@@ -1,0 +1,67 @@
+.ques-con{
+    height: 280px;
+}
+.skip-btn {
+    margin-top: -10px !important;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.skip-btn:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+.skip-btn:active{
+    outline: none !important;
+    box-shadow:  none !important;
+}
+
+.upload-forms-btn{
+    top: -95px;
+    left: 280px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+.upload-forms-btn:hover{    
+    color: black;
+}
+
+.btn-light-unselect{
+    background-color: lightgray !important;
+    color: darkgray !important;
+}
+
+.in-btwn-line{
+    display: block;
+    position: relative;
+    top: -68px;
+    left: 40px;
+    width: 81px;
+}
+
+
+.btn-send:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+@media only screen and  (max-width: 460px){
+    .upload-doc-btn{
+        position: relative;
+        top: -37px;
+        left: 45px;
+        font-size: 10px;
+    }
+}
+
+@media only screen and  (max-width: 610px){
+    .skip-btn{
+        font-size: 12px !important;
+    }
+}

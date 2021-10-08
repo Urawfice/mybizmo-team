@@ -1,0 +1,849 @@
+.btnMe {
+  margin: 3.46vh;
+  padding-left: 1.62vw;
+  padding-right: 1.62vw;
+  border-radius: 20px;
+  padding-top: 1.108vh;
+  padding-bottom: 1.108vh;
+  min-width: 9.114vw !important;
+  margin-bottom: 2.07vh;
+  outline: none;
+  border: none;
+
+}
+
+.btnMe:focus {
+  outline: none !;
+}
+.inx {
+  margin: 1.38vh;
+  margin-top: 6.92vh;
+  background-color: white;
+  /* padding-top: 10px; */
+  padding-top: 1.38vh;
+  padding-bottom: 1.38vh;
+  /* height: 37.39vh !important; */
+  border-radius: 10px;
+  padding-left: 0.911vw;
+}
+
+
+
+.inxSp {
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.btn2 {
+  background-color: rgb(75, 223, 210);
+  color: white;
+  margin: 3.46vh;
+  padding-left: 1.62vw;
+  padding-right: 1.62vw;
+  border-radius: 20px;
+  padding-top: 1.108vh;
+  padding-bottom: 1.108vh;
+  border: none;
+  font-size: 2.2vh;
+  outline: none;
+  margin-top: 0;
+  min-width: 9.114vw;
+  margin-bottom: 2.077vh;
+  box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.25);
+}
+.btn2:focus {
+  outline: none;
+}
+
+.ctgsc {
+  max-width: 85vw;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 0;
+}
+
+.hrcr {
+  background-color: white;
+  color: black;
+  margin: 3.46vh;
+  padding-left: 1.62vw;
+  padding-right: 1.62vw;
+  border-radius: 20px;
+  padding-top: 0.69vh;
+  padding-bottom: 0.69vh;
+  font-size: 2.25vh;
+  border-color: black;
+  border-width: 1px;
+  outline: none;
+  min-width: 9.114vw;
+  margin-bottom: 2.077vh;
+  box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.25);
+}
+
+.hrcr:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 1050px) {
+  .ctgsc {
+    /* width: 52vw; */
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+#overlay2 {
+  position: fixed; /* Sit on top of the page content */
+  /* display: none; Hidden by default */
+  width: 57%; /* Full width (cover the whole page) */
+  height: 68%; /* Full height (cover the whole page) */
+  top: 15%;
+  left: 24%;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.overlay2-main {
+  background: #c4c4c4;
+  box-shadow: 8px 8px 40px #cac9d2;
+}
+
+.libIns {
+  background: black;
+  height: 27%;
+  margin-top: -1.108vh;
+}
+
+.insDivBl {
+  background-color: black;
+}
+
+.insDescBl {
+  background-color: black;
+  padding-top: 25px;
+}
+
+.insNameBl {
+  color: white;
+}
+
+.seePrBtn {
+  background: none;
+}
+
+.insStarBl {
+  color: white;
+}
+
+.InsClassBtn {
+  color: #f2f1f7;
+  background: none;
+  border: 0.74px solid #03cbc9;
+  box-sizing: border-box;
+  border-radius: 32.56px;
+  padding: 0.815vh;
+  padding-left: 0.625vw;
+  padding-right: 0.625vw;
+}
+
+.InsClassBtn:focus {
+  outline: none;
+}
+
+.InsDBl {
+  color: white;
+  padding: 1.38vh;
+  padding-top: 2.77vh;
+  width: 90%;
+  display: inline-flex;
+}
+
+.seePrBtn {
+  margin-left: 0.911vw;
+  padding-left: 0.325vw;
+  padding-right: 0.325vw;
+  font-size: 1.2vh;
+}
+
+.other-Btn {
+  /* margin-left: 0.911vw; */
+  padding-left: 0.325vw;
+  padding-right: 0.325vw;
+  font-size: 2.4vh;
+}
+
+.hdnBtn {
+  background: none;
+  outline: none;
+  border: none;
+}
+.hdnBtn:focus {
+  outline: none;
+}
+
+#play-btn {
+  position: relative;
+  bottom: 10.5vh;
+  left: 40%;
+  z-index: 2147483648;
+  background: none;
+  border: none;
+  outline: none;
+}
+.plyBtn {
+  height: 4vh;
+}
+#play-btn:focus {
+  outline: none;
+}
+
+#rewind2-btn {
+  position: relative;
+  bottom: 10.5vh;
+  left: 40%;
+  z-index: 2147483648;
+  background: none;
+  border: none;
+  outline: none;
+}
+#rewind2-btn:focus {
+  outline: none;
+}
+
+#rewind1-btn {
+  position: relative;
+  bottom: 10.5vh;
+  left: 40%;
+  z-index: 2147483648;
+  background: none;
+  border: none;
+  outline: none;
+}
+#rewind1-btn:focus {
+  outline: none;
+}
+
+.audio[poster] {
+  background-color: white !important;
+}
+
+/* .audio::-webkit-media-controls-panel{
+    -webkit-appearance: none !important;
+
+   background-color:white !important;
+   z-index: 0 !important;
+} */
+
+*::-webkit-media-controls-cc-ma-menu {
+  display: none !important;
+}
+
+*::-webkit-media-controls-accessible-button {
+  display: none !important;
+}
+*::-webkit-media-controls-toggle-closed-captions-button {
+  display: none !important;
+}
+
+audio::-webkit-media-controls-panel {
+  background: transparent;
+  --webkit-filter: hue-rotate(143deg) saturate(10);
+}
+
+*::-internal-media-controls-overflow-button {
+  display: none !important;
+}
+
+.hlc::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+/* video::-webkit-media-controls-time-remaining-display {
+      
+      color: wheat !important;
+    
+    } */
+
+/* video::-webkit-media-controls-mute-button {
+      position: absolute !important;
+
+      right: 30px !important;
+      bottom: 8px !important;
+    }
+
+    video::-webkit-media-controls-fullscreen-button {
+        position: absolute !important;
+
+        right: 40px !important;
+        bottom: 8px !important;
+    }
+
+    video::-webkit-media-controls-toggle-closed-captions-button {
+        position: absolute !important;
+
+        right: 40px !important;
+        bottom: 8px !important;
+
+    } */
+
+.Climg {
+  position: relative !important;
+  top: 0 !important;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 40px;
+  width: auto;
+}
+
+button:hover {
+  z-index: 20021;
+  cursor: pointer !important;
+}
+
+video::-internal-media-controls-overflow-button {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+*::-webkit-internal-media-controls-overflow-button {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+@media only screen and (max-width: 1300px) {
+  .ctgsc {
+    width: 81vw;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  .ctgsc {
+    width: 75vw;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .ctgsc {
+    width: 77vw;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .ctgsc {
+    width: 94vw;
+  }
+}
+
+*::-webkit-media-controls-show-more-media-controls-button {
+  display: none !important;
+  visibility: hidden !important;
+  /* -webkit-appearance: none; */
+}
+
+audio::-webkit-media-controls-overflow-button {
+  height: 500px !important;
+  visibility: hidden !important;
+}
+
+* [title="more options"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+input::-internal-media-controls-overflow-button {
+  height: 200px !important;
+}
+
+*[title~="more"] {
+  display: none !important;
+}
+
+.right-arrow3,
+.left-arrow3 {
+  background: none !important;
+  border: none;
+  outline: none;
+}
+.right-arrow3:focus {
+  outline: none;
+}
+
+.rgtAr {
+  height: 27px;
+  margin-left: -2.8vw;
+}
+
+.lgtAr {
+  height: 27px;
+  margin-right: -2.8vw;
+}
+
+@media only screen and (max-width: 750px) {
+  .ctgsc {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 785px) {
+  .plyBtn {
+    height: 3vh;
+  }
+  #play-btn {
+    bottom: 9vh;
+    left: 40%;
+  }
+  #rewind1-btn {
+    bottom: 9vh;
+    left: 40%;
+  }
+  #rewind2-btn {
+    bottom: 9vh;
+    left: 40%;
+  }
+  #overlay1 {
+    height: 50%;
+    width: 72%;
+    left: 13.5%;
+  }
+}
+
+@media only screen and (max-width: 636px) {
+  .plyBtn {
+    height: 3vh;
+  }
+  #play-btn {
+    bottom: 13vh;
+    left: 39%;
+  }
+  #rewind1-btn {
+    bottom: 13vh;
+    left: 39%;
+  }
+  #rewind2-btn {
+    bottom: 13vh;
+    left: 39%;
+  }
+  #overlay2 {
+    height: 50%;
+    width: 72%;
+    left: 10%;
+  }
+  .insDescBl {
+    font-size: 10px;
+  }
+  .library-circle {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+  }
+  #overlay {
+    height: 50%;
+    width: 78%;
+    left: 12%;
+  }
+  .overlay-des {
+    height: 40%;
+    width: 72%;
+    left: 12%;
+  }
+  .insClass {
+    right: 30px;
+  }
+  .overlay-desHm {
+    left: 13%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .btnMe {
+    font-size: 10px;
+    margin: 13px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  .btn2 {
+    font-size: 10px;
+    margin: 13px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .hrcr {
+    font-size: 10px;
+    margin: 13px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .ctgsc {
+    width: 100% !important;
+  }
+}
+
+#likeScr {
+  width: 103%;
+}
+
+video::-webkit-media-controls-timeline {
+  color: white;
+  /* background-color: white; */
+}
+
+.audio::-webkit-media-controls-enclosure {
+  text-indent: 0px;
+  background-color: transparent !important;
+  /* background-color: #03CBC9 !important; */
+  filter: invert(1);
+  /* color: aqua !important; */
+}
+
+video {
+  object-fit: contain;
+}
+
+@keyframes zoominoutsinglefeatured {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.06, 1.06);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.testTrnF {
+  position: fixed;
+  /* background-color: #03CBC9; */
+  height: 44%;
+  top: 21%;
+  margin: auto !important;
+  width: 57%;
+
+  animation: zoominoutsinglefeatured 5s infinite;
+}
+
+.testTrn {
+  position: fixed;
+  /* background-color: #ebf7f6; */
+  height: 44%;
+  top: 21%;
+  margin: auto !important;
+  width: 57%;
+}
+
+.AudImg {
+  height: 284px !important;
+  max-width: 95% !important;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto auto;
+}
+
+.horCardBody {
+  padding-left: 10px;
+}
+
+.likeScrLc {
+  margin-left: -11px !important;
+  width: 104% !important;
+}
+
+@media only screen and (max-width: 768px) and (min-height: 1024px) and (max-height: 1024px) {
+  #likeScr {
+    margin-top: 30px !important;
+  }
+  .boxCardSz {
+    height: 29.5vh !important;
+  }
+  .con1-in {
+    left: 7px !important;
+  }
+  .fa2 {
+    right: -8px;
+  }
+  .faI {
+    left: 6px !important;
+  }
+}
+
+.MuiGrid-spacing-xs-3 {
+  width: calc(100% + 24px);
+  margin: -12px;
+  min-height: 66vh;
+}
+
+td {
+  background-color: white !important;
+}
+
+@media only screen and (max-width: 412px) and (min-height: 822px) and (max-height: 824px) {
+  .boxCardSz {
+    width: 180px !important;
+    height: 26.8vh !important;
+  }
+  .contISz {
+    right: -8px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #play-btn {
+    left: 35%;
+  }
+  #rewind1-btn {
+    left: 35%;
+  }
+  #rewind2-btn {
+    left: 35%;
+  }
+  .con1-in {
+    left: 6px;
+  }
+  .fa2 {
+    right: -6px !important;
+  }
+  .faI {
+    left: 6px !important;
+  }
+  .fa3 {
+    padding-right: 5px !important;
+  }
+}
+
+/* @media only screen and (max-width: 440px){
+    .testTrn{
+        height: 33%;
+        right: 15%;
+    }
+ }
+
+
+ @media only screen and (max-width: 380px){
+    .testTrn{
+        height: 30%;
+        right: 20%;
+    }
+ } */
+
+@media only screen and (max-width: 978px) and (min-width: 919px) {
+  .testTrn {
+    position: fixed;
+    /* background-color:#03CBC9; */
+    height: 45%;
+    top: 21%;
+    margin: auto !important;
+    width: 57%;
+  }
+
+  .AudImg {
+    height: 300px !important;
+    max-width: 94% !important;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+  }
+}
+
+.libIns {
+  margin-top: -10.95vh;
+}
+
+.libInsVid {
+  margin-top: -5.55vh !important;
+}
+
+@media only screen and (max-width: 919px) and (min-width: 636px) {
+  #overlay2 {
+    height: 50%;
+    width: 64% !important;
+    left: 10%;
+  }
+  .testTrn {
+    position: fixed;
+    /* background-color: #03CBC9; */
+    height: 30%;
+    top: 21%;
+    margin: auto !important;
+    width: 64%;
+    /* bottom: 40%;
+        right: 33%; */
+  }
+
+  .AudImg {
+    height: 208px !important;
+    max-width: 94% !important;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+  }
+  .insNameBl {
+    font-size: 13px;
+  }
+  .insStarBl {
+    font-size: 10px;
+  }
+  .insDescBl {
+    padding-top: 22px;
+  }
+  .InsClassBtn {
+    font-size: 12px;
+  }
+  .seePrBtnBl {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 919px) and (min-width: 785px) {
+  #overlay2 {
+    height: 50%;
+    width: 64% !important;
+    left: 10%;
+  }
+  .testTrn {
+    position: fixed;
+    /* background-color: #03CBC9; */
+    height: 32.3%;
+    top: 21%;
+    margin: auto !important;
+    width: 64%;
+    /* bottom: 40%;
+        right: 33%; */
+  }
+
+  .AudImg {
+    height: 210px !important;
+    max-width: 94% !important;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+  }
+}
+
+@media only screen and (max-width: 636px) {
+  #overlay2 {
+    height: 50%;
+    width: 72%;
+    left: 10%;
+  }
+  .testTrn {
+    position: fixed;
+    /* background-color: #03CBC9; */
+    height: 30%;
+    top: 21%;
+    margin: auto !important;
+    width: 72%;
+    /* bottom: 40%;
+        right: 33%; */
+  }
+
+  .AudImg {
+    height: 200px !important;
+    max-width: 94% !important;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+  }
+  .insNameBl {
+    font-size: 13px;
+  }
+  .insStarBl {
+    font-size: 10px;
+  }
+  .insDescBl {
+    padding-top: 29px;
+  }
+  .InsClassBtn {
+    font-size: 12px;
+  }
+  .seePrBtnBl {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 535px) {
+  .insDescBl {
+    padding-top: 15px;
+  }
+  .libIns {
+    margin-top: -10.55vh !important;
+  }
+  .libInsVid {
+    margin-top: -5.55vh !important;
+  }
+  .AudImg {
+    height: 222px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #overlay2 {
+    height: 50%;
+    width: 90%;
+    left: 4%;
+  }
+  .testTrn {
+    position: fixed;
+    /* background-color: #03CBC9; */
+    height: 30%;
+    top: 21%;
+    margin: auto !important;
+    width: 90%;
+    /* bottom: 40%;
+        right: 33%; */
+  }
+
+  .AudImg {
+    height: 215px !important;
+    max-width: 95% !important;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+  }
+
+  .insDescBl {
+    padding-top: 20px;
+  }
+  .libIns {
+    margin-top: -9.4vh !important;
+  }
+  .libInsVid {
+    margin-top: -5.55vh !important;
+  }
+  .AudImg {
+    height: 200px !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .boxCardSz {
+    height: 200px;
+  }
+}

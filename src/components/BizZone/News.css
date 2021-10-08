@@ -1,0 +1,78 @@
+.news-title-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 38px;
+  letter-spacing: 0.1em;
+  color: #252525;
+}
+
+.news-date-text {
+  font-family: "Nunito";
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #98989c;
+}
+
+.new-data-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 33px;
+  color: #252525;
+}
+
+.new-card-background {
+  background: #f6ecff;
+  border-radius: 10px 10px 0px 0px;
+}
+.news-card-top-div-back {
+  background: #d082ff;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.news-pagination-border {
+  border: none !important;
+}
+
+.news-readmore-btn {
+  background: #9929fd;
+  box-shadow: 5px 5px 40px -2px #b6a6c6;
+  border-radius: 44px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.new-pagination-active {
+  font-family: "Nunito" !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-size: 15px !important;
+  line-height: 30px !important;
+  letter-spacing: 0.2em !important;
+  text-decoration-line: underline;
+  color: #ffffff !important;
+  background: #d082ff !important;
+}
+
+.page-link {
+  font-family: "Nunito" !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-size: 15px !important;
+  line-height: 30px !important;
+  letter-spacing: 0.2em !important;
+  color: #ffffff !important;
+  background: #d082ff !important;
+  margin: 0px;
+  border: none;
+}

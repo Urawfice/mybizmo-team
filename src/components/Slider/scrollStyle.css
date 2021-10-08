@@ -1,0 +1,524 @@
+
+  .sc-bdfBwQ  {
+
+    visibility: hidden ;
+    display: none ;
+
+  }
+  .img .scr{
+    border-width: 12px;
+    padding:0 !important;
+    align-items: center;
+    text-align: center;
+   
+  }
+
+  .containerI{
+    position: relative;
+    margin: 0;
+  }
+  .containerI img{
+    display: block;
+  }
+
+  .containerI .faI{
+    position: absolute;
+    top: 1.66vh;
+    left: 5px;
+  }
+
+  .containerI .faII{
+    position: absolute;
+    top: 5.54vh;
+    left:  3px;
+  }
+
+  .Container-3Z{
+    height: 100%;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    display: flex;
+  }
+  .Container-3Z img{
+    display: block;
+  }
+ 
+   .fa2{
+    position: absolute;
+    right:0px;
+    top: 1.66vh;
+  }
+
+  .con1-in{
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .boxCard{
+    
+
+    box-shadow: 0px 4px 9px -4px rgba(53, 47, 47, 0.25) !important;
+    
+    border: 0;
+    border-style: solid;
+    padding-right: 0.65vw;
+    padding-left: 0;
+    margin: 0px;
+    margin-bottom: 4.847vh;
+    margin-top: 2.77;
+    margin-left: 0.976vw;
+    margin-right: 0;
+
+  }
+  
+  
+  .faI {
+    height: 3.04vh;
+    border-radius: 20px;
+    background-color: white;
+    padding: 2px;
+  }
+
+  .faII {
+    height: 3.04vh;
+    border-radius: 20px;
+    background-color: white;
+    padding: 2px;
+  }
+  
+  .fa2{
+    height: 3.04vh;
+    border-radius: 20px;
+    background-color: white;
+  }
+  .fa3{
+    height: 2.07vh;
+    padding-right: 0.32vw;
+    padding-left:  0.52vw;
+  }
+
+  #titleScr{
+    font-weight: 700;
+    text-align: left;
+    font-size: 2.35vh;
+    padding-left: 10px;
+    padding-bottom:  0.83vh;
+    padding-top: 0.55vh;
+    margin-top:  0.415vh;
+  }
+
+  .titleS{
+    margin-left: 0.325vw;
+    margin-top: 0.325vw;
+  }
+
+  #desScr{
+    font-size: 12px;
+    /* text-overflow: ellipsis; */
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
+    font-weight: 200;
+    text-align: left;
+    padding-left: 15px;
+    height: 26px;
+    padding-bottom: 0.692vh;
+  }
+
+
+  #likeScr{
+    /* display :inline-flex; */
+    font-size: 1.6vh;
+    padding: 1.108vh;
+    padding-left: 0;
+    margin-top: 0.969vh !important;
+    height: 4.432vh;
+    width: 104%;
+  
+    /* box-shadow: -1px -2px 13px -7px #969696 !important;
+     */
+
+     box-shadow: -6px 4px 15px -7px #969696!important;
+    border-radius: 6px;
+    
+    
+    border: 0;
+    border-style: solid;
+  }
+
+  .lScr{
+    float: left;
+    text-align: left;
+    align-items: left;
+    padding-left: 0.65vw;
+  }
+  .mScr{
+    float: left;
+    padding-left: 0.976vw;
+  }
+
+  .rScr{
+    float: right;
+    padding-right: 0.651vw;
+  }
+
+  .faIc {
+    height: 3.04vh;
+    border-radius: 20px;
+    background-color: white;
+    margin: 0.27vh;
+    padding-left: 0.65vw;
+    padding-right:  0.325vw;
+    font-size: 1.9vh;
+    font-weight: 300;
+    visibility: hidden;
+  }
+  .faId {
+    height: 3.04vh;
+    border-radius: 20px;
+    background-color: white;
+    margin: 2px;
+    padding-left: 0.65vw;
+    padding-right: 0.325vw;
+    font-size: 1.8vh;
+    font-weight: 300;
+    visibility: hidden;
+  }
+  
+
+
+  .faI:hover{
+    border-radius:10px 0 0 10px ;
+  }
+
+  .faII:hover{
+    border-radius:10px 0 0 10px ;
+  }
+
+
+  .hoverC:hover .faIc{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .hoverD:hover .faId{
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+
+  .hoverC:hover{
+    border-radius:10px 0 0 10px ;
+  }
+
+  .hoverD:hover{
+    border-radius:10px 0 0 10px ;
+  }
+
+  .containerI .faIc{
+    position: absolute;
+    
+    top: 1.38vh;
+    left: 19px;
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  .containerI .faId{
+    position: absolute;
+    
+    top: 5.26vh;
+    left: 1.62vw;
+    border-radius: 0px 10px 10px 0px;
+  }
+
+
+  .hoverC{
+    background-color: white;
+  }
+
+  .hoverC{
+    background-color: white;
+  }
+
+  
+
+  .titleW{
+    margin-top: 2.87vh;
+  }
+
+  #title{
+    float: left;
+    padding-left: 0.781vw;
+    /* margin-bottom: 30px; */
+  }
+
+  .seeBtn{
+    /* float: right; */
+    font-weight: 500;
+    
+    font-size: 1.8vh;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: #03CBC9;
+    border: 1px solid #03CBC9;
+    padding: 0.692vh;
+    padding-left: 0.8vw;
+    padding-right: 0.8vw;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+    
+    position: relative;
+    z-index: 1;
+   
+  }
+
+  .seeEvnB{
+    margin-top: 36px !important;
+    margin-bottom: 20px;
+  }
+
+  .containerG .img-fluid{
+    display: block;
+  }
+  
+  .containerG .musicGif{
+    position: absolute;
+    
+   
+    top: 29%;
+    left: 25%;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .musicGif{
+    height: 40%;
+    width: 75%;
+    
+  }
+
+  .containerG .videoGif{
+    position: absolute;
+    
+    top: 29%;
+    left: 50%;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .videoGif{
+    height: 50%;
+    width: auto;
+    
+    
+  }
+
+
+  .container{
+    margin: 0;
+  }
+
+  .rec-item-wrapper{
+    margin: 0 !important;
+    margin-left: 1.23vw !important;
+    margin-right: -1.62vw !important;
+  }
+  
+  .mapD{
+    height: 83.1vh !important;
+  }
+
+  #overlay {
+    position: fixed; /* Sit on top of the page content */
+    /* display: none; Hidden by default */
+    width: 80%; /* Full width (cover the whole page) */
+    height: 80%; /* Full height (cover the whole page) */
+    top: 10%;
+    left: 10%;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+
+  .outer{
+    margin: 0.96vh;
+  }
+
+
+ 
+  #likeScr{
+    color:#98989C !important
+  }
+
+
+  .boxCard{
+    height: 242px;
+    width: 250px;
+  }
+  boxCardEx{
+    height: 178px;
+  }
+  .containerI{
+    height: 129px;
+    /* width: 217px; */
+  }
+  .containerIZ{
+    width: 216px;
+  }
+
+
+  /* @media only screen and  (min-width: 2200px){
+    .containerIS{
+      height:19.11vh !important;
+      width:14.12vw !important;
+    }
+  } */
+
+  @media only screen and  (min-height: 1000px){
+    .fa3{
+      height: 22px;
+      padding-left: 0;
+    }
+    #desScr {
+      font-size: 1.6vh;
+      font-weight: 200;
+      text-align: left;
+      padding-left: 15px;
+      height: 26px;
+      padding-bottom: .692vh;
+    }
+    #titleScr{
+      font-size: 1.8vh;
+    }
+    .boxCard{
+      height: 33.5vh;
+      width: 250px;
+    }
+    .lScr{
+      padding-left: 0;
+    }
+    .mScr{
+      padding-left: 0;
+    }
+  }
+
+
+  @media only screen and  (min-width: 1800px){
+    .boxCard{
+
+      height: 24.62vh;
+      width: 15.95vw;
+    }
+    .carousel-wrapperEx {
+      height: 34vh;
+  }
+    /* .containerI{
+      height:19.11vh;
+      width:14.12vw;
+    } */
+    .boxCardEx{
+      height: 24.65vh;
+    }
+
+    .con1-in{
+      max-height: 118% !important;
+      height: 110% !important;
+    }
+    .con1-in, .con2-in{
+      max-width: 110%;
+    }
+    #titleScr {
+      font-size: 1.9vh;
+      
+      padding-bottom: 0;
+      padding-top: 1.2vh;
+  }
+    
+  } 
+
+  
+  @media only screen and  (min-width: 1580px) and (max-width:1800){
+    .boxCard{
+
+      height: 26.62vh;
+      width: 15.95vw;
+    }
+  } 
+
+
+
+
+
+
+  .outer{
+    width:27vw;
+    height:15.62vw; 
+    margin-right:1.8vw;
+  }
+  
+  
+  @media only screen and (max-width: 1300px) and (min-width: 920px) {
+    .carousel-containerS {
+      width: 80vw;
+      margin-left: 0vw;
+      flex-direction: column;
+    }
+    .outer{
+      width:26vw !important;
+      height:15.62vw; 
+      margin-right:1.8vw;
+      margin-left: -2px;
+      z-index: 2000 !important; 
+    }
+    .img1{
+      z-index: 20001 !important;
+    }
+  }
+ .MuiListItemIcon-root{
+   padding-right: 5px;
+ }
+
+
+ @media only screen and (max-width: 600px) {
+  .seeBtn{
+   padding-top: 2px !important;
+   padding-bottom: 2px !important;
+   margin-top: 22px;
+   margin-bottom: 18px !important;
+   
+  }
+  .seeEvnB{
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    margin-top: 45px !important;
+    margin-bottom: 20px !important;
+  }
+  #titleScr{
+   
+    padding-left: 16px; 
+  }
+  #desScr{
+    padding-left: 18px;
+  }
+  #likeScr {
+    padding-left: 15px;
+    margin-top: 13px !important;
+  }
+  .mScr{
+    margin-left: 8px;
+  }
+
+ }
+
+
+
+ @media only screen and  (min-width: 1020px) and (max-width:1050) {
+  body{
+    font: normal !important;
+  }
+  
+} 

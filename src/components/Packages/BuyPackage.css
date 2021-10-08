@@ -1,0 +1,111 @@
+.ord-sum{
+    font-size: 2.6vh;
+    padding: 15px;
+    color: #03CBC9;
+    font-weight: 600;
+    border-bottom: solid 1px rgb(189, 182, 182);
+    background-color: white;
+    
+}
+
+.pack-head1{
+    font-weight: 600;
+    padding: 15px;
+    padding-left: 30px;
+}
+.pack-mid1{
+    padding: 15px;  
+}
+
+.gr-dis{
+    color: rgb(175, 164, 164);
+    font-weight: 500;
+
+}
+
+.btn-app-cp{
+    background: none;
+    border: none;
+    color: white;
+    margin-left: -130px;
+}
+
+
+.prcd-pay{
+    background-color: #0EB6FE;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    font-size: 2.2vh;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    /* box-shadow: 60px -16px teal */
+}
+
+.tnc-warn{
+    visibility: hidden;
+}
+
+.prcd-con:hover  .tnc-warn{
+   visibility: visible;
+}
+
+.bk-icon{
+    position: absolute;
+    top: 20px;
+    left: -10px;
+}
+
+.span-bord-ver{
+    position: relative;
+    
+   
+    border-left: solid 1px #03CBC9;
+    left: 8px;
+    top: 20px;
+
+}
+
+.span-bord-ver-dn{
+    position: relative;
+    
+   
+    border-left: solid 1px #03CBC9;
+    left: 8px;
+    top: 50px;
+
+}
+
+.back-home-th{
+    background-color:#1080ca;
+    border: none;
+    border-radius: 5px;
+    margin-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 2vh;
+    color: white;
+}
+.view-ord-th{
+    border: solid 1px black;
+    border-radius: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 2vh;
+    background-color: white;
+}
+
+@media only screen and (max-width: 992px){
+.con-ful{
+    padding: 30px;
+}
+
+
+}

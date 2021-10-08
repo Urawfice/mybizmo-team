@@ -1,0 +1,268 @@
+@media only screen and (max-width: 1025px) {
+  #userLinks {
+    display: flex;
+    align-items: center;
+  }
+  #userLinks p {
+    font-size: 1rem;
+  }
+  #men {
+    padding: 15px 10px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .down-ar-lp {
+    display: none;
+  }
+
+  #homeNav {
+    margin-right: 70px;
+  }
+  #men {
+    padding: 25px;
+  }
+  #men:hover {
+    text-decoration: none;
+    background-color: #f2f2f2;
+    color: black;
+  }
+}
+
+#navbar {
+  font-size: 2vh;
+  margin-bottom: 50px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  background-color: black;
+  background-color: rgba(20, 20, 20);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  color: white;
+  z-index: 2;
+
+  background: #ffffff;
+  /* Card Shadow */
+
+  box-shadow: 0px 3px 4px rgba(159, 159, 159, 0.25);
+}
+
+#men {
+  color: white;
+}
+
+#home {
+  left: 15px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#homeNav {
+  color: white;
+}
+
+#homeNav:hover {
+  text-decoration: none;
+}
+
+#userLinks {
+  right: 10px;
+  position: absolute;
+  display: flex;
+  margin: 0px 10px;
+}
+
+#mylogo {
+  width: 40px;
+  height: 40px;
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+#dropdown-basic {
+  background-color: white;
+  border: none;
+}
+
+@media only screen and (max-width: 1026px) {
+  #name {
+    display: none;
+  }
+
+  #menufull {
+    display: none;
+  }
+
+  #menubtn {
+    background: none;
+    border: none;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  #namedown {
+    display: none;
+  }
+
+  #menubtn {
+    background: none;
+    border: none;
+    display: none;
+  }
+}
+
+#name {
+  font-weight: 400;
+}
+
+.banner-image-lp {
+  background-color: white;
+  margin: auto;
+  margin-top: 60px;
+  width: 85%;
+  height: 25vw;
+  border-radius: 10px;
+  display: flex;
+}
+
+.banner-img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.gallery-lp {
+  width: 85%;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  /* max-height: 60vh; */
+  /* overflow: auto; */
+}
+
+.pur-tp {
+  background-color: #9929fd;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /* height: 30px; */
+  color: white;
+
+  padding-top: 22px !important;
+  padding-bottom: 22px !important;
+  padding-left: 25px !important;
+  /* position: fixed; */
+}
+.inf-3-lp {
+  width: 85%;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.con-img-lp {
+  height: 21vh;
+  /* border: 4px solid #9929fd; */
+  min-width: 220px;
+  width: 22vh;
+  margin: auto;
+}
+
+.inf-img-lp {
+  height: 17.5vh;
+  width: 17.5vh;
+  border-radius: 6vh;
+  border: 4px solid #9929fd;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.card-con-lp {
+  width: 85%;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.image-review2 {
+  float: right;
+  margin-top: -20px;
+}
+.image-review3 {
+  float: right;
+  margin-top: -20px;
+}
+
+.arrow-lp {
+  height: 5vh;
+  margin: auto;
+  cursor: pointer;
+}
+
+.know-ins {
+  font-size: 2vh;
+  margin: auto;
+  border-radius: 20px;
+  padding: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border: 2px solid #03cbc9;
+  margin-right: 20px;
+  box-shadow: none;
+  background-color: #f6ecff;
+}
+
+.footer-cont-lp {
+  background-color: black;
+}
+.desc-footer-lp {
+  color: white;
+  font-size: 2.2vh;
+}
+
+.mr-read-more {
+  cursor: pointer;
+}
+
+.mr-card-title-text {
+  overflow: auto;
+  white-space: nowrap;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.mr-read-more {
+  width: 110px;
+}
+
+.news-readmore-btn {
+  width: 135px;
+}
+
+.accordion-item {
+  padding: 25px !important;
+}
+
+@media only screen and (max-width: 755px) {
+  .name-lp-inf {
+    display: block;
+  }
+  .role-inf-lp {
+    position: initial !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .less-padding-card {
+    padding: 15px !important;
+  }
+}

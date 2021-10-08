@@ -1,0 +1,65 @@
+.image-review {
+  position: absolute;
+  right: 35px;
+  /* bottom: 130px; */
+  top: -22px;
+}
+
+.image-review1 {
+  position: absolute;
+  right: 10px;
+  /* bottom: 130px; */
+  top: -22px;
+}
+
+/* .testimonial-margin {
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+} */
+
+.test-title-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  color: #252525;
+}
+.test-fontsize-title {
+  font-size: 16px;
+}
+.test-font-weight-normal {
+  font-weight: 400;
+  color: #98989c;
+}
+
+.test-review-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+
+  color: #252525;
+}
+
+.test-card-style {
+  background: #ffffff;
+  box-shadow: 0px 3px 4px rgba(159, 159, 159, 0.25);
+  border-radius: 10px;
+  /* margin-left: 5px !important;
+  margin-right: 5px !important; */
+  /* align-items: center; */
+}
+
+.add-your-review-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 38px;
+  letter-spacing: 0.05em;
+  color: #9929fd;
+  text-align: center;
+}

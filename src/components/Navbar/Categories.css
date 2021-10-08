@@ -1,0 +1,139 @@
+
+@media only screen and (max-width: 1025px) {
+  
+  #userLinks {
+    display: flex;
+    align-items: center;
+  }
+  #userLinks p {
+    font-size: 1rem;
+  }
+  #men {
+    padding: 15px 10px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+ 
+ 
+  #homeNav {
+    margin-right: 70px;
+  }
+  #men {
+    padding: 25px;
+  }
+  #men:hover {
+    text-decoration: none;
+    background-color: #f2f2f2;
+    color: black;
+  }
+}
+
+ 
+
+
+
+#navbar {
+	font-size:2vh;
+  margin-bottom: 50px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  background-color: black;
+  background-color: rgba(20, 20, 20);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  color: white;
+  z-index: 2;
+
+
+background: #FFFFFF;
+/* Card Shadow */
+
+box-shadow: 0px 3px 4px rgba(159, 159, 159, 0.25);
+}
+
+#men {
+  color: white;
+}
+
+#home {
+  left: 15px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#homeNav {
+  color: white;
+}
+
+#homeNav:hover {
+  text-decoration: none;
+}
+
+#userLinks {
+  right: 10px;
+  position: absolute;
+  display: flex;
+  margin: 0px 10px;
+}
+
+#mylogo{
+
+width: 40px;
+height: 40px;
+}
+
+
+.dropdown-toggle::after{
+ content:none;
+}
+
+#dropdown-basic{
+background-color:white;
+border:none;
+
+}
+
+@media only screen and (max-width: 1026px){
+#name{
+display:none;
+}
+
+#menufull{
+display:none;
+}
+
+#menubtn{
+background:none;
+border:none;
+}
+
+}
+
+
+@media only screen and (min-width: 1026px){
+#namedown{
+display:none;
+}
+
+#menubtn{
+background:none;
+border:none;
+display:none;
+}
+
+}
+
+
+
+
+#name{
+  font-weight: 400;
+}
+

@@ -1,0 +1,19 @@
+/* .sc-eCssSg {
+    height: 50vh !important;
+} */
+
+
+.card-img-top{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.shadowBottom{
+    box-shadow: 0 1px 13px -7px !important;
+}
+
+.fa3{
+    padding-left: 0;
+}

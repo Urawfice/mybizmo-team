@@ -1,0 +1,67 @@
+.ju-joinus-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 38px;
+  color: #ffffff;
+}
+
+.ju-nav-back {
+  background: #d082ff;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.ju-hiring-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 38px;
+
+  color: #000000;
+}
+
+.ju-bottom-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 33px;
+  color: #000000;
+}
+
+.ju-resume-btn {
+  background: #9929fd;
+  box-shadow: 5px 5px 40px -2px #b6a6c6;
+  border-radius: 44px;
+  width: 200px;
+  text-align: center;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+
+  color: #ffffff;
+}
+
+.ju-main-back {
+  background: #f6ecff;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.custom-file-upload-package {
+  border-radius: 10px;
+  font-family: "Montserrat";
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #45314f;
+  padding-left: 30px;
+}
+
+/* input[type="file"] {
+  display: none;
+} */

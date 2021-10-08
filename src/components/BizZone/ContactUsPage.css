@@ -1,0 +1,102 @@
+.Cu-nav-background {
+  background: #d082ff;
+  border-radius: 10px 10px 0px 0px;
+}
+.cu-form-background {
+  background: #f6ecff;
+  /* border-radius: 10px 10px 0px 0px; */
+}
+
+.cu-nav-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 38px;
+  color: #ffffff;
+}
+
+.cu-form-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 38px;
+  color: #000000;
+}
+
+.cu-form-subtitle {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 33px;
+  color: #000000;
+}
+
+.cu-form-name-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 33px;
+  color: #98989c;
+}
+
+.cu-form-input {
+  border: 2px solid grey !important;
+  border-radius: 5px;
+  width: 90%;
+  background: #f6ecff;
+}
+
+.cu-submit-btn {
+  background: #9929fd;
+  box-shadow: 5px 5px 40px -2px #b6a6c6;
+  border-radius: 44px;
+
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  color: #ffffff;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border: none;
+}
+
+.cu-inage-style {
+  display: flex;
+  margin: auto;
+}
+
+.cu-find-us-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 0.05em;
+  color: #9929fd;
+}
+
+.cu-find-us-info-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  color: #252525;
+}
+
+.cu-connect-withus-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 38px;
+  color: #000000;
+}

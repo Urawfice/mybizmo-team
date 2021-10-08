@@ -1,0 +1,666 @@
+
+// .btnApp{
+    
+//     margin-right: 10px;
+//     padding-right: 15px !important;
+//     padding-left: 15px !important;
+//     margin-left: 45px;
+//     min-width: 0 !important;
+//     width: 90px;
+// }
+
+
+
+// css by Thomas
+#navbar{
+    margin-bottom: 0 !important;
+    height: 50px !important;
+}
+.noMargin{
+    margin: 0;
+}
+.noPadding{
+    padding: 0;
+}
+
+.package_class_main{
+    // padding: 24px;
+    flex-grow: 1;
+    margin-top: 50px;
+
+    .overlay-filter {
+        position: fixed; /* Sit on top of the page content */
+        /* display: none; Hidden by default */
+        width: 310px; /* Full width (cover the whole page) */
+        height: 93% ; /* Full height (cover the whole page) */
+        top: 7%;
+        
+        right: 0;
+        bottom: 0;
+        background-color: white;
+        /* z-index: 200 !important; Specify a stack order in case you're using a different order for other elements */
+        /* pointer-events: none; */
+        overflow: auto;
+        
+        padding-left: 15px;
+        
+    }
+    .inFilter{
+        float: left;
+        color: black;
+        margin-top: 25px;
+        margin-left: 5px;
+        font-weight: 500;
+        font-size: 3.2vh;
+        font-weight: 600;
+    }
+    .claType{
+        clear: both;
+        color: black;
+        margin-left: 5px;
+        font-size: 2.3vh;
+        padding-top: 15px;
+        display: block;
+        font-weight: 600;
+    }
+    .claType1{
+        padding-top: 85px;
+    }
+    .tp-con{
+        margin-top: 10px;
+        line-height: 40px;
+        position: relative;
+        clear: both;
+    }
+    .tp-option{
+        font-size: 2vh;
+        color: black;
+        position: absolute;
+        margin-left: -20px;
+        text-align: left;
+        
+    }
+    .tp-all{
+        left: 20px;
+    }
+    .tp-on{
+        position: absolute;
+        right: 55px;
+    }
+    .tp-off{
+        position: absolute;
+        top: 34px;
+        left: 20px;
+        
+    }
+    .tp-evn{
+        position: absolute;
+        bottom: -74px;
+        right: 55px;
+    }
+    .wellnessCat{
+        margin-top: 90px;
+    }
+    .catPc{
+        padding-top: 5px;
+    }
+    .indCat{
+        width: 160px;
+        margin-right: 0px;
+        background: none;
+        border: none;
+        margin-top: 10px;
+        font-size: 2vh;
+        color: black;
+        text-align: left;
+    }
+    .inCrl{
+        border-radius: 60px;
+        height: 18px;
+        width: 18px;
+        /* margin: auto; */
+        outline: none;
+        border: none;
+    }
+    
+    .outCrl{
+        border-radius: 50px;
+        height: 27px;
+        width: 27px;
+        padding-left: 4.4px;
+        padding-top: 3.1px;
+        margin-right: 2px;
+        margin-left: 0;
+        outline: none;
+        border: none;
+    }
+    .inDef{
+        border-radius: 20px;
+        height: 11px;
+        width: 8px;
+    }
+    .outDef{
+        padding-top: 8px;
+        padding-left: 5px;
+    }
+    .catNameFil{
+        margin-left: 5px;
+        padding-top: 5px;
+        position: absolute;
+    }
+    
+    .top_fil{
+        overflow: hidden;
+        position: fixed;
+        background-color: white;
+        width: 320px;
+        z-index: 4;
+    }
+    .footer_btns{
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        z-index: 4;
+        bottom: 0px;
+    }
+    
+    .scCat{
+        margin-top: 12px;
+    }
+    .btnClr2{
+        background-color: white;
+        border-radius: 8px;
+        font-size: 1.9vh;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-left: 15px;
+    }
+      
+    .numClas{
+        background-color:#F6ECFF !important;
+        width: auto !important;
+        border-radius: 7px;
+        margin: 10px;
+        padding-top: 5px;
+        min-width: 55px;
+        text-align: center;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .MasIns{
+        width: 100%;
+    }
+    .MasScl::after{
+        position: absolute;
+        background: linear-gradient(rgba(0,0,0,0), #000);
+    }
+    .MasScl{
+        margin-top: 15px;
+        max-height: 180px;
+        overflow: auto;
+    }
+    .incl{
+        border: black;
+        color: white;
+        background-color:#03CBC9!important;
+    }
+    .btnApp{
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-left: 30px;
+        min-width: 0 !important;
+    }
+
+    //new CSS
+    .active_btn {
+       background-color: rgb(75, 223, 210);
+       color: white;
+       border: none;
+       box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.25);
+    }
+    .not_active_btn{
+       border: none;
+       background-color: white;
+    }
+    .common_btn:focus {
+        outline: none;
+    }
+    .common_btn {
+        border-radius: 44px;
+        width: auto;
+    }
+    .head_package_span{
+        font-weight: 600;
+    }
+    .each_custom_card{
+        border: none;
+        border-radius: 10px;
+        background-repeat: no-repeat !important;
+        background-position: right top;
+
+        &:hover {
+            .card_top_btn{
+                border: 0.578947px solid white;
+                color: white;
+            }
+            .card_rating_span{
+                color: white;
+            }
+            .card_item_name_span{
+                color: white;
+            }
+            .class_hrs_span, .like_share_span{
+                color: white;
+            }
+            .auth_inst_span, .package_rate_span{
+                color: white;
+            }
+            .master_name_div, .item_price_div{
+                color: white;
+            }
+        }
+    }
+    .card_top_btn{
+        background-color: transparent;
+        border: 0.578947px solid #252525;
+        border-radius: 6px;
+
+    }
+    .card_rating_span{
+        font-weight: 600;
+        color: black;
+    }
+    .card_item_name_div{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .card_item_name_span{
+        color: #252525;
+        font-weight: 600;
+    }
+    .card_item_name_span, .class_hrs_span, .like_share_span, .master_name_div, .item_price_div{
+        color: #252525;
+    }
+    .auth_inst_span, .package_rate_span{
+        color: #98989C;
+    }
+    .pos_relative{
+        position: relative;
+    }
+    .bottom_sec_div{
+        position: absolute;
+        bottom: 0;
+    }
+    .bottom_sec_right_div{
+        position: absolute;
+        bottom: -7px;
+        right: 0;
+    }
+
+    .cls-Btn{
+        margin-top: 26px !important;
+        font-weight: 600;
+        background: none;
+        border: none;
+        float: right;
+        margin-right: 35px !important;
+        font-size: 2.6vh;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .package_class_main{
+        $headBtnFont: 1vw;
+        $normalPadding: 1vw;
+        $pageSidePadding: 1vw;
+        $normalHeadFont: 1vw;
+        $subHeadFont: 0.8vw;
+        $cardRowspace: 1vw;
+        .common_btn {
+            font-size: $headBtnFont;
+            min-width: 10vw;
+            padding: 0.5vw 1vw 0.5vw 1vw;
+        }
+        .head_package_span{
+            font-size: $headBtnFont;
+        }
+        .card_rating_span{
+            font-size: $headBtnFont;
+        }
+        .margin_left_btn{
+            margin-left: 2vw;
+        }
+
+        .filter_img{
+            height: 1.2vw;
+        }
+        .each_card_sec{
+            padding: $pageSidePadding;
+        }
+        .each_custom_card{
+            padding: $normalPadding;
+            height: 14vw;
+        }
+        .pos_relative{
+            height: 4.5vw;
+        }
+        .top_btn_sec{
+            padding: $pageSidePadding;
+        }
+        .card_top_btn{
+            font-size: $subHeadFont;
+            padding: 0.2vw 0.5vw;
+            margin-right: 5px;
+        }
+        .cat_icon_img{
+            height: 1vw;
+            margin-right: 5px;
+        }
+        .card_star_img{
+            height: 1vw;
+            margin-right: 5px;
+        }
+        .card_bookmark_icon{
+            height: 1.5vw;
+        }
+        .ration_sec_span{
+            margin-right: 0.5vw;
+        }
+        .card_item_name_span{
+            font-size: 1.5vw;
+        }
+        .item_details_row{
+            margin-top: $cardRowspace;
+        }
+        .classes_share_row{
+            margin-bottom: $cardRowspace;
+        }
+        .class_hrs_span, .like_share_span, .master_name_div{
+            font-size: 1.2vw;
+        }
+        .auth_inst_span, .package_rate_span{
+            font-size: $normalHeadFont;
+        }
+        .item_price_div{
+            font-size: 2vw;
+        }
+
+        .overlay-filter{
+            // top: 4%;
+            height: 96%;
+            width: 360px;
+        }
+        .tp-option{
+            font-size: 1.8vh;
+        }
+        .catNameFil{
+            font-size: 2vh;
+        }
+        .wellnessCat{
+            font-size: 2vh;
+        }
+        .claType{
+            font-size: 2vh;
+        }
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .package_class_main{
+        $headBtnFont: 1.3vw;
+        $normalPadding: 1.3vw;
+        $pageSidePadding: 1.3vw;
+        $normalHeadFont: 1.3vw;
+        $subHeadFont: 1.1vw;
+        $cardRowspace: 1.3vw;
+        .common_btn {
+            font-size: $headBtnFont;
+            min-width: 12vw;
+            padding: 0.7vw 1.2vw 0.7vw 1.2vw;
+        }
+        .head_package_span{
+            font-size: $headBtnFont;
+        }
+        .margin_left_btn{
+            margin-left: 2.3vw;
+        }
+
+        .filter_img{
+            height: 1.5vw;
+            margin-right: 5px;
+        }
+        .each_card_sec{
+            padding: $pageSidePadding;
+        }
+        .each_custom_card{
+            padding: $normalPadding;
+            height: 18vw;
+        }
+        .pos_relative{
+            height: 5.5vw;
+        }
+        .top_btn_sec{
+            padding: $pageSidePadding;
+        }
+        .card_top_btn{
+            font-size: $subHeadFont;
+            padding: 0.4vw 0.7vw;
+            margin-right: 5px;
+        }
+        .cat_icon_img{
+            height: 1.3vw;
+            margin-right: 5px;
+        }
+        .card_star_img{
+            height: 1.3vw;
+            margin-right: 5px;
+            margin-bottom: 3px;
+        }
+        .card_bookmark_icon{
+            height: 1.7vw;
+        }
+        .ration_sec_span{
+            margin-right: 0.5vw;
+        }
+        .card_item_name_span{
+            font-size: 1.8vw;
+        }
+        .item_details_row{
+            margin-top: $cardRowspace;
+        }
+        .classes_share_row{
+            margin-bottom: $cardRowspace;
+        }
+        .class_hrs_span, .like_share_span, .master_name_div{
+            font-size: 1.5vw;
+        }
+        .auth_inst_span, .package_rate_span{
+            font-size: $normalHeadFont;
+        }
+        .item_price_div{
+            font-size: 2.3vw;
+        }
+    }
+}
+@media only screen and (max-width: 768px){
+    .package_class_main{
+        .top_fil{
+            width: 300px;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .package_class_main{
+        $headBtnFont: 1.9vw;
+        $normalPadding: 1.6vw;
+        $pageSidePadding: 2vw;
+        $normalHeadFont: 1.6vw;
+        $subHeadFont: 1.4vw;
+        $cardRowspace: 1.6vw;
+        .common_btn {
+            font-size: $headBtnFont;
+            min-width: 14vw;
+            padding: 0.9vw 1.4vw 0.9vw 1.4vw;
+        }
+        .head_package_span{
+            font-size: $headBtnFont;
+        }
+        .margin_left_btn{
+            margin-left: 2.6vw;
+        }
+
+        .filter_img{
+            height: 1.8vw;
+            margin-right: 5px;
+        }
+        .each_card_sec{
+            padding: $pageSidePadding;
+        }
+        .each_custom_card{
+            padding: $normalPadding;
+            min-height: 23vw;
+        }
+        .pos_relative{
+            height: 6vw;
+        }
+        .top_btn_sec{
+            padding: $pageSidePadding;
+        }
+        .card_top_btn{
+            font-size: $subHeadFont;
+            padding: 0.6vw 0.9vw;
+            margin-right: 5px;
+        }
+        .cat_icon_img{
+            height: 1.8vw;
+            margin-right: 5px;
+        }
+        .card_star_img{
+            height: 1.6vw;
+            margin-right: 5px;
+            margin-bottom: 3px;
+        }
+        .card_bookmark_icon{
+            height: 2vw;
+        }
+        .ration_sec_span{
+            margin-right: 0.7vw;
+        }
+        .card_item_name_span{
+            font-size: 2.3vw;
+        }
+        .item_details_row{
+            margin-top: $cardRowspace;
+        }
+        .classes_share_row{
+            margin-bottom: $cardRowspace;
+        }
+        .class_hrs_span, .like_share_span, .master_name_div{
+            font-size: 1.8vw;
+        }
+        .auth_inst_span, .package_rate_span{
+            font-size: $normalHeadFont;
+        }
+        .item_price_div{
+            font-size: 3vw;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .package_class_main{
+        $headBtnFont: 2.2vw;
+        $normalPadding: 2.1vw;
+        $pageSidePadding: 2.5vw;
+        $normalHeadFont: 2.6vw;
+        $subHeadFont: 2.4vw;
+        $cardRowspace: 2.3vw;
+        .common_btn {
+            font-size: $headBtnFont;
+            min-width: 15vw;
+            padding: 1.1vw 1.6vw 1.1vw 1.6vw;
+        }
+        .head_package_span{
+            font-size: $headBtnFont;
+        }
+        .margin_left_btn{
+            margin-left: 3.5vw;
+        }
+
+        .filter_img{
+            height: 2.8vw;
+            margin-right: 5px;
+        }
+        .each_card_sec{
+            padding: $pageSidePadding;
+        }
+        .each_custom_card{
+            padding: $normalPadding;
+            min-height: 26vw;
+        }
+        .pos_relative{
+            height: 9vw;
+        }
+        .top_btn_sec{
+            padding: $pageSidePadding;
+        }
+        .card_top_btn{
+            font-size: $subHeadFont;
+            padding: 0.8vw 1.1vw;
+            margin-right: 5px;
+        }
+        .cat_icon_img{
+            height: 3vw;
+            margin-right: 5px;
+        }
+        .card_star_img{
+            height: 2.6vw;
+            margin-right: 5px;
+            margin-bottom: 3px;
+        }
+        .card_bookmark_icon{
+            height: 3vw;
+        }
+        .ration_sec_span{
+            margin-right: 1.5vw;
+        }
+        .card_item_name_span{
+            font-size: 3vw;
+        }
+        .item_details_row{
+            margin-top: $cardRowspace;
+        }
+        .classes_share_row{
+            margin-bottom: $cardRowspace;
+        }
+        .class_hrs_span, .like_share_span, .master_name_div{
+            font-size: 2.8vw;
+        }
+        .auth_inst_span, .package_rate_span{
+            font-size: $normalHeadFont;
+        }
+        .item_price_div{
+            font-size: 4vw;
+        }
+
+        .btnApp{
+            font-size: 13px !important;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 5px !important;
+            padding-bottom: 5px !important;
+        }
+        .btnClr2{
+            font-size: 13px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+    
+        }
+    }
+}
+// }

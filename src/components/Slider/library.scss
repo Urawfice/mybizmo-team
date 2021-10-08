@@ -1,0 +1,300 @@
+ 
+// css by Thomas  
+.home_page_library_card_main{
+    .card_custom{
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.05) !important;
+        border: none;
+    }
+    .card_title{
+        font-weight: 600;
+    }
+    .top_head_sec{
+        box-shadow: 0px 2px 2px rgba(175, 175, 175, 0.25);
+    }
+    .schedule_img{
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        width: auto;
+        align-self: center;
+        max-width: 100%;
+    }
+    .schedule_img_div{
+        display: grid;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .each_event_right_main{
+        display: grid;
+    }
+    .alignSelfCenter{
+        align-self: center;
+    }
+    .event_title{
+        padding-right: 0;
+    }
+    .see_all_btn_div{
+        align-self: center;
+        position: relative;
+    }
+    .see_all_btn{
+        border: 1px solid #03CBC9;
+        box-sizing: border-box;
+        border-radius: 6px;
+        color: #03CBC9;
+        background-color: transparent;
+    }
+    .music_gif, .video_gif{
+        position: absolute;
+    }
+    .event_info_span{
+        color: #98989C;
+        font-weight: 600;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .home_page_library_card_main{
+        $cardInsidePadding: 1vw;
+        $cardImageHeight: 5.3vw;
+
+        .card_title{
+            padding: $cardInsidePadding;
+            font-size: 1.2vw;
+        }
+        .custom_card_body{
+            padding: $cardInsidePadding;
+        }
+        .schedule_img{
+            max-height: $cardImageHeight;
+        }
+        .schedule_img_div{
+            height: $cardImageHeight;
+        }
+        .individual_row{
+            margin-bottom: 1vw;
+        }
+        .each_event_right_main{
+            height: $cardImageHeight;
+        }
+        .event_title{
+            font-size: 1vw;
+            padding-left: 1vw;
+        }
+        .event_info_span{
+            font-size: 0.8vw;
+        }
+        .empty_state_text{
+            font-size: 1.2vw;
+            margin-top: 3vw;
+        }
+        .body_scroll{
+            height: 30vw;
+        }
+        .empty_img{
+            height: 20vw;
+        }
+        .see_all_btn{
+            padding: 0.3vw 1vw;
+            font-size: 0.8vw;
+        }
+        .see_all_btn_div{
+            padding-right: $cardInsidePadding;
+        }
+        .music_gif{
+            height: 1.5vw;
+            top: 35%;
+            left: 35%;
+        }
+        .video_gif{
+            height: 2vw;
+            top: 33%;
+            left: 41%;
+        }
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .home_page_library_card_main{
+        $cardInsidePadding: 1.3vw;
+        $cardImageHeight: 5.3vw;
+
+        .card_title{
+            padding: $cardInsidePadding;
+            font-size: 1.5vw;
+        }
+        .custom_card_body{
+            padding: $cardInsidePadding;
+        }
+        .schedule_img{
+            max-height: $cardImageHeight;
+        }
+        .schedule_img_div{
+            height: $cardImageHeight;
+        }
+        .individual_row{
+            margin-bottom: 1.3vw;
+        }
+        .each_event_right_main{
+            height: $cardImageHeight;
+        }
+        .event_title{
+            font-size: 1.3vw;
+            padding-left: 1.3vw;
+        }
+        .event_info_span{
+            font-size: 1.1vw;
+        }
+        .empty_state_text{
+            font-size: 1.5vw;
+            margin-top: 4vw;
+        }
+        .body_scroll{
+            height: 35vw;
+        }
+        .empty_img{
+            height: 25vw;
+        }
+        .see_all_btn{
+            padding: 0.3vw 1vw;
+            font-size: 1.1vw;
+        }
+        .see_all_btn_div{
+            padding-right: $cardInsidePadding;
+        }
+        .music_gif{
+            height: 1.5vw;
+            top: 35%;
+            left: 35%;
+        }
+        .video_gif{
+            height: 2vw;
+            top: 33%;
+            left: 41%;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .home_page_library_card_main{
+        $cardInsidePadding: 1.6vw;
+        $cardImageHeight: 7.7vw;
+
+        .card_title{
+            padding: $cardInsidePadding;
+            font-size: 1.6vw;
+        }
+        .custom_card_body{
+            padding: $cardInsidePadding;
+        }
+        .schedule_img{
+            max-height: $cardImageHeight;
+        }
+        .schedule_img_div{
+            height: $cardImageHeight;
+        }
+        .individual_row{
+            margin-bottom: 1.6vw;
+        }
+        .each_event_right_main{
+            height: $cardImageHeight;
+        }
+        .event_title{
+            font-size: 1.6vw;
+            padding-left: 1.6vw;
+        }
+        .event_info_span{
+            font-size: 1.4vw;
+        }
+        .empty_state_text{
+            font-size: 1.8vw;
+            margin-top: 4vw;
+        }
+        .body_scroll{
+            height: 40vw;
+        }
+        .empty_img{
+            height: 27vw;
+        }
+        .event_card{
+            margin-top: 2.6vw;
+        }
+        .see_all_btn{
+            padding: 0.3vw 1vw;
+            font-size: 1.4vw;
+        }
+        .see_all_btn_div{
+            padding-right: $cardInsidePadding;
+        }
+        .music_gif{
+            height: 2.3vw;
+            top: 35%;
+            left: 36%;
+        }
+        .video_gif{
+            height: 2.8vw;
+            top: 32%;
+            left: 41%;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .home_page_library_card_main{
+        $cardInsidePadding: 2.6vw;
+        $cardImageHeight: 16.6vw;
+
+        .card_title{
+            padding: $cardInsidePadding;
+            font-size: 2.6vw;
+        }
+        .custom_card_body{
+            padding: $cardInsidePadding;
+        }
+        .schedule_img{
+            max-height: $cardImageHeight;
+        }
+        .schedule_img_div{
+            height: $cardImageHeight;
+        }
+        .individual_row{
+            margin-bottom: 2.6vw;
+        }
+        .each_event_right_main{
+            height: $cardImageHeight;
+        }
+        .event_title{
+            font-size: 3vw;
+            padding-left: 2.6vw;
+        }
+        .event_info_span{
+            font-size: 2.5vw;
+        }
+        .empty_state_text{
+            font-size: 3.1vw;
+            margin-top: 5vw;
+        }
+        .body_scroll{
+            max-height: 80vw;
+        }
+        .empty_img{
+            height: 50vw;
+        }
+        .card_custom{
+            margin-top: 4vw;
+        }
+        .see_all_btn{
+            padding: 0.4vw 1.2vw;
+            font-size: 2.1vw;
+        }
+        .see_all_btn_div{
+            padding-right: $cardInsidePadding;
+        }
+        .music_gif{
+            height: 4.5vw;
+            top: 35%;
+            left: 37%;
+        }
+        .video_gif{
+            height: 5vw;
+            top: 33%;
+            left: 43%;
+        }
+    }
+}

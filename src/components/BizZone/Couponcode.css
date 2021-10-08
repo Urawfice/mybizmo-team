@@ -1,0 +1,91 @@
+.coupon-backgroubnd-nav {
+  background: #d082ff;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 38px;
+  color: #ffffff;
+}
+
+.coupon-card-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 93.54%;
+  color: #9929fd;
+}
+
+.coupon-card-subtitle {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 93.54%;
+  color: #9929fd;
+}
+
+.coupon-card-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.coupon-code-text {
+  background: #98989c;
+  border-radius: 20px;
+  color: #f2f1f7;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 27px;
+}
+
+.coupon-code-copy {
+  background: #9929fd;
+  box-shadow: 5px 5px 40px -2px #b6a6c6;
+  border-radius: 20px;
+  color: #f2f1f7;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  width: 200px;
+  font-size: 15px;
+  line-height: 27px;
+}
+
+.coupon-terms-condition-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
+  color: #252525;
+}
+
+.coupon-light-background {
+  background: #f6ecfb;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.coupon-card-background {
+  background: #ffffff;
+  box-shadow: 0px 3px 4px rgba(159, 159, 159, 0.25);
+  border-radius: 15px;
+}
+
+.no-coupon-code-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 38px;
+  letter-spacing: 0.05em;
+  color: #9929fd;
+  text-align: center;
+}

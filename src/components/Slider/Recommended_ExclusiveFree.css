@@ -1,0 +1,60 @@
+.carousel-wrapperEx{
+    height: 265px;
+  }
+
+  @media only screen and (max-width: 1600px){
+    .boxCardEx{
+      height: 180px !important;
+      margin-bottom: 0 !important;
+    }
+  }
+
+
+  @media only screen and (max-width: 322px) {
+  .carousel-wrapperEx{
+    height: 265px;
+  }
+}
+
+
+@media only screen and (max-width: 1600px){
+    .boxCardEx{
+      height: 180px !important;
+      margin-bottom: 0 !important;
+    }
+  }
+
+
+  
+  @media only screen and  (min-width: 1800px){
+    .boxCard{
+
+      height: 24.62vh;
+      width: 15.95vw;
+    }
+    .carousel-wrapperEx {
+      height: 34vh;
+  }
+    /* .containerI{
+      height:19.11vh;
+      width:14.12vw;
+    } */
+    .boxCardEx{
+      height: 24.65vh;
+    }
+
+    .con1-in{
+      max-height: 118% !important;
+      height: 110% !important;
+    }
+    .con1-in, .con2-in{
+      max-width: 110%;
+    }
+    #titleScr {
+      font-size: 1.9vh;
+      
+      padding-bottom: 0;
+      padding-top: 1.2vh;
+  }
+    
+  } 

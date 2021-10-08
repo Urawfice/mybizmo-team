@@ -1,0 +1,83 @@
+.img{
+    height: 97%;
+    margin: 0;
+    margin-top: 0;
+    padding: 0;
+    padding-right: 0;
+   
+  }
+
+  .carousel-wrapper{
+    margin: 0 !important;
+    padding-bottom: 0;
+   }
+
+
+   
+.carousel-containerS {
+    width: 86vw;
+    margin-left: 0vw;
+    /* margin-right: auto; */
+    margin-top: -1vh;
+    display: flex;
+    /* background-color: aqua; */
+    flex-direction: column;
+}
+
+.carousel-wrapperS {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding:0;
+    left: 0;
+    right: 0;
+}
+
+.carousel-content-wrapperS {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-content {
+    display: flex;
+    transition: all 250ms linear;
+    -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
+    scrollbar-width: none;  /* hide scrollbar in Firefox */
+}
+
+.show-3{
+    width: 96.5% !important;
+    margin-left: -48px !important;
+    margin-right: -10px !important;
+    
+  }
+
+
+  .outer{
+    width:27vw;
+    height:15.62vw; 
+    margin-right:1.8vw;
+  }
+
+
+  @media only screen and (max-width: 1300px) and (min-width: 920px) {
+    .carousel-containerS {
+      width: 80vw;
+      margin-left: 0vw;
+      flex-direction: column;
+    }
+    .outer{
+      width:26vw !important;
+      height:15.62vw; 
+      margin-right:1.8vw;
+      margin-left: -2px;
+      z-index: 2000 !important; 
+    }
+    .img1{
+      z-index: 20001 !important;
+    }
+  }
+ .MuiListItemIcon-root{
+   padding-right: 5px;
+ }

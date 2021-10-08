@@ -1,0 +1,1603 @@
+html, body{
+    overflow-x: hidden !important;
+}
+.single_lib_main_class{
+    padding: 24px;
+    flex-grow: 1;
+}
+.single_lib_main_class{ 
+    .carousel-containerS1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .carousel-wrapperS1 {
+        display: flex;
+        width: 100%;
+        position: relative;
+    } 
+    .carousel-content-wrapperS1 {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    .left-arrow, .right-arrow {
+        position: absolute;
+        z-index: 1;
+        top: 49%;
+        transform: translateY(-50%);
+        width: 2.01vw;
+        height: 4.29vh;
+        border-radius: 24px;
+        background-color: white;
+        border: 1px solid #ddd;
+        font-size: 2vh;
+        background: transparent;
+    }
+    .left-arrow{
+        left: 0.52vw;
+    }
+    .right-arrow{
+        right: 0.65vw;
+    }
+    .lgtAr{
+        height: 27px;
+        margin-right: -2.8vw;
+    }
+    .rgtAr {
+        height: 27px;
+        margin-left: -2.8vw;
+    }
+    .sngPlay{
+        z-index: 1;
+        position: absolute;
+        height: 18px;
+        left: 47%;
+        width: auto;
+        top: 43%;
+        margin-right: 0 !important;
+    }
+    .single_library_top_sec_card, .single_lib_head_card, .single_lib_table_card{
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.05) !important;
+    }
+        .single_lib_active_btn,
+        .active_cat_btn {
+        background-color: rgb(75, 223, 210);
+        color: white;
+        border: none;
+        box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.25);
+    }
+        .single_lib_not_active_btn,
+        .top_sec_card,
+        .library_cards {
+        border: none;
+    }
+        .single_lib_common_btn {
+        border-radius: 44px;
+        width: auto;
+    }
+    .single_lib_common_btn:focus {
+        outline: none;
+    }
+    .single_lib_not_active_btn {
+        background-color: #f2f1f7;
+    }
+    .right-arrow.right-arrow3, .left-arrow.left-arrow3{
+        border: 0 !important;
+    }
+    .single_lib_slider_img{
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+    }
+    .single_lib_slider_img_div div{
+        display: grid;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .single_lib_top_right_cat_btn{
+        color: #98989C; 
+        background: #F2F1F7;
+        border: 1px solid #98989C;
+        border-radius: 7px;
+        cursor: default !important;
+        outline: none;
+    }
+    .single_lib_top_right_level_btn{
+        color: #9929FD;
+        outline: none;
+        background: #F6ECFF;
+        border: 1px solid #9929FD;
+        border-radius: 7px;
+    }
+    .single_lib_top_right_lang_btn{
+        color: #E6C000;
+        outline: none;
+        background: #F2F1F7;
+        border: 1px solid #E6C000;
+        border-radius: 7px;
+    }
+    .single_lib_top_right_disclaimer_btn{
+        color: #FFFFFF;
+        outline: none;
+        background: #03CBC9;
+        border: 1px solid #03CBC9;
+        border-radius: 7px;
+    }
+    .single_lib_desc_model {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    .single_lib_table_header_sec{
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    }
+    .single_lib_table_header_div{
+        color: #03cbc9;
+    }
+    .single_lib_close_btn {
+        border: none;
+        background: transparent;
+    }
+    .single_lib_name_span{
+        font-weight: 500;
+    }
+    .single_lib_desc_para{
+        color: #98989C;
+        font-weight: 500;
+    }
+    .single_lib_video_inst_name_span{
+        font-weight: 600;
+    }
+    .single_lib_video_inst_name_span, .single_lib_vid_inst_quali_span{
+        color: white;
+    }
+    .single_lib_description_div, .single_lib_desc_para, .single_lib_name_div{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .single_lib_inst_like_sec, .single_lib_name_div, .single_lib_description_div{
+        display: grid;
+    }
+    .single_lib_table_div .table th:first-child{
+        border-top-left-radius: 10px;
+    }
+    .single_lib_table_div .table th:last-child{
+        border-top-right-radius: 10px;
+    }
+    .single_lib_table_div .theading{
+        background: #E6D4F6 !important;
+    }
+    .single_lib_table_div .table thead th, .single_lib_table_body td{
+        border: 0;
+        color: #252525;
+        font-weight: normal;
+    }
+    .single_lib_table_header_tracks_span{
+        font-weight: 500;
+    }
+    .single_lib_table_body td{
+        background-color: #FAFAFA !important;
+    }
+    .single_lib_table_body td{
+        /* box-shadow: 0px 1px 1px rgba(73, 73, 73, 0.25); */
+        border-bottom: 1px solid rgba(73, 73, 73, 0.25);
+    }
+    .single_lib_table_type_btn{
+        border: 0;
+        background-color: transparent;
+    }
+    .single_lib_table_body .chkinp{
+        margin-top: 1px;
+    }
+    .single_lib_purchase_sec{
+        background-color:#9929FD;
+        border-radius: 0px 0px 10px 10px;
+    }
+    .single_lib_purchase_price_span{
+        color: white;
+    }
+    .single_lib_coupon_div input[type="text"]{
+        background: none;
+        outline: none;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        color: white;
+    }
+    .single_lib_coupon_div{
+        border: 1px solid #d2a7f7;
+        border-radius: 6px;
+    }
+    .single_lib_coupon_btn{
+        border: none;
+        background-color: transparent;
+        color: white;
+        width: 100%;
+    }
+    .single_lib_purchase_price_span{
+        align-self: center;
+    }
+    .single_lib_buy_btn{
+        border: none;
+        background-color: #36afe3;
+        color: white;
+        border-radius: 6px;
+    }
+}
+.single_lib_scss_inst_sec{
+    .single_lib_inst_card{
+        background: #F2F1F7;
+        border-radius: 10px;
+    }
+    .single_lib_inst_pro_div{
+        border-radius: 50px;
+        overflow: hidden;
+        border: 2px solid #03CBC9;
+    }
+    .single_lib_inst_pro_pic{
+        object-fit: cover;
+    }
+    .single_lib_inst_name_span{
+        font-weight: 600;
+    }
+    .single_lib_seePrBtn{
+        color: #03CBC9;
+        outline: none;
+        background: transparent;
+        border: 0.5px solid #03CBC9;
+        box-sizing: border-box;
+        border-radius: 6px;
+    }
+    .single_lib_star_div, .single_lib_inst_img_div{
+        display: grid;
+    }
+    .single_lib_inst_pro_div, .single_lib_see_more_vid_pop{
+        align-self: center;
+    }
+    .single_lib_other_Btn, .single_lib_other_Btn:focus, .single_lib_other_Btn:hover{
+        background: #E6D4F6;
+        border-radius: 5px;
+        border: 0;
+        color: black;
+        outline: 0;
+        box-shadow: none;
+    }
+    .single_lib_other_mob_Btn, .single_lib_other_mob_Btn:focus, .single_lib_other_mob_Btn:hover{
+        background: transparent;
+        border: 0;
+        color: black;
+        outline: 0;
+        box-shadow: none;
+    }
+    .single_lib_see_more_vid_pop{
+        color: #03CBC9;
+        outline: none;
+        background: transparent;
+        border: 0.5px solid #03CBC9;
+        box-sizing: border-box;
+        border-radius: 6px;
+    }
+    .single_lib_inst_quali_span{
+        color: #98989C;
+    }
+    .single_lib_inst_quali_div, .single_lib_inst_quali_span{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .single_lib_inst_quali_div{
+        display: grid;
+    }
+    .single_lib_insDesc{
+        display: inline-flex;
+        background: black;
+    }
+    .single_lib_AudImg{
+        height: auto !important;
+        width: auto !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .single_lib_test_trn{
+        display: grid;
+        background-color: transparent;
+    }
+    .single_lib_testTrnF{
+        animation: zoominoutsinglefeatured 5s infinite;
+    }
+    .single_lib_video_div{
+        background: white;
+    }
+    .single_lib_overlay2 {
+        position: absolute;
+        width: 57%;
+        min-height: 55%;
+        top: 15%;
+        left: 24%;
+        right: 0;
+        bottom: 0;
+        background-color: transparent;
+        z-index: 2;
+        cursor: pointer;
+    }
+    .single_lib_overlay2, .single_lib_overlay2 .overlay2-main{
+        border-radius: 8px;
+    }
+    .single_lib_overlay2 .overlay2-main{
+        overflow: hidden;
+    }
+    .modal-body{
+        overflow-y: auto;
+    }
+    .more_categories{
+        background: #F2F1F7;
+        border: 1px solid #98989C;
+        box-sizing: border-box;
+        border-radius: 6px;
+    }
+    .single_lib_table_header_div{
+        display: grid;
+    }
+    .wellness_header{
+        background: #D082FF;
+        border-radius: 10px 10px 0px 0px;
+    }
+    .each_category_sec{
+        background: #F2F1F7;
+    }
+    .category_body{
+        overflow-y: auto;
+    }
+    .cat_head{
+        color: white;
+    }
+    .enter_mail_id, .enter_text{
+        background: #F2F1F7;
+        border-radius: 10px;
+        border: none;
+    }
+    .copy_link_grp{
+        background-color: #F2F1F7;
+        border-radius: 10px;
+    }
+    .copy_link, .copy_img_span{
+        background: transparent;
+        background-color: transparent !important;
+    }
+    .mail_share_btn{
+        border-radius: 44px;
+        background: #9929FD;
+        box-shadow: 5px 5px 40px -2px #B6A6C6;
+        color: white;
+        border: 0;
+    }
+    .copy_link_img{
+        border: 0;
+        background: transparent;
+    }
+    
+    .rating_main_span{
+        display: inline-flex;
+    }
+    .displayInlineFlex{
+        display: inline-flex;
+    }
+
+    .modal_master_div{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+    
+    /* CSS by Thomas */
+
+    
+    .noMargin{
+        margin: 0;
+    }
+    .noPadding{
+        padding: 0;
+    }
+    .align_self_center{
+        align-self: center;
+    }
+    @media only screen and (min-width: 992px) and (max-width: 1499px) {
+        .narrator_modal_dialogue{
+            .modal-dialog.modal-lg{
+                max-width: 575px !important;
+            }
+        }
+        .package_inst_modal_dialogue{
+            .modal-dialog.modal-lg{
+                max-width: 575px !important;
+            }
+        }
+    }
+    @media only screen and (min-width: 992px) {
+        .single_lib_main_class{
+            .single_lib_close_btn {
+                font-size: 1vw;
+            }
+            .single_library_top_sec_card {
+                padding: 1vw;
+            }
+            .single_lib_head_right{
+                padding-left: 1vw !important;
+            }
+            .single_lib_desc_model {
+                height: 20vw;
+                width: 35%;
+                top: 24%;
+                left: 35%;
+            }
+            .single_lib_common_btn {
+                font-size: 1vw;
+                min-width: 10vw;
+                padding: 0.5vw 1vw 0.5vw 1vw;
+            }
+            .single_lib_all_btn, .single_lib_audio_btn, .single_lib_video_btn{
+                margin-right: 6vw;
+            }
+            .single_lib_head_card, .single_lib_table_card{
+                margin-top: 2vw !important;
+            }
+            .single_lib_table_div {
+                padding: 2vw !important;
+            }
+            .single_lib_slider_img div{
+                max-height: 20vw;
+            }
+            .single_lib_head_card, .single_lib_table_header_sec{
+                padding: 1vw;
+            }
+            .single_lib_top_right_common_btn{
+                font-size: 0.9vw;
+                padding: 0.2vw 0.7vw;
+                min-width: 5vw;
+            }
+            .single_lib_top_right_level_btn, .single_lib_top_right_cat_btn, .single_lib_top_right_disclaimer_btn{
+                margin-right: 1vw;
+            }
+            .single_lib_top_right_cat_btn img{
+                height: 1vw;
+                margin-right: 0.5vw;
+            }
+            .single_lib_top_right_bookmark_icon{
+                height: 3vw;
+            }
+            .single_lib_name_span{
+                font-size: 1.7vw;
+            }
+            .single_lib_desc_para{
+                font-size: 1vw;
+            }
+            .single_lib_description_div{
+                height: 2vw;
+                margin-bottom: 1vw;
+            }
+            .single_lib_inst_like_img, .single_lib_inst_share_img{
+                height: 1.3vw;
+                margin-right: 0.3vw;
+                margin-bottom: 4px;
+            }
+            .single_lib_share_like_span{
+                font-size: 1.2vw;
+            }
+            .single_lib_slider_img_div div, .single_lib_head_right{
+                height: 17.7vw;
+            }
+            .single_lib_slider_img{
+                max-height: 17.7vw;
+            }
+            .single_lib_table_header_div{
+                font-size: 1.2vw;
+            }
+            .single_lib_table_header_tracks_span{
+                font-size: 1.2vw;
+                padding-right: 2vw;
+            }
+            .single_lib_table_div .table th, .single_lib_table_body td{
+                padding: 1vw;
+            }
+            .single_lib_table_body input[type=checkbox]{
+                width: 1vw;
+                height: 1vw;
+            }
+            .single_lib_table_type_img{
+                height: 1.8vw;
+            }
+            .single_lib_table_type_btn{
+                margin-left: 3vw;
+            }
+            .single_lib_duration_th{
+                width: 21vw;
+            }
+            .single_lib_purchase_sec{
+                padding: 0.7vw;
+            }
+            .single_lib_purchase_price_span{
+                font-size: 1.1vw;
+            }
+            .single_lib_coupon_div, .single_lib_coupon_div input[type="text"], .single_lib_coupon_btn, .single_lib_buy_btn{
+                height: 2.8vw;
+            }
+            .single_lib_buy_btn{
+                font-size: 1vw;
+                padding-left: 1vw;
+                padding-right: 1vw;
+            }
+            .single_lib_header_sec_desc, .single_lib_body_sec_desc {
+                padding: 1vw;
+            }
+        }
+        .single_lib_scss_inst_sec{
+            .modal-body{
+                max-height: 30vw;
+            }
+            .single_lib_close_btn {
+                font-size: 1vw;
+            }
+            .single_lib_inst_card{
+                padding: 0.7vw;
+            }
+            .single_lib_inst_like_sec, .single_lib_inst_card{
+                height: 6.6vw;
+            }
+            .single_lib_inst_pro_div, .single_lib_inst_pro_pic{
+                height: 4vw;
+                width: 4vw;
+            }
+            .single_lib_inst_name_span, .single_lib_video_inst_name_span{
+                font-size: 1.2vw;
+                margin-right: 1vw;
+            }
+            .single_lib_seePrBtn, .single_lib_see_more_vid_pop{
+                font-size: 0.8vw;
+            }
+            .single_lib_see_more_vid_pop{
+                height: 2vw;
+            }
+            .single_lib_see_more_vid_pop img{
+                height: 1vw;
+                margin-left: 0.5vw;
+            }
+            .single_lib_inst_quali_span, .single_lib_vid_inst_quali_span, .single_lib_vid_inst_star_span{
+                font-size: 1vw;
+            }
+            .single_lib_inst_rating_img{
+                height: 1.1vw;
+                margin-right: 0.3vw;
+                margin-bottom: 0.5vw;
+            }
+            .single_lib_other_Btn span{
+                font-size: 1vw;
+                margin-right: 0.3vw;
+            }
+            .single_lib_other_Btn img{
+                height: 1vw;
+            }
+            .single_lib_other_Btn{
+                padding: 0.2vw 1vw;
+            }
+            .single_lib_inst_img_div{
+                height: 5vw;
+            }
+            .single_lib_inst_quali_div{
+                height: 1.6vw;
+            }
+            .single_lib_plyBtn{
+                height: 2vw;
+            }
+            .single_lib_AudImg{
+                max-width: 52% !important;
+                max-height: 16.6vw;
+            }
+            .single_lib_test_trn, .single_lib_cls_vid, .single_lib_video_div{
+                height: 18vw;
+            }
+            .single_lib_insDesc, .single_lib_more_desc_sec{
+                padding: 1vw;
+            }
+            .single_lib_header_sec_desc{
+                padding: 1vw;
+            }
+            .single_lib_pro_head_sub_div span{
+                font-size: 1.2vw;
+            }
+            .single_class_pro_tail_heads{
+                font-size: 1.2vw;
+                margin-top: 1vw;
+            }
+            .single_class_pro_like_count_sec{
+                margin-top: 1vw !important;
+            }
+            .single_class_pro_tail_text{
+                font-size: 1vw;
+                margin-top: 0.6vw;
+            }
+            .single_lib_pro_star_heart_img{
+                height: 1vw;
+                margin-right: 0.5vw;
+            }
+            .single_class_pro_tail_grid_div{
+                height: 2vw;
+            }
+            .single_lib_inst_card{
+                margin-bottom: 1vw !important;
+            }
+            .single_lib_popup_desc{
+                font-size: 1.4vw;
+            }
+            .single_lib_pro_head_div{
+                padding: 1vw;
+            }
+            .more_categories{
+                margin-right: 1vw;
+                padding: 0.3vw 0.6vw;
+            }
+            .first_cat{
+                font-size: 1vw;
+                margin-right: 0.4vw;
+            }
+            .next_count{
+                font-size: 0.8vw;
+                margin-right: 0.4vw;
+            }
+            .more_cat_arrow{
+                height: 1.2vw;
+            }
+            .wellness_header, .each_category_sec{
+                padding: 1vw;
+            }
+            .each_category_sec{
+                margin-top: 0.5vw;
+            }
+            .category_body{
+                max-height: 30vw;
+            }
+
+            .mail_sec, .enter_text, .mail_share_btn{
+                margin-top: 1.5vw;
+                font-size: 1vw;
+            }
+            .mail_share_btn{
+                padding: 0.5vw 1.5vw;
+            }
+            .copy_link_img{
+                height: 1.2vw;
+            }
+            .copy_link{
+                font-size: 1vw;
+            }
+            .share_mail_img{
+                height: 3vw;
+            }
+            .rating_span_top{
+                margin-top: 3px;
+            }
+            .single_lib_inst_star_span{
+                font-size: 1.1vw;
+            }
+            .share_individual_span{
+                margin-top: 0.1vw;
+            }
+            .single_lib_table_body td, .single_lib_table_div th{
+                font-size: 1.1vw;
+            }
+        }
+        
+        .single_lib_star_div{
+            height: 2vw;
+        }
+        
+    }
+    @media only screen and (max-width: 991px) and (min-width: 768px) {
+        .single_lib_main_class{
+            .single_lib_close_btn {
+                font-size: 1.3vw;
+            }
+            .single_library_top_sec_card {
+                padding: 1.3vw;
+            }
+            .single_lib_common_btn {
+                font-size: 1.3vw;
+                min-width: 12vw;
+                padding: 0.7vw 1.2vw 0.7vw 1.2vw;
+            }
+            .single_lib_all_btn, .single_lib_audio_btn, .single_lib_video_btn{
+                margin-right: 8vw;
+            }
+            .single_lib_desc_model {
+                height: 22vw;
+                width: 40%;
+                top: 36%;
+                left: 30%;
+            }
+            .single_lib_common_btn {
+                font-size: 1vw;
+                min-width: 10vw;
+                padding: 0.5vw 1vw 0.5vw 1vw;
+            }
+            .single_lib_all_btn, .single_lib_audio_btn, .single_lib_video_btn{
+                margin-right: 6vw;
+            }
+            .single_lib_head_card, .single_lib_table_card{
+                margin-top: 2.3vw !important;
+            }
+            .single_lib_table_div {
+                padding: 2.3vw !important;
+            }
+            .single_lib_slider_img div{
+                max-height: 20vw;
+            }
+            .single_lib_head_card, .single_lib_table_header_sec{
+                padding: 1.3vw;
+            }
+            .single_lib_top_right_common_btn{
+                font-size: 1.2vw;
+                padding: 0.4vw 0.9vw;
+                min-width: 6vw;
+            }
+            .single_lib_top_right_level_btn, .single_lib_top_right_cat_btn, .single_lib_top_right_disclaimer_btn{
+                margin-right: 1.3vw;
+            }
+            .single_lib_top_right_cat_btn img{
+                height: 1.3vw;
+                margin-right: 0.8vw;
+            }
+            .single_lib_top_right_bookmark_icon{
+                height: 3.3vw;
+            }
+            .single_lib_name_span{
+                font-size: 2vw;
+            }
+            .single_lib_desc_para{
+                font-size: 1.3vw;
+            }
+            .single_lib_description_div{
+                height: 2vw;
+                margin-bottom: 1vw;
+            }
+            .single_lib_inst_like_img, .single_lib_inst_share_img{
+                height: 1.6vw;
+                margin-right: 0.5vw;
+            }
+            .single_lib_share_like_span{
+                font-size: 1.4vw;
+            }
+            .single_lib_slider_img_div div, .single_lib_head_right{
+                height: 17.7vw;
+            }
+            .single_lib_slider_img{
+                max-height: 17.7vw;
+            }
+            .single_lib_table_header_div{
+                font-size: 1.5vw;
+            }
+            .single_lib_table_header_tracks_span{
+                font-size: 1.5vw;
+                padding-right: 2.3vw;
+            }
+            .single_lib_table_div .table th, .single_lib_table_body td{
+                padding: 1.3vw;
+            }
+            .single_lib_table_body input[type=checkbox]{
+                width: 17px;
+                height: 17px;
+            }
+            .single_lib_table_type_img{
+                height: 2.1vw;
+            }
+            .single_lib_table_type_btn{
+                margin-left: 3.3vw;
+            }
+            .single_lib_duration_th{
+                width: 21vw;
+            }
+            .single_lib_purchase_sec{
+                padding: 1vw;
+            }
+            .single_lib_purchase_price_span{
+                font-size: 1.4vw;
+            }
+            .single_lib_coupon_div, .single_lib_coupon_div input[type="text"], .single_lib_coupon_btn, .single_lib_buy_btn{
+                height: 3.5vw;
+            }
+            .single_lib_buy_btn{
+                font-size: 1.3vw;
+                padding-left: 1.3vw;
+                padding-right: 1.3vw;
+            }
+            .single_lib_head_right{
+                padding-left: 1.3vw !important;
+            }
+            .single_lib_header_sec_desc, .single_lib_body_sec_desc {
+                padding: 1.3vw;
+            }
+        }
+        .single_lib_scss_inst_sec{
+            .modal-body{
+                max-height: 50vw;
+            }
+            .single_lib_close_btn {
+                font-size: 1.3vw;
+            }
+            .single_lib_inst_card{
+                padding: 1vw;
+            }
+            .single_lib_inst_like_sec, .single_lib_inst_card{
+                height: 8.6vw;
+            }
+            .single_lib_inst_pro_div, .single_lib_inst_pro_pic{
+                height: 6vw;
+                width: 6vw;
+            }
+            .single_lib_inst_name_span, .single_lib_video_inst_name_span{
+                font-size: 1.5vw;
+                margin-right: 1.3vw;
+            }
+            .single_lib_seePrBtn, .single_lib_see_more_vid_pop{
+                font-size: 1.1vw;
+            }
+            .single_lib_see_more_vid_pop{
+                height: 2.3vw;
+            }
+            .single_lib_see_more_vid_pop img{
+                height: 1.3vw;
+                margin-left: 0.8vw;
+            }
+            .single_lib_inst_quali_span, .single_lib_vid_inst_quali_span, .single_lib_vid_inst_star_span{
+                font-size: 1.3vw;
+            }
+            .single_lib_inst_rating_img{
+                height: 1.4vw;
+                margin-right: 0.6vw;
+                margin-bottom: 0.8vw;
+            }
+            .single_lib_other_Btn span{
+                font-size: 1.3vw;
+                margin-right: 0.6vw;
+            }
+            .single_lib_other_Btn img{
+                height: 1.3vw;
+            }
+            .single_lib_other_Btn{
+                padding: 0vw 1vw;
+            }
+            .single_lib_inst_img_div{
+                height: 5vw;
+            }
+            .single_lib_inst_quali_div{
+                height: 1.9vw;
+            }
+            .single_lib_inst_card{
+                margin-bottom: 1.3vw !important;
+            }
+            .single_lib_plyBtn{
+                height: 2.6vw;
+            }
+            .single_lib_AudImg{
+                max-width: 55% !important;
+                max-height: 17.6vw;
+            }
+            .single_lib_test_trn, .single_lib_cls_vid, .single_lib_video_div{
+                height: 19vw;
+            }
+            .single_lib_insDesc, .single_lib_more_desc_sec{
+                padding: 1.3vw;
+            }
+            .single_lib_header_sec_desc{
+                padding: 1.3vw;
+            }
+            .single_lib_pro_head_sub_div span{
+                font-size: 1.5vw;
+            }
+            .single_class_pro_tail_heads{
+                font-size: 1.5vw;
+                margin-top: 1.3vw;
+            }
+            .single_class_pro_like_count_sec{
+                margin-top: 1.3vw !important;
+            }
+            .single_class_pro_tail_text{
+                font-size: 1.3vw;
+                margin-top: 0.8vw;
+            }
+            .single_lib_pro_star_heart_img{
+                height: 1.3vw;
+                margin-right: 0.7vw;
+            }
+            .single_class_pro_tail_grid_div{
+                height: 2.3vw;
+            }
+            .single_lib_popup_desc{
+                font-size: 2vw;
+            }
+            .single_lib_pro_head_div{
+                padding: 1.3vw;
+            }
+            .more_categories{
+                margin-right: 1.3vw;
+                padding: 0.5vw 0.8vw;
+            }
+            .first_cat{
+                font-size: 1.3vw;
+                margin-right: 0.6vw;
+            }
+            .next_count{
+                font-size: 1.1vw;
+                margin-right: 0.5vw;
+            }
+            .more_cat_arrow{
+                height: 1.5vw;
+            }
+            .wellness_header, .each_category_sec{
+                padding: 1.3vw;
+            }
+            .each_category_sec{
+                margin-top: 0.7vw;
+            }
+            .category_body{
+                max-height: 40vw;
+            }
+
+            .mail_sec, .enter_text, .mail_share_btn{
+                margin-top: 1.8vw;
+                font-size: 1.3vw;
+            }
+            .mail_share_btn{
+                padding: 0.7vw 1.7vw;
+            }
+            .copy_link_img{
+                height: 1.5vw;
+            }
+            .copy_link{
+                font-size: 1.3vw;
+            }
+            .share_mail_img{
+                height: 3.4vw;
+            }
+            .rating_span_top{
+                margin-top: 3px;
+            }
+            .single_lib_inst_star_span{
+                font-size: 1.4vw;
+            }
+            .share_individual_span{
+                margin-top: 0.2vw;
+            }
+            .single_lib_table_body td, .single_lib_table_div th{
+                font-size: 1.4vw;
+            }
+        }
+        .single_lib_star_div{
+            height: 2.3vw;
+        }
+        
+    }
+    @media only screen and (max-width: 767px) and (min-width: 576px) {
+        .single_lib_main_class{
+            .single_lib_close_btn {
+                font-size: 1.6vw;
+            }
+            .single_lib_desc_model {
+                height: 22vw;
+                width: 40%;
+                top: 36%;
+                left: 30%;
+            }
+            .single_library_top_sec_card {
+                padding: 1.6vw;
+            }
+            .single_lib_common_btn {
+                font-size: 1.6vw;
+                min-width: 14vw;
+                padding: 0.9vw 1.4vw 0.9vw 1.4vw;
+            }
+            .single_lib_all_btn, .single_lib_audio_btn, .single_lib_video_btn{
+                margin-right: 7vw;
+            }
+            .single_lib_head_card, .single_lib_table_card{
+                margin-top: 2.6vw !important;
+            }
+            .single_lib_table_div {
+                padding: 2.6vw !important;
+            }
+            .single_lib_slider_img div{
+                max-height: 20vw;
+            }
+            .single_lib_head_card, .single_lib_table_header_sec{
+                padding: 1.6vw;
+            }
+            .single_lib_top_right_common_btn{
+                font-size: 1.5vw;
+                padding: 0.4vw 1vw;
+                min-width: 7vw;
+            }
+            .single_lib_top_right_level_btn, .single_lib_top_right_cat_btn, .single_lib_top_right_disclaimer_btn{
+                margin-right: 1.6vw;
+            }
+            .single_lib_top_right_cat_btn img{
+                height: 1.6vw;
+                margin-right: 1vw;
+            }
+            .single_lib_top_right_bookmark_icon{
+                height: 3.6vw;
+            }
+            .single_lib_name_span{
+                font-size: 2.3vw;
+            }
+            .single_lib_desc_para{
+                font-size: 1.6vw;
+            }
+            .single_lib_description_div{
+                height: 3.2vw;
+                margin-bottom: 1.1vw;
+            }
+            .single_lib_inst_like_img, .single_lib_inst_share_img{
+                height: 1.9vw;
+                margin-right: 0.6vw;
+            }
+            .single_lib_share_like_span{
+                font-size: 1.7vw;
+            }
+            .single_lib_slider_img_div div, .single_lib_head_right{
+                height: 21vw;
+            }
+            .single_lib_slider_img{
+                max-height: 21vw;
+            }
+            .single_lib_table_header_div{
+                font-size: 1.8vw;
+            }
+            .single_lib_table_header_tracks_span{
+                font-size: 1.8vw;
+                padding-right: 2.6vw;
+            }
+            .single_lib_table_div .table th, .single_lib_table_body td{
+                padding: 1.6vw;
+            }
+            .single_lib_table_body input[type=checkbox]{
+                width: 18px;
+                height: 18px;
+            }
+            .single_lib_table_type_img{
+                height: 2.4vw;
+            }
+            .single_lib_duration_th{
+                width: 21vw;
+            }
+            .single_lib_table_vid_title{
+                padding-left: 1vw !important;
+            }
+            .single_lib_purchase_sec{
+                padding: 1.2vw;
+            }
+            .single_lib_purchase_price_span{
+                font-size: 1.7vw;
+            }
+            .single_lib_coupon_div, .single_lib_coupon_div input[type="text"], .single_lib_coupon_btn, .single_lib_buy_btn{
+                height: 4.8vw;
+            }
+            .single_lib_buy_btn{
+                font-size: 1.6vw;
+                padding-left: 1.6vw;
+                padding-right: 1.6vw;
+            }
+            .single_lib_head_right{
+                padding-left: 1.6vw !important;
+            }
+            .single_lib_header_sec_desc, .single_lib_body_sec_desc {
+                padding: 1.6vw;
+            }
+        }
+        .single_lib_scss_inst_sec{
+            .modal-body{
+                max-height: 55vw;
+            }
+            .single_lib_close_btn {
+                font-size: 1.6vw;
+            }
+            .single_lib_inst_card{
+                padding: 1.2vw;
+            }
+            .single_lib_inst_like_sec, .single_lib_inst_card{
+                height: 9.6vw;
+            }
+            .single_lib_inst_pro_div, .single_lib_inst_pro_pic{
+                height: 7.5vw;
+                width: 7.5vw;
+            }
+            .single_lib_inst_name_span, .single_lib_video_inst_name_span{
+                font-size: 1.8vw;
+                margin-right: 1.6vw;
+            }
+            .single_lib_seePrBtn, .single_lib_see_more_vid_pop{
+                font-size: 1.4vw;
+            }
+            .single_lib_see_more_vid_pop{
+                height: 2.6vw;
+            }
+            .single_lib_see_more_vid_pop img{
+                height: 1.6vw;
+                margin-left: 1vw;
+            }
+            .single_lib_inst_quali_span, .single_lib_vid_inst_quali_span, .single_lib_vid_inst_star_span{
+                font-size: 1.6vw;
+            }
+            .single_lib_inst_rating_img{
+                height: 1.7vw;
+                margin-right: 0.7vw;
+            }
+            .single_lib_inst_star_span{
+                font-size: 1.6vw;
+            }
+            .single_lib_other_mob_Btn span{
+                font-size: 1.6vw;
+                margin-right: 0.7vw;
+            }
+            .single_lib_other_mob_Btn img{
+                height: 1.6vw;
+            }
+            .single_lib_other_mob_Btn{
+                padding: 0vw 1.1vw;
+            }
+            .single_lib_inst_img_div{
+                height: 5vw;
+            }
+            .single_lib_inst_quali_div{
+                height: 1.2vw;
+                line-height: 0.7;
+            }
+            .single_lib_inst_card{
+                margin-bottom: 1.6vw !important;
+            }
+            .single_lib_plyBtn{
+                height: 2.9vw;
+            }
+            .single_lib_AudImg{
+                max-width: 55% !important;
+                max-height: 17.6vw;
+            }
+            .single_lib_test_trn, .single_lib_cls_vid, .single_lib_video_div{
+                height: 19vw;
+            }
+            .single_lib_insDesc, .single_lib_more_desc_sec{
+                padding: 1.6vw;
+            }
+            .single_lib_header_sec_desc{
+                padding: 1.6vw;
+            }
+            .single_lib_pro_head_sub_div span{
+                font-size: 1.8vw;
+            }
+            .single_class_pro_tail_heads{
+                font-size: 1.8vw;
+                margin-top: 1.6vw;
+            }
+            .single_class_pro_like_count_sec{
+                margin-top: 1.6vw !important;
+            }
+            .single_class_pro_tail_text{
+                font-size: 1.6vw;
+                margin-top: 1vw;
+            }
+            .single_lib_pro_star_heart_img{
+                height: 1.6vw;
+                margin-right: 0.9vw;
+            }
+            .single_class_pro_tail_grid_div{
+                height: 2.6vw;
+            }
+            .single_lib_popup_desc{
+                font-size: 2.5vw;
+            }
+            .single_lib_pro_head_div{
+                padding: 1.6vw;
+            }
+            .more_categories{
+                margin-right: 1.6vw;
+                padding: 0.5vw 0.7vw;
+            }
+            .first_cat{
+                font-size: 1.6vw;
+                margin-right: 0.8vw;
+            }
+            .next_count{
+                font-size: 1.4vw;
+                margin-right: 0.7vw;
+            }
+            .more_cat_arrow{
+                height: 1.8vw;
+            }
+            .wellness_header, .each_category_sec{
+                padding: 1.6vw;
+            }
+            .each_category_sec{
+                margin-top: 0.9vw;
+            }
+            .category_body{
+                max-height: 40vw;
+            }
+
+            .mail_sec, .enter_text, .mail_share_btn{
+                margin-top: 2.1vw;
+                font-size: 1.6vw;
+            }
+            .mail_share_btn{
+                padding: 0.9vw 1.9vw;
+            }
+            .copy_link_img{
+                height: 1.8vw;
+            }
+            .copy_link{
+                font-size: 1.6vw;
+            }
+            .share_mail_img{
+                height: 4vw;
+            }
+            .share_individual_span{
+                margin-top: 0.3vw;
+            }
+            .single_lib_table_body td, .single_lib_table_div th{
+                font-size: 1.7vw;
+            }
+        }
+        .single_lib_star_div{
+            height: 2.6vw;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        .single_lib_main_class{
+            .single_lib_close_btn {
+                font-size: 2.6vw;
+            }
+            .single_lib_desc_model {
+                height: 50vw;
+                width: 90%;
+                top: 36%;
+                left: 5%;
+            }
+            .single_library_top_sec_card {
+                padding: 2.5vw;
+                margin-top: 3.5vw !important;
+            }
+            .single_lib_common_btn {
+                font-size: 2.2vw;
+                min-width: 15vw;
+                padding: 1.1vw 1.6vw 1.1vw 1.6vw;
+            }
+            .single_lib_all_btn, .single_lib_audio_btn, .single_lib_video_btn{
+                margin-right: 6vw;
+            }
+            .single_lib_head_card, .single_lib_table_card{
+                margin-top: 2.6vw !important;
+            }
+            .single_lib_table_div {
+                padding: 2.6vw !important;
+            }
+            .single_lib_slider_img div{
+                max-height: 20vw;
+            }
+            .single_lib_head_card, .single_lib_table_header_sec{
+                padding: 2.6vw;
+            }
+            .single_lib_top_right_common_btn{
+                font-size: 2.3vw;
+                padding: 0.6vw 1.2vw;
+                min-width: 14vw;
+            }
+            .single_lib_top_btn_sec {
+                margin-bottom: 2vw !important;
+            }
+            .single_lib_top_right_level_btn, .single_lib_top_right_cat_btn, .single_lib_top_right_disclaimer_btn{
+                margin-right: 2.6vw;
+            }
+            .single_lib_top_right_cat_btn img{
+                height: 2.6vw;
+                margin-right: 1vw;
+            }
+            .single_lib_top_right_bookmark_icon{
+                height: 6.6vw;
+            }
+            .single_lib_name_span{
+                font-size: 3.2vw;
+            }
+            .single_lib_desc_para{
+                font-size: 2.5vw;
+            }
+            .single_lib_description_div{
+                height: 3.2vw;
+                margin-bottom: 1.1vw;
+            }
+            .single_lib_inst_like_img, .single_lib_inst_share_img{
+                height: 2.9vw;
+                margin-right: 1.6vw;
+            }
+            .single_lib_share_like_span{
+                font-size: 2.7vw;
+            }
+            .single_lib_slider_img_div div{
+                height: 26vw;
+                max-width: 47vw;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .single_lib_slider_img{
+                max-height: 26vw;
+            }
+            .single_lib_table_header_div{
+                font-size: 3.5vw;
+            }
+            .single_lib_table_header_tracks_span{
+                font-size: 3vw;
+                padding-right: 2.6vw;
+            }
+            .single_lib_table_div .table th, .single_lib_table_body td{
+                padding: 3vw;
+            }
+            .single_lib_table_div table th{
+                font-size: 3vw;
+            }
+            .single_lib_table_div table{
+                width: 100% !important;
+            }
+            .single_lib_table_body input[type=checkbox]{
+                width: 4vw;
+                height: 4vw;
+            }
+            .single_lib_table_type_img{
+                height: 3.4vw;
+            }
+            .single_lib_duration_th{
+                width: 21vw;
+            }
+            .single_lib_table_vid_title{
+                padding-left: 4vw !important;
+            }
+            .single_lib_purchase_sec{
+                padding: 1.2vw;
+            }
+            .single_lib_purchase_price_span{
+                font-size: 2.5vw;
+            }
+            .single_lib_coupon_div, .single_lib_coupon_div input[type="text"], .single_lib_coupon_btn, .single_lib_buy_btn{
+                height: 6.8vw;
+            }
+            .single_lib_coupon_btn{
+                font-size: 2vw;
+            }
+            .single_lib_buy_btn{
+                font-size: 2.6vw;
+                padding-left: 1.6vw;
+                padding-right: 1.6vw;
+            }
+            .single_lib_head_right{
+                padding-left: 1.6vw !important;
+            }
+            .single_lib_header_sec_desc, .single_lib_body_sec_desc {
+                padding: 2.6vw;
+            }
+        }
+        .single_lib_scss_inst_sec{
+            .modal-body{
+                max-height: 90vw;
+            }
+            .single_lib_close_btn {
+                font-size: 2.6vw;
+            }
+            .single_lib_inst_card{
+                padding: 1.2vw;
+            }
+            .single_lib_inst_like_sec, .single_lib_inst_card{
+                height: 16.6vw;
+            }
+            .single_lib_inst_pro_div, .single_lib_inst_pro_pic{
+                height: 12.5vw;
+                width: 12.5vw;
+            }
+            .single_lib_inst_name_span, .single_lib_video_inst_name_span{
+                font-size: 2.8vw;
+                margin-right: 1.6vw;
+            }
+            .single_lib_seePrBtn, .single_lib_see_more_vid_pop{
+                font-size: 2.2vw;
+            }
+            .single_lib_see_more_vid_pop{
+                height: 5.5vw;
+            }
+            .single_lib_see_more_vid_pop img{
+                height: 2.6vw;
+                margin-left: 1vw;
+            }
+            .single_lib_inst_quali_span, .single_lib_vid_inst_quali_span, .single_lib_vid_inst_star_span{
+                font-size: 2.6vw;
+            }
+            .single_lib_inst_rating_img{
+                height: 2.7vw;
+                margin-right: 0.7vw;
+            }
+            .single_lib_inst_star_span{
+                font-size: 2.6vw;
+            }
+            .single_lib_other_mob_Btn span{
+                font-size: 2.6vw;
+                margin-right: 0.7vw;
+                margin-bottom: 0.4vw
+            }
+            .single_lib_other_mob_Btn img{
+                height: 2.6vw;
+            }
+            .single_lib_other_mob_Btn{
+                padding: 0vw 1.1vw;
+            }
+            .single_lib_inst_img_div{
+                height: 14vw;
+            }
+            .single_lib_inst_quali_div{
+                height: 3.2vw;
+                line-height: 1;
+            }
+            .single_lib_inst_card{
+                margin-bottom: 1.6vw !important;
+            }
+            .single_lib_plyBtn{
+                height: 6vw;
+            }
+            .single_lib_AudImg{
+                max-width: 69% !important;
+                max-height: 34.6vw;
+            }
+            .single_lib_test_trn, .single_lib_cls_vid, .single_lib_video_div{
+                height: 37vw;
+            }
+            .single_lib_insDesc, .single_lib_more_desc_sec{
+                padding: 1.6vw;
+            }
+            .single_lib_overlay2 {
+                position: absolute;
+                width: 90%;
+                min-height: 55%;
+                top: 38%;
+                left: 5%;
+                right: 0;
+                bottom: 0;
+                background-color: transparent;
+                z-index: 2;
+                cursor: pointer;
+            }
+            .single_lib_header_sec_desc{
+                padding: 2.6vw;
+            }
+            .single_lib_pro_head_sub_div span{
+                font-size: 3vw;
+            }
+            .single_class_pro_tail_heads{
+                font-size: 3vw;
+                margin-top: 2.6vw;
+            }
+            .single_class_pro_like_count_sec{
+                margin-top: 1.6vw !important;
+            }
+            .single_class_pro_tail_text{
+                font-size: 2.8vw;
+                margin-top: 1vw;
+            }
+            .single_lib_pro_star_heart_img{
+                height: 2.6vw;
+                margin-right: 0.9vw;
+            }
+            .single_class_pro_tail_grid_div{
+                height: 2.6vw;
+            }
+            .single_lib_popup_desc {
+                font-size: 3.8vw;
+            }
+            .single_lib_pro_head_div{
+                padding: 2.6vw;
+            }
+            .more_categories{
+                margin-right: 2.6vw;
+                padding: 0.5vw 0.7vw;
+            }
+            .first_cat{
+                font-size: 2.6vw;
+                margin-right: 1.8vw;
+            }
+            .next_count{
+                font-size: 2.4vw;
+                margin-right: 1.7vw;
+            }
+            .more_cat_arrow{
+                height: 2.8vw;
+            }
+            .wellness_header, .each_category_sec{
+                padding: 2.6vw;
+            }
+            .each_category_sec{
+                margin-top: 1.9vw;
+            }
+            .category_body{
+                max-height: 50vw;
+            }
+
+            .mail_sec, .enter_text, .mail_share_btn{
+                margin-top: 2.1vw;
+                font-size: 2.6vw;
+            }
+            .mail_share_btn{
+                padding: 1.1vw 2.1vw;
+            }
+            .copy_link_img{
+                height: 2.8vw;
+            }
+            .copy_link{
+                font-size: 2.6vw;
+            }
+            .share_mail_img{
+                height: 5vw;
+            }
+            .share_individual_span{
+                margin-top: 0.5vw;
+            }
+            .single_lib_table_body td, .single_lib_table_div th{
+                font-size: 2.5vw;
+            }
+        }
+        .single_lib_star_div{
+            height: 2.6vw;
+        }
+        .single_lib_main_class{
+            padding: 3vw;
+        }
+        
+    }
+// }
+
+
+.single_lib_header_sec_desc{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    // box-shadow: 0px 1px 1px rgb(0 0 0 / 25%);
+    border: 0;
+}
+.single_lib_pro_head_div{
+    background: #9929FD;
+    border-radius: 10px 10px 0px 0px;
+}
+.single_lib_pro_tail_div{
+    background: #F8F1FF;
+    border-radius: 0px 0px 10px 10px;
+}
+.single_lib_pro_head_div, .single_lib_vid_inst_star_span{
+    color: white;
+}
+.single_class_pro_tail_heads{
+    font-weight: 600;
+}
+.single_class_pro_tail_text{
+    color: #818181;
+}
+.single_class_pro_tail_grid_div{
+    display: table;
+}
+.single_class_pro_tail_grid_div span{
+    display: table-cell;
+    vertical-align: middle;
+}
+.single_lib_popup_desc{
+    color: #03cbc9;
+}
+

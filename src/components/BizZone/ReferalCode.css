@@ -1,0 +1,145 @@
+.referal-backgroubnd-nav {
+  background: #d082ff;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 38px;
+  color: #ffffff;
+}
+
+.referal-card-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 93.54%;
+  color: #9929fd;
+}
+
+.referal-card-subtitle {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 93.54%;
+  color: #9929fd;
+}
+
+.referal-card-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.referal-code-text {
+  background: #98989c;
+  border-radius: 20px;
+  color: #f2f1f7;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 27px;
+}
+
+.referal-code-copy {
+  background: #9929fd;
+  box-shadow: 5px 5px 40px -2px #b6a6c6;
+  border-radius: 20px;
+  color: #f2f1f7;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  width: 200px;
+  font-size: 15px;
+  line-height: 27px;
+}
+
+.referal-terms-condition-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
+  color: #252525;
+}
+
+.referal-light-background {
+  background: #f6ecfb;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.referal-card-background {
+  background: #ffffff;
+  box-shadow: 0px 3px 4px rgba(159, 159, 159, 0.25);
+  border-radius: 15px;
+}
+.refral-review-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 44px;
+  color: #03cbc9;
+}
+
+.refral-review-form-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 33px;
+  color: #98989c;
+}
+
+.refral-review-input {
+  border: 1px solid grey !important;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.refral-review-submit-btn {
+  background: #9929fd;
+  box-shadow: 5px 5px 40px -2px #b6a6c6;
+  border-radius: 44px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.referal-review-cancel-btn {
+  background: #ffffff;
+  border: 1px solid #98989c;
+  box-sizing: border-box;
+  border-radius: 44px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #252525;
+  border: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: 1px solid grey;
+}

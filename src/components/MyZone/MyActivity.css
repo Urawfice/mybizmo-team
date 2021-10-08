@@ -1,0 +1,27 @@
+
+.btnMyAct{
+    font-size: 2.45vh;
+}
+
+@media only screen and (max-width: 782px){
+    .btnMyAct{
+        font-size: 12px !important;
+        margin-left: 0 !important;
+    }
+}
+
+
+@media only screen and (max-width: 400px){
+    .btnMyAct{
+        font-size: 10px !important;
+        margin-left: 2px !important;
+        margin-right: 5px !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    .topBtn-MyAct{
+        width: 109%;
+        margin-left: -5px;
+        /* margin-right: -10px; */
+    }
+}

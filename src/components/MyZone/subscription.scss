@@ -1,0 +1,449 @@
+
+//Css by Thomas
+.subscription_main_class{
+    flex-grow: 1;
+    margin-top: 50px;
+
+    .common_btn:focus {
+        outline: none;
+    }
+    .common_btn {
+        border-radius: 44px;
+    }
+    .not_active_btn{
+        border: none;
+        background-color: white;
+    }
+    .active_btn {
+        background-color: rgb(75, 223, 210);
+        color: white;
+        border: none;
+        box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.25);
+    }
+
+    .each_custom_card{
+        border: none;
+        border-radius: 10px;
+        background-repeat: no-repeat !important;
+        background-position: right top;
+
+        &:hover {
+            .card_top_btn{
+                border: 0.578947px solid white;
+                color: white;
+            }
+            .card_rating_span{
+                color: white;
+            }
+            .card_item_name_span{
+                color: white;
+            }
+            .class_hrs_span, .like_share_span{
+                color: white;
+            }
+            .auth_inst_span, .package_rate_span{
+                color: white;
+            }
+            .master_name_div, .item_price_div{
+                color: white;
+            }
+        }
+    }
+    .card_top_btn{
+        background-color: transparent;
+        border: 0.578947px solid #252525;
+        border-radius: 6px;
+
+    }
+    .card_rating_span{
+        font-weight: 600;
+        color: black;
+    }
+    .card_item_name_div{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .card_item_name_span{
+        color: #252525;
+        font-weight: 600;
+    }
+    .card_item_name_span, .class_hrs_span, .like_share_span, .master_name_div, .item_price_div{
+        color: #252525;
+    }
+    .auth_inst_span, .package_rate_span{
+        color: #98989C;
+    }
+    .pos_relative{
+        position: relative;
+    }
+    .bottom_sec_div{
+        position: absolute;
+        bottom: 0;
+    }
+    .bottom_sec_right_div{
+        position: absolute;
+        bottom: -7px;
+        right: 0;
+    }
+    .cls-Btn{
+        margin-top: 26px !important;
+        font-weight: 600;
+        background: none;
+        border: none;
+        float: right;
+        margin-right: 35px !important;
+        font-size: 2.6vh;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .subscription_main_class{
+        padding: 2vw;
+        $headBtnFont: 1vw;
+        $normalPadding: 1vw;
+        $pageSidePadding: 1vw;
+        $normalHeadFont: 1vw;
+        $subHeadFont: 0.8vw;
+        $cardRowspace: 1vw;
+        $secMargin: 2vw;
+
+        .common_btn {
+            font-size: $headBtnFont;
+            width: 10vw;
+            padding: 0.5vw 1vw 0.5vw 1vw;
+        }
+        .btn_row{
+            margin-top: $secMargin;
+        }
+        .btnOne{
+            margin-right: $secMargin;
+        }
+
+        .head_package_span{
+            font-size: $headBtnFont;
+        }
+        .card_rating_span{
+            font-size: $headBtnFont;
+        }
+        .margin_left_btn{
+            margin-left: 2vw;
+        }
+
+        .filter_img{
+            height: 1.2vw;
+        }
+        .each_card_sec{
+            padding: $pageSidePadding;
+        }
+        .each_custom_card{
+            padding: $normalPadding;
+            height: 14vw;
+        }
+        .pos_relative{
+            height: 4.5vw;
+        }
+        .top_btn_sec{
+            padding: $pageSidePadding;
+        }
+        .card_top_btn{
+            font-size: $subHeadFont;
+            padding: 0.2vw 0.5vw;
+            margin-right: 5px;
+        }
+        .cat_icon_img{
+            height: 1vw;
+            margin-right: 5px;
+        }
+        .card_star_img{
+            height: 1vw;
+            margin-right: 5px;
+        }
+        .card_bookmark_icon{
+            height: 1.5vw;
+        }
+        .ration_sec_span{
+            margin-right: 0.5vw;
+        }
+        .card_item_name_span{
+            font-size: 1.5vw;
+        }
+        .item_details_row{
+            margin-top: $cardRowspace;
+        }
+        .classes_share_row{
+            margin-bottom: $cardRowspace;
+        }
+        .class_hrs_span, .like_share_span, .master_name_div{
+            font-size: 1.2vw;
+        }
+        .auth_inst_span, .package_rate_span{
+            font-size: $normalHeadFont;
+        }
+        .item_price_div{
+            font-size: 2vw;
+        }
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .subscription_main_class{
+        padding: 2.3vw;
+        $headBtnFont: 1.3vw;
+        $normalPadding: 1.3vw;
+        $pageSidePadding: 1.3vw;
+        $normalHeadFont: 1.3vw;
+        $subHeadFont: 1.1vw;
+        $cardRowspace: 1.3vw;
+        $secMargin: 2.3vw;
+
+        .common_btn {
+            font-size: $headBtnFont;
+            min-width: 12vw;
+            padding: 0.7vw 1.2vw 0.7vw 1.2vw;
+        }
+        .btn_row{
+            margin-top: $secMargin;
+        }
+        .btnOne{
+            margin-right: $secMargin;
+        }
+
+        .head_package_span{
+            font-size: $headBtnFont;
+        }
+        .margin_left_btn{
+            margin-left: 2.3vw;
+        }
+
+        .filter_img{
+            height: 1.5vw;
+            margin-right: 5px;
+        }
+        .each_card_sec{
+            padding: $pageSidePadding;
+        }
+        .each_custom_card{
+            padding: $normalPadding;
+            height: 18vw;
+        }
+        .pos_relative{
+            height: 5.5vw;
+        }
+        .top_btn_sec{
+            padding: $pageSidePadding;
+        }
+        .card_top_btn{
+            font-size: $subHeadFont;
+            padding: 0.4vw 0.7vw;
+            margin-right: 5px;
+        }
+        .cat_icon_img{
+            height: 1.3vw;
+            margin-right: 5px;
+        }
+        .card_star_img{
+            height: 1.3vw;
+            margin-right: 5px;
+            margin-bottom: 3px;
+        }
+        .card_bookmark_icon{
+            height: 1.7vw;
+        }
+        .ration_sec_span{
+            margin-right: 0.5vw;
+        }
+        .card_item_name_span{
+            font-size: 1.8vw;
+        }
+        .item_details_row{
+            margin-top: $cardRowspace;
+        }
+        .classes_share_row{
+            margin-bottom: $cardRowspace;
+        }
+        .class_hrs_span, .like_share_span, .master_name_div{
+            font-size: 1.5vw;
+        }
+        .auth_inst_span, .package_rate_span{
+            font-size: $normalHeadFont;
+        }
+        .item_price_div{
+            font-size: 2.3vw;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .subscription_main_class{
+        padding: 2.6vw;
+        padding-top: 0;
+        $headBtnFont: 1.9vw;
+        $normalPadding: 1.6vw;
+        $pageSidePadding: 2vw;
+        $normalHeadFont: 1.6vw;
+        $subHeadFont: 1.4vw;
+        $cardRowspace: 1.6vw;
+        $secMargin: 2.6vw;
+
+        .common_btn {
+            font-size: $headBtnFont;
+            min-width: 14vw;
+            padding: 0.9vw 1.4vw 0.9vw 1.4vw;
+        }
+        .btn_row{
+            margin-top: $secMargin;
+        }
+        .btnOne{
+            margin-right: $secMargin;
+        }
+
+        .head_package_span{
+            font-size: $headBtnFont;
+        }
+        .margin_left_btn{
+            margin-left: 2.6vw;
+        }
+
+        .filter_img{
+            height: 1.8vw;
+            margin-right: 5px;
+        }
+        .each_card_sec{
+            padding: $pageSidePadding;
+        }
+        .each_custom_card{
+            padding: $normalPadding;
+            min-height: 23vw;
+        }
+        .pos_relative{
+            height: 6vw;
+        }
+        .top_btn_sec{
+            padding: $pageSidePadding;
+        }
+        .card_top_btn{
+            font-size: $subHeadFont;
+            padding: 0.6vw 0.9vw;
+            margin-right: 5px;
+        }
+        .cat_icon_img{
+            height: 1.8vw;
+            margin-right: 5px;
+        }
+        .card_star_img{
+            height: 1.6vw;
+            margin-right: 5px;
+            margin-bottom: 3px;
+        }
+        .card_bookmark_icon{
+            height: 2vw;
+        }
+        .ration_sec_span{
+            margin-right: 0.7vw;
+        }
+        .card_item_name_span{
+            font-size: 2.3vw;
+        }
+        .item_details_row{
+            margin-top: $cardRowspace;
+        }
+        .classes_share_row{
+            margin-bottom: $cardRowspace;
+        }
+        .class_hrs_span, .like_share_span, .master_name_div{
+            font-size: 1.8vw;
+        }
+        .auth_inst_span, .package_rate_span{
+            font-size: $normalHeadFont;
+        }
+        .item_price_div{
+            font-size: 3vw;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .subscription_main_class{
+        padding: 2.6vw;
+        padding-top: 0;
+        $headBtnFont: 2.2vw;
+        $normalPadding: 2.1vw;
+        $pageSidePadding: 2.5vw;
+        $normalHeadFont: 2.6vw;
+        $subHeadFont: 2.4vw;
+        $cardRowspace: 2.3vw;
+        $secMargin: 2.6vw;
+
+        .common_btn {
+            font-size: $headBtnFont;
+            min-width: 15vw;
+            padding: 1.1vw 1.6vw 1.1vw 1.6vw;
+        }
+        .btn_row{
+            margin-top: $secMargin;
+        }
+        .btnOne{
+            margin-right: $secMargin;
+        }
+
+        .head_package_span{
+            font-size: $headBtnFont;
+        }
+        .margin_left_btn{
+            margin-left: 3.5vw;
+        }
+
+        .filter_img{
+            height: 2.8vw;
+            margin-right: 5px;
+        }
+        .each_card_sec{
+            padding: $pageSidePadding;
+        }
+        .each_custom_card{
+            padding: $normalPadding;
+            min-height: 26vw;
+        }
+        .pos_relative{
+            height: 9vw;
+        }
+        .top_btn_sec{
+            padding: $pageSidePadding;
+        }
+        .card_top_btn{
+            font-size: $subHeadFont;
+            padding: 0.8vw 1.1vw;
+            margin-right: 5px;
+        }
+        .cat_icon_img{
+            height: 3vw;
+            margin-right: 5px;
+        }
+        .card_star_img{
+            height: 2.6vw;
+            margin-right: 5px;
+            margin-bottom: 3px;
+        }
+        .card_bookmark_icon{
+            height: 3vw;
+        }
+        .ration_sec_span{
+            margin-right: 1.5vw;
+        }
+        .card_item_name_span{
+            font-size: 3vw;
+        }
+        .item_details_row{
+            margin-top: $cardRowspace;
+        }
+        .classes_share_row{
+            margin-bottom: $cardRowspace;
+        }
+        .class_hrs_span, .like_share_span, .master_name_div{
+            font-size: 2.8vw;
+        }
+        .auth_inst_span, .package_rate_span{
+            font-size: $normalHeadFont;
+        }
+        .item_price_div{
+            font-size: 4vw;
+        }
+    }
+}

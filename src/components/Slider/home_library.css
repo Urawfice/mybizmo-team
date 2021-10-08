@@ -1,0 +1,137 @@
+.cardBtn{
+    margin-top: 1.38vh !important;
+    font-size: 1.45vh !important;
+    padding-left: 0.846vw !important;
+    padding-right: 0.846vw !important;
+    margin-bottom: 0.69vh !important;
+    margin-left: 0 !important;
+  }
+
+
+  .cardtitleW{
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0.69vh !important;
+  }
+
+
+  .outer2 {
+    position: relative;
+  }
+  .outer2:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 56.25%;
+  }
+  .outer2 > .inner2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+  }
+
+
+  @media only screen and (max-width: 786px) and (min-width: 500px){
+    #card{
+      min-width: 33vw;
+      max-width: 36vw;
+    }
+    .show-3 {
+      width: 92.5% !important;
+      margin-left: -66px !important;
+    }
+    .crdHgt{
+      height: 40vw ;
+    }
+  }
+
+
+
+  
+@media only screen and (max-width: 500px) and (min-width: 280px){
+    #card{
+      min-width: 47vw;
+      width: 77vw;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .seeBtn{
+      font-size: 10px !important;
+    }
+    .containerG .musicGif{
+      position: absolute;
+      
+     
+      top: 29%;
+      left: 16% !important;
+      border-radius: 10px 10px 10px 10px;
+    }
+  
+    .containerG .videoGif{
+      position: absolute;
+      
+      top: 29%;
+      left: 40% !important;
+      border-radius: 10px 10px 10px 10px;
+    }
+    .crdHgt{
+      height: 70vw ;
+    }
+    
+    #likeScr{
+      width: 101%;
+    }
+    
+  }
+
+
+
+  @media only screen and (max-width: 786px){
+    #card{
+      margin-bottom: 15px;
+    }
+   }
+  @media only screen and (max-width: 500px){
+    #card{
+      width: 109% !important;
+      margin-left: -5%;
+    }
+    .titleUp{
+      padding-left: 20px !important;
+      
+    }
+    .containerI .faIc{
+     
+      left: 20px !important;
+   
+    }
+    .sc-eCssSg {
+      height: 35.7vh!important;
+      margin-bottom: 0 !important;
+  }
+  } 
+
+
+  .musicGif{
+    height: 40%;
+    width: 75%;
+    
+  }
+
+  .containerG .videoGif{
+    position: absolute;
+    
+    top: 29%;
+    left: 50%;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .videoGif{
+    height: 50%;
+    width: auto;
+    
+    
+  }

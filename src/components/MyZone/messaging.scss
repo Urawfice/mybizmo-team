@@ -1,0 +1,454 @@
+
+//Css bu Thomas
+.messaging_main{
+    flex-grow: 1;
+    margin-top: 50px;
+
+    .common_btn:focus{
+        outline: none;
+    }
+    .common_btn{
+        border-radius: 44px;
+    }
+    .not_active_btn{
+        border: none;
+        background-color: white;
+    }
+    .blue_active{
+        background: #9929FD;
+        box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.25);
+        border-radius: 44px;
+        border: none;
+        color: white;
+    }
+    .page_head{
+        font-weight: 600;
+    }
+    .active_btn {
+        background-color: rgb(75, 223, 210);
+        color: white;
+        border: none;
+        box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.25);
+    }
+    .theading{
+        background: #E6D4F6 !important;
+    }
+    .message_table{
+        th{
+            border: none;
+        }
+        th:first-child {
+            border-top-left-radius: 10px;
+        }
+    }
+    .red_dot{
+        background-color: red;
+        border-radius: 30px;
+        height: 7px;
+        width: 7px;
+        padding-left: 0;
+        border: none;
+        margin-right: 10px;
+    }
+    ::-webkit-calendar-picker-indicator{
+        margin-left: 0px;
+    }
+    .overlay_message{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 6px;
+        background-color: white;
+    }
+    .message_pop_head{
+        background-color: #E6D4F6;
+    }
+    .repient_name_input{
+        color: #98989C;
+    }
+    .repient_name_input:focus{
+        box-shadow: none;
+    }
+
+    .search_input{
+        margin-left: 5px;
+        border: none;
+        background: #F2F1F7 !important;
+        float: right;
+    }
+    .search_input ~.user_list{
+        visibility: hidden;
+    }
+    .search_input:focus ~.user_list{
+        visibility: visible;
+    }
+    
+    .search_input:active ~.user_list{
+        visibility: visible;
+    }
+    .search_input:placeholder-shown ~.user_list{
+        visibility: visible;
+    }
+    .user_list:hover{
+        visibility: visible !important;
+    }
+    
+    .user_list {
+        position: absolute;
+        background-color: white;
+        z-index: 2;
+        min-width: 50%;
+        text-align: left;
+        right: 0;
+        width: auto;
+    }
+    .close_search{
+        position: absolute;
+        height: 2vh;
+        right: 0;
+        top: 50%;
+        bottom: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .to_sec{
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.07);
+    }
+    .user_li{
+        list-style: none;
+    }
+    .subj_span{
+        padding: 0 !important;
+    }
+    .enter_msg_area{
+        margin-top: 0;
+    }
+    input {
+        border: none !important;
+        outline: none;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .messaging_main{
+        padding: 2vw;
+        $headBtnFont: 1vw;
+        $topBtnMargin: 2vw;
+        $normalPadding: 1vw;
+
+        .common_btn {
+            font-size: $headBtnFont;
+            width: 10vw;
+            padding: 0.5vw 1vw 0.5vw 1vw;
+        }
+        .margin_left_btn{
+            margin-left: $topBtnMargin;
+        }
+        .margin_right_btn{
+            margin-right: $topBtnMargin;
+        }
+        .button_margin_top{
+            margin-top: $topBtnMargin;
+        }
+        .page_head{
+            font-size: 1.2vw;
+        }
+        .from_to_span{
+            font-size: $headBtnFont;
+        }
+
+        .filter_icon{
+            height: 1.2vw;
+        }
+        .message_table{
+            td, th{
+                padding: 1vw;
+            }
+            th, td{
+                font-size: 1.1vw;
+            }
+            .last_th{
+                width: 10vw;
+            }
+            .date_th{
+                width: 12vw;
+            }
+        }
+        .check_svg{
+            height: 1.4vw;
+        }
+        .del_btn{
+            height: 1.5vw;
+        }
+        .overlay_message{
+            height: 30vw;
+            width: 60%;
+        }
+        .message_pop_head{
+            padding: $normalPadding;
+        }
+        .close_text{
+            font-size: $headBtnFont;
+        }
+        .pop_head{
+            font-size: $headBtnFont;
+        }
+        .normal_font{
+            font-size: $headBtnFont;
+        }
+        .to_sec{
+            padding: $normalPadding;
+        }
+        .user_li{
+            padding: 0.3vw 0.8vw;
+        }
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .messaging_main{
+        padding: 2.3vw;
+        $headBtnFont: 1.3vw;
+        $topBtnMargin: 2.3vw;
+        $normalPadding: 1.3vw;
+
+        .common_btn {
+            font-size: $headBtnFont;
+            min-width: 12vw;
+            padding: 0.7vw 1.2vw 0.7vw 1.2vw;
+        }
+        .margin_left_btn{
+            margin-left: $topBtnMargin;
+        }
+        .margin_right_btn{
+            margin-right: $topBtnMargin;
+        }
+        .button_margin_top{
+            margin-top: $topBtnMargin;
+        }
+        .page_head{
+            font-size: 1.5vw;
+        }
+        .from_to_span{
+            font-size: $headBtnFont;
+        }
+        .filter_icon{
+            height: 1.6vw;
+        }
+        .message_table{
+            td, th{
+                padding: 1.2vw;
+            }
+            th, td{
+                font-size: 1.4vw;
+            }
+            .last_th{
+                width: 11vw;
+            }
+            .date_th{
+                width: 13vw;
+            }
+        }
+        .check_svg{
+            height: 1.7vw;
+        }
+        .del_btn{
+            height: 1.9vw;
+        }
+        .message_pop_head{
+            padding: $normalPadding;
+        }
+        .close_text{
+            font-size: $headBtnFont;
+        }
+        .pop_head{
+            font-size: $headBtnFont;
+        }
+
+        .normal_font{
+            font-size: $headBtnFont;
+        }
+        .to_sec{
+            padding: $normalPadding;
+        }
+        .user_li{
+            padding: 0.4vw 1vw;
+        }
+        .overlay_message{
+            height: 40vw;
+            width: 75%;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .messaging_main{
+        padding: 2.6vw;
+        padding-top: 0;
+        $headBtnFont: 1.9vw;
+        $topBtnMargin: 2.6vw;
+        $normalPadding: 1.6vw;
+
+        .common_btn {
+            font-size: $headBtnFont;
+            min-width: 14vw;
+            padding: 0.9vw 1.4vw 0.9vw 1.4vw;
+        }
+        .margin_left_btn{
+            margin-left: $topBtnMargin;
+        }
+        .margin_right_btn{
+            margin-right: $topBtnMargin;
+        }
+        .button_margin_top{
+            margin-top: $topBtnMargin;
+        }
+        .page_head{
+            font-size: 1.8vw;
+        }
+        .from_to_span{
+            font-size: $headBtnFont;
+        }
+        .filter_icon{
+            height: 2vw;
+        }
+        .message_table{
+            td, th{
+                padding: 1.4vw;
+            }
+            th, td{
+                font-size: 1.7vw;
+            }
+            .last_th{
+                width: 13vw;
+            }
+            .date_th{
+                width: 16vw;
+            }
+        }
+        .check_svg{
+            height: 2vw;
+        }
+        .del_btn{
+            height: 2.5vw;
+        }
+        .message_pop_head{
+            padding: $normalPadding;
+        }
+        .close_text{
+            font-size: $headBtnFont;
+        }
+        .pop_head{
+            font-size: $headBtnFont;
+        }
+
+        .normal_font{
+            font-size: $headBtnFont;
+        }
+        .to_sec{
+            padding: $normalPadding;
+        }
+        .user_li{
+            padding: 0.6vw 1.2vw;
+        }
+        .overlay_message{
+            height: 50vw;
+            width: 95%;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .messaging_main{
+        padding: 2.6vw;
+        padding-top: 0;
+        $headBtnFont: 2.2vw;
+        $topBtnMargin: 3.5vw;
+        $normalPadding: 2.6vw;
+
+        .common_btn {
+            font-size: $headBtnFont;
+            min-width: 15vw;
+            padding: 1.1vw 1.6vw 1.1vw 1.6vw;
+        }
+        .margin_left_btn{
+            margin-left: $topBtnMargin;
+        }
+        .margin_right_btn{
+            margin-right: $topBtnMargin;
+        }
+        .button_margin_top{
+            margin-top: $topBtnMargin;
+        }
+        .page_head{
+            font-size: 2.8vw;
+        }
+        .from_to_span{
+            font-size: $headBtnFont;
+        }
+        .filter_icon{
+            height: 3vw;
+        }
+        .message_table{
+            td, th{
+                padding: 2vw;
+            }
+            th, td{
+                font-size: 2.5vw;
+            }
+            .last_th{
+                width: 17vw;
+            }
+            .date_th{
+                width: 20vw;
+            }
+        }
+        .check_svg{
+            height: 3.5vw;
+        }
+        .del_btn{
+            height: 4vw;
+        }
+        .message_pop_head{
+            padding: $normalPadding;
+        }
+        .close_text{
+            font-size: $headBtnFont;
+        }
+        .pop_head{
+            font-size: $headBtnFont;
+        }
+
+        .normal_font{
+            font-size: $headBtnFont;
+        }
+        .to_sec{
+            padding: $normalPadding;
+        }
+        .user_li{
+            padding: 0.8vw 1.5vw;
+        }
+        .overlay_message{
+            height: 63vw;
+            width: 98%;
+        }
+        .repient_name_input{
+            width: 100%;
+        }
+        .search_input {
+            width: 80%;
+        }
+        .small_screen_left{
+            text-align: left;
+        }
+        .enter_msg_area{
+            min-height: 0 !important;
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+    .messaging_main{
+        .overlay_message{
+            height: 75vw !important;
+        }
+    }
+}

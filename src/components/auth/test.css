@@ -1,0 +1,23 @@
+/* input[type=checkbox] {
+  display: none;
+} */
+
+/* input[type=checkbox] p:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  padding-bottom: 0.3em;
+  vertical-align: bottom;
+  color: transparent;
+}
+
+input[type=checkbox]:checked p:before {
+  background-color: #03CBC9;
+  border-color: #03CBC9;
+  color: #fff;
+  width: 1.3em;
+  height: 1.3em;
+} */

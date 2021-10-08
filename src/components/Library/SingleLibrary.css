@@ -1,0 +1,1150 @@
+/* html, body{
+    overflow-x: hidden !important;
+   } */
+   .topBtn{
+       background-color: white;
+       width: 101%;
+       margin-top: 0;
+       padding-top: 0;
+       border-radius: 10px;
+       margin-left: -4px;
+       align-items: center;
+       text-align: center;
+       display: inline-block;
+   }
+   .hrcr{
+       
+       
+       margin:  3.46vh;
+       padding-left: 1.62vw;
+       padding-right: 1.62vw;
+      
+       padding-top: 0.69vh;
+       padding-bottom: 0.69vh;
+       font-size: 2.5vh;
+       
+      
+       /* outline: none; */
+       margin-bottom: 0;
+           
+       background: #FFFFFF;
+       border: 1px solid #9929FD !important;
+       box-sizing: border-box !important;
+       box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.25);
+       border-radius: 44px;
+   }
+   .hrcr:focus{
+       outline: none;
+   }
+   .nbtn:focus{
+    outline: none;
+   }
+   .conwid{
+       margin-top: 4.15vh!important;
+   }
+   .horCardOuter{
+       background-color: white;
+       padding: 1.38vh;
+       margin: 1.38vh;
+       border-radius: 10px;
+       padding-bottom: 0;
+       
+   }
+   .horCardImg{
+       border-radius: 10px;
+       width: 95%;
+       align-self: center;
+       align-content: center;
+       margin-right: 0;
+       padding-right: 0;
+   }
+   .horCard{
+       border: none;
+   }
+   .horCardBody{
+       padding: 0.69vh;
+   }
+   .horCardBtn{
+       margin-bottom: 0;
+   }
+   .horCatBtn{
+       color: #98989C;
+       margin: 15px;
+       margin-left: 0.19vw;
+       padding-left: 0.781vw;
+       padding-right: 0.781vw;
+       
+       padding-top: 0.4155vh;
+       padding-bottom: 0.4155vh;
+       font-size: 1.7vh ;
+       outline: none;
+       margin-top: 5px;
+       margin-bottom: 0;
+       margin-right: 0.32vw;
+       float: left;
+   cursor: default !important;
+      /* Text Box 1 */
+       background: #F2F1F7;
+       border: 1px solid #98989C;
+       box-sizing: border-box;
+       border-radius: 10px;
+   }
+   .horDisBtn{
+       color: #FFFFFF;
+       margin: 2.077vh;
+       padding-left: 0.7812vw;
+       padding-right: 0.7812vw;
+       
+       padding-top: 0.415vh;
+       padding-bottom: 0.415vh;
+       font-size: 1.8vh ;
+       outline: none;
+       margin-top: 0.69vh;
+       margin-bottom: 0;
+       margin-right: 0.32vw;
+       float: right;
+       
+       background: #03CBC9;
+       /* Primary 1 */
+       border: 1px solid #03CBC9;
+       box-sizing: border-box;
+       border-radius: 10px;
+   }
+   .horAdvBtn{
+       color: #9929FD;
+       margin: 2.07vh;
+       padding-left: 0.781vw;
+       padding-right: 0.781vw;
+       
+       padding-top:  0.41vh;
+       padding-bottom: 0.41vh;
+       font-size: 1.7vh ;
+       outline: none;
+       margin-top: 0.69vh;
+       margin-bottom: 0;
+       margin-right: 0.325vw;
+       float: left;
+       
+       background: #F6ECFF;
+       /* Button 1 */
+       border: 1px solid #9929FD;
+       box-sizing: border-box;
+       border-radius: 10px;
+   }
+   .horbookIcon{
+       float: right;
+       margin-top: -0.27vh;
+       padding-top: 0;
+       height: 5.54vh;
+       margin-right: 0;
+   }
+   .horCardName{
+       font-size: 2.9vh;
+       font-weight: 600;
+       margin-top: 0 !important;
+       padding-top: 0 !important;
+   }
+   .text-muted{
+       padding-top: 1.38vh;
+   }
+   .insPic{
+       /* height: 7vh; */
+       width: 3.45vw;
+       height: 3.45vw;
+       border-radius: 60px;
+       float: left;
+       display: inline-flex;
+       align-self: center;
+       align-content: center;
+       /* Primary 1 */
+       /* max-height: 100%;
+       max-width: 100%;
+       border-radius: 1vw;
+       /* max-width: 100%;
+       max-height: 100%;  */
+       background-color: white;
+   }
+   .insName{
+      margin-left: 0.65vw;
+      display: inline-flex;
+      font-weight: 500;
+      font-size: 2.35vh;
+   }
+   .instext{
+       /* display: inline-flex; */
+       margin-left: 0.65vw;
+       color: #98989C;
+       padding-bottom: 0.41vh;
+   }
+   .insStar{
+       display: inline-flex;
+       margin-left: 0.65vw;
+       font-weight: 400;
+       font-size: 2vh;
+   }
+   .insDesc{
+       display: inline-flex;
+       /* Text Box 1 */
+       padding: 0.69vh;
+       padding-right: 2.60vw;
+       padding-top: 2.07vh;
+       background: #F2F1F7;
+       border-radius: 10px;
+       padding-bottom: 0.69vh;
+       margin-bottom: 0.69vh;
+       margin-left: 7px;
+   }
+   .insDiv{
+       display: inline-flex; /* or inline-flex */
+     flex-flow: row nowrap; /* is default: columns along the main-axis (row) and no wrapping to next lines */
+     align-items: flex-end; /* bottom */
+   }
+   .text-des{
+       min-height: 8.31vh;
+   }
+   .seePrBtn{
+       color: #03CBC9;
+       margin-left: 0.325vw;
+       padding-left: 0.19vw;
+       padding-right: 0.19vw;
+       padding-top: 0;
+       padding-bottom: 0;
+       margin-right: 0.65vw;
+       
+       font-size: 1.2vh ;
+       outline: none;
+       
+       background: #F2F1F7;
+       /* Primary 1 */
+       border: 0.432203px solid #03CBC9;
+       box-sizing: border-box;
+       border-radius: 7.32203px;
+   }
+   .other-Btn{
+       margin-top: 5.54vh;
+       background-color: #E6D4F6;
+       border: 0;
+       border-radius: 5px;
+       outline: none;
+       font-size: 1.8vh;
+   }
+   .likeSh{
+       margin-top: 3.46vh;
+       position: absolute;
+       bottom: 1.38vh;
+       right: 100px;
+       float: right !important;
+       margin-left:  1.30vw;
+   }
+   .sharelk{
+       position: absolute;
+       bottom: 1.38vh;
+       right: 0.325vw;
+       float: right !important;
+       margin-left: 1.30vw;
+       
+   }
+   .packDet{
+      margin: 1.38vh;
+      
+       color: #03CBC9;
+       font-weight: 600;
+       font-size: 2.5vh;
+       display: inline-flex;
+   }
+   .packCl{
+       display: inline-flex;
+       float: right;
+       font-size: 2.5vh;
+       font-weight: 600;
+       padding-right: 0.65vw;
+       margin: 1.38vh;
+   }
+   .SchTableDiv{
+       background-color: white;
+       padding: 1.38vh;
+       margin: 1.38vh;
+       border-radius: 10px;
+   }
+   .tableCon{
+       align-content: center;
+       text-align: center;
+   }
+   table{
+       border-collapse: separate;
+       border-spacing: 0;
+       font-weight: 600;
+   }
+   .theading{
+       background: #E6D4F6 !important;
+       
+       
+   }
+   th:first-child{
+       
+       border-top-left-radius: 10px;
+   }
+   th:last-child{
+       border-top-right-radius: 10px;
+   }
+   .chkinp{
+       float: left;
+       margin-top: 0.55vh;
+       margin-left: 0.325vw;
+       min-width: 10px;
+       margin-right: 10px;
+       margin-left: 10px;
+   }
+   td {
+       background-color: #FAFAFA !important;
+   }
+   .left-arrow, .right-arrow {
+       position: absolute;
+       z-index: 1;
+       top: 49%;
+       transform: translateY(-50%);
+       width: 2.01vw;
+       height: 4.29vh;
+       border-radius: 24px;
+       background-color: white;
+       border: 1px solid #ddd;
+       font-size: 2vh;
+   }
+   .left-arrow{
+       left: 0.52vw;
+   }
+   .right-arrow{
+       right: 0.65vw;
+   }
+   .other-small{
+       color: black;
+   }
+   .horEngBtn{
+       color: #E6C000;
+       margin: 2.077vh;
+       padding-left:  0.781vw;
+       padding-right:  0.781vw;
+       
+       padding-top: 0.415vh;
+       padding-bottom: 0.415vh;
+       font-size: 1.7vh ;
+       outline: none;
+       margin-top: 0.69vh;
+       margin-bottom: 0;
+       margin-right: 0.325vw;
+       float: left;
+       /* Text Box 1 */
+       background: #F2F1F7;
+       /* sec color */
+       border: 1px solid #E6C000;
+       box-sizing: border-box;
+       border-radius: 10px;
+   }
+   #overlay {
+       position: fixed; /* Sit on top of the page content */
+       /* display: none; Hidden by default */
+       width: 45%; /* Full width (cover the whole page) */
+       height: 60%; /* Full height (cover the whole page) */
+       top: 24%;
+       left: 35%;
+       right: 0;
+       bottom: 0;
+       background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+       z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+       cursor: pointer; /* Add a pointer on hover */
+     }
+     .overlay-main{
+       
+       background: #C4C4C4;
+   box-shadow: 8px 8px 40px #CAC9D2;
+   }
+   #overlay1 {
+       position: fixed; /* Sit on top of the page content */
+       /* display: none; Hidden by default */
+       width: 40%; /* Full width (cover the whole page) */
+       height: 52%; /* Full height (cover the whole page) */
+       top: 24%;
+       left: 35%;
+       right: 0;
+       bottom: 0;
+       background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+       z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+       cursor: pointer; /* Add a pointer on hover */
+     }
+     .overlay1-main{
+       
+       background: #C4C4C4;
+   box-shadow: 8px 8px 40px #CAC9D2;
+   }
+   .insClass{
+         position: absolute;
+         right: 2.32vw;
+         align-content: center;
+         align-self: center;
+         
+         font-weight: 600;
+         
+     }
+     .cls-Btn{
+         background: none;
+         border: none;
+         outline: none;
+     }
+     .cls-Btn:focus{
+         outline: none;
+     }
+     .ftr-table{
+         background-color:#9929FD;
+         border-radius: 0px 0px 10px 10px;
+         width: 100% !important;
+         
+     }
+     .ftr-div1{
+         display: inline-flex;
+         color: white;
+         float: left;
+         font-weight: 400;
+         margin-top: 1.66vh;
+         padding-left: 1.62vw;
+        
+     }
+     .ftr-div2{
+       display: inline-flex;
+       background-color: transparent !important;
+       background: none !important;
+       padding-bottom:  3vh;
+       margin-top: 1vh;
+       padding-left: 0.65vw;
+       
+   }
+   input[type="text"], textarea {
+       background: none;
+       outline: none;
+       border: solid 1px white;
+       box-shadow: none;
+       /* margin-top: 1.38vh; */
+       max-width: 26vw;
+       /* height: 4vh; */
+   }
+   .ftr-div3{
+       display: inline-flex;
+       color: white;
+        float: right;
+       padding-bottom:  2.35vh;
+   }
+   .byPack{
+       margin-top: 1.66vh;
+       border-radius: 5px;
+       margin-right: 1.30vw;
+       padding-bottom: 0.69vh;
+       padding-top: 0.69vh;
+       /* padding-left: 0; */
+       margin-left: 0;
+   }
+   .cpn-btn{
+       background: none;
+       border: none;
+       outline: none;
+       position: relative;
+       right: 95px;
+       top: 0.11vh;
+       color:white;
+   }
+   .outer3 {
+       position: relative;
+     }
+     .outer3:before {
+       display: block;
+       content: "";
+       width: 95%;
+       padding-top: 56.25%;
+     }
+     .outer3 > .inner3 {
+       position: absolute;
+       top: 0;
+       right: 0;
+       bottom: 0;
+       left: 0;
+       height: 100%;
+     }
+     .rc-b{
+         height: 2.35vh;
+         padding-left: 0vw;
+         margin-left: -3vw;
+         background: none;
+     }
+     .rcb-btn{
+         background: none;
+         border: none;
+         outline: none;
+     }
+     .rcb-btn:focus{
+         outline: none;
+     }
+     .evn-Title{
+         font-weight: 600;
+         font-size: 2.8vh;
+         margin-left: 1.30vw;
+     }
+     .evn-desc{
+       color: #98989C;
+       margin-left: 1.30vw;
+       font-weight: 300;
+       margin-top: 1.38vh;
+       margin-bottom: 1.38vh;
+     }
+     .timeD{
+         display: inline-flex;
+         margin-top: 1.38vh;
+         margin-bottom: 1.38vh;
+     }
+     .timeE{
+         font-weight: 400;
+         padding-left: 1.30vw;
+         font-size: 2vh;
+     }
+     .dateE{
+       font-weight: 400;
+       padding-left: 1.30vw;
+     }
+     .hrE{
+       font-weight: 400;
+       padding-left: 1.30vw;
+     }
+     
+     .Container-1 {
+     
+     
+       width: 100vw;
+       max-width: 177.78vw;
+       /* 16/9 = 1.778 */
+       height: 56.25vw;
+       /* height:width ratio = 9/16 = .5625  */
+       max-height: 100vh;
+     }
+     .con2-in {
+       position: absolute;
+       top: 0;
+       left: 0;
+       bottom: 0;
+       right: 0;
+       text-align: center;
+       font-size: 3.46vh;
+       color: black;
+       height: 70% !important;
+       width: auto;
+       max-width: 100%;
+       
+       align-items: center !important;
+       align-self: center !important;
+       text-align: center !important;
+       align-content: center !important;
+       margin: auto !important;
+      
+       
+       
+     }
+     .con1-in {
+       /* position: absolute; */
+       top: 0;
+       left: 0;
+       bottom: 0;
+       right: 10px !important;
+       text-align: center;
+       font-size: 3.46vh;
+       color: black;
+       max-height: 100% !important;
+       width: auto;
+       max-width: 100%;
+       height: 115% !important;
+       align-items: center !important;
+       align-self: center !important;
+       text-align: center !important;
+       align-content: center !important;
+       margin: auto !important;
+       margin-top: 1.38vh;
+       padding: auto;
+       
+       
+     }
+     .btnMe{
+         outline: none !important;
+         border: none;
+     }
+     #likeScr{
+       color:#98989C !important;
+     }
+     .seePrBtn{
+       margin-left: 0.911vw;
+       padding-left: 0.825vw;
+       padding-right: 0.325vw;
+       font-size: 1.5vh;
+   }
+   .other-Btn{
+       margin-left: 0.911vw;
+       padding-left: 0.325vw;
+       padding-right: 0.325vw;
+       font-size: 2vh;
+   }
+   .titleScr2{
+       padding-left: 0 !important;
+   }
+   .desScr2{
+       padding-left: 0.325vw !important;
+   }
+   .carousel-containerS1 {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+   }
+   .carousel-wrapperS1 {
+       display: flex;
+       width: 100%;
+       position: relative;
+   }
+   .carousel-content-wrapperS1 {
+       overflow: hidden;
+       width: 100%;
+       height: 100%;
+   }
+   .library-circle {    
+       width: 3.45vw;
+       height: 3.45vw;
+       border-radius: 3vw;
+       float: left;
+       display: inline-flex;
+       align-self: center;
+       align-content: center;
+       border: 2px solid #03CBC9;
+       background-color: white;
+       box-sizing: border-box;
+   }
+   .sngPlay{
+       z-index: 1;
+       position: absolute;
+       height: 18px;
+       left: 47%;
+       width: auto;
+       top: 43%;
+       margin-right: 0 !important;
+   }
+   
+   .sc-eCssSg{
+       /* height: 241px !important; */
+       height: 246px !important;
+   }
+   /* .sc-jSgupP{
+       height: 180px;
+   } */
+   .overlay-des{
+       position: fixed; /* Sit on top of the page content */
+       /* display: none; Hidden by default */
+       width: 35%; /* Full width (cover the whole page) */
+       height: 50%; /* Full height (cover the whole page) */
+       top: 24%;
+       left: 35%;
+       right: 0;
+       bottom: 0;
+       background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+       z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+       cursor: pointer; /* Add a pointer on hover */
+   }
+   #likeScr{
+       width: 100%;
+   }
+   .oDesc{
+       font-size: 2.5vh;
+       padding-left: 1.5vw;
+       padding-right: 2vw;
+       color:black;
+   }
+   .boxCardSz{
+       height: 262px;
+       width: 245px ;
+       margin-left: 40px;
+       /* margin: auto; */
+       
+   }
+   .contISz{
+       height: 138px;
+       width: 217px;
+   }
+   @media only screen and (min-width: 1300px)  {
+       .boxCardSz{
+           height: 265px;
+           width: 250.23px ;
+           /* margin: auto; */
+       }
+       .contISz{
+           right: 2px;
+           height: 142px;
+           width: 222px;
+       }
+   }
+   @media only screen and (min-width: 1550px)  {
+       .boxCardSz{
+           height: 36.62vh;
+           width: 16.276vw;
+           /* margin: auto; */
+       }
+       .contISz{
+           right: 2px;
+           height: 19.667vh;
+           width: 14.45vw;
+       }
+   }
+   @media only screen and (max-width: 1245px) and (min-width:1125px) {
+       .boxCardSz{
+           height: 237px;
+           width: 215px ;
+           /* margin-left: 10px !important; */
+           /* margin-right: auto !important; */
+           padding: 0;
+       }
+       .contISz{
+           height: 114px;
+           width: 180px;
+           right: -5px;
+       }
+   }
+   @media only screen and (max-width: 1125px) and (min-width:1025px) {
+       .boxCardSz{
+           height: 270px;
+           width: 260px ;
+           /* margin: auto; */
+           padding: 0;
+       }
+       .contISz{
+           height: 146px;
+           width: 230px;
+       }
+   }
+   @media only screen and (max-width: 1013px) and (min-width:768px) {
+       .likeSh{
+       bottom: 6.38vh;
+       right: 15px;
+       }
+   }
+   @media only screen and (max-width: 978px){
+       .con1-in{
+           left:5px;
+       }
+       .packDet{
+           font-size: 2.7vw;
+           padding-right: 0 !important;
+           margin-left:2px !important;
+       }
+       .cls-Btn{
+           font-size: 2.7vw !important;
+           padding-left: 0;
+           padding-right: 0 !important;
+           margin-right: 0 !important;
+       }
+       .packCl{
+           font-size: 2.7vw;
+       }
+       .oDesc{
+           font-size: 2.3vw;
+       }
+   }
+   @media only screen and (max-width:768px) {
+       .horDisBtn{
+           margin-left: 10px ;
+           font-size: 12px;
+       }
+       .horEngBtn{
+           margin-left: 50px ;
+           margin-right: 0;
+           font-size: 12px;
+       }
+       .horAdvBtn{
+           margin-left: 50px;
+           font-size: 12px;
+       }
+       .horCatBtn{
+           margin-left: 3px ;
+           margin-right: 0;
+           font-size: 12px;
+       }
+   }
+   @media only screen and (max-width: 535px)  {
+    .insDesc{
+        padding:1vh;
+       padding-right: 0%;
+       margin-bottom: 7.4vh;
+       margin-left: 13px;
+    }
+    .other-Btn{
+        margin-right: 8vw;
+        margin-left: -7vw;
+    }
+    .insPic{
+        height: 40px;
+        width: 40px;
+    }
+    .likeSh{
+        right: 224px;
+    }
+    .sharelk{
+        right: 90px;
+    }
+    .packCl{
+        font-size: 4vw;
+    }
+    .packDet{
+        font-size: 4vw;
+    }
+   }
+   @media only screen and (max-width: 602px){
+       .ftr-div1{
+           font-size: 10px;
+       }
+       .cpn-btn{
+           font-size: 10px;
+           right: 76px;
+       }
+       .ftr-table{
+           width: 100% !important;
+       }
+       
+      
+   }
+   @media only screen and (max-width: 535px){
+       .ftr-div1{
+           font-size: 11.5px;
+       }
+       .cpn-btn{
+           font-size: 11.5px;
+           right: 84px;
+       }
+       .byPack{
+           font-size: 11.5px;
+           position: relative;
+           bottom: 55px;
+       }
+       .ftr-table{
+           width: 100% !important;
+       }
+       
+   }
+   @media only screen and (max-width: 508px){
+       .ftr-table{
+           width: 103% !important;
+       }
+   }
+   @media only screen and (max-width: 496px){
+       .ftr-table{
+           width: 106% !important;
+       }
+   }
+   @media only screen and (max-width: 410px) and (min-width:376px){
+       .byPack{
+           font-size: 12.5px;
+           position: relative;
+           bottom: 0px;
+       }
+       .inpPur{
+           width: 110px !important;
+       }
+   }
+   @media only screen and (max-width: 516px)  {
+       .topBtn{
+           width: 108%; 
+           margin-left: -13px; 
+       }
+       .boxCardSz{
+           height: 223px;
+           width: 160px ;
+           margin: auto;
+           padding: 0;
+           font-size: small;
+           
+       }
+       .contISz{
+           right: 2px;
+           height: 100px;
+           width: 144px;
+           
+       }
+       #likeScr{
+           width: 100%;
+       }
+       .btnMe{
+           padding-right: 5px;
+           padding-left: 5px;
+       }
+       .overlay-des{
+           width: 40%; /* Full width (cover the whole page) */
+           height: 32%; /* Full height (cover the whole page) */
+           top: 30%;
+           left: 35%;
+           right: 0;
+           bottom: 0;
+           
+       }
+       .titleScr2{
+           font-size: 12px !important;
+       }
+       .insName{
+           font-size: 15px;
+       }
+       .instext{
+           font-size: 13px;
+       }
+       .tableCon{
+           margin-left: 0 ;
+       }
+       /* table{
+           width: 60% !important;
+       } */
+       .libTb{
+          margin-left: 8vw;
+       }
+       .ftr-tbLib{
+           width: 87% !important;
+       }
+       /* th{
+           font-size: 15px;
+       }
+       td{
+           font-size: 15px;
+       } */
+      
+       
+   }
+   @media only screen and (max-width: 490px) and (min-width:450px){
+       .horCardOuter{
+           width: 95%;
+           margin-left: 1vw;
+       }
+       .topBtnCard{
+           width: 94% !important;
+           margin-left: 2vw;
+       }
+       th{
+           font-size: 14.8px;
+       }
+       td{
+           font-size: 14.8px;
+       }
+       .tableCon{
+           padding-left: 5px;
+       }
+       
+   }
+   @media only screen and (max-width: 450px) and (min-width:410px){
+       .horCardOuter{
+           width: 94% ;
+           margin-left: 1.7vw;
+           /* margin-right: auto; */
+       }
+       .topBtnCard{
+           width: 94% !important;
+           margin-left: 2vw;
+       }
+       .insName{
+           font-size: 14px;
+       }
+       .instext{
+           font-size: 12px;
+       }
+        th{
+           font-size: 11.8px;
+       }
+       td{
+           font-size: 11.8px;
+       }
+       .tableCon{
+           padding-left: 5px;
+       }
+      
+   }
+   @media only screen and (max-width: 492px) {
+       .ftr-tbLib{
+           width: 61vw !important;
+       }
+       .horDisBtn{
+           margin-left: 10px ;
+       }
+       .horEngBtn{
+           margin-left: 10px ;
+           margin-right: 0;
+       }
+       .horAdvBtn{
+           margin-left: 10px;
+       }
+       .horCatBtn{
+           margin-left: 30px;
+       }
+   }
+   @media only screen and (max-width: 516px) and (min-width: 492px) {
+       .ftr-tbLib{
+           width: 59vw !important;
+       }
+   }
+   @media only screen and (max-width: 410px) and (min-width:372px){
+       .horCardOuter{
+           width: 95%;
+           margin-left: -3vw;
+           /* margin-right: auto; */
+       }
+       .topBtnCard{
+           width: 95% !important;
+           margin-left: -3vw;
+       }
+       .horDisBtn{
+           margin-left: 0;
+       }
+       .likeSh{
+           right: 180px;
+       }
+       .sharelk{
+           right: 40px;
+       }
+       .insName{
+           font-size: 14px;
+       }
+       .instext{
+           font-size: 12px;
+       }
+       th{
+           font-size: 13px;
+       }
+       td{
+           font-size: 13px;
+       }
+       .tableCon{
+           padding-left: 5px;
+       }
+       .libTb{
+           margin-left: 8%;
+        }
+        .libsch{
+           width: 105% !important;
+       }
+       
+   }
+   @media only screen and (max-width: 372px) and (min-width:340px){
+       
+       .horCardOuter{
+           width: 96%;
+           margin-left: -3vw;
+           /* margin-right: auto; */
+       }
+       .horDisBtn{
+           margin-left: 10px ;
+           font-size: 12px;
+       }
+       .horEngBtn{
+           margin-left: 10px ;
+           margin-right: 0;
+           font-size: 12px;
+       }
+       .horAdvBtn{
+           margin-left: 10px;
+           font-size: 12px;
+       }
+       .horCatBtn{
+           margin-left: 3px ;
+           margin-right: 0;
+           font-size: 12px;
+       }
+       
+       .topBtnCard{
+           width: 96% !important;
+           margin-left: -3vw;
+       }
+       .likeSh{
+           right: 180px;
+       }
+       .sharelk{
+           right: 40px;
+       }
+       .insDesc{
+           font-size: small;
+       }
+       .other-Btn{
+           font-size: 10px !important;
+       }
+       .insName{
+           font-size: 12px;
+       }
+       .instext{
+           font-size: 10px;
+       }
+       th{
+           font-size: 12px;
+       }
+       td{
+           font-size: 12px;
+       }
+       .tableCon{
+           padding-left: 0px;
+           margin-left: -5px;
+       }
+       .libTb{
+           margin-left: 6%;
+        }
+        .ftr-tbLib{
+           width: 65vw !important;
+       }
+       .libsch{
+           width: 105% !important;
+       }
+       
+   }
+   @media only screen and (max-width: 340px) {
+       .horCardOuter{
+           width: 100%;
+           margin-left: -0.9vw;
+           
+       }
+       .horDisBtn{
+           margin-left: 2px ;
+           font-size: 11.7px ;
+       }
+       .horEngBtn{
+           margin-left: 2px ;
+           margin-right: 0;
+           font-size: 11.7px ;
+       }
+       .horAdvBtn{
+           margin-left: 2px;
+           font-size: 11.7px ;
+       }
+       .horCatBtn{
+           font-size: 11.7px ;
+       }
+       .topBtn{
+           width: 108% !important;
+           margin-left: -4vw;
+       }
+       .insDesc{
+           font-size: small;
+       }
+       .likeSh{
+           right: 180px;
+       }
+       .sharelk{
+           right: 40px;
+       }
+       .other-Btn{
+           font-size: 10px !important;
+       }
+       .insName{
+           font-size: 12px;
+       }
+       .instext{
+           font-size: 10px;
+       }
+       th{
+           font-size: 8.7px;
+       }
+       td{
+           font-size: 8.7px;
+       }
+       .tableCon{
+           padding-left: 0px;
+           margin-left: -10px;
+       }
+   }

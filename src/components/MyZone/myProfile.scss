@@ -1,0 +1,950 @@
+//Css by Thomas
+.public-profile-head {
+    color: #98989c;
+    font-size: 1vw;
+    font-weight: 700;
+}
+.public-profile-contend {
+    color: black;
+    font-size: 1vw;
+}
+.my_profile_main{
+    flex-grow: 1;
+    margin-top: 50px;
+
+    .common_btn:focus, .edit_common_btn:focus {
+        outline: none;
+    }
+    .common_btn, .edit_common_btn {
+        border-radius: 44px;
+    }
+    .not_active_btn{
+        border: none;
+        background-color: white;
+    }
+    .not_active_security{
+        background-color: white;
+        border: 1px solid #98989C;
+    }
+    .edit_cancel_btn{
+        border: none;
+        background-color: #f1eeee;
+    }
+    .blue_active{
+        background: #9929FD;
+        box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.25);
+        border-radius: 44px;
+        border: none;
+        color: white;
+    }
+
+    .profile_card, .doc_card{
+        border: none;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0,  0.05) !important;
+    }
+    .profile_img{
+        object-fit: cover;
+    }
+    .profile_img_div{
+        overflow: hidden;
+        border: 4px solid #03CBC9;
+        border-radius: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .profile_email{
+        color: #98989C;
+        font-weight: 600;
+    }
+    .profile_gr{
+        color: #98989C;
+    }
+    .profile_input{
+        color: #252525;
+        background-color: white !important;
+        border-bottom-right-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+    }
+    .btn_check{
+        border: solid 1px #03cbc9;
+        margin-right: 10px;
+        border-radius: 2px;
+    }
+    .pink_active{
+        background: #b25ee6 !important;
+        box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.25);
+        border-radius: 44px;
+        border: none;
+        color: white;
+    }
+    .pink_not_active{
+        border: solid 1px #9929FD;
+        background-color: white;
+        border-radius: 44px;
+    }
+    .docs_container{
+        background-color: #F6ECFF;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        position: relative;
+    }
+    .doc_img_div{
+        display: grid;
+    }
+    .doc_image{
+        height: auto;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+        max-width: 80%;
+    }
+    .del_btn{
+        position: absolute;
+    }
+    .docs_name_container{
+        background-color: #EAC7FF;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;    
+    }
+    .group_class, .popup_input{
+        border: 1px solid #98989C !important;
+        border-radius: 4px;
+    }
+    .popup_input{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .profile_input :focus{
+        outline: none;
+        border: none;
+        box-shadow: none !important;
+    }
+    .form-control:focus{
+        box-shadow: none !important;
+    }
+    .grp_text{
+        background-color: #F6ECFF !important;
+    }
+    .security_mail_phn{
+        color: #98989C;
+    }
+    .verified_btn{
+        border: 1px solid #1FB741;
+        box-sizing: border-box;
+        border-radius: 5px; 
+        color: #1FB741;
+        background-color: transparent;
+    }
+    .overlay_security, .overlay_security_pass, .overlay_status_msg{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 6px;
+        background-color: white;
+    }
+    .overlay_status_msg{
+        border-top: 8px solid #03CBC9;
+    }
+    .overlay_head{
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+        font-weight: 500;
+    }
+    .form_text{
+        font-weight: 600;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .my_profile_main{
+        padding: 2vw;
+        $headBtnFont: 1vw;
+        $topBtnMargin: 2vw;
+        $cardPadding: 2vw;
+        $profileImgHeight: 15vw;
+        $docImgHeight: 8vw;
+
+        $modalPadding: 1vw;
+        $modalHeadFont: 1.2vw;
+
+        .common_btn {
+            font-size: $headBtnFont;
+            min-width: 10vw;
+            padding: 0.5vw 1vw 0.5vw 1vw;
+        }
+        .edit_common_btn {
+            font-size: $headBtnFont;
+            min-width: auto;
+            padding: 0.5vw 1vw 0.5vw 1vw;
+        }
+        .profile_btn{
+            font-size: 0.8vw;
+            width: auto;
+            padding: 0.3vw 0.8vw;
+        }
+        .margin_left_btn{
+            margin-left: $topBtnMargin;
+        }
+        .button_margin_top{
+            margin-top: $topBtnMargin;
+        }
+        .profile_card{
+            margin-top: $topBtnMargin;
+            padding: $cardPadding;
+        }
+        .doc_card{
+            margin-top: $topBtnMargin;
+            padding-bottom: $cardPadding;
+        }
+        .header_sec{
+            padding-top: $cardPadding;
+            padding-left: $cardPadding;
+            padding-right: $cardPadding;
+        }
+        .body_sec{
+            padding-left: $cardPadding/2;
+            padding-right: $cardPadding/2;
+        }
+        .each_doc_sec{
+            padding-left: $cardPadding/2;
+            padding-right: $cardPadding/2;
+        }
+        .each_security_sec{
+            padding-left: $cardPadding/2;
+            padding-right: $cardPadding/2;
+            margin-top: 1vw;
+        }
+
+
+        .edit_img{
+            height: 2vw;
+        }
+        .profile_img{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_img_div{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .user_name_span{
+            font-size: 1.5vw;
+        }
+        .profile_email, .profile_email_id{
+            font-size: $headBtnFont;
+        }
+        .green_tick{
+            height: 1vw;
+        }
+        .address_row{
+            margin-top: $topBtnMargin;
+        }
+        .right_sec_div{
+            height: $profileImgHeight;
+        }
+        .pro_pic_div{
+            margin-top: 1vw;
+        }
+        
+        .edit_profile_head{
+            font-size: 1.2vw;
+            margin-left: $topBtnMargin;
+        }
+        .profile_input, .input_text, .profile_gr{
+            font-size: 1vw;
+        }
+        .edit_sec{
+            padding-left: $topBtnMargin;
+            padding-right: $topBtnMargin;
+        }
+        .i_icon{
+            height: 1vw;
+        }
+        .each_input{
+            margin-top: $topBtnMargin;
+        }
+
+        .interest_val_sec{
+            margin-top: $topBtnMargin;
+        }
+        .btn_check{
+            height: 1.2vw;
+        }
+        .interest_name{
+            font-size: $headBtnFont;
+        }
+        .each_interest_type_row{
+            padding: 1vw 2vw;
+        }
+        .down_arrow_img{
+            height: 1vw;
+        }
+        .margin_right_btn{
+            margin-right: 1vw;
+        }
+
+        .doc_image{
+            max-height: $docImgHeight;
+        }
+        .doc_img_div{
+            height: $docImgHeight;
+        }
+        .del_btn{
+            top: 1vw;
+            right: 1vw;
+            height: 2vw;
+        }
+        .docs_container{
+            padding: 1vw;
+            margin-top: $topBtnMargin;
+        }
+        .docs_name_container{
+            padding: 0.5vw 1vw;
+            font-size: $headBtnFont;
+        }
+
+        .security_mail_phn{
+            font-size: $headBtnFont;
+        }
+        .verified_btn{
+            font-size: 0.8vw;
+            padding: 0.3vw 0.8vw;
+        }
+        .contact_card{
+            padding-right: $cardPadding/2;
+        }
+        .mail_card{
+            padding-left: $cardPadding/2;
+        }
+        .overlay_head{
+            padding: $modalPadding;
+            font-size: $modalHeadFont;
+        }
+        .form_text, .form_normal_text{
+            font-size: $headBtnFont;
+        }
+        .popup_input{
+            font-size: $headBtnFont;
+            width: 60%;
+        }
+        .overlay_security{
+            min-height: 18vw;
+        }
+        .overlay_security_pass{
+            min-height: 24vw;
+        }
+        .overlay_status_msg{
+            height: 12vw;
+        }
+        .small_margin{
+            margin-top: $modalPadding;
+        }
+        .overlay_security, .overlay_security_pass, .overlay_status_msg{
+            width: 50%;
+        }
+        input[type="file"] {
+            display: block;
+        }
+        .pro_pic_div{
+            position: relative;
+        }
+        .profile_img_upload{
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        .doc_upload_input{
+            position: absolute;
+            top: 0;
+            right: 0;
+            opacity: 0;
+        }
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .my_profile_main{
+        padding: 2.3vw;
+        $headBtnFont: 1.3vw;
+        $topBtnMargin: 2.3vw;
+        $cardPadding: 2.3vw;
+        $profileImgHeight: 20vw;
+        $profileHeadFont: 1.5vw;
+        $docImgHeight: 11vw;
+
+        $modalPadding: 1.3vw;
+        $modalHeadFont: 1.5vw;
+
+        .common_btn {
+            font-size: $headBtnFont;
+            min-width: 12vw;
+            padding: 0.7vw 1.2vw 0.7vw 1.2vw;
+        }
+        .edit_common_btn {
+            font-size: $headBtnFont;
+            min-width: auto;
+            padding: 0.7vw 1.2vw 0.7vw 1.2vw;
+        }
+        .profile_btn{
+            font-size: 1.1vw;
+            width: auto;
+            padding: 0.5vw 1vw;
+        }
+        .margin_left_btn{
+            margin-left: $topBtnMargin;
+        }
+        .button_margin_top{
+            margin-top: $topBtnMargin;
+        }
+        .profile_card{
+            margin-top: $topBtnMargin;
+            padding: $cardPadding;
+        }
+        .doc_card{
+            margin-top: $topBtnMargin;
+            padding-bottom: $cardPadding;
+        }
+        .header_sec{
+            padding-top: $cardPadding;
+            padding-left: $cardPadding;
+            padding-right: $cardPadding;
+        }
+        .body_sec{
+            padding-left: $cardPadding/2;
+            padding-right: $cardPadding/2;
+        }
+        .each_doc_sec{
+            padding-left: $cardPadding/2;
+            padding-right: $cardPadding/2;
+        }
+        .each_security_sec{
+            padding-left: $cardPadding/2;
+            padding-right: $cardPadding/2;
+            margin-top: 1.3vw;
+        }
+
+        .edit_img{
+            height: 2.3vw;
+        }
+        .profile_img{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_img_div{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .user_name_span{
+            font-size: 1.8vw;
+        }
+        .profile_email, .profile_email_id{
+            font-size: $headBtnFont;
+        }
+        .green_tick{
+            height: 1.3vw;
+        }
+        .address_row{
+            margin-top: $topBtnMargin;
+        }
+        .right_sec_div{
+            height: $profileImgHeight;
+        }
+        .pro_pic_div{
+            margin-top: 1.3vw;
+        }
+
+        .edit_profile_head{
+            font-size: $profileHeadFont;
+            margin-left: $topBtnMargin;
+        }
+        .profile_input, .input_text, .profile_gr{
+            font-size: 1.3vw;
+        }
+        .edit_sec{
+            padding-left: $topBtnMargin;
+            padding-right: $topBtnMargin;
+        }
+        .i_icon{
+            height: 1.3vw;
+        }
+        .each_input{
+            margin-top: $topBtnMargin;
+        }
+        .select_interest_head{
+            font-size: $profileHeadFont;
+        }
+
+        .interest_val_sec{
+            margin-top: $topBtnMargin;
+        }
+        .btn_check{
+            height: 1.5vw;
+        }
+        .interest_name{
+            font-size: $headBtnFont;
+        }
+        .each_interest_type_row{
+            padding: 1.2vw 2.2vw;
+        }
+        .down_arrow_img{
+            height: 1.3vw;
+        }
+        .margin_right_btn{
+            margin-right: 1.3vw;
+        }
+
+        .doc_image{
+            max-height: $docImgHeight;
+        }
+        .doc_img_div{
+            height: $docImgHeight;
+        }
+        .del_btn{
+            top: 1.3vw;
+            right: 1.3vw;
+            height: 2.3vw;
+        }
+        .docs_container{
+            padding: 1.3vw;
+            margin-top: $topBtnMargin;
+        }
+        .docs_name_container{
+            padding: 0.6vw 1.1vw;
+            font-size: $headBtnFont;
+        }
+
+        .security_mail_phn{
+            font-size: $headBtnFont;
+        }
+        .verified_btn{
+            font-size: 1.1vw;
+            padding: 0.4vw 0.9vw;
+        }
+        .contact_card{
+            padding-right: $cardPadding/2;
+        }
+        .mail_card{
+            padding-left: $cardPadding/2;
+        }
+
+        .overlay_head{
+            padding: $modalPadding;
+            font-size: $modalHeadFont;
+        }
+        .form_text, .form_normal_text{
+            font-size: $headBtnFont;
+        }
+        .popup_input{
+            font-size: $headBtnFont;
+            width: 65%;
+        }
+        .overlay_security{
+            height: 25vw;
+        }
+        .overlay_security_pass{
+            height: 35vw;
+        }
+        .overlay_status_msg{
+            height: 15vw;
+        }
+        .small_margin{
+            margin-top: $modalPadding;
+        }
+        .overlay_security, .overlay_security_pass, .overlay_status_msg{
+            width: 55%;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .my_profile_main{
+        padding: 2.6vw;
+        padding-top: 0;
+        $headBtnFont: 1.9vw;
+        $topBtnMargin: 2.6vw;
+        $cardPadding: 2.6vw;
+        $profileImgHeight: 22vw;
+        $normalPadding: 1.6vw;
+        $profileHeadFont: 1.8vw;
+        $docImgHeight: 15vw;
+
+        $modalPadding: 1.6vw;
+        $modalHeadFont: 1.8vw;
+
+        .common_btn {
+            font-size: $headBtnFont;
+            min-width: 14vw;
+            padding: 0.9vw 1.4vw 0.9vw 1.4vw;
+        }
+        .edit_common_btn {
+            font-size: $headBtnFont;
+            min-width: auto;
+            padding: 0.9vw 1.4vw 0.9vw 1.4vw;
+        }
+        .profile_btn{
+            font-size: 1.4vw;
+            width: auto;
+            padding: 0.7vw 1.2vw;
+        }
+        .margin_left_btn{
+            margin-left: $topBtnMargin;
+        }
+        .button_margin_top{
+            margin-top: $topBtnMargin;
+        }
+        .profile_card{
+            margin-top: $topBtnMargin;
+            padding: $cardPadding;
+        }
+        .doc_card{
+            margin-top: $topBtnMargin;
+            padding-bottom: $cardPadding;
+        }
+        .header_sec{
+            padding-top: $cardPadding;
+            padding-left: $cardPadding;
+            padding-right: $cardPadding;
+        }
+        .body_sec{
+            padding-left: $cardPadding/2;
+            padding-right: $cardPadding/2;
+        }
+        .each_doc_sec{
+            padding-left: $cardPadding/2;
+            padding-right: $cardPadding/2;
+        }
+        .each_security_sec{
+            padding-left: $cardPadding/2;
+            padding-right: $cardPadding/2;
+            margin-top: 1.6vw;
+        }
+
+        .edit_img{
+            height: 2.6vw;
+        }
+        .profile_img{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_img_div{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .user_name_span{
+            font-size: 2.1vw;
+        }
+        .profile_email, .profile_email_id{
+            font-size: $headBtnFont;
+        }
+        .green_tick{
+            height: 1.6vw;
+        }
+        .address_row{
+            margin-top: 0;
+        }
+        .right_sec_div{
+            height: $profileImgHeight;
+        }
+        .pro_pic_div{
+            margin-top: 1.6vw;
+        }
+        
+        .edit_profile_head{
+            font-size: $profileHeadFont;
+            margin-left: $topBtnMargin;
+        }
+        .profile_input, .input_text, .profile_gr{
+            font-size: 1.6vw;
+        }
+        .edit_sec{
+            padding-left: $topBtnMargin;
+            padding-right: $topBtnMargin;
+        }
+        .i_icon{
+            height: 1.6vw;
+        }
+        .each_input{
+            margin-top: $topBtnMargin;
+        }
+        .select_interest_head{
+            font-size: $profileHeadFont;
+        }
+
+        .interest_val_sec{
+            margin-top: $topBtnMargin;
+        }
+        .btn_check{
+            height: 1.8vw;
+        }
+        .interest_name{
+            font-size: $headBtnFont;
+        }
+        .each_interest_type_row{
+            padding: 1.4vw 2.4vw;
+        }
+        .down_arrow_img{
+            height: 1.6vw;
+        }
+        .margin_right_btn{
+            margin-right: 1.6vw;
+        }
+        
+        .doc_image{
+            max-height: $docImgHeight;
+        }
+        .doc_img_div{
+            height: $docImgHeight;
+        }
+        .del_btn{
+            top: 1.6vw;
+            right: 1.6vw;
+            height: 2.6vw;
+        }
+        .docs_container{
+            padding: 1.6vw;
+            margin-top: $topBtnMargin;
+        }
+        .docs_name_container{
+            padding: 0.8vw 1.3vw;
+            font-size: $headBtnFont;
+        }
+
+        .security_mail_phn{
+            font-size: $headBtnFont;
+        }
+        .verified_btn{
+            font-size: 1.4vw;
+            padding: 0.6vw 1.1vw;
+        }
+        .contact_card{
+            padding-right: $cardPadding/2;
+        }
+        .mail_card{
+            padding-left: $cardPadding/2;
+        }
+        
+        .overlay_head{
+            padding: $modalPadding;
+            font-size: $modalHeadFont;
+        }
+        .form_text, .form_normal_text{
+            font-size: $headBtnFont;
+        }
+        .popup_input{
+            font-size: $headBtnFont;
+            width: 70%;
+        }
+        .overlay_security{
+            height: 35vw;
+        }
+        .overlay_security_pass{
+            height: 45vw;
+        }
+        .overlay_status_msg{
+            height: 18vw;
+        }
+        .small_margin{
+            margin-top: $modalPadding;
+        }
+        .overlay_security, .overlay_security_pass, .overlay_status_msg{
+            width: 65%;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .my_profile_main{
+        padding: 2.6vw;
+        padding-top: 0;
+        $headBtnFont: 2.2vw;
+        $topBtnMargin: 3.5vw;
+        $cardPadding: 3.5vw;
+        $profileImgHeight: 25vw;
+        $profileHeadFont: 2.8vw;
+        $docImgHeight: 20vw;
+
+        $modalPadding: 2.6vw;
+        $modalHeadFont: 2.8vw;
+
+        .common_btn {
+            font-size: $headBtnFont;
+            min-width: 15vw;
+            padding: 1.1vw 1.6vw 1.1vw 1.6vw;
+        }
+        .edit_common_btn {
+            font-size: $headBtnFont;
+            min-width: auto;
+            padding: 1.1vw 1.6vw 1.1vw 1.6vw;
+        }
+        .profile_btn{
+            font-size: 2.4vw;
+            width: auto;
+            padding: 0.9vw 1.4vw;
+            margin-top: $topBtnMargin;
+        }
+        .margin_left_btn{
+            margin-left: $topBtnMargin;
+        }
+        .button_margin_top{
+            margin-top: $topBtnMargin;
+        }
+        .profile_card{
+            margin-top: $topBtnMargin;
+            padding: $cardPadding;
+        }
+        .doc_card{
+            margin-top: $topBtnMargin;
+            padding-bottom: $cardPadding;
+        }
+        .header_sec{
+            padding-top: $cardPadding;
+            padding-left: $cardPadding;
+            padding-right: $cardPadding;
+        }
+        .body_sec{
+            padding-left: $cardPadding/2;
+            padding-right: $cardPadding/2;
+        }
+        .each_doc_sec{
+            padding-left: $cardPadding/2;
+            padding-right: $cardPadding/2;
+        }
+        .each_security_sec{
+            padding-left: $cardPadding/2;
+            padding-right: $cardPadding/2;
+            margin-top: 2.5vw;
+        }
+
+        .edit_img{
+            height: 3.6vw;
+        }
+        .profile_img{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_img_div{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .user_name_span{
+            font-size: 3.1vw;
+        }
+        .profile_email, .profile_email_id{
+            font-size: $headBtnFont;
+        }
+        .green_tick{
+            height: 2.6vw;
+        }
+        .address_row{
+            margin-top: 0;
+        }
+        .right_sec_div{
+            height: $profileImgHeight;
+        }
+        .pro_pic_div{
+            margin-top: 0;
+        }
+        .sml_device{
+            line-height: 1;
+        }
+        
+        .edit_profile_head{
+            font-size: $profileHeadFont;
+            margin-left: $topBtnMargin;
+        }
+        .profile_input, .input_text, .profile_gr{
+            font-size: 2.6vw;
+        }
+        .edit_sec{
+            padding-left: $topBtnMargin;
+            padding-right: $topBtnMargin;
+        }
+        .i_icon{
+            height: 2.6vw;
+        }
+        .each_input{
+            margin-top: 2vw;
+        }
+        .select_interest_head{
+            font-size: $profileHeadFont;
+        }
+
+        .interest_val_sec{
+            margin-top: $topBtnMargin;
+        }
+        .btn_check{
+            height: 2.8vw;
+        }
+        .interest_name{
+            font-size: $headBtnFont;
+        }
+        .each_interest_type_row{
+            padding: 1.8vw 2.8vw;
+        }
+        .down_arrow_img{
+            height: 2.6vw;
+        }
+        .margin_right_btn{
+            margin-right: 2.6vw;
+        }
+
+        .doc_image{
+            max-height: $docImgHeight;
+        }
+        .doc_img_div{
+            height: $docImgHeight;
+        }
+        .del_btn{
+            top: 1.6vw;
+            right: 1.6vw;
+            height: 3.6vw;
+        }
+        .docs_container{
+            padding: 1.6vw;
+            margin-top: $topBtnMargin;
+        }
+        .docs_name_container{
+            padding: 0.8vw 1.3vw;
+            font-size: $headBtnFont;
+        }
+
+        .security_mail_phn{
+            font-size: 2.8vw;
+        }
+        .verified_btn{
+            font-size: 2vw;
+            padding: 1vw 1.5vw;
+        }
+        
+        .overlay_head{
+            padding: $modalPadding;
+            font-size: $modalHeadFont;
+        }
+        .form_text, .form_normal_text{
+            font-size: 3.5vw;
+        }
+        .popup_input{
+            font-size: $headBtnFont;
+            width: 70%;
+        }
+        .overlay_security{
+            height: 50vw;
+        }
+        .overlay_security_pass{
+            height: 60vw;
+        }
+        .overlay_status_msg{
+            height: 27vw;
+        }
+        .small_margin{
+            margin-top: $modalPadding;
+        }
+        .overlay_security, .overlay_security_pass, .overlay_status_msg{
+            width: 90%;
+        }
+    }
+}

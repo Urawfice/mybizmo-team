@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans|Nunito:300,400,700&amp;display=swap");
+
+:root {
+  --member-animation: all 0.35s ease-in-out;
+  --font-family-1: "Josefin Sans", sans-serif;
+  --font-family-2: Nunito, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* TIMELINE */
+#timeline-container {
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  padding: 60px 0;
+  margin-top: 40px;
+}
+.work_experience_head {
+    font-size: 1.5rem,
+}
+.timeline-data {
+    color: #98989c;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.timeline {
+    margin-top: 3rem;
+}
+@media only screen and (max-width: 740px) {
+    .work_experience_head {
+        font-size: 1rem,
+    }
+}

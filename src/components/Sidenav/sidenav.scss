@@ -1,0 +1,234 @@
+.test:hover{
+
+    cursor: pointer;
+    filter:invert(73%) sepia(67%) saturate(4102%) hue-rotate(135deg) brightness(97%) contrast(98%) !important;
+}
+
+.outer {
+    position: relative;
+    height: 15vw !important;
+    /* width: 20.55vw; */
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+}
+.outer:before {
+    display: block;
+    content: "";
+    /* padding-top: 56.25%; */
+}
+.item > .img1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    margin: auto;
+    padding:auto;
+    max-width:100% ;
+    max-height: 100%;
+    
+}
+
+.img1{
+    border-radius: 0px;
+    margin-top: 0;   
+}
+
+.nbtn{
+    background: none;
+    border: none;
+    float: left !important;
+}
+
+
+
+@media only screen and (max-width: 420px){
+    .carousel-content.show-3 > * {
+      width: calc(100% / 0.89);
+  }
+  .outer {
+    height: 40vw !important;
+    width: 100% !important;
+    margin-left: 30px !important;
+    }
+    .carousel-containerS {
+        margin-left: 0vw;
+      
+      }
+
+  }
+
+/* Thomas css */
+.noMargin{
+    margin: 0;
+}
+.noPadding{
+    padding: 0;
+}
+.home_page_main_class{
+    padding: 24px;
+    flex-grow: 1;
+    margin-top: 50px;
+
+    .section_head{
+        font-weight: 600;
+    }
+    .explore_card{
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.05) !important;
+        border: none;
+    }
+    .offline_scroll_div, .event_scroll_div{
+        padding: 0;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .home_page_main_class{
+        $sectionMarginTop: 2vw;
+        $cardLeftPadding: 1vw;
+        $cardRightPadding: 1vw;
+        .section_head{
+            font-size: 1.2vw;
+            margin-top: $sectionMarginTop;
+            margin-bottom: 1vw;
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .top_slider_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .schedule_card_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .audio_card_div, .video_card_div, .quotes_card_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .explore_main_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .explore_card {
+            padding-bottom: 2vw !important;
+        }
+        .recommended_main_div{
+            margin-top: $sectionMarginTop;
+        }
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .home_page_main_class{
+        $sectionMarginTop: 2.3vw;
+        $cardLeftPadding: 1.3vw;
+        $cardRightPadding: 1.3vw;
+        .section_head{
+            font-size: 1.5vw;
+            margin-top: $sectionMarginTop;
+            margin-bottom: 1.3vw;
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .top_slider_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .schedule_card_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .audio_card_div, .video_card_div, .quotes_card_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .explore_main_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .explore_card {
+            padding-bottom: 0.5vw !important;
+        }
+        .recommended_main_div{
+            margin-top: $sectionMarginTop;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .home_page_main_class{
+        $sectionMarginTop: 2.6vw;
+        $cardLeftPadding: 1.3vw;
+        $cardRightPadding: 1.3vw;
+        .section_head{
+            font-size: 1.8vw;
+            margin-top: $sectionMarginTop;
+            margin-bottom: 1.6vw;
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .top_slider_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .schedule_card_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .audio_card_div, .video_card_div, .quotes_card_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .explore_main_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .explore_card {
+            padding-bottom: 0.5vw !important;
+        }
+        .quotes_card_div{
+            margin-top: $sectionMarginTop;
+        }
+        .recommended_main_div{
+            margin-top: $sectionMarginTop;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .home_page_main_class{
+        padding: 2vw !important;
+        $sectionMarginTop: 4vw;
+        $cardLeftPadding: 2.3vw;
+        $cardRightPadding: 2.3vw;
+        .section_head{
+            font-size: 3vw;
+            margin-top: $sectionMarginTop;
+            margin-bottom: 0;
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .top_slider_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .schedule_card_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .audio_card_div, .video_card_div, .quotes_card_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .explore_main_div{
+            padding-left: $cardLeftPadding;
+            padding-right: $cardRightPadding;
+        }
+        .explore_main_div{
+            margin-top: 3vw;
+        }
+        .explore_card {
+            padding-bottom: 0 !important;
+        }
+        .recommended_main_div{
+            margin-top: $sectionMarginTop;
+        }
+    }
+}

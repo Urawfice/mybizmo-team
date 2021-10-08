@@ -1,0 +1,238 @@
+.msgHead{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.msg-act{
+    background-color: #9929FD !important;
+    color: white !important;
+}
+.table td, .table th {
+    text-align: left;
+}
+
+.red-dot{
+    background-color: red;
+    border-radius: 30px;
+    height: 7px;
+    width: 7px;
+    padding-left: 0;
+    border: none;
+    margin-right: 10px;
+}
+.search-inp{
+    background: #F2F1F7 !important;
+    float: right;
+
+}
+.profile-msg{
+    margin-top: 15px;
+    margin-left: 4%;
+    height:5vh;
+}
+.name-msg{
+    margin-left: 20px;
+    font-size: 2vh;
+    font-weight: 500;
+
+}
+.to-msg{
+    position: absolute;
+    top: 10vh;
+    font-size: 1.8vh;
+    left: 12.8vh;
+}
+.date-msg{
+    float: right;
+    margin-right: 20px;
+    margin-top: 17px;
+}
+.msg-box{
+    height: 220px;
+    overflow: auto;
+    margin-top: 20px;
+    margin-left: 4%;
+    font-size: 2.2vh;
+}
+input{
+    border: none !important;
+    outline: none;
+}
+.td-ins{
+    font-weight: 500 !important;
+}
+
+.btn-del1{
+    border: none;
+}
+.ComposeMsg{
+    margin-top: 22px !important;
+}
+.btn-fr{
+    margin-left: 3px !important;
+    min-width: 100px !important;
+    padding-right: 10px;
+    max-width: 180px;
+    max-height: 30px;
+}
+.calen-icon{
+    height: 2.5vh;
+    float: right !important;
+    margin-left: 20px;
+    color: gray;
+    margin-top: -3.2vh;
+}
+.none-btn{
+    background: none;
+    border: none;
+    float: right;
+    margin-right: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.fr-d{
+    margin-top: -25px;
+    margin-bottom: 7px;
+}
+
+.search-inp{
+    margin-left: 5px;
+    border: none;
+}
+
+.search-inp:focus ~.user-list{
+    visibility: visible;
+}
+
+.search-inp:active ~.user-list{
+    visibility: visible;
+}
+.search-inp:placeholder-shown ~.user-list{
+    visibility: visible;
+}
+.user-list:hover{
+    visibility: visible !important;
+}
+
+.user-list {
+    margin-top: 3px;
+    margin-left: 110px;
+    visibility: hidden;
+    position: fixed;
+    background-color: white;
+    z-index: 2;
+    min-width: 200px;
+    text-align: left;
+  }
+  
+  .user {
+    list-style: none;
+    padding: 10px;
+    background-color: white;
+    font-size: 2vh;
+  
+    justify-content: space-between;
+  }
+  .crs-ovr{
+      position: relative;
+      height: 2vh;
+      right: -140px;
+  }
+  
+  @media only screen and  (max-width: 688px){
+    .btn-fr{
+        max-width: 170px;
+    }
+    .ComposeMsg{
+        position: relative;
+        right: 20px;
+        top: -144px;
+    }
+  }  
+
+
+  @media only screen and  (max-width: 688px) and (min-width:669px){
+      .ComposeMsg{
+          top: -80px;
+      }
+  }
+  @media only screen and  (max-width: 500px){
+    .btn-fr{
+        max-width: 120px;
+    }
+    .ComposeMsg{
+        position: relative;
+        right: 20px;
+        top: -102px;
+        font-size: 10px;
+    }
+  } 
+  @media only screen and  (max-width: 380px){
+    .btn-fr{
+        max-width: 110px;
+    }
+    .ComposeMsg{
+        top: -113px;
+        font-size: 6px;
+    }
+  
+  } 
+
+  @media only screen and  (max-width: 540px){
+    .none-btn{
+        float: inherit !important;
+    }
+  }
+
+@media only screen and  (max-width: 500px){
+    /* .btn-fr{
+        margin-left: 3px !important;
+        min-width: 100px !important;
+        padding-right: 3px;
+        max-width: 120px;
+        max-height: 25px;
+    } */
+    .calen-icon{
+        margin-top: -14px;
+        
+    }
+    /* .btnMePc2{
+        margin: 3.46vh;
+        border-radius: 20px;
+        padding-top: 1.108vh;
+        padding-bottom: 1.108vh;
+        min-width: 9.114vw !important;
+        margin-bottom: 2.07vh;
+        font-size: 2vh !important;
+    } */
+    .fr-d{
+        font-size: 1.5vh;
+        margin-top: -10px;
+        margin-bottom: -1px;
+        
+    }
+    .ComposeMsg{
+        margin-right: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 372px) and (min-width: 340px){
+.tableCon1 {
+    padding-left: 0px;
+    margin-left: 7px;
+}
+}
+
+
+
+
+@media only screen and (max-width: 450px){
+    .ComposeMsg{
+        margin-top: 8px !important;
+        margin-right: 30px;
+        font-size: 10px !important;
+        padding-right: 10px;
+    }
+
+}
