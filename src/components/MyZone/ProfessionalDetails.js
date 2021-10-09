@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import WorkExperience from './professionalDetails/WorkExperience';
+import Skills from './professionalDetails/Skills';
 
 function ProfessionalDetails(props) {
     const [activeHead,setActiveHead] = useState('work-experience');
@@ -30,6 +31,7 @@ function ProfessionalDetails(props) {
                 </div>
             </div>
             {activeHead=="work-experience" ? <WorkExperience /> : <></>}
+            {activeHead==='skills'? <Skills/>:<></>}
         </div>
     );
 }

@@ -19,7 +19,7 @@ body {
 #timeline-container {
   background: rgb(255, 255, 255);
   overflow: auto;
-  padding: 60px 0;
+  padding: 40px 0;
   margin-top: 40px;
 }
 .work_experience_head {
@@ -37,4 +37,82 @@ body {
     .work_experience_head {
         font-size: 1rem,
     }
+}
+
+
+
+
+.hd-pr{
+  font-size: 2.5vh;
+  font-weight: 600;
+  
+}
+
+.sub-hd-pr{
+  font-weight: 600;
+  font-size: 2vh;
+  color: #98989C;
+}
+.list-itm-prd{
+  font-weight: 1.8vh;
+}
+
+.btn-ad-an-prd{
+  border-radius: 20px;
+  background-color: rgb(3, 203, 201);
+  color: white;
+  border-radius: none;
+  outline: none;
+  border: none;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.btn-ad-an-prd:focus{
+  outline: none;
+}
+
+
+input:focus{
+  outline: none !important;
+  border: solid 1px black;
+  box-shadow: none;
+
+}
+input:active{
+  outline: none !important;
+}
+
+.jb-ps-pr{
+  font-weight: 600;
+  font-size: 1.9vh;
+  color: #98989C;
+}
+
+
+.btn-up-prd{
+  color: white;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 20px;
+  margin-right: 20px;
+  font-size: 2.1vh;
+  background-color: #9929FD;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+
+.btn-cn-prd{
+  color: black;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 20px;
+  margin-right: 20px;
+  font-size: 2.1vh;
+  border: solid 1px #98989C;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: white;
 }
