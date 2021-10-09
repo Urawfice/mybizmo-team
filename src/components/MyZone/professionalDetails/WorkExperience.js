@@ -190,10 +190,10 @@ function WorkExperience(props) {
                                     <div className='col-12  mt-3'>
                                         <div className='mb-2 jb-ps-pr' >Job Status</div>
 
-                                        <input type="radio" id="html" name="fav_language" value="HTML" style={{ marginRight: "15px" }} />
-                                        <label for="html">Completed</label>
-                                        <input type="radio" id="html" name="fav_language" value="HTML" style={{ marginRight: "15px", marginLeft: "20px" }} />
-                                        <label for="html">On-going</label>
+                                        <input type="radio" id="job-status" name="fav_language" value="Completed" style={{ marginRight: "15px" }} />
+                                        <label for="job-status">Completed</label>
+                                        <input type="radio" id="job-status" name="fav_language" value="On-going" style={{ marginRight: "15px", marginLeft: "20px" }} />
+                                        <label for="job-status">On-going</label>
 
                                     </div>
 
@@ -274,10 +274,10 @@ function WorkExperience(props) {
                                     <div className='col-12  mt-3'>
                                         <div className='mb-2 jb-ps-pr' >Job Status</div>
 
-                                        <input type="radio" id="html" name="fav_language" value="HTML" style={{ marginRight: "15px" }} />
-                                        <label for="html">Completed</label>
-                                        <input type="radio" id="html" name="fav_language" value="HTML" style={{ marginRight: "15px", marginLeft: "20px" }} />
-                                        <label for="html">On-going</label>
+                                        <input type="radio" id="job-status" name="fav_language" value="Completed" style={{ marginRight: "15px" }} />
+                                        <label for="job-status">Completed</label>
+                                        <input type="radio" id="job-status" name="fav_language" value="On-going" style={{ marginRight: "15px", marginLeft: "20px" }} />
+                                        <label for="job-status">On-going</label>
 
                                     </div>
 
