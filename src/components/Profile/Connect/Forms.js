@@ -1302,6 +1302,11 @@ export default function Forms(props) {
                 <button onClick={() => onCommentsClick()} className={activeBtn1 === 'Comments' ? "common_btn blue_active margin_left_btn" : "common_btn not_active_btn margin_left_btn"}>Comments</button>
                 <button onClick={() => onInboxClick()} className={activeBtn1 === 'Inbox' ? "common_btn blue_active margin_left_btn" : "common_btn not_active_btn margin_left_btn"}>Inbox</button>
                 <button onClick={() => onAssignFormClick()} className={activeBtn1 === 'Assign' ? "common_btn blue_active margin_left_btn" : "common_btn not_active_btn margin_left_btn"}>Assign Forms</button>
+                <div className="text-right">
+                    <button className="common_btn active_btn mr-2" style={{position:"relative",top:"-30px", width:"12vw"}} >
+                        Create new - form
+                    </button>
+                </div>
             </div>
 
             {/* Table section */}

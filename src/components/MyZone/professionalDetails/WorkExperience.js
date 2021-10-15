@@ -23,6 +23,26 @@ function WorkExperience(props) {
   const [startYear, setStartYear] = useState("");
   const [endYear, setEndYear] = useState("");
   const [responsibilities, setResponsibilities] = useState("");
+  const [projectTitle, setProjectTitle] = useState("");
+  const [createdYear, setCreatedYear] = useState("");
+  const [projectUrl, setProjectUrl] = useState("");
+  const [updateData, setUpdateData] = React.useState({
+    id: "",
+    jobPosition: "",
+    companyName: "",
+    city: "",
+    country: "",
+    jobStatus: "",
+    startYear: "",
+    endYear: "",
+    responsibilities: "",
+  })
+  const [updateProject, setUpdateProject] = React.useState({
+    id:"",
+    link:"",
+    year:"",
+    title:''
+  })
 
   useEffect(() => {
     axios.get("masters/work-experiences", {
@@ -85,10 +105,13 @@ function WorkExperience(props) {
       })
       .then((res) => {
         console.log(res.data);
-        toast.success("added", {
+        toast.success("Work experience added", {
           position: toast.POSITION.TOP_CENTER,
           setTimeout: 2000,
-        });
+        });        
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
       })
       .catch((err) => {
         toast.error("server error", {
@@ -97,6 +120,160 @@ function WorkExperience(props) {
         });
       });
   };
+
+  const fetchUpdateData = (e,id) => {
+    e.preventDefault();
+    console.log("id",id);
+    setWorkExpEdit(true)    
+    axios.get(`masters/work-experiences/${id}`, {
+      headers: {
+        Authorization: "Token" + " " + cookies.get("token"),
+      },
+    })
+    .then((res) => {
+      let job_status="completed";
+      if (res.data.is_current)
+        job_status="ongoing";
+      setUpdateData({
+        id: res.data.id,
+        jobPosition: res.data.job_position,
+        companyName: res.data.company_name,
+        city: res.data.city,
+        country: res.data.country,
+        jobStatus: job_status,
+        startYear: res.data.start_year,
+        endYear: res.data.end_year,
+        responsibilities: res.data.detail,
+      })
+    })
+    .catch((err) => {
+      console.log("some error");
+    });
+  }
+
+  const UpdateWorkExperience = () => {
+    let is_current = false;
+    let end_year = updateData.endYear;
+    if (updateData.jobStatus == "ongoing") is_current = true;
+    if (is_current) end_year = "";
+    const data = {
+      master: cookies.get("id"),
+      start_year: updateData.startYear,
+      end_year: end_year,
+      company_name: updateData.companyName,
+      job_position: updateData.jobPosition,
+      country: updateData.country,
+      city: updateData.city,
+      detail: updateData.responsibilities,
+      is_current: is_current,
+    };
+    axios
+      .put(`masters/work-experiences/${updateData.id}/edit`, data, {
+        headers: {
+          Authorization: "Token" + " " + cookies.get("token"),
+        },
+      })
+      .then((res) => {
+        console.log(res.data);
+        toast.success("Work experience Updated successfully", {
+          position: toast.POSITION.TOP_CENTER,
+          setTimeout: 2000,
+        });        
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
+      })
+      .catch((err) => {
+        toast.error("server error", {
+          position: toast.POSITION.TOP_CENTER,
+          setTimeout: 2000,
+        });
+      });
+  }
+
+  const AddProject = () => {
+    const data = {
+      master: cookies.get("id"),
+      title: projectTitle,
+      link: projectUrl,
+      year: createdYear
+    };
+    axios
+      .post("masters/project-create", data, {
+        headers: {
+          Authorization: "Token" + " " + cookies.get("token"),
+        },
+      })
+      .then((res) => {
+        console.log(res.data);
+        toast.success("Project added Successfully", {
+          position: toast.POSITION.TOP_CENTER,
+          setTimeout: 2000,
+        });        
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
+      })
+      .catch((err) => {
+        toast.error("server error", {
+          position: toast.POSITION.TOP_CENTER,
+          setTimeout: 2000,
+        });
+      });
+  }
+
+  const fetchProjectUpdateData = (e,id) => {
+    e.preventDefault();
+    setProjectEdit(true)    
+    axios.get(`masters/project-detail/${id}`, {
+      headers: {
+        Authorization: "Token" + " " + cookies.get("token"),
+      },
+    })
+    .then((res) => {
+      setUpdateProject({
+        id: res.data.id,
+        link: res.data.link,
+        year: res.data.year,
+        title: res.data.title,
+      })
+    })
+    .catch((err) => {
+      console.log("some error");
+    });
+  }
+
+  const UpdateProject = () => {
+    const data = {
+      master: cookies.get("id"),
+      id: updateProject.id,
+      link: updateProject.link,
+      year: updateProject.year,
+      title: updateProject.title,
+    };
+    axios
+      .put(`masters/project-update/${updateProject.id}`, data, {
+        headers: {
+          Authorization: "Token" + " " + cookies.get("token"),
+        },
+      })
+      .then((res) => {
+        toast.success("Project Updated successfully", {
+          position: toast.POSITION.TOP_CENTER,
+          setTimeout: 2000,
+        });        
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
+      })
+      .catch((err) => {
+        toast.error("server error", {
+          position: toast.POSITION.TOP_CENTER,
+          setTimeout: 2000,
+        });
+      });
+  }
+
   return (
     <div>
       {!workExpEdit && !addAnother ? (
@@ -160,7 +337,7 @@ function WorkExperience(props) {
                         <img
                             className="edit_img"
                             src="/Images/editP.svg"
-                            onClick={() => setWorkExpEdit(true)}
+                            onClick={(e) => fetchUpdateData(e, item.id)}
                             style={{ cursor: "pointer", marginRight: "40px" }}
                         />
                         </span>
@@ -195,38 +372,63 @@ function WorkExperience(props) {
               <div className="row  ml-3">
                 <div className="col-12 col-sm-6 mt-2">
                   <div className="jb-ps-pr">Job Position</div>
-                  <input type="text" style={{ width: "80%" }} />
+                  <input 
+                    className="inpt-add-expr"
+                    value={updateData.jobPosition}
+                    onChange={(e) => setUpdateData({...updateData, jobPosition: e.target.value})}
+                    placeholder="Enter your job role / position"
+                    type="text"
+                    style={{ width: "80%" }} />
                 </div>
 
                 <div className="col-12 col-sm-6 mt-3">
                   <div className="jb-ps-pr">Company Name</div>
-                  <input type="text" style={{ width: "80%" }} />
+                  <input 
+                    className="inpt-add-expr"
+                    value={updateData.companyName}
+                    onChange={(e) => setUpdateData({...updateData, companyName: e.target.value})}
+                    placeholder="Enter the name of your company of work"
+                    type="text"
+                    style={{ width: "80%" }} />
                 </div>
 
                 <div className="col-12 col-sm-6 mt-3">
                   <div className="jb-ps-pr">City</div>
-                  <input type="text" style={{ width: "80%" }} />
+                  <input 
+                    className="inpt-add-expr"
+                    value={updateData.city}
+                    onChange={(e) => setUpdateData({...updateData, city: e.target.value})}
+                    placeholder="Enter your work city"
+                    type="text"
+                    style={{ width: "80%" }} />
                 </div>
                 <div className="col-12 col-sm-6 mt-3">
                   <div className="jb-ps-pr">Country</div>
-                  <input type="text" style={{ width: "80%" }} />
+                  <input 
+                    className="inpt-add-expr"
+                    value={updateData.country}
+                    onChange={(e) => setUpdateData({...updateData, country: e.target.value})}
+                    placeholder="Please select your work country"
+                    type="text"
+                    style={{ width: "80%" }} />
                 </div>
                 <div className="col-12  mt-3">
                   <div className="mb-2 jb-ps-pr">Job Status</div>
-
                   <input
+                    className="inpt-add-expr"
                     type="radio"
-                    id="html"
-                    name="fav_language"
-                    value="HTML"
+                    value="completed"
+                    onChange={(e) => setUpdateData({...updateData, jobStatus: e.target.value})}
                     style={{ marginRight: "15px" }}
+                    checked={updateData.jobStatus=="completed"}
                   />
                   <label for="html">Completed</label>
                   <input
+                    className="inpt-add-expr"
                     type="radio"
-                    id="html"
-                    name="fav_language"
-                    value="HTML"
+                    value="ongoing"
+                    onChange={(e) => setUpdateData({...updateData, jobStatus: e.target.value})}
+                    checked={updateData.jobStatus=="ongoing"}
                     style={{ marginRight: "15px", marginLeft: "20px" }}
                   />
                   <label for="html">On-going</label>
@@ -235,9 +437,11 @@ function WorkExperience(props) {
                 <div className="col-12 col-sm-6 mt-3">
                   <div className="jb-ps-pr">Job Start Year</div>
                   <input
+                    className="inpt-add-expr"
                     type="number"
-                    defaultValue="2020"
                     min="1900"
+                    value={updateData.startYear}
+                    onChange={(e) => setUpdateData({...updateData, startYear: e.target.value})}
                     max="2099"
                     step="1"
                     style={{ width: "80%" }}
@@ -246,27 +450,41 @@ function WorkExperience(props) {
 
                 <div className="col-12 col-sm-6 mt-3">
                   <div className="jb-ps-pr">Job End Year</div>
+                  {updateData.jobStatus !== "ongoing" ? (
                   <input
+                    className="inpt-add-expr"
                     type="number"
-                    defaultValue="2020"
                     min="1900"
+                    value={updateData.endYear}
+                    onChange={(e) => setUpdateData({...updateData, endYear: e.target.value})}
                     max="2099"
                     step="1"
                     style={{ width: "80%" }}
                   />
+                ) : (
+                    <input
+                      className="inpt-add-expr"
+                      type="text"
+                      value="current"
+                      disabled
+                      style={{ width: "80%" }}
+                    />
+                )}
                 </div>
 
                 <div className="col-12 mt-3">
                   <div className="jb-ps-pr">Job Responsibilities</div>
                   <textarea
                     type="textarea"
+                    value={updateData.responsibilities}
+                    onChange={(e) => setUpdateData({...updateData, responsibilities: e.target.value})}
+                    placeholder="Please enter your job responsibilities"
                     style={{ width: "91%", minHeight: "100px" }}
                   />
                 </div>
 
                 <div className="col-12 col-sm-6 mt-3">
-                  <button className="btn-up-prd">Update</button>
-
+                  <button className="btn-up-prd" onClick={UpdateWorkExperience}>Update</button>
                   <button
                     className="btn-cn-prd"
                     onClick={() => setWorkExpEdit(false)}
@@ -487,7 +705,7 @@ function WorkExperience(props) {
                         <img
                             className="edit_img"
                             src="/Images/editP.svg"
-                            onClick={() => setProjectEdit(true)}
+                            onClick={(e) => fetchProjectUpdateData(e, item.id)}
                             style={{ cursor: "pointer", marginRight: "80px" }}
                         />
                     </span>
@@ -517,17 +735,25 @@ function WorkExperience(props) {
 
               <div className="row  ml-3">
                 <div className="col-12 col-sm-6 mt-2">
-                  <div className="jb-ps-pr">First Project / Activity Table</div>
-                  <input type="text" style={{ width: "80%" }} />
+                  <div className="jb-ps-pr">Project / Activity Title</div>
+                  <input 
+                    className="inpt-add-expr"
+                    value={projectTitle}
+                    onChange={(e) => setProjectTitle(e.target.value)}
+                    placeholder="Enter the project / activity title here..."
+                    type="text" 
+                    style={{ width: "80%" }} />
                 </div>
 
                 <div className="col-12 col-sm-6 mt-3">
                   <div className="jb-ps-pr">Year Created / Performed</div>
                   <input
                     type="number"
-                    defaultValue="2020"
                     min="1900"
                     max="2099"
+                    value={createdYear}
+                    placeholder="Enter the project / activity date here..."
+                    onChange={(e) => setCreatedYear(e.target.value)}
                     step="1"
                     style={{ width: "80%" }}
                   />
@@ -535,11 +761,16 @@ function WorkExperience(props) {
 
                 <div className="col-12  mt-3">
                   <div className="jb-ps-pr">Project / Activity URL </div>
-                  <input type="text" style={{ width: "39%" }} />
+                  <input 
+                    className="inpt-add-expr"
+                    value={projectUrl}
+                    onChange={(e) => setProjectUrl(e.target.value)}
+                    placeholder="Enter the project / activity url here..."
+                    type="text" 
+                    style={{ width: "39%" }} />
                 </div>
                 <div className="col-12 col-sm-6 mt-3">
-                  <button className="btn-up-prd">Add</button>
-
+                  <button className="btn-up-prd" onClick={AddProject}>Add</button>
                   <button
                     className="btn-cn-prd"
                     onClick={() => setProjectAdd(false)}
@@ -567,7 +798,13 @@ function WorkExperience(props) {
               <div className="row  ml-3">
                 <div className="col-12 col-sm-6 mt-2">
                   <div className="jb-ps-pr">First Project / Activity Table</div>
-                  <input type="text" style={{ width: "80%" }} />
+                  <input 
+                    className="inpt-add-expr"
+                    value={updateProject.title}
+                    onChange={(e) => setUpdateProject({...updateProject, title: e.target.value})}
+                    placeholder="Enter the project / activity title here..."
+                    type="text" 
+                    style={{ width: "80%" }} />
                 </div>
 
                 <div className="col-12 col-sm-6 mt-3">
@@ -577,6 +814,9 @@ function WorkExperience(props) {
                     defaultValue="2020"
                     min="1900"
                     max="2099"
+                    value={updateProject.year}
+                    onChange={(e) => setUpdateProject({...updateProject, year: e.target.value})}
+                    placeholder="Enter the project / activity date here..."
                     step="1"
                     style={{ width: "80%" }}
                   />
@@ -584,11 +824,16 @@ function WorkExperience(props) {
 
                 <div className="col-12  mt-3">
                   <div className="jb-ps-pr">Project / Activity URL </div>
-                  <input type="text" style={{ width: "39%" }} />
+                  <input 
+                    className="inpt-add-expr"
+                    value={updateProject.link}
+                    onChange={(e) => setUpdateProject({...updateProject, link: e.target.value})}
+                    placeholder="Enter the project / activity url here..."
+                    type="text" 
+                    style={{ width: "39%" }} />
                 </div>
                 <div className="col-12 col-sm-6 mt-3">
-                  <button className="btn-up-prd">Update</button>
-
+                  <button className="btn-up-prd" onClick={UpdateProject}>Update</button>
                   <button
                     className="btn-cn-prd"
                     onClick={() => setProjectEdit(false)}

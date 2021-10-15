@@ -5,58 +5,38 @@ import Cookies from "universal-cookie";
 import axios from "../../Axios";
 import { toast } from "react-toastify";
 import "react-datepicker/dist/react-datepicker.css";
-import DatePicker from "react-datepicker";
 
 const cookies = new Cookies();
 
 export default function PersonalDetails(props) {
-  const [dob, setDob] = useState("");
-  const [gender, setGender] = useState("");
-  const [address, setAddress] = useState("");
-  const [docs, setDocs] = useState("");
-
-  const [selectedSubCateg, setSelectedSubCateg] = useState([]);
-
-  const [selectedImage, setSelectedImage] = useState("");
-  const [uploadId, setUploadId] = useState([
-    { name: "doc1" },
-    { name: "doc2" },
-  ]);
+  const [uploadId, setUploadId] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`users/document-list`, {
+      .get(`masters/document-list`, {
         headers: {
           Authorization: "Token " + cookies.get("token"),
         },
       })
       .then((res) => {
         console.log(res);
-        setDocs(res.data);
         if (res.data && res.data.length > 0) setUploadId(res.data);
-        console.log(uploadId);
-        // toast.success("Successfully uodated", { position: toast.POSITION.TOP_CENTER, setTimeout: 2000 })
       })
       .catch((err) => {
         console.log(err);
-        // toast.warning("Some error occured", { position: toast.POSITION.TOP_CENTER, setTimeout: 2000 })
       });
   }, []);
 
   const delDoc = (id) => {
-    console.log("Delete function");
-    // return ;
     axios
-      .delete(`users/document-delete/` + id, {
+      .delete(`masters/document-delete/${id}`, {
         headers: {
           Authorization: "Token " + cookies.get("token"),
         },
       })
       .then((res) => {
         console.log(res);
-        setDocs(res.data);
         if (res.data && res.data.length > 0) setUploadId(res.data);
-        console.log(uploadId);
         toast.error("Successfully deleted", {
           position: toast.POSITION.TOP_CENTER,
           setTimeout: 2000,
@@ -65,7 +45,7 @@ export default function PersonalDetails(props) {
       })
       .catch((err) => {
         console.log(err);
-        // toast.warning("Some error occured", { position: toast.POSITION.TOP_CENTER, setTimeout: 2000 })
+        toast.warning("Some error occurred", { position: toast.POSITION.TOP_CENTER, setTimeout: 2000 })
       });
   };
 
@@ -91,14 +71,12 @@ export default function PersonalDetails(props) {
 
     const formData = new FormData();
     console.log(e.target.files[0]);
+    formData.append("master", cookies.get('id'));
     formData.append("document", e.target.files[0]);
     formData.append("document_name", e.target.files[0].name);
     formData.append("saved_id", isId);
-    for (var key of formData.entries()) {
-      console.log(key[0] + ", " + key[1]);
-    }
     axios
-      .post(`users/document-create`, formData, {
+      .post(`masters/document-create`, formData, {
         headers: {
           Authorization: "Token " + cookies.get("token"),
         },
@@ -113,43 +91,7 @@ export default function PersonalDetails(props) {
       })
       .catch((err) => {
         console.log(err);
-        toast.warning("Some error occured", {
-          position: toast.POSITION.TOP_CENTER,
-          setTimeout: 2000,
-        });
-      });
-  };
-
-  const updateDetails = (name, doc) => {
-    console.log(selectedImage);
-    let intr = "";
-    for (let i = 0; i < selectedSubCateg.length; i++) {
-      if (selectedSubCateg[i]) intr = intr + selectedSubCateg[i] + ",";
-    }
-    axios
-      .post(
-        `users/document-create`,
-        {
-          name: name,
-          document: doc,
-        },
-        {
-          headers: {
-            Authorization: "Token " + cookies.get("token"),
-          },
-        }
-      )
-      .then((res) => {
-        console.log(res);
-        toast.success("Successfully uodated", {
-          position: toast.POSITION.TOP_CENTER,
-          setTimeout: 2000,
-        });
-        window.location.reload();
-      })
-      .catch((err) => {
-        console.log(err);
-        toast.warning("Some error occured", {
+        toast.error("Some error occured", {
           position: toast.POSITION.TOP_CENTER,
           setTimeout: 2000,
         });
@@ -186,12 +128,14 @@ export default function PersonalDetails(props) {
               item.saved_id ? (
                 <div className="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6 each_doc_sec">
                   <div className="docs_container">
+                    <a href={item.document} target="_blank">
                     <div className="doc_img_div">
                       <img
                         className="doc_image"
                         src={checkPdf(item.document)}
                       />
                     </div>
+                    </a>
                     <img
                       className="del_btn"
                       onClick={() => delDoc(item.id)}
@@ -239,12 +183,14 @@ export default function PersonalDetails(props) {
               !item.saved_id ? (
                 <div className="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6 each_doc_sec">
                   <div className="docs_container">
+                    <a href={item.document} target="_blank">
                     <div className="doc_img_div">
                       <img
                         className="doc_image"
                         src={checkPdf(item.document)}
                       />
                     </div>
+                    </a>
                     <img
                       className="del_btn"
                       onClick={() => delDoc(item.id)}

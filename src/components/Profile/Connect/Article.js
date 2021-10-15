@@ -1306,7 +1306,7 @@ export default function Article(props) {
                 <button onClick={() => onAssignFormClick()} className={activeBtn1 === 'Assign' ? "common_btn blue_active margin_left_btn" : "common_btn not_active_btn margin_left_btn"}>Assign Forms</button> */}
 
                     <div className="text-right">
-                        <button className="common_btn active_btn mr-2" style={{position:"relative",top:"-30px"}} >
+                        <button className="common_btn active_btn mr-2" style={{position:"relative",top:"-30px", width:"12vw"}} >
                             Create new - Articles
                         </button>
                         <button className="common_btn active_btn" style={{position:"relative",top:"-30px"}}>
