@@ -1,0 +1,167 @@
+
+//   Css by Thomas
+
+.join_us_main{
+    .noMargin{
+        margin: 0;
+    }
+    .noPadding{
+        padding: 0;
+    }
+    .sectionPinkHead{
+        background: #d082ff;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: white;
+    }
+    .sectionBody{
+        background: #f6ecff;
+    }
+    .file_input_upload{
+        display: none;
+    }
+    .mike_img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .join_us_main{
+        $pagePadding: 2vw;
+        $cardPadding: 1vw;
+        $sectionFont: 1.3vw;
+        $normalFont: 1vw;
+
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+        .resume_upload_row{
+            margin-top: $pagePadding;
+        }
+        .sectionBodyHead{
+            font-size: 3vw;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .small_margin_top{
+            margin-top: $cardPadding;
+        }
+        .sectionBodyHead{
+            font-size: 1.5vw;
+        }
+        .left_margin{
+            margin-left: $pagePadding;
+        }
+        .mike_img{
+            height: 15vw;
+        }
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .join_us_main{
+        $pagePadding: 2.3vw;
+        $cardPadding: 1.3vw;
+        $sectionFont: 1.6vw;
+        $normalFont: 1.3vw;
+
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+        .resume_upload_row{
+            margin-top: $pagePadding;
+        }
+        .sectionBodyHead{
+            font-size: 3vw;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .small_margin_top{
+            margin-top: $cardPadding;
+        }
+        .sectionBodyHead{
+            font-size: 1.8vw;
+        }
+        .left_margin{
+            margin-left: $pagePadding;
+        }
+        .mike_img{
+            height: 17vw;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .join_us_main{
+        $pagePadding: 2.6vw;
+        $cardPadding: 1.6vw;
+        $sectionFont: 1.9vw;
+        $normalFont: 1.6vw;
+
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+        .resume_upload_row{
+            margin-top: $pagePadding;
+        }
+        .sectionBodyHead{
+            font-size: 3vw;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .small_margin_top{
+            margin-top: $cardPadding;
+        }
+        .sectionBodyHead{
+            font-size: 2.1vw;
+        }
+        .left_margin{
+            margin-left: $pagePadding;
+        }
+        .mike_img{
+            height: 19vw;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .join_us_main{
+        $pagePadding: 3.6vw;
+        $cardPadding: 2.6vw;
+        $sectionFont: 2.9vw;
+        $normalFont: 2.6vw;
+
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+        .resume_upload_row{
+            margin-top: $pagePadding;
+        }
+        .sectionBodyHead{
+            font-size: 3vw;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .small_margin_top{
+            margin-top: $cardPadding;
+        }
+        .sectionBodyHead{
+            font-size: 3vw;
+        }
+        .left_margin{
+            margin-left: $pagePadding;
+        }
+        .mike_img{
+            height: 25vw;
+        }
+    }
+}

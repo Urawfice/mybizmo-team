@@ -1,0 +1,229 @@
+    //Css by Thomas
+.testimonial_main{
+    .testimonial_card{
+        position: relative;
+        border: none;
+        box-shadow: 0px 3px 4px rgba(159, 159, 159, 0.25);
+        border-radius: 10px;
+    }
+    .image_quotes{
+        position: absolute;
+    }
+    .profile_img_div{
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 50px;
+        border: 1px solid #03CBC9;
+    }
+    .align_self_center{
+        align-self: center;
+    }
+    .profile_name_span{
+        font-weight: 600;
+        color: #252525;
+    }
+    .profile_role_span{
+        color: #98989C;
+    }
+    .test_desc{
+        color: #252525;
+    }
+    .test_desc_sec{
+        overflow-y: auto;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .testimonial_main{
+        $pagePadding: 2vw;
+        $cardPadding: 1.5vw;
+        $quoteImgHeight: 3vw;
+        $profileImgHeight: 4vw;
+
+        .testimonial_sec_div{
+            margin-top: $pagePadding + ($quoteImgHeight/2);
+            margin-left: $pagePadding/2;
+            margin-right: $pagePadding/2;
+        }
+        .each_card_div{
+            padding-left: $pagePadding/2;
+            padding-right: $pagePadding/2;
+        }
+        .testimonial_card{
+            padding: $cardPadding;
+            padding-top: $cardPadding + ($quoteImgHeight/2);
+            margin-bottom: $pagePadding;
+        }
+        .image_quotes{
+            height: $quoteImgHeight;
+            right: 1vw;
+            top: -($quoteImgHeight/2);
+        }
+        .biz-profile-pic{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_img_div{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_name_span{
+            font-size: 1.2vw;
+        }
+        .profile_role_span, .test_desc{
+            font-size: 1vw;
+        }
+        .test_desc_sec{
+            margin-top: $cardPadding;   
+        }
+        .test_desc_sec{
+            height: 7vw;
+        }
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .testimonial_main{
+        $pagePadding: 2.3vw;
+        $cardPadding: 1.8vw;
+        $quoteImgHeight: 3.3vw;
+        $profileImgHeight: 5vw;
+
+        .testimonial_sec_div{
+            margin-top: $pagePadding + ($quoteImgHeight/2);
+            margin-left: $pagePadding/2;
+            margin-right: $pagePadding/2;
+        }
+        .each_card_div{
+            padding-left: $pagePadding/2;
+            padding-right: $pagePadding/2;
+        }
+        .testimonial_card{
+            padding: $cardPadding;
+            padding-top: $cardPadding + ($quoteImgHeight/2);
+            margin-bottom: $pagePadding;
+        }
+        .image_quotes{
+            height: $quoteImgHeight;
+            right: 2vw;
+            top: -($quoteImgHeight/2);
+        }
+        .biz-profile-pic{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_img_div{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_name_span{
+            font-size: 1.5vw;
+        }
+        .profile_role_span, .test_desc{
+            font-size: 1.3vw;
+        }
+        .test_desc_sec{
+            margin-top: $cardPadding;   
+        }
+        .test_desc_sec{
+            height: 10vw;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .testimonial_main{
+        $pagePadding: 2.6vw;
+        $cardPadding: 2.1vw;
+        $quoteImgHeight: 3.6vw;
+        $profileImgHeight: 6vw;
+
+        .testimonial_sec_div{
+            margin-top: $pagePadding + ($quoteImgHeight/2);
+            margin-left: $pagePadding/2;
+            margin-right: $pagePadding/2;
+        }
+        .each_card_div{
+            padding-left: $pagePadding/2;
+            padding-right: $pagePadding/2;
+        }
+        .testimonial_card{
+            padding: $cardPadding;
+            padding-top: $cardPadding + ($quoteImgHeight/2);
+            margin-bottom: $pagePadding;
+        }
+        .image_quotes{
+            height: $quoteImgHeight;
+            right: 3vw;
+            top: -($quoteImgHeight/2);
+        }
+        .biz-profile-pic{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_img_div{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_name_span{
+            font-size: 1.8vw;
+        }
+        .profile_role_span, .test_desc{
+            font-size: 1.6vw;
+        }
+        .test_desc_sec{
+            margin-top: $cardPadding;   
+        }
+        .test_desc_sec{
+            max-height: 15vw;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .testimonial_main{
+        $pagePadding: 3.6vw;
+        $cardPadding: 3.1vw;
+        $quoteImgHeight: 5.6vw;
+        $profileImgHeight: 11vw;
+
+        .testimonial_sec_div{
+            margin-top: $pagePadding + ($quoteImgHeight/2);
+            margin-left: $pagePadding/2;
+            margin-right: $pagePadding/2;
+        }
+        .each_card_div{
+            padding-left: $pagePadding/2;
+            padding-right: $pagePadding/2;
+        }
+        .testimonial_card{
+            padding: $cardPadding;
+            padding-top: $cardPadding + ($quoteImgHeight/2);
+            margin-bottom: $pagePadding;
+        }
+        .image_quotes{
+            height: $quoteImgHeight;
+            right: 4vw;
+            top: -($quoteImgHeight/2);
+        }
+        .biz-profile-pic{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_img_div{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_name_span{
+            font-size: 2.8vw;
+        }
+        .profile_role_span, .test_desc{
+            font-size: 2.6vw;
+        }
+        .test_desc_sec{
+            margin-top: $cardPadding;   
+        }
+        .test_desc_sec{
+            max-height: 20vw;
+        }
+        .pro_details_sec{
+            line-height: 1;
+        }
+    }
+}

@@ -1,0 +1,325 @@
+
+  //Css by Thomas
+.news_main{
+    .sectionPinkHead{
+        background: #d082ff;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: white;
+    }
+    .sectionBody{
+        background: #f6ecff;
+    }
+    .news_sec_div{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .page_link{
+        color: white;
+        font-weight: bold !important;
+        
+    }
+    .new-pagination-active {
+        text-decoration-line: underline;
+        color: #ffffff !important;
+        // line-height: 30px !important;
+    }
+    .page-item{
+        // line-height: 30px !important;
+    }
+    .news_img_div{
+        display: grid;
+        img{
+            left: 0;
+            width: auto;
+            height: auto;
+            align-self: center;
+        }
+    }
+    .sectionBodyHead{
+        font-weight: 600;
+    }
+    .created_date{
+        color: #98989C;
+        font-weight: 700;
+    }
+    .each_news_row{
+        border-bottom: 2px solid #D081FF;
+    }
+    .pagination{
+        display: flex;
+    }
+    .alignSelfCenter{
+        align-self: center;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .news_main{
+        $pagePadding: 2vw;
+        $cardPadding: 1vw;
+        $sectionFont: 1.3vw;
+        $normalFont: 1vw;
+        $newsImgHeight: 6vw;
+        $newsImgWidth: 11vw;
+
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .sectionBodyHead{
+            font-size: 1.5vw;
+        }
+        .head_sec{
+            margin-top: $cardPadding;
+        }
+        .date_news_div{
+            margin-top: $cardPadding;
+        }
+        .news_sec_div{
+            margin-top: $pagePadding;
+        }
+        .news_content{
+            margin-top: $pagePadding;
+        }
+        .each_news_row{
+            padding-bottom: $pagePadding;
+        }
+
+        .page_link{
+            font-size: $normalFont;
+        }
+        .new-pagination-active{
+            margin-right: $cardPadding/2;
+        }
+        .page-item{
+            margin-right: $cardPadding/2;
+        }
+        .news_img_div{
+            height: $newsImgHeight;
+            width: $newsImgWidth;
+            img{
+                max-height: $newsImgHeight;
+                max-width: $newsImgWidth;
+            }
+        }
+        .news_date_img{
+            height: 1.1vw;
+            margin-right: 0.5vw;
+        }
+        .created_date{
+            font-size: $normalFont;
+        }
+        .news_title_span{
+            margin-left: 3vw;
+        }
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .news_main{
+        $pagePadding: 2.3vw;
+        $cardPadding: 1.3vw;
+        $sectionFont: 1.6vw;
+        $normalFont: 1.3vw;
+        $newsImgHeight: 8vw;
+        $newsImgWidth: 15vw;
+
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .sectionBodyHead{
+            font-size: 1.8vw;
+        }
+        .head_sec{
+            margin-top: $cardPadding;
+        }
+        .date_news_div{
+            margin-top: $cardPadding;
+        }
+        .news_content{
+            margin-top: $pagePadding;
+        }
+        .each_news_row{
+            padding-bottom: $pagePadding;
+        }
+        .news_sec_div{
+            margin-top: $pagePadding;
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+
+        .page_link{
+            font-size: $normalFont;
+        }
+        .new-pagination-active{
+            margin-right: $cardPadding/2;
+        }
+        .page-item{
+            margin-right: $cardPadding/2;
+        }
+        .news_img_div{
+            height: $newsImgHeight;
+            width: $newsImgWidth;
+            img{
+                max-height: $newsImgHeight;
+                max-width: $newsImgWidth;
+            }
+        }
+        .news_date_img{
+            height: 1.6vw;
+            margin-right: 0.7vw;
+        }
+        .created_date{
+            font-size: $normalFont;
+        }
+        .news_title_span{
+            margin-left: -3vw;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .news_main{
+        $pagePadding: 2.6vw;
+        $cardPadding: 1.6vw;
+        $sectionFont: 1.9vw;
+        $normalFont: 1.6vw;
+        $newsImgHeight: 10vw;
+        $newsImgWidth: 17vw;
+
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .sectionBodyHead{
+            font-size: 2.1vw;
+        }
+        .head_sec{
+            margin-top: $cardPadding;
+        }
+        .date_news_div{
+            margin-top: $cardPadding;
+        }
+        .news_content{
+            margin-top: $pagePadding;
+        }
+        .each_news_row{
+            padding-bottom: $pagePadding;
+        }
+        .news_sec_div{
+            margin-top: $pagePadding;
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .page_link{
+            font-size: $normalFont;
+        }
+        .new-pagination-active{
+            margin-right: $cardPadding/2;
+        }
+        .page-item{
+            margin-right: $cardPadding/2;
+        }
+        .news_img_div{
+            height: $newsImgHeight;
+            width: $newsImgWidth;
+            img{
+                max-height: $newsImgHeight;
+                max-width: $newsImgWidth;
+            }
+        }
+        .news_date_img{
+            height: 1.9vw;
+            margin-right: 0.9vw;
+        }
+        .created_date{
+            font-size: $normalFont;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .news_main{
+        $pagePadding: 3.6vw;
+        $cardPadding: 2.6vw;
+        $sectionFont: 2.9vw;
+        $normalFont: 2.6vw;
+        $newsImgHeight: 16vw;
+        $newsImgWidth: 24vw;
+
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .sectionBodyHead{
+            font-size: 3.1vw;
+        }
+        .head_sec{
+            margin-top: $cardPadding;
+        }
+        .date_news_div{
+            margin-top: $cardPadding;
+        }
+        .news_content{
+            margin-top: $pagePadding;
+        }
+        .each_news_row{
+            padding-bottom: $pagePadding;
+        }
+        .news_sec_div{
+            margin-top: $pagePadding;
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .page_link{
+            font-size: $normalFont;
+        }
+        .new-pagination-active{
+            margin-right: $cardPadding/2;
+        }
+        .page-item{
+            margin-right: $cardPadding/2;
+        }
+        .news_img_div{
+            height: $newsImgHeight;
+            width: $newsImgWidth;
+            img{
+                max-height: $newsImgHeight;
+                max-width: $newsImgWidth;
+            }
+        }
+        .news_date_img{
+            height: 2.9vw;
+            margin-right: 2.1vw;
+        }
+        .created_date{
+            font-size: $normalFont;
+        }
+    }
+}

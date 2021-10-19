@@ -1,0 +1,125 @@
+.promos_and_offers_main{
+    .common_btn:focus {
+        outline: none;
+    }
+    .common_btn {
+        border-radius: 44px;
+    }
+    .not_active_btn{
+        border: none;
+        background-color: white;
+    }
+    .blue_active{
+        background: #9929FD;
+        box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.25);
+        border-radius: 44px;
+        border: none;
+        color: white;
+    }
+    .noMargin{
+        margin: 0;
+    }
+    .noPadding{
+        padding: 0;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .promos_and_offers_main{
+        $pagePadding: 2vw;
+        $cardPadding: 1vw;
+        $sectionFont: 1.3vw;
+        $normalFont: 1vw;
+
+        .common_btn {
+            font-size: $normalFont;
+            min-width: 10vw;
+            padding: 0.5vw 1vw 0.5vw 1vw;
+        }
+        .margin_left_btn{
+            margin-left: $pagePadding;
+        }
+        .button_margin_top{
+            margin-top: $pagePadding;
+        }
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .promos_and_offers_main{
+        $pagePadding: 2.3vw;
+        $cardPadding: 1.3vw;
+        $sectionFont: 1.6vw;
+        $normalFont: 1.3vw;
+
+        .common_btn {
+            font-size: $normalFont;
+            min-width: 12vw;
+            padding: 0.7vw 1.2vw 0.7vw 1.2vw;
+        }
+        .margin_left_btn{
+            margin-left: $pagePadding;
+        }
+        .button_margin_top{
+            margin-top: $pagePadding;
+        }
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .promos_and_offers_main{
+        $pagePadding: 2.6vw;
+        $cardPadding: 1.6vw;
+        $sectionFont: 1.9vw;
+        $normalFont: 1.6vw;
+
+        .common_btn {
+            font-size: $normalFont;
+            min-width: 14vw;
+            padding: 0.9vw 1.4vw 0.9vw 1.4vw;
+        }
+        .margin_left_btn{
+            margin-left: $pagePadding;
+        }
+        .button_margin_top{
+            margin-top: $pagePadding;
+        }
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .promos_and_offers_main{
+        $pagePadding: 3.6vw;
+        $cardPadding: 2.6vw;
+        $sectionFont: 2.9vw;
+        $normalFont: 2.6vw;
+
+        .common_btn {
+            font-size: $normalFont;
+            min-width: 15vw;
+            padding: 1.1vw 1.6vw 1.1vw 1.6vw;
+        }
+        .margin_left_btn{
+            margin-left: $pagePadding;
+        }
+        .button_margin_top{
+            margin-top: $pagePadding;
+        }
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+    }
+}

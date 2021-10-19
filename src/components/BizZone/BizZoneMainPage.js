@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./BizZoneMainPage.css";
+// import "./BizZoneMainPage.css";
+import "./bizZoneMainPage.scss";
 import axios from "../../Axios";
 import Cookies from "universal-cookie";
 import profilepictest from "./BizImages/profile-pic-test.jpeg";
@@ -172,303 +173,153 @@ const BizZoneMainPage = () => {
   }
 
   return (
-    <div style={{ marginLeft: "70px", marginRight: "50px" }}>
-      <div className="row  pt-5">
-        {auActive === true ? (
-          <div className="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-5 biz-top-nav-padding  biz-top-nav-back-clr biz-btm-bordr">
-            <p
-              className="biz-zone-text-top biz-zone-top-font-size text-center biz-black-clr pt-2 mb-0 pb-2 "
-              onClick={(e) => setActiveMain("aboutus")}
-            >
-              <span style={{ paddingRight: "20px" }}>
-                <img
-                  src={au}
-                  style={{
-                    position: "absolute",
-                    paddingLeft: "4px",
-                    paddingTop: "4px",
-                  }}
-                />
-                <img src={aboutus1}></img>
-              </span>
-              About us
-            </p>
-          </div>
-        ) : (
-          <div
-            className="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-5 biz-top-nav-padding  biz-top-nav-back-clr"
-            onClick={aboutUsFn}
-          >
-            <p
-              className="biz-zone-text-top biz-zone-top-font-size text-center biz-black-clr pt-2 mb-0 pb-2 "
-              onClick={(e) => setActiveMain("aboutus")}
-            >
-              <span style={{ paddingRight: "20px" }}>
-                <img
-                  src={au}
-                  style={{
-                    position: "absolute",
-                    paddingLeft: "4px",
-                    paddingTop: "4px",
-                  }}
-                />
-                <img src={aboutus1}></img>
-              </span>
-              About us
-            </p>
-          </div>
-        )}
+    <div className="biz_zone_main_page_main">
 
-        {poActive === true ? (
-          <div className="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-5 biz-top-nav-padding  biz-top-nav-back-clr biz-btm-bordr">
-            <p
-              className="biz-zone-text-top biz-zone-top-font-size text-center biz-black-clr pt-2 mb-0 pb-2"
-              onClick={(e) => setActiveMain("promosandoffers")}
-            >
-              <span style={{ paddingRight: "20px" }}>
-                <img
-                  src={po}
-                  style={{
-                    position: "absolute",
-                    paddingLeft: "8px",
-                    paddingTop: "8px",
-                  }}
-                />
-                <img src={contactus1}></img>
+      {/* Button section START */}
+      <div className='row noMargin noPadding top_menu_btn_sec_scss_class top_menu_activity'>
+        <div className='col-12 noMargin noPadding'>
+          {auActive === true ? (
+            <button className="topmenu_btn active_menu">
+              <span onClick={(e) => setActiveMain("aboutus")}>
+                <span className="img_span">
+                  <img className='topMenu_icon ' src={au} />
+                  <img className="btn_background_img_span" src={aboutus1}></img>
+                </span>
+                About us
               </span>
-              Promos & Offers
-            </p>
-          </div>
-        ) : (
-          <div
-            className="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-5 biz-top-nav-padding  biz-top-nav-back-clr"
-            onClick={poFn}
-          >
-            <p
-              className="biz-zone-text-top biz-zone-top-font-size text-center biz-black-clr pt-2 mb-0 pb-2"
-              onClick={(e) => setActiveMain("promosandoffers")}
-            >
-              <span style={{ paddingRight: "20px" }}>
-                <img
-                  src={po}
-                  style={{
-                    position: "absolute",
-                    paddingLeft: "8px",
-                    paddingTop: "8px",
-                  }}
-                />
-                <img src={contactus1}></img>
+            </button>
+          ) : (
+              <button className="topmenu_btn" onClick={aboutUsFn}>
+                <span onClick={(e) => setActiveMain("aboutus")}>
+                  <span className="img_span">
+                    <img className='topMenu_icon' src={au} />
+                    <img className="btn_background_img_span" src={aboutus1}></img>
+                  </span>
+                  About us
+                </span>
+              </button>
+          )}
+          {poActive === true ? (
+            <button className="topmenu_btn active_menu">
+              <span onClick={(e) => setActiveMain("promosandoffers")}>
+                <span className="img_span">
+                  <img className='topMenu_icon ' src={po} />
+                  <img className="btn_background_img_span" src={contactus1}></img>
+                </span>
+                Promos & Offers
               </span>
-              Promos & Offers
-            </p>
-          </div>
-        )}
-
-        {cuActive === true ? (
-          <div className="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-5 biz-top-nav-padding  biz-top-nav-back-clr biz-btm-bordr">
-            <p
-              className="biz-zone-text-top biz-zone-top-font-size text-center biz-black-clr pt-2 mb-0 pb-2"
-              onClick={(e) => setActiveMain("contactUs")}
-            >
-              {" "}
-              <span style={{ paddingRight: "20px" }}>
-                <img
-                  src={cu}
-                  style={{
-                    position: "absolute",
-                    paddingLeft: "8px",
-                    paddingTop: "6px",
-                  }}
-                />
-                <img src={contactus1}></img>
+            </button>
+          ) : (
+              <button className="topmenu_btn" onClick={poFn}>
+                <span onClick={(e) => setActiveMain("promosandoffers")}>
+                  <span className="img_span">
+                    <img className='topMenu_icon ' src={po} />
+                    <img className="btn_background_img_span" src={contactus1}></img>
+                  </span>
+                  Promos & Offers
+                </span>
+              </button>
+          )}
+          {cuActive === true ? (
+            <button className="topmenu_btn active_menu">
+              <span onClick={(e) => setActiveMain("contactUs")}>
+                <span className="img_span">
+                  <img className='topMenu_icon ' src={cu} />
+                  <img className="btn_background_img_span" src={contactus1}></img>
+                </span>
+                Contact us
               </span>
-              Contact us
-            </p>{" "}
-          </div>
-        ) : (
-          <div
-            className="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-5 biz-top-nav-padding  biz-top-nav-back-clr"
-            onClick={CuFn}
-          >
-            <p
-              className="biz-zone-text-top biz-zone-top-font-size text-center biz-black-clr pt-2 mb-0 pb-2"
-              onClick={(e) => setActiveMain("contactUs")}
-            >
-              {" "}
-              <span style={{ paddingRight: "20px" }}>
-                <img
-                  src={cu}
-                  style={{
-                    position: "absolute",
-                    paddingLeft: "8px",
-                    paddingTop: "6px",
-                  }}
-                />
-                <img src={contactus1}></img>
+            </button>
+          ) : (
+            <button className="topmenu_btn" onClick={CuFn}>
+              <span onClick={(e) => setActiveMain("contactUs")}>
+                <span className="img_span">
+                  <img className='topMenu_icon ' src={cu} />
+                  <img className="btn_background_img_span" src={contactus1}></img>
+                </span>Contact us
               </span>
-              Contact us
-            </p>{" "}
-          </div>
-        )}
-
-        {juActive === true ? (
-          <div className="col-xxl-1 col-xl-2 col-lg-2 col-md-4 col-5 biz-top-nav-padding  biz-top-nav-back-clr biz-btm-bordr">
-            <p
-              className="biz-zone-text-top biz-zone-top-font-size text-center biz-black-clr pt-2 mb-0 pb-2"
-              onClick={(e) => setActiveMain("joinuspage")}
-            >
-              <span style={{ paddingRight: "20px" }}>
-                <img
-                  src={ju}
-                  style={{
-                    position: "absolute",
-                    paddingLeft: "8px",
-                    paddingTop: "6px",
-                  }}
-                />
-                <img src={contactus1}></img>
+            </button>
+          )}
+          {juActive === true ? (
+            <button className="topmenu_btn active_menu">
+              <span onClick={(e) => setActiveMain("joinuspage")}>
+                <span className="img_span">
+                  <img className='topMenu_icon ' src={ju} />
+                  <img className="btn_background_img_span" src={contactus1}></img>
+                </span>Join us
               </span>
-              Join us
-            </p>
-          </div>
-        ) : (
-          <div
-            className="col-xxl-1 col-xl-2 col-lg-2 col-md-4 col-5 biz-top-nav-padding  biz-top-nav-back-clr"
-            onClick={JuFn}
-          >
-            <p
-              className="biz-zone-text-top biz-zone-top-font-size text-center biz-black-clr pt-2 mb-0 pb-2"
-              onClick={(e) => setActiveMain("joinuspage")}
-            >
-              <span style={{ paddingRight: "20px" }}>
-                <img
-                  src={ju}
-                  style={{
-                    position: "absolute",
-                    paddingLeft: "8px",
-                    paddingTop: "6px",
-                  }}
-                />
-                <img src={contactus1}></img>
+            </button>
+          ) : (
+            <button className="topmenu_btn" onClick={JuFn}>
+              <span onClick={(e) => setActiveMain("joinuspage")}>
+                <span className="img_span">
+                  <img className='topMenu_icon ' src={ju} />
+                  <img className="btn_background_img_span" src={contactus1}></img>
+                </span>Join us
               </span>
-              Join us
-            </p>
-          </div>
-        )}
+            </button>
+          )}
+        </div>
       </div>
+      
       {activeMain === "aboutus" && (
         <>
-          <div className="row  mt-5 ">
-            {outteamBtn === true ? (
-              <div className="col-xxl-1 col-xl-2 mt-2 col-lg-2 col-md-4 col-5 biz-top-nav-padding  biz-zone-button-top ">
-                <p
-                  className="biz-zone-text-top  biz-zone-bottom-font-size text-center pt-2 mb-0 pb-2"
-                  onClick={(e) => setActive("ourTeam")}
-                >
-                  Our Team
-                </p>
+          <div className="row noPadding noMargin">
+            <div className="row noMargin noPadding btn_row">
+              <div className="col-sm-9 col-12 noMargin noPadding text-left button_margin_top" >
+                {outteamBtn === true ? (
+                    <button className="common_btn blue_active">
+                      <span onClick={(e) => setActive("ourTeam")}>Our Team</span>
+                    </button>
+                ) : (
+                  <button className="common_btn not_active_btn" onClick={ourTeambtn}>
+                    <span onClick={(e) => setActive("ourTeam")}>Our Team</span>
+                  </button>
+                )}
+                {testimonialBtn === true ? (
+                    <button className="common_btn blue_active margin_left_btn">
+                      <span onClick={(e) => setActive("testimonial")}>Testimonials</span>
+                    </button>
+                ) : (
+                  <button className="common_btn not_active_btn margin_left_btn" onClick={testimonialBtnFn}>
+                    <span onClick={(e) => setActive("testimonial")}>Testimonials</span>
+                  </button>
+                )}
+                {newsBtn === true ? (
+                    <button className="common_btn blue_active margin_left_btn">
+                      <span onClick={(e) => setActive("news")}>News</span>
+                    </button>
+                ) : (
+                  <button className="common_btn not_active_btn margin_left_btn" onClick={newsBtnFn}>
+                    <span onClick={(e) => setActive("news")}>News</span>
+                  </button>
+                )}
+                {mustRead === true ? (
+                    <button className="common_btn blue_active margin_left_btn">
+                      <span onClick={(e) => setActive("mustread")}>Must Read</span>
+                    </button>
+                ) : (
+                  <button className="common_btn not_active_btn margin_left_btn" onClick={mustReadBtnFn}>
+                    <span onClick={(e) => setActive("mustread")}>Must Read</span>
+                  </button>
+                )}
               </div>
-            ) : (
-              <div
-                className="col-xxl-1 col-xl-2 mt-2 col-lg-2 col-md-4 col-5 biz-top-nav-padding  biz-btn-disabled-white "
-                onClick={ourTeambtn}
-              >
-                <p
-                  className="biz-zone-text-top  biz-zone-bottom-font-size text-center pt-2 mb-0 pb-2"
-                  onClick={(e) => setActive("ourTeam")}
-                >
-                  Our Team
-                </p>
-              </div>
-            )}
+              {active === "testimonial" && (
+                <div className="col-sm-3 col-12 noMargin noPadding text-right button_margin_top">
+                  <button className="common_btn_review green_active margin_left_btn"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    <span className="review_span">Give your review</span>
+                    <img className="review_icon" src={review2}></img>
+                  </button>
+                </div>
+              )}
+            </div>
 
-            {testimonialBtn === true ? (
-              <div className="col-xxl-1 col-xl-2 mt-2  col-lg-2 col-md-4 col-5 biz-top-nav-padding  biz-zone-button-top">
-                <p
-                  className="biz-zone-text-top  biz-zone-bottom-font-size text-center pt-2 mb-0 pb-2"
-                  onClick={(e) => setActive("testimonial")}
-                >
-                  Testimonials
-                </p>
-              </div>
-            ) : (
-              <div
-                className="col-xxl-1 col-xl-2 mt-2  col-lg-2 col-md-4 col-5 biz-top-nav-padding  biz-btn-disabled-white"
-                onClick={testimonialBtnFn}
-              >
-                <p
-                  className="biz-zone-text-top  biz-zone-bottom-font-size text-center pt-2 mb-0 pb-2"
-                  onClick={(e) => setActive("testimonial")}
-                >
-                  Testimonials
-                </p>
-              </div>
-            )}
-
-            {newsBtn === true ? (
-              <div className="col-xxl-1 col-xl-2 mt-2 col-lg-2 col-md-4 col-5 biz-top-nav-padding  biz-zone-button-top">
-                <p
-                  className="biz-zone-text-top  biz-zone-bottom-font-size text-center pt-2 mb-0 pb-2"
-                  onClick={(e) => setActive("news")}
-                >
-                  News
-                </p>
-              </div>
-            ) : (
-              <div
-                className="col-xxl-1 col-xl-2 mt-2 col-lg-2 col-md-4 col-5 biz-top-nav-padding  biz-btn-disabled-white"
-                onClick={newsBtnFn}
-              >
-                <p
-                  className="biz-zone-text-top  biz-zone-bottom-font-size text-center pt-2 mb-0 pb-2"
-                  onClick={(e) => setActive("news")}
-                >
-                  News
-                </p>
-              </div>
-            )}
-
-            {mustRead === true ? (
-              <div className="col-xxl-1 col-xl-2 mt-2 col-lg-2 col-md-4 col-5 biz-top-nav-padding  biz-zone-button-top">
-                <p
-                  className="biz-zone-text-top  biz-zone-bottom-font-size text-center pt-2 mb-0 pb-2"
-                  onClick={(e) => setActive("mustread")}
-                >
-                  Must Read
-                </p>
-              </div>
-            ) : (
-              <div
-                className="col-xxl-1 col-xl-2 mt-2 col-lg-2 col-md-4 col-5 biz-top-nav-padding  biz-btn-disabled-white"
-                onClick={mustReadBtnFn}
-              >
-                <p
-                  className="biz-zone-text-top  biz-zone-bottom-font-size text-center pt-2 mb-0 pb-2"
-                  onClick={(e) => setActive("mustread")}
-                >
-                  Must Read
-                </p>
-              </div>
-            )}
-
-            {active === "testimonial" && (
-              <div className="col-xxl-1 col-xl-2 mt-2 col-lg-2 col-md-4 col-5 ">
-                {" "}
-                <button
-                  type="button"
-                  className="btn btn-primary biz-giveyourreview-btn"
-                  data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
-                >
-                  Give your review{" "}
-                  <img src={review2} style={{ paddingLeft: "10px" }}></img>
-                </button>
-              </div>
-            )}
-
-            <div
-              className="modal fade "
-              id="staticBackdrop"
+            {/* Button section END */}
+            
+            <div className="modal fade" id="staticBackdrop"
               data-bs-backdrop="static"
               data-bs-keyboard="false"
               tabindex="-1"
@@ -477,61 +328,37 @@ const BizZoneMainPage = () => {
             >
               <div className="modal-dialog modal-dialog-centered modal-lg">
                 <div className="modal-content ">
-                  <div className="modal-header">
-                    <h5
-                      className="modal-title biz-review-title"
-                      id="staticBackdropLabel"
-                    >
+                  <div className="modal-header popupHead">
+                    <span className="modal-title biz_review_title align_self_center" id="staticBackdropLabel">
                       Your Review
-                    </h5>
-                    <button
-                      type="button"
-                      className="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
+                    </span>
+                    <button type="button" className="btn-close align_self_center" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                  <div className="modal-body">
-                    <p className="biz-review-subtitle ">
-                      {" "}
+                  <div className="modal-body review_modal_body">
+                    <span className="biz-review-subtitle ">
                       Give your review of your overall experience with <br></br>
                       "our wellness business"
-                    </p>
-
-                    <p className="biz-review-form-title mb-0">
-                      Designation / Role
-                    </p>
-                    <input
-                      type="text"
-                      className="biz-review-input p-1"
+                    </span>
+                    <div className="designation_div">
+                      <span className="biz-review-form-title">Designation / Role</span>
+                    </div>
+                    <input type="text" className="biz-review-input form-control"
                       placeholder="Enter your designation or role here"
                       value={reviewRole}
                       onChange={(e) => setReviewRole(e.target.value)}
                     ></input>
-
-                    <p className="biz-review-form-title mb-0 mt-3">Review</p>
-                    <textarea
-                      placeholder="write your review"
-                      rows="8"
-                      cols="81"
-                      style={{ borderRadius: "5px" }}
-                      value={review}
+                    <div className="designation_div">
+                      <span className="biz-review-form-title">Review</span>
+                    </div>
+                    <textarea placeholder="write your review" rows="8" className="pop_review_text_area form-control" value={review}
                       onChange={(e) => setReview(e.target.value)}
                     />
                   </div>
-                  <div className="modal-footer justify-content-start">
-                    <button
-                      type="button"
-                      className="btn btn-primary biz-review-submit-btn"
-                      onClick={updateBasic}
-                    >
+                  <div className="modal-footer justify-content-start review_footer">
+                    <button type="button" className="common_btn blue_active" onClick={updateBasic}>
                       Submit
                     </button>
-                    <button
-                      type="button"
-                      className="btn btn-secondary biz-review-cancel-btn"
-                      data-bs-dismiss="modal"
-                    >
+                    <button type="button" className="common_btn not_active_grey_btn" data-bs-dismiss="modal">
                       Cancel
                     </button>
                   </div>
@@ -539,187 +366,124 @@ const BizZoneMainPage = () => {
               </div>
             </div>
           </div>
-          {active === "ourTeam" && (
-            <>
-              {whoWeAre === "" ? (
-                <></>
-              ) : (
-                <div className="row simpl-border mt-5  ">
-                  <div className="col-xxl-12  p-2 biz-title-backg-clr ">
-                    <p className="biz-zone-padding-text biz-white-clr biz-zone-text-top biz-font-big mt-3">
-                      Who We Are
-                    </p>
-                  </div>
-                  <div className="col-xxl-12  biz-bottom-card-back ">
-                    <p className="biz-zone-long-text-padding mt-4 biz-zone-text-top biz-zone-top-font-size">
-                      {whoWeAre}
-                    </p>
-                  </div>
-                </div>
-              )}
-              {ourMission === "" ? (
-                <></>
-              ) : (
-                <div className="row simpl-border mt-3 ">
-                  <div className="col-xxl-12  biz-title-backg-clr  p-2">
-                    <p className="biz-zone-padding-text biz-white-clr biz-zone-text-top biz-font-big mt-3">
-                      Our Mission
-                    </p>
-                  </div>
-                  <div className="col-xxl-12  biz-bottom-card-back">
-                    <p className="text-center mt-3 biz-zone-text-top biz-font-weight-big biz-zone-top-font-size mt-5">
-                      {ourMissionHeading}
-                    </p>
-                    <p className="biz-zone-long-text-padding mt-4 biz-zone-text-top biz-zone-top-font-size mt-4">
-                      {ourMission}
-                    </p>
-                    {/* <div className="row ">
-                  {certificate.length>0 && certificate.map((item)=>
-                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-11  mx-auto">
-                      <img
-                        src={leaf}
-                        // style={{ display: "flex", margin: "auto"}}
-                      />
-                       <p className="text-center biz-zone-text-top biz-font-weight-big biz-zone-top-font-size ">
-                        {item.certified_by}
-                      </p>
-                      <p
-                        style={{ position: "absolute", top: "50px", display: "flex", margin: "auto"}}
-                        className="our-mission-title-text "
-                      >
-                        {item.name}
-                      </p>
-                     
-                      <p className="text-center biz-zone-text-top biz-zone-top-font-size">
-                        {item.created_at.slice(0,10)}
-                      </p>
+
+          <div className="row noMargin our_team_content content_sec">
+            {active === "ourTeam" && (
+              <>
+                {whoWeAre === "" ? (
+                  <></>
+                ) : (
+                  <div className="row noPadding who_we_are_main">
+                    <div className="col-12 sectionPinkHead">
+                        Who We Are
                     </div>
-                  )}
-                    
-                  </div> */}
-
-                    {/* <div className="row ">
-                  {certificate.length>0 && certificate.map((item)=>
-                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-11  mx-auto">
-                      <img
-                        src={leaf}
-                        // style={{ display: "flex", margin: "auto"}}
-                      />
-                       <p className="text-center biz-zone-text-top biz-font-weight-big biz-zone-top-font-size ">
-                        {item.certified_by}
-                      </p>
-                      <p
-                        style={{ position: "absolute", top: "50px", display: "flex", margin: "auto"}}
-                        className="our-mission-title-text "
-                      >
-                        {item.name}
-                      </p>
-                     
-                      <p className="text-center biz-zone-text-top biz-zone-top-font-size">
-                        {item.created_at.slice(0,10)}
-                      </p>
+                    <div className="col-12 sectionBody">
+                      <span className="sectionBodyText">
+                        {whoWeAre}
+                      </span>
                     </div>
-                  )}
-                    
-                  </div> */}
+                  </div>
+                )}
+                {ourMission === "" ? (
+                  <></>
+                ) : (
+                  <div className="row noPadding who_we_are_main">
+                      <div className="col-12 sectionPinkHead">
+                        Our Mission
+                      </div>
+                    <div className="col-12 sectionBody">
+                      <div className="text-center sectionBodyHead" style={{fontWeight: "600"}}>
+                        {ourMissionHeading}
+                      </div>
+                      <div className="text-center mission_body_text_div">
+                        <span className="sectionBodyText">{ourMission}</span>
+                      </div>
 
-                    <div className="row ">
-                      {certificate.length > 0 &&
-                        certificate.map((item) => (
-                          <div className="col-xl-3 col-lg-4 col-md-6 col-11  mx-auto">
-                            <div className="row">
-                              <div className="col-xl-12 mx-auto ">
-                                <img
-                                  src={leaf}
-                                  style={{ display: "flex", margin: "auto" }}
-                                />
-                                <p
-                                  style={{ position: "absolute", top: "30px" }}
-                                  className="our-mission-title-text text-center"
-                                >
-                                  {item.name}
-                                </p>
-                              </div>
-                              <div className="col-xl-12 mx-auto ">
-                                <p className="text-center biz-zone-text-top biz-font-weight-big biz-zone-top-font-size ">
-                                  {item.certified_by}
-                                </p>
-                              </div>
+                      <div className="row noMargin certi_leaf_sec">
+                        {certificate.length > 0 &&
+                          certificate.map((item) => (
+                            <div className="col-xl-3 col-lg-4 col-md-6 col-12 mx-auto">
+                              <div className="row noMargin">
+                                <div className="col-12 mx-auto noPadding cert_main_sec">
+                                  <div className="leaf_img_div">
+                                    <img className="leaf_img" src={leaf}/>
+                                    <span className="leaf_item_name">{item.name}</span>
+                                  </div>
+                                </div>
+                                <div className="col-12 mx-auto noPadding text-center certified_by_div">
+                                  <span className="sectionBodyHead">
+                                    {item.certified_by}
+                                  </span>
+                                </div>
 
-                              <div className="col-xl-12 mx-auto ">
-                                <p className="text-center biz-zone-text-top biz-zone-top-font-size">
-                                  {item.created_at.slice(0, 10)}
-                                </p>
+                                <div className="col-12 mx-auto text-center">
+                                  <span className="sectionBodyText">
+                                    {item.created_at.slice(0, 10)}
+                                  </span>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        ))}
+                          ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              )}
-              {teamList.length > 0 ? (
-                <div className="row  mt-2 biz-bottom-card-back ">
-                  <div className="col-xxl-12   biz-title-backg-clr  p-2">
-                    <p className="biz-zone-padding-text biz-white-clr biz-zone-text-top biz-font-big mt-3">
+                )}
+                {teamList.length > 0 ? (
+                  <div className="row noPadding who_we_are_main">
+                    <div className="col-12 sectionPinkHead">
                       Meet the Team
-                    </p>
-                  </div>
-
-                  <div className="row  p-4 ">
-                    <div class="accordion" id="accordionExample">
-                      {teamList &&
-                        teamList.map((item) => (
-                          <div class="accordion-item">
-                            <h2 class="accordion-header" id={item.user_id}>
-                              <button
-                                class="accordion-button"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne"
-                                aria-expanded="true"
-                                aria-controls="flush-collapseOne"
+                    </div>
+                    <div className="col-12 sectionBody">
+                      <div class="accordion" id="accordionExample">
+                        {teamList &&
+                          teamList.map((item) => (
+                            <div class="accordion-item">
+                              {console.log(item)}
+                              <div class="accordion-header row noMargin" id={item.user_id}>
+                                <button class="accordion-button acc_btn" type="button"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target={"#collapseOne" + item.user_id}
+                                  aria-expanded="false"
+                                  aria-controls={"flush-collapseOne" + item.user_id}
+                                >
+                                  <div className="row noMargin noPadding profile_row_sec">
+                                    <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 noMargin noPadding">
+                                      <div className="row noMargin noPadding">
+                                        <div className="col-xl-1 col-lg-1 col-md-1 col-sm-2 col-2 noMargin noPadding align_self_center">
+                                          <div className="profile_img_div">
+                                            <img src={item.profile_image} className="biz-profile-pic" />
+                                          </div>
+                                        </div>
+                                        <div className="col-xl-11 col-lg-11 col-md-11 col-sm-10 col-10 noMargin noPadding align_self_center pro_details_sec">
+                                          <span className="profile_name_span">{item.name}</span>
+                                          <br></br>
+                                          <span className="profile_role_span">{item.role}</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </button>
+                              </div>
+                              <div id={"collapseOne" + item.user_id}
+                                class="accordion-collapse collapse show"
+                                aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample"
                               >
-                                <img
-                                  src={item.profile_image}
-                                  className="biz-profile-pic-style"
-                                  style={{
-                                    height: "100px",
-                                    width: "100px",
-                                    objectFit: "cover",
-                                  }}
-                                />
-                                <p className="biz-zone-text-top biz-font-weight-big biz-zone-top-font-size ml-3">
-                                  {" "}
-                                  {item.name}
-                                </p>{" "}
-                                <br></br>
-                                <p className="biz-zone-text-top biz-zone-top-font-size ml-3">
-                                  {item.role}
-                                </p>
-                              </button>
-                            </h2>
-                            <div
-                              id="collapseOne"
-                              class="accordion-collapse collapse show"
-                              aria-labelledby="headingOne"
-                              data-bs-parent="#accordionExample"
-                            >
-                              <div class="accordion-body">
-                                <strong>{item.bio}</strong>
+                                <div class="accordion-body acc_body">
+                                  <span className="bio_text"><strong>{item.bio}</strong></span>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        ))}
+                          ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ) : (
-                <></>
-              )}
-            </>
-          )}
-
+                ) : (
+                  <></>
+                )}
+              </>
+            )}
+          </div>
           {active === "testimonial" && <TestimonialPage />}
           {active === "news" && <News />}
           {active === "mustread" && <MustRead />}

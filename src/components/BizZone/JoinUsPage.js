@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./JoinUsPage.css";
+import "./joinUs.scss";
 import ss from "./BizImages/ss.png";
 import axios from "../../Axios";
 import Cookies from "universal-cookie";
@@ -55,57 +55,44 @@ const JoinUsPage = () => {
   }
 
   return (
-    <div>
+    <div className="join_us_main">
       {/* <p>Join us page</p> */}
-      <div className="row mt-5 ju-nav-back">
-        <div className="col-xxl-12  ">
-          <p className="ju-joinus-text ml-5 mt-2">Join Our Team</p>
+      <div className="row news_sec_div noMargin">
+        <div className="col-12 sectionPinkHead">
+          Join Our Team
         </div>
-      </div>
 
-      <div className="row ju-main-back ">
-        <div className="col-xxl-6  p-3">
-          <p className="ju-hiring-text ml-5 mt-3">We're Hiring</p>
-          <p className="ju-bottom-text ml-5">
-            Join us on our quest to lorem ipsum dolor sit amet
-          </p>
-
-          <div className="row">
-            <div className="col-xl-4 ">
-              {" "}
-              <label
-                className="ju-resume-btn p-2 mt-5 ml-5 mb-5"
-                for="file-upload"
-              >
-                Share your resume
-              </label>
-            </div>
-            <input type="file" id="file-upload" onChange={resumeFn}></input>
-            {resume === "" ? (
-              <></>
-            ) : (
-              <div className="col-xl-4 ">
-                {" "}
-                <p
-                  className="ju-resume-btn p-2 mt-5 ml-5 mb-5"
-                  onClick={updateBasic}
-                >
-                  Send
-                </p>
+        <div className="col-12 sectionBody">
+          <div className="row noMargin noPadding">
+            <div className="col-8 noPadding">
+              <div className="sectionBodyHead" style={{ fontWeight: "600" }}>
+                We're Hiring
               </div>
-            )}
+              <div className="sectionBodyText small_margin_top">
+                Join us on our quest to lorem ipsum dolor sit amet
+              </div>
+              <div className="col-12 noPadding">
+                <div className="row noMargin noPadding resume_upload_row">
+                  <span className="blue_active common_btn" style={{ "width": "auto" }}>
+                    <label for="file-upload" style={{ "marginBottom": "0" }}>
+                      Share your resume
+                    </label>
+                  </span>
+                  <input type="file" id="file-upload" className="file_input_upload" onChange={resumeFn}></input>
+                  {resume === "" ? (
+                    <></>
+                  ) : (
+                    <button className="blue_active common_btn left_margin" onClick={updateBasic}>
+                      Send
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+            <div className="col-4 noPadding" style={{ "display": "grid" }}>
+              <img className="mike_img" src={ss} ></img>
+            </div>
           </div>
-        </div>
-        <div className="col-xxl-6  p-3 mt-2">
-          <img
-            src={ss}
-            style={{
-              height: "200px",
-              width: "300px",
-              display: "flex",
-              margin: "auto",
-            }}
-          ></img>
         </div>
       </div>
     </div>

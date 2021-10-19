@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import review from "./BizImages/review.png";
+import quotes from "./BizImages/quotes.png";
 import profilepictest from "./BizImages/profile-pic-test.jpeg";
 import axios from "../../Axios";
 import Cookies from "universal-cookie";
-import "./TestimonialPage.css";
+// import "./TestimonialPage.css";
+import "./testimonial.scss";
 
 const cookies = new Cookies();
 
@@ -26,52 +27,33 @@ const TestimonialPage = () => {
       });
   }, []);
   return (
-    <div>
+    <div className="testimonial_main">
       {testimonialList.length > 0 ? (
-        <div className="row mt-5 test-card-row-padding">
+        <div className="row noPadding noMargin testimonial_sec_div">
           {testimonialList &&
             testimonialList.map((item) => (
-              <div
-                className="col-xl-3 col-lg-3 col-md-5 col-10 mt-5 pt-2 mx-auto test-card-style "
-                style={{ minWidth: "350px", maxWidth: "20vw" }}
-              >
-                <img src={review} className="image-review" />
-                <img src={review} className="image-review1" />
+              <div className="col-xl-4 col-lg-4 col-md-6 col-12 each_card_div">
+              <div className="card testimonial_card">
+                <img src={quotes} className="image_quotes" />
 
-                <div className="row pt-2">
-                  <div className="col-xl-3 pt-2">
-                    <img
-                      src={item.user_image}
-                      style={{
-                        height: "60px",
-                        width: "60px",
-                        objectFit: "cover",
-                        borderRadius: "50%",
-                        display: "flex",
-                        margin: "auto",
-                      }}
-                    ></img>
-                  </div>
-                  <div className="col-xl-9 pt-2">
-                    <div className="row">
-                      <div className="col-xxl-12">
-                        <p className="test-title-text test-fontsize-title mb-0">
-                          {item.name}
-                        </p>
-                      </div>
-                      <div className="col-xxl-12">
-                        <p className="test-title-text test-fontsize-title test-font-weight-normal mb-0">
-                          {item.designation}
-                        </p>
+                  <div className="row noPadding noMargin">
+                    <div className="col-xl-2 col-lg-2 col-md-1 col-sm-2 col-2 noMargin noPadding align_self_center">
+                      <div className="profile_img_div">
+                        <img src={item.user_image} className="biz-profile-pic" />
                       </div>
                     </div>
+                    <div className="col-xl-10 col-lg-10 col-md-11 col-sm-10 col-10 noMargin noPadding align_self_center pro_details_sec">
+                      <span className="profile_name_span">{item.name}</span>
+                      <br></br>
+                      <span className="profile_role_span">{item.designation}</span>
+                    </div>
+                </div>
+                <div className="row noPadding noMargin test_desc_sec">
+                  <div className="col-12 noPadding">
+                    <p className="test_desc">{item.content}</p>
                   </div>
                 </div>
-                <div className="row p-2 mt-2">
-                  <div className="col-xxl-12">
-                    <p className="test-review-text">{item.content}</p>
-                  </div>
-                </div>
+              </div>
               </div>
             ))}
         </div>

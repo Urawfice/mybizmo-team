@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import mustread from "./BizImages/mustread.png";
-import "./MustRead.css";
+import "./mustRead.scss";
 import vertical from "./BizImages/vertical.jpg";
 import pan from "./BizImages/pan.jfif";
 import refe from "./BizImages/refe.jfif";
@@ -13,6 +13,8 @@ import sharesmall from "./BizImages/sharesmall.png";
 import { Button, Modal, OverlayTrigger } from "react-bootstrap";
 import share from "./BizImages/share.png";
 import emailimage from "./BizImages/email.png";
+import newsdate from "./BizImages/newsdate.png";
+import readAuthor from "./BizImages/read_author.png";
 const cookies = new Cookies();
 const MustRead = () => {
   const [mustRead, mustReadList] = useState([]);
@@ -102,223 +104,234 @@ const MustRead = () => {
 
   return (
     <>
-      {active === "normalcard" && (
-        <div>
-          {paginatedPosts.length > 0 ? (
-            <div>
-              <div className="row mt-5 mr-top-nav">
-                <div className="col-xl-12 ">
-                  <nav className="">
-                    <ul className="pagination pagination-md justify-content-end paginationStyling ">
-                      {pages.map((page) => (
-                        <li
-                          className={
-                            page === currentPage
-                              ? "new-pagination-active "
-                              : "page-item"
-                          }
-                        >
-                          <p
-                            className="page-link"
-                            onClick={() => pagination(page)}
+      <div className="must_read_main">
+        {active === "normalcard" && (
+          <div>
+            {paginatedPosts.length > 0 ? (
+              <div className="row noPadding news_sec_div">
+                <div className="row noPadding noMargin">
+                  <div className="col-12 sectionPinkHead">
+                    <nav className="">
+                      <ul className="pagination justify-content-end noMargin noPadding">
+                        {pages.map((page) => (
+                          <li
+                            className={
+                              page === currentPage
+                                ? "new-pagination-active alignSelfCenter"
+                                : "page-item alignSelfCenter"
+                            }
                           >
-                            {page}
-                          </p>
-                        </li>
-                      ))}
-                    </ul>
-                  </nav>
+                            <span
+                              className="page_link"
+                              onClick={() => pagination(page)}
+                            >
+                              {page}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </nav>
+                  </div>
+                  <div className="col-12 noMargin sectionBody">
+                    <div className="row noMargin ">
+                      {paginatedPosts &&
+                        paginatedPosts.map((item) => (
+                          <div className="col-xl-4 col-lg-4 col-md-4 col-6 each_read_card_div noMargin">
+                            <div className="card read_card">
+                              {/* <div className="col-xl-12"> */}
+                              <div className="read_card_div">
+                                <img
+                                  src={item.image}
+                                  className="read_img"
+                                ></img>
+                                <span className="share_absolute_span">
+                                  <img
+                                    src={sharesmall}
+                                    className="share_absolute_img"
+                                    data-bs-toggle="modal"
+                                    data-bs-target={"#exampleModal" + item.id}
+                                  />
+                                </span>
+                              </div>
+
+                              {/* </div> */}
+                              <div className="row noMargin read_card_body">
+                                <div className="col-12 noPadding noMargin card_title_div">
+                                  <span className="card_title">
+                                    {item.title}
+                                  </span>
+                                </div>
+                                <div className="col-12 noPadding noMargin">
+                                  <div className="row noMargin">
+                                    <div className="col-6 noPadding noMargin">
+                                      <span className="news_date_span">
+                                        <img
+                                          className="news_date_img"
+                                          src={newsdate}
+                                        ></img>
+                                      </span>
+                                      <span className="created_date">
+                                        {item.updated_at.slice(0, 10)}
+                                      </span>
+                                    </div>
+                                    <div className="col-6 noPadding noMargin">
+                                      <span className="news_date_span">
+                                        <img
+                                          className="news_date_img"
+                                          src={readAuthor}
+                                        ></img>
+                                      </span>
+                                      <span className="created_date">
+                                        {item.author_name}
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="col-12 noPadding noMargin card_body_text_div">
+                                  <span className="card_body_text">
+                                    {item.content.length > 80
+                                      ? item.content.slice(0, 80) + "..."
+                                      : item.content}
+                                  </span>
+                                </div>
+                                <div className="col-12 noPadding noMargin card_body_btn_div">
+                                  <button
+                                    className="blue_active common_btn"
+                                    onClick={(e) => setActive("readmore")}
+                                  >
+                                    <Link
+                                      to={{
+                                        pathname: "/read-more-page/" + item.id,
+                                        query: { id: item.id },
+                                      }}
+                                    >
+                                      Read More
+                                    </Link>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div
+                              className="modal fade"
+                              id={"exampleModal" + item.id}
+                              tabindex="-1"
+                              role="dialog"
+                              aria-labelledby="exampleModalLabel"
+                              aria-hidden="true"
+                            >
+                              <div
+                                className="modal-dialog modal-dialog-centered modal-lg"
+                                role="document"
+                              >
+                                <div className="modal-content">
+                                  <div className="modal-header popupHead">
+                                    <span
+                                      className="modal-title biz_review_title align_self_center"
+                                      id="exampleModalLabel"
+                                    >
+                                      Share this Article
+                                    </span>
+                                    <button
+                                      type="button"
+                                      className="btn-close align_self_center"
+                                      data-bs-dismiss="modal"
+                                      aria-label="Close"
+                                    ></button>
+                                  </div>
+                                  <div className="modal-body review_modal_body">
+                                    <div className="row noMargin">
+                                      <div className="col-10 noPadding">
+                                        <div className="">
+                                          <span className="share_this_head">
+                                            Share this with your Email contacts
+                                          </span>
+                                        </div>
+                                        <div className="row noMargin normal_margin_top">
+                                          <div className="col-2 noPadding text-center">
+                                            <span className="normal_font">
+                                              To
+                                            </span>
+                                          </div>
+                                          <div className="col-10 noPadding ">
+                                            <input
+                                              type="text"
+                                              className="must_read_input form-control"
+                                              placeholder="Enter your email"
+                                              value={email}
+                                              onChange={(e) =>
+                                                setEmail(e.target.value)
+                                              }
+                                            ></input>
+                                          </div>
+                                        </div>
+                                        <div className="row noMargin normal_margin_top">
+                                          <div className="col-2 noPadding text-center"></div>
+                                          <div className="col-10 noPadding">
+                                            <textarea
+                                              className="must_read_input form-control must_read_area"
+                                              value={message}
+                                              rows="4"
+                                              onChange={(e) =>
+                                                setMessage(e.target.value)
+                                              }
+                                            />
+                                          </div>
+                                        </div>
+                                        <div className="row noMargin normal_margin_top">
+                                          <div className="col-2 text-center noPadding"></div>
+                                          <div className="col-3 noPadding">
+                                            <button
+                                              type="button"
+                                              className="blue_active common_btn"
+                                              onClick={updateBasic}
+                                              style={{ width: "auto" }}
+                                            >
+                                              Share
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div className="row noMargin normal_margin_top">
+                                          <div className="col-2 noPadding alignSelfCenter"></div>
+                                          <div className="col-3 noPadding alignSelfCenter">
+                                            <span className="normal_font">
+                                              or copy link
+                                            </span>
+                                          </div>
+                                          <div className="col-7 noPadding alignSelfCenter">
+                                            <span className="must_read_input text-center form-control copy_url_span">
+                                              {locationUrl}
+                                            </span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div className="col-2 noPadding text-center">
+                                        <img
+                                          className="email_img"
+                                          src={emailimage}
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  {/* <button type="button" className="btn btn-secondary rm-review-cancel-btn" data-dismiss="modal">Close</button> */}
+
+                                  {/* </div> */}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="row  mr-main-back">
-                {paginatedPosts &&
-                  paginatedPosts.map((item) => (
-                    <div
-                      className="col-xl-3 col-lg-3 col-md-5 col-10  mx-auto mr-card-style mt-5 "
-                      style={{ minWidth: "350px", maxWidth: "20vw" }}
-                    >
-                      <div className="row mr-row-absolute">
-                        {/* <div className="col-xl-12"> */}
-                        <div className="mr-share-small-background"></div>
-                        <img
-                          src={sharesmall}
-                          className="mr-shae-small "
-                          data-toggle="modal"
-                          data-target="#exampleModal"
-                        />
-                        <img
-                          src={item.image}
-                          style={{
-                            height: "200px",
-                            width: "600px",
-                            objectFit: "contain",
-                          }}
-                          className="mr-image-borders"
-                        ></img>
-                        {/* </div> */}
-                        <div className="col-xl-12 ">
-                          <p className="mr-card-title-text">{item.title}</p>
-                        </div>
-                        <div className="col-xl-12 ">
-                          <div className="row">
-                            <div className="col-xl-6">
-                              <p className="mr-date-text">
-                                {item.updated_at.slice(0, 10)}
-                              </p>
-                            </div>
-                            <div className="col-xl-6">
-                              <p className="mr-date-text">{item.author_name}</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-xl-12 ">
-                          <p className="mr-details-text">
-                            {item.content.slice(0, 80)}...
-                          </p>
-                        </div>
-                        <div className="col-xl-4 col-4 ">
-                          <p
-                            className="mr-read-more text-center p-2"
-                            onClick={(e) => setActive("readmore")}
-                          >
-                            <Link
-                              to={{
-                                pathname: "/read-more-page/" + item.id,
-                                query: { id: item.id },
-                              }}
-                            >
-                              Read More
-                            </Link>
-                          </p>
-                        </div>
-                      </div>
-
-                      <div
-                        className="modal fade"
-                        id="exampleModal"
-                        tabindex="-1"
-                        role="dialog"
-                        aria-labelledby="exampleModalLabel"
-                        aria-hidden="true"
-                      >
-                        <div
-                          className="modal-dialog modal-dialog-centered modal-lg"
-                          role="document"
-                        >
-                          <div className="modal-content">
-                            <div className="modal-header">
-                              <h5
-                                className="modal-title rm-review-title"
-                                id="exampleModalLabel"
-                              >
-                                Share this Article
-                              </h5>
-                              <button
-                                type="button"
-                                className="close"
-                                data-dismiss="modal"
-                                aria-label="Close"
-                              >
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div className="modal-body">
-                              <div className="row">
-                                <div className="col-xl-10 ">
-                                  {" "}
-                                  <p className="rm-review-form-title mb-0">
-                                    Share this with your Email contacts
-                                  </p>
-                                </div>
-                                <div className="col-xl-2 ">
-                                  <img
-                                    src={emailimage}
-                                    style={{
-                                      height: "50px",
-                                      width: "50px",
-                                      margin: "auto",
-                                    }}
-                                  />
-                                </div>
-                              </div>
-
-                              <div className="row">
-                                <div className="col-xl-2  text-center">
-                                  <p className="rm-to-text">To</p>
-                                </div>
-                                <div className="col-xl-8  ">
-                                  <input
-                                    type="text"
-                                    className="rm-input-text"
-                                    placeholder="| Enter your email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                  ></input>
-                                </div>
-                              </div>
-
-                              <div className="row">
-                                <div className="col-xl-2  text-center"></div>
-                                <div className="col-xl-8  ">
-                                  <textarea
-                                    className="rm-input-text"
-                                    value={message}
-                                    onChange={(e) => setMessage(e.target.value)}
-                                    rows="4"
-                                    cols="50"
-                                  />
-                                </div>
-                              </div>
-
-                              {/* <input type="text" placeholder="Enter your email" className="rm-review-input" value={email} onChange={(e)=>setEmail(e.target.value)}></input>
-        <p className="rm-review-form-title mb-0 mt-3">Message</p>
-        <input type="text" placeholder="Write your message" className="rm-review-input" value={message} onChange={(e)=>setMessage(e.target.value)}></input> */}
-                            </div>
-                            {/* <div className="modal-footer justify-content-start"> */}
-
-                            <div className="row">
-                              <div className="col-xl-2  text-center"></div>
-                              <div className="col-xl-3">
-                                <button
-                                  type="button"
-                                  className="btn btn-primary rm-review-submit-btn"
-                                  onClick={updateBasic}
-                                >
-                                  Share
-                                </button>
-                              </div>
-                            </div>
-
-                            <div className="row mt-3 pb-5">
-                              <div className="col-xl-2  mb-0 "></div>
-                              <div className="col-xl-2  mb-0">
-                                <p className="rm-copy-link pt-2">
-                                  {" "}
-                                  or copy link
-                                </p>
-                              </div>
-                              <div className="col-xl-5  rm-link-styling mb-0">
-                                <p className="rm-link-copy-text mb-0 pt-2 text-center">
-                                  {locationUrl}
-                                </p>
-                              </div>
-                            </div>
-
-                            {/* <button type="button" className="btn btn-secondary rm-review-cancel-btn" data-dismiss="modal">Close</button> */}
-
-                            {/* </div> */}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          ) : (
-            <></>
-          )}
-        </div>
-      )}
+            ) : (
+              <></>
+            )}
+          </div>
+        )}
+      </div>
       {active === "readmore" && <ReadMore />}
     </>
   );

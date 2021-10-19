@@ -1,4 +1,4 @@
-.containerF{
+.containerF {
   margin-left: auto;
   margin-right: auto;
   width: 75%;
@@ -9,19 +9,19 @@
   /* margin-bottom: 20px !important; */
 }
 @media only screen and (max-width: 1000px) {
-  .containerF{
+  .containerF {
     width: 90% !important;
   }
- }
+}
 
-.profile_img_ins{
+.profile_img_ins {
   height: 70px;
   width: 70px;
   border-radius: 50px;
   margin-top: 10px;
 }
 
-.ins_name{
+.ins_name {
   font-size: 2.3vh;
   font-weight: 600;
   margin-left: 20px;
@@ -31,107 +31,102 @@
   left: 100px;
 }
 
-.role_ins{
+.role_ins {
   margin-left: 90px;
   margin-top: -16px;
   font-size: 2vh;
-  color: #9873AB;;
+  color: #9873ab;
 }
-.hr_line{
+.hr_line {
   height: 0px !important;
 }
 
-.rating_ins{
+.rating_ins {
   float: right;
   font-weight: 600;
   font-size: 2vh;
 }
 
-.date_ins{
-  color: #8C8591;
+.date_ins {
+  color: #8c8591;
   font-weight: 600;
   font-size: 2.2vh;
 }
-.joined_on{
-  color: #8C8591;
+.joined_on {
+  color: #8c8591;
   font-size: 2.2vh;
 }
-.top_svg{
+.top_svg {
   float: right;
   padding-right: 10px;
 }
 
-.msg_svg{
+.msg_svg {
   margin-right: 20px;
   height: 3vh;
 }
-.card{
+.card {
   border-radius: 10px;
   cursor: pointer;
 }
-.btn_blue{
+.btn_blue {
   border-radius: 20px;
   min-width: 70px;
   border: none;
   color: white;
   margin-right: 10px;
-  background-color:  #419DC5;
+  background-color: #419dc5;
   margin-top: 20px;
   font-size: 2.2vh;
 }
 
-.btn_purple{
+.btn_purple {
   border-radius: 20px;
   min-width: 70px;
   border: none;
   color: white;
   margin-right: 10px;
-  background-color: #A241C5;
+  background-color: #a241c5;
   font-size: 2.2vh;
   padding-right: 10px;
   padding-left: 10px;
   margin-top: 10px;
-
 }
 
-
-.btn_green{
-
+.btn_green {
   border-radius: 20px;
   min-width: 70px;
   border: none;
   color: white;
   margin-right: 10px;
-  background-color: #BAC541;
+  background-color: #bac541;
   margin-top: 10px;
   font-size: 2.2vh;
   padding-right: 10px;
   padding-left: 10px;
 }
-.btn_red{
-
+.btn_red {
   border-radius: 20px;
   min-width: 70px;
   border: none;
   color: white;
   /* margin-right: 10px; */
-  background-color: #C57841;
+  background-color: #c57841;
   margin-top: 10px;
   font-size: 2.2vh;
   padding-right: 10px;
   padding-left: 10px;
 }
 
-.btn_right_two{
+.btn_right_two {
   float: right;
   margin-top: 20px;
   font-size: 2.2vh;
 }
 
 .image-cropper {
- 
   border-radius: 50%;
-  height:80px;
+  height: 80px;
   width: 80px;
 }
 
@@ -144,13 +139,13 @@
   border-radius: 50% !important;
 }
 
-.ins_narr{
+.ins_narr {
   font-weight: 600;
   font-size: 2.5vh;
   padding-top: 13.6vh;
   margin-left: 59px;
 }
-.ftr-nbtn{
+.ftr-nbtn {
   background: none;
   border: none;
   margin-right: 20px;
@@ -159,7 +154,7 @@
   font-size: 2vh;
   cursor: pointer;
 }
-.active-btn{
+.active-btn {
   background-color: black;
   color: white;
   border-radius: 20px;
@@ -175,9 +170,9 @@
   left: 24%;
   right: 0;
   bottom: 0;
-  background-color: #F6ECFF; 
-  z-index: 2; 
-  cursor: pointer; 
+  background-color: #f6ecff;
+  z-index: 2;
+  cursor: pointer;
 }
 .overlay-msg {
   position: fixed;
@@ -187,27 +182,26 @@
   left: 24%;
   right: 0;
   bottom: 0;
-  background-color: white; 
-  z-index: 2; 
-  cursor: pointer; 
+  background-color: white;
+  z-index: 2;
+  cursor: pointer;
 }
 
-.top_blue{
-  background-color: #03CBC9;
+.top_blue {
+  background-color: #03cbc9;
   height: 10px;
 }
-.profile_img_ins_over2{
+.profile_img_ins_over2 {
   margin-left: 30px;
   margin-top: 10px;
- 
 }
 
-.rating_ins_over{
+.rating_ins_over {
   margin-top: -23px;
   padding-right: 30px;
 }
-.bio-over{
-  color: #8A8A8A;
+.bio-over {
+  color: #8a8a8a;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-left: 3%;
@@ -217,43 +211,43 @@
   /* white-space: nowrap; */
   overflow-x: hidden;
 }
-.head-over{
+.head-over {
   font-weight: 600;
   font-size: 2.2vh;
-  color: #8A8A8A;
+  color: #8a8a8a;
   margin-left: -2%;
 }
-.des-over{
+.des-over {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 12px;
   font-size: 2vh;
-  color: #8A8A8A;
+  color: #8a8a8a;
 }
 
-.loc-name{
+.loc-name {
   margin-top: 15px;
   position: absolute;
   margin-left: 3%;
   font-size: 2.4vh;
-  color: #6A6868;
+  color: #6a6868;
 }
-.loc-img{
+.loc-img {
   margin-left: 3%;
   margin-top: 15px;
   height: 4vh;
 }
-.have_ques{
+.have_ques {
   float: right;
   width: 30vh;
-  color: #03CBC9;
+  color: #03cbc9;
   font-size: 2.1vh;
   margin-right: 0px;
   margin-top: 10px;
 }
-.shoot-over{
+.shoot-over {
   float: left;
-  color: #6A6868;
+  color: #6a6868;
   position: relative;
   top: 5px;
   left: 0px;
@@ -261,164 +255,155 @@
   /* right: 140px;
   bottom: 40px; */
 }
-.cross-icon{
+.cross-icon {
   float: right;
   position: absolute;
   right: 15px;
   top: 15px;
 }
-.role_ins_over{
+.role_ins_over {
   margin-left: 110px;
   color: white;
 }
-.ovr-head{
-  background-color:  #E6D4F6;
-  height: 5.5vh;
+.ovr-head {
+  background-color: #e6d4f6;
+  height: 5.8vh;
 }
-.ovr-cls{
+.ovr-cls {
   float: right;
   margin-right: 25px !important;
   font-weight: 500;
   font-weight: 2vh;
 }
-.ovr-cr{
+.ovr-cr {
   height: 1.7vh;
   margin-right: 10px;
   margin-top: -1px;
 }
-.compose-msg{
+.compose-msg {
   font-size: 2.2vh;
   font-weight: 500;
   float: left;
-  margin-top: 7px;
+  margin-top: 9px;
   margin-left: 5%;
 }
-.ovr-con{
+.ovr-con {
   text-align: left;
   margin-left: 5%;
   /* font-size: 2.2vh; */
 }
-.Sub-input{
+.Sub-input {
   width: 74%;
 }
-.btn-send{
-float: right;
-color: white;
-font-size: 2.2vh;
-padding-left: 15px;
-padding-right: 15px;
-border-radius: 20px;
-border: none;
-background-color: #9929FD;
-min-width: 90px;
-box-shadow: 5px 5px 40px -2px #B6A6C6;
-margin-right: 20px;
-height: 5vh;
-margin-top: -10px ;
+.btn-send {
+  float: right;
+  color: white;
+  font-size: 2.2vh;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: #9929fd;
+  min-width: 90px;
+  box-shadow: 5px 5px 40px -2px #b6a6c6;
+  margin-right: 20px;
+  height: 5vh;
+  margin-top: -10px;
 }
-.btn-send:focus{
- outline: none;
- text-decoration: none;
- color: white;
- border: none;
+.btn-send:focus {
+  outline: none;
+  text-decoration: none;
+  color: white;
+  border: none;
 }
-.btn-send:hover{
+.btn-send:hover {
   text-decoration: none;
   color: white;
 }
 
-
-.rating_ins_over{
-float: none;
-padding: 0 !important;
+.rating_ins_over {
+  float: none;
+  padding: 0 !important;
 }
 
-
-
-
-.btn-del{
-float: right;
-border: solid black 2px;
-font-size: 2.2vh;
-padding-left: 15px;
-padding-top: 0;
-padding-bottom: 0;
-padding-right: 15px;
-border-radius: 20px;
-height: 5vh;
-min-width: 90px;
-margin-right: 20px;
-margin-top: -10px ;
-
+.btn-del {
+  float: right;
+  border: solid black 2px;
+  font-size: 2.2vh;
+  padding-left: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 15px;
+  border-radius: 20px;
+  height: 5vh;
+  min-width: 90px;
+  margin-right: 20px;
+  margin-top: -10px;
 }
 
-.mail-img{
+.mail-img {
   margin-top: 13px;
   height: 2.6vh !important;
 }
 
-textarea:focus{
+textarea:focus {
   outline: none;
 }
 
-
-@media only screen and (max-width: 610px) and (min-width:300px){
-  .have_ques{
+@media only screen and (max-width: 610px) and (min-width: 300px) {
+  .have_ques {
     position: absolute;
     left: 17vw;
     bottom: 18px;
     font-size: 1.9vh;
   }
-  .shoot-over{
+  .shoot-over {
     font-size: 1.6vh;
   }
-  .overlay-ins{
+  .overlay-ins {
     height: 440px !important;
   }
-  .mail-img{
+  .mail-img {
     margin-top: 50px;
     height: 2.4vh !important;
   }
-  .btn-send , .btn-del{
+  .btn-send,
+  .btn-del {
     font-size: 12px;
     min-width: 60px;
     height: 30px;
     /* margin-top: -5px !important; */
   }
-  .compose-msg{
+  .compose-msg {
     font-size: 13px;
     margin-left: 2px;
   }
-  .ovr-cls{
+  .ovr-cls {
     margin-right: 0px !important;
     font-size: 13px;
   }
-
 }
 
 @media only screen and (max-width: 340px) {
-  .compose-msg{
+  .compose-msg {
     font-size: 12px;
     margin-left: 0px;
   }
-  .ovr-cls{
+  .ovr-cls {
     margin-right: 0px !important;
     font-size: 12px;
   }
 }
 
-
-@media only screen and (max-width: 980px){
-  .overlay-ins{
+@media only screen and (max-width: 980px) {
+  .overlay-ins {
     width: 90%;
     height: 430px;
     top: 20%;
     left: 5%;
     right: 0;
-    
- 
   }
-  .overlay-msg{
+  .overlay-msg {
     width: 90%;
     height: 430px;
     top: 20%;
@@ -427,72 +412,71 @@ textarea:focus{
   }
 }
 
-@media only screen and (min-width: 1600px){
-  .btn_blue{
+@media only screen and (min-width: 1600px) {
+  .btn_blue {
     border-radius: 20px;
     min-width: 7vw;
   }
-  .btn_purple{
+  .btn_purple {
     border-radius: 20px;
     min-width: 7vw;
   }
-  .btn_green{
+  .btn_green {
     border-radius: 20px;
     min-width: 7vw;
   }
-  .btn_red{
+  .btn_red {
     border-radius: 20px;
     width: 90px;
     min-width: 7vw;
-    
   }
-  .profile_img_ins2{
+  .profile_img_ins2 {
     height: 7vw;
     width: 7vw;
     border-radius: 5vw;
   }
-  .role_ins{
+  .role_ins {
     margin-left: 8.3vw;
     margin-top: 1vw;
   }
-  .ins_name{
+  .ins_name {
     left: 9vw;
   }
-  .bio-over{
+  .bio-over {
     height: 10vh;
   }
-  
-  .hr_line{
+
+  .hr_line {
     margin-top: 4vw;
   }
-  .role_ins_over{
+  .role_ins_over {
     margin-left: 9.3vw !important;
   }
 }
 
-@media only screen and (max-width: 600px){
-  .ins_name{
+@media only screen and (max-width: 600px) {
+  .ins_name {
     font-size: 2.2vh;
     margin-left: 15px;
   }
-  .containerF{
+  .containerF {
     height: 74vh;
   }
 }
 
-@media only screen and (min-height: 800px){
-  .containerF{
+@media only screen and (min-height: 800px) {
+  .containerF {
     height: 75vh;
   }
 }
 
-@media only screen and (min-height: 940px){
-  .containerF{
+@media only screen and (min-height: 940px) {
+  .containerF {
     height: 76vh;
   }
 }
-@media only screen and (min-height: 1100px){
-  .containerF{
+@media only screen and (min-height: 1100px) {
+  .containerF {
     height: 76.5vh;
   }
 }

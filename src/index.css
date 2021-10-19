@@ -1,18 +1,14 @@
-.App{
-
-
-
-    font-family: 'Nunito', sans-serif;
-    font-weight: 300;
-    background-color:#f1eeee;
+.App {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  background-color: #f1eeee;
 }
 body {
-    background-color: #1b1a1aec;
+  background-color: #1b1a1aec;
 }
-.noPadding{
-    padding: 0;
+.noPadding {
+  padding: 0;
 }
-.displayInline{
-    display: inline-block;
+.displayInline {
+  display: inline-block;
 }
-

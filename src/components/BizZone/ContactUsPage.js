@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./ContactUsPage.css";
+import "./contactUs.scss";
 import axios from "../../Axios";
 import { Link, useHistory } from "react-router-dom";
 import Cookies from "universal-cookie";
@@ -7,10 +7,10 @@ import { Phone } from "@material-ui/icons";
 import phone from "./BizImages/phone.png";
 import location from "./BizImages/location.png";
 import messages from "./BizImages/message.png";
-import fbimg from "./BizImages/fb.png";
-import igimg from "./BizImages/ig.png";
-import twitterimg from "./BizImages/twitter.png";
-import linkedinimg from "./BizImages/linkedin.png";
+import fbimg from "./BizImages/biz_fb.png";
+import igimg from "./BizImages/biz_insta.png";
+import twitterimg from "./BizImages/biz_twitter.png";
+import linkedinimg from "./BizImages/biz_linkedin.png";
 
 const cookies = new Cookies();
 
@@ -92,128 +92,96 @@ const ContactUsPage = () => {
   }
 
   return (
-    <div>
-      <div className="row  mt-5">
-        <div className="col-xl-12  Cu-nav-background">
-          <p className="cu-nav-title pt-2 pl-3 pb-2 mb-0"> Get in touch!</p>
+    <div className="contact_us_main">
+      <div className="row news_sec_div noMargin">
+        <div className="col-12 sectionPinkHead">
+          Get in touch!
+        </div>
+        <div className="col-12 sectionBody">
+          <div className="sectionBodyHead" style={{fontWeight: "600"}}>
+            Any question or feedback?
+          </div>
+          <div className="sectionBodyText small_margin_top">
+            Just write us a message
+          </div>
+          <div className="col-12 noPadding noMargin">
+            <div className="cu-form-name-title small_margin_top">Message</div>
+            <textarea className="form-control write_here_area" placeholder="write your message here..." rows="8" value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
+
+            <button className="blue_active common_btn small_margin_top" onClick={updateBasic}>
+              Submit
+            </button>
+          </div>
         </div>
       </div>
-      <div className="row  cu-form-background p-3">
-        <div className="col-xl-12 ">
-          <p className="cu-form-title"> Any question or feedback?</p>
-          <p className="cu-form-subtitle"> Just write us a message</p>
 
-          <div className="row ">
-            {/* <div className='col-xxl-5  mr-5'>
-    
-   <div className='row'>
-   <div className="col-xl-12 ">
-  <p className="cu-form-name-title mb-0">Name</p>
-  <input type="text" className="cu-form-input p-1" value={name} onChange={(e)=>setName(e.target.value)} ></input>
-   </div>
-   <div className="col-xl-12 mt-2">
-   <p className="cu-form-name-title mb-0">Contact</p>
-  <input type="text"  className="cu-form-input p-1" value={contact} onChange={(e)=>setContact(e.target.value)} ></input>
-   </div>
-
-   <div className="col-xl-12 mt-2">
-   <p className="cu-form-name-title mb-0">Email</p>
-  <input type="email"  className="cu-form-input p-1" value={email} onChange={(e)=>setEmail(e.target.value)} ></input>
-   </div>
-
-    </div>
-    
-    
-    </div> */}
-            <div className="col-xxl-5  ">
-              <p className="cu-form-name-title mb-0">Message</p>
-              <textarea
-                className="cu-form-input"
-                placeholder="write your message here..."
-                rows="8"
-                cols="50"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              ></textarea>
+      <div className="row news_sec_div noMargin last_sec">
+        <div className="col-12 sectionPinkHead">
+          Find us Here
+        </div>
+        <div className="col-12 sectionBody">
+          <div className="row noMargin noPadding small_margin_top">
+            <div className="col-4 noPadding noMargin text-center">
+              <img className="cu-inage-style" src={phone}></img>
+              <div className="text-center small_margin_top cu-find-us-text">Phone</div>
+              <div className="text-center sectionBodyText">{ofcPhone}</div>
+            </div>
+            <div className="col-4 noPadding noMargin text-center">
+              <img className="cu-inage-style" src={location}></img>
+              <div className="text-center small_margin_top cu-find-us-text">Address</div>
+              <div className="text-center sectionBodyText">{ofcAddress}</div>
+            </div>
+            <div className="col-4 noPadding noMargin text-center">
+              <img className="cu-inage-style" src={messages}></img>
+              <div className="text-center small_margin_top cu-find-us-text">Email</div>
+              <div className="text-center sectionBodyText">{ofcEmail}</div>
             </div>
           </div>
 
-          <button className="cu-submit-btn mt-5 mb-5" onClick={updateBasic}>
-            Submit
-          </button>
-        </div>
-      </div>
+          <div className="row noMargin noPadding section_marign_top">
+            <div className="col-12 noMargin noPadding">
+              <div className="sectionBodyHead text-center" style={{fontWeight: "600"}}>Connect with us</div>
 
-      <div className="row  Cu-nav-background mt-5">
-        <div className="col-xl-12 ">
-          <p className="cu-nav-title pt-2 pl-3 pb-2 mb-1"> Find us Here</p>
-        </div>
-      </div>
+              <div className="col-10 ml-auto noMargin noPadding">
+                <div className="row noMargin noPadding">
+                  <div className="col-3 noMargin noPadding text-center">
+                    <a href={ig} target="_blank">
+                      <div className="social_img_div">
+                        <img src={igimg} className="social_img"></img>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="col-3 noMargin noPadding text-center">
+                    <a href={twitter} target="_blank">
+                      <div className="social_img_div">
+                        <img src={twitterimg} className="social_img"></img>
+                      </div>
+                    </a>
+                  </div>
 
-      {/* <div style={{ height: '100vh', width: '100%' }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key:1}}
-          
-        >
-          <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text="My Marker"
-          />
-        </GoogleMapReact>
-      </div> */}
+                  <div className="col-3 noMargin noPadding text-center">
+                    <a href={fb} target="_blank">
+                      <div className="social_img_div">
+                        <img src={fbimg} className="social_img"></img>
+                      </div>
+                    </a>
+                  </div>
 
-      <div className="row  cu-form-background pt-5">
-        <div className="col-xl-3  mx-auto">
-          <img className="cu-inage-style" src={phone}></img>
-          <p className="text-center mt-3 cu-find-us-text">Phone</p>
-          <p className="text-center cu-find-us-info-text">{ofcPhone}</p>
-        </div>
-        <div className="col-xl-3  mx-auto">
-          <img className="cu-inage-style" src={location}></img>
-          <p className="text-center mt-3 cu-find-us-text">Address</p>
-          <p className="text-center cu-find-us-info-text">{ofcAddress}</p>
-        </div>
-        <div className="col-xl-3  mx-auto">
-          <img
-            className="cu-inage-style"
-            style={{ width: "100px", height: "80px" }}
-            src={messages}
-          ></img>
-          <p className="text-center mt-4 cu-find-us-text">Email</p>
-          <p className="text-center cu-find-us-info-text">{ofcEmail}</p>
-        </div>
-      </div>
-
-      <div className="row  cu-form-background">
-        <div className="col-xxl-6  mx-auto mt-5">
-          <p className="text-center cu-connect-withus-text">Connect with us</p>
-
-          <div className="row mt-5 pb-5">
-            <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-6 mx-auto ">
-              <a href={ig} target="_blank">
-                <img src={igimg} className="cu-inage-style"></img>
-              </a>
-            </div>
-            <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-6 mx-auto ">
-              <a href={twitter} target="_blank">
-                <img src={twitterimg} className="cu-inage-style"></img>
-              </a>
-            </div>
-
-            <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-6 mx-auto ">
-              <a href={fb} target="_blank">
-                <img src={fbimg} className="cu-inage-style"></img>
-              </a>
-            </div>
-
-            <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-6 mx-auto ">
-              <a href={linkedin} target="_blank">
-                <img className="cu-inage-style" src={linkedinimg}></img>
-              </a>
+                  <div className="col-3 noMargin noPadding text-center">
+                    <a href={linkedin} target="_blank">
+                      <div className="social_img_div">
+                        <img className="social_img" src={linkedinimg}></img>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );

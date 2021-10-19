@@ -1,0 +1,457 @@
+
+  //Css by Thomas
+  .must_read_main{
+    .news_sec_div{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .sectionPinkHead{
+        background: #d082ff;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: white;
+    }
+    .alignSelfCenter{
+        align-self: center;
+    }
+    .pagination{
+        display: flex;
+    }
+    .page_link{
+        color: white;
+        font-weight: bold !important;
+        
+    }
+    .new-pagination-active {
+        text-decoration-line: underline;
+        color: #ffffff !important;
+        // line-height: 30px !important;
+    }
+    .sectionBody{
+        background: #f6ecff;
+        padding-top: 0 !important;
+    }
+    .noPadding{
+        padding: 0;
+    }
+    .noMargin{
+        margin: 0;
+    }
+    .read_card{
+        border: none;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.05) !important;
+        border-radius: 10px;
+    }
+    .read_img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: auto;
+        align-self: center;
+        max-width: 100%;
+    }
+    .read_card_div{
+        display: grid;
+        position: relative;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        overflow: hidden;
+    }
+    .share_absolute_span{
+        position: absolute;
+    }
+    .card_title{
+        font-weight: 600;
+        color: #252525;
+    }
+    .card_title_div{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .created_date{
+        color: #98989C;
+        font-weight: 700;
+    }
+    .blue_active a{
+        color: white;
+    }
+    .must_read_input{
+        color: #98989c;
+        background: #f2f1f7;
+        border-radius: 10px;
+    }
+    .must_read_area{
+        width: 100%;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    .must_read_main{
+        $pagePadding: 2vw;
+        $cardPadding: 1vw;
+        $sectionFont: 1.3vw;
+        $normalFont: 1vw;
+        $readImgHeight: 16.3vw;
+
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .page_link{
+            font-size: $normalFont;
+        }
+        .new-pagination-active{
+            margin-right: $cardPadding/2;
+        }
+        .page-item{
+            margin-right: $cardPadding/2;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+            padding-left: $pagePadding/2;
+            padding-right: $pagePadding/2;
+        }
+        .each_read_card_div{
+            padding-top: $pagePadding;
+            padding-left: $pagePadding/2;
+            padding-right: $pagePadding/2;
+        }
+        .read_card_div{
+            height: $readImgHeight;
+        }
+        .read_img{
+            max-height: $readImgHeight;
+        }
+        .share_absolute_span{
+            left: $cardPadding;
+            top: $cardPadding;
+        }
+
+        .read_card_body{
+            padding: $cardPadding;
+        }
+        .card_title{
+            font-size: $sectionFont;
+        }
+        .news_date_img{
+            height: 1.1vw;
+            margin-right: 0.5vw;
+        }
+        .created_date{
+            font-size: $normalFont;
+        }
+        .card_body_text{
+            font-size: $normalFont;
+        }
+        .card_body_text_div{
+            margin-top: $cardPadding;
+            height: 4vw;
+        }
+        .card_body_btn_div{
+            margin-top: $cardPadding;
+        }
+        .share_this_head{
+            font-size: $sectionFont;
+        }
+        .email_img{
+            width: 4vw;
+        }
+        .normal_margin_top{
+            margin-top: $cardPadding;
+        }
+        .normal_font{
+            font-size: $normalFont;
+        }
+        .must_read_input{
+            font-size: $normalFont;
+        }
+        .copy_url_span{
+            height: 3vw;
+        }
+    }
+  }
+  @media only screen and (max-width: 991px) and (min-width: 768px) {
+    .must_read_main{
+        $pagePadding: 2.3vw;
+        $cardPadding: 1.3vw;
+        $sectionFont: 1.6vw;
+        $normalFont: 1.3vw;
+        $readImgHeight: 16.2vw;
+
+        .news_sec_div{
+            margin-top: $pagePadding;
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .page_link{
+            font-size: $normalFont;
+        }
+        .new-pagination-active{
+            margin-right: $cardPadding/2;
+        }
+        .page-item{
+            margin-right: $cardPadding/2;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+            padding-left: $pagePadding/2;
+            padding-right: $pagePadding/2;
+        }
+        .each_read_card_div{
+            padding-top: $pagePadding;
+            padding-left: $pagePadding/2;
+            padding-right: $pagePadding/2;
+        }
+        
+        .read_card_div{
+            height: $readImgHeight;
+        }
+        .read_img{
+            max-height: $readImgHeight;
+        }
+        .share_absolute_span{
+            left: $cardPadding;
+            top: $cardPadding;
+        }
+        .read_card_body{
+            padding: $cardPadding;
+        }
+        .card_title{
+            font-size: $sectionFont;
+        }
+        .news_date_img{
+            height: 1.4vw;
+            margin-right: 0.7vw;
+        }
+        .created_date{
+            font-size: $normalFont;
+        }
+        .card_body_text{
+            font-size: $normalFont;
+        }
+        .card_body_text_div{
+            margin-top: $cardPadding;
+            height: 4.5vw;
+            line-height: 1;
+        }
+        .card_body_btn_div{
+            margin-top: $cardPadding;
+        }
+        .share_this_head{
+            font-size: $sectionFont;
+        }
+        .normal_margin_top{
+            margin-top: $cardPadding;
+        }
+        .normal_font{
+            font-size: $normalFont;
+        }
+        .must_read_input{
+            font-size: $normalFont;
+        }
+        .email_img{
+            width: 5vw;
+        }
+        .copy_url_span{
+            height: 3.3vw;
+        }
+    }
+  }
+  @media only screen and (max-width: 767px) and (min-width: 576px) {
+    .must_read_main{
+        $pagePadding: 2.6vw;
+        $cardPadding: 1.6vw;
+        $sectionFont: 1.9vw;
+        $normalFont: 1.6vw;
+        $readImgHeight: 24.5vw;
+
+        .news_sec_div{
+            margin-top: $pagePadding;
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .page_link{
+            font-size: $normalFont;
+        }
+        .new-pagination-active{
+            margin-right: $cardPadding/2;
+        }
+        .page-item{
+            margin-right: $cardPadding/2;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+            padding-left: $pagePadding/2;
+            padding-right: $pagePadding/2;
+        }
+        .each_read_card_div{
+            padding-top: $pagePadding;
+            padding-left: $pagePadding/2;
+            padding-right: $pagePadding/2;
+        }
+
+        .read_card_div{
+            height: $readImgHeight;
+        }
+        .read_img{
+            max-height: $readImgHeight;
+        }
+        .share_absolute_span{
+            left: $cardPadding;
+            top: $cardPadding;
+        }
+        .read_card_body{
+            padding: $cardPadding;
+        }
+        .card_title{
+            font-size: $sectionFont;
+        }
+        .news_date_img{
+            height: 1.7vw;
+            margin-right: 0.9vw;
+        }
+        .created_date{
+            font-size: $normalFont;
+        }
+        .card_body_text{
+            font-size: $normalFont;
+        }
+        .card_body_text_div{
+            margin-top: $cardPadding;
+            height: 5.5vw;
+            line-height: 1;
+        }
+        .card_body_btn_div{
+            margin-top: $cardPadding;
+        }
+        .share_this_head{
+            font-size: $sectionFont;
+        }
+        .normal_margin_top{
+            margin-top: $cardPadding;
+        }
+        .normal_font{
+            font-size: $normalFont;
+        }
+        .must_read_input{
+            font-size: $normalFont;
+        }
+        .email_img{
+            width: 6vw;
+        }
+        .copy_url_span{
+            height: 3.6vw;
+        }
+    }
+  }
+  @media screen and (max-width: 575px) {
+    .must_read_main{
+        $pagePadding: 3.6vw;
+        $cardPadding: 2.6vw;
+        $sectionFont: 2.9vw;
+        $normalFont: 2.6vw;
+        $readImgHeight: 24.5vw;
+
+        .news_sec_div{
+            margin-top: $pagePadding;
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .page_link{
+            font-size: $normalFont;
+        }
+        .new-pagination-active{
+            margin-right: $cardPadding/2;
+        }
+        .page-item{
+            margin-right: $cardPadding/2;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+            padding-left: $pagePadding/2;
+            padding-right: $pagePadding/2;
+        }
+        .each_read_card_div{
+            padding-top: $pagePadding;
+            padding-left: $pagePadding/2;
+            padding-right: $pagePadding/2;
+        }
+        
+        .read_card_div{
+            height: $readImgHeight;
+        }
+        .read_img{
+            max-height: $readImgHeight;
+        }
+        .share_absolute_span{
+            left: $cardPadding;
+            top: $cardPadding;
+        }
+        .read_card_body{
+            padding: $cardPadding;
+        }
+        .card_title{
+            font-size: $sectionFont;
+        }
+        .news_date_img{
+            height: 2.7vw;
+            margin-right: 1.4vw;
+        }
+        .created_date{
+            font-size: $normalFont;
+        }
+        .card_body_text{
+            font-size: $normalFont;
+        }
+        .card_body_text_div{
+            margin-top: $cardPadding;
+            height: 5vw;
+            line-height: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .card_body_btn_div{
+            margin-top: $cardPadding;
+        }
+        .news_date_span{
+            display: none;
+        }
+        .share_this_head{
+            font-size: $sectionFont;
+        }
+        .normal_margin_top{
+            margin-top: $cardPadding;
+        }
+        .normal_font{
+            font-size: $normalFont;
+        }
+        .must_read_input{
+            font-size: $normalFont;
+        }
+        .email_img{
+            width: 7vw;
+        }
+        .copy_url_span{
+            height: 7vw;
+        }
+    }
+  }
+  

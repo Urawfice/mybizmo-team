@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import coupon from "./BizImages/coupon.png";
 import { Link, useHistory } from "react-router-dom";
-import "./Couponcode.css";
+import "./referalCode.scss";
 import axios from "../../Axios";
 import Cookies from "universal-cookie";
 const cookies = new Cookies();
@@ -28,93 +28,66 @@ const CouponCode = () => {
   return (
     <>
       {couponCodeList.length < 0 ? (
-        <div>
-          <div className="row  mt-5 ">
-            <div className="col-xxl-12  coupon-backgroubnd-nav pt-2 pl-5">
-              <p>Redeem Coupon Codes</p>
+        <div className="referral_code_main">
+          <div className="row noMargin noPadding news_sec_div">
+            <div className="col-12 sectionPinkHead">
+            Redeem Coupon Codes
             </div>
           </div>
-          <div className="row  coupon-light-background">
+          <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 sectionBody">
             {couponCodeList &&
               couponCodeList.map((item) => (
-                <div className="col-xl-11 mx-auto ">
-                  <div className="row  mt-5 p-5 coupon-card-background mb-5">
-                    <div className="col-xl-7  col-lg-7 col-md-7 col-11">
-                      {item.discount_in_percentage == 0 ? (
-                        <p className="coupon-card-title">
-                          GET {item.discount_in_amount}Rs OFF
-                        </p>
-                      ) : (
-                        <p className="coupon-card-title">
-                          GET {item.discount_in_percentage}% OFF
-                        </p>
-                      )}
-
-                      <p className="coupon-card-subtitle">LIMITED TIME OFFER</p>
-                      <p className="coupon-card-text">
-                        Please redeem this coupon code on any product before{" "}
-                        {item.expiry_date.slice(0, 10)} to receive an instant{" "}
-                        {item.discount_in_amount == 0
-                          ? item.discount_in_percentage
-                          : item.discount_in_amount}{" "}
-                        while purchasing paid packages.
-                      </p>
-                      <div className="row">
-                        <div className="col-xl-8 col-lg-8 col-md-8 col-12  ">
-                          <p className="coupon-code-text text-center p-2 mt-2">
-                            {item.code}
-                          </p>
+                <div className="row card referral_card noMargin">
+                  <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 noPadding noMargin">
+                    <div className="row noPadding noMargin">
+                      <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 noPadding noMargin">
+                        <div>
+                          {item.discount_in_percentage == 0 ? (
+                            <span className="referal-card-title">GET {item.discount_in_amount}Rs OFF</span>
+                          ) : (
+                            <span className="referal-card-title">GET {item.discount_in_percentage}% OFF</span>
+                          )}
                         </div>
-                        <div className="col-xl-4 col-lg-4 col-md-4  col-6">
-                          <p className="coupon-code-copy text-center p-2 mt-2">
-                            COPY
-                          </p>
+                        <div>
+                          <span className="referal-card-subtitle">LIMITED TIME OFFER</span>
+                        </div>
+                        <div>
+                          <span className="referal-card-text">
+                            Please redeem this coupon code on any product before{" "}
+                            {item.expiry_date.slice(0, 10)} to receive an instant{" "}
+                            {item.discount_in_amount == 0
+                              ? item.discount_in_percentage
+                              : item.discount_in_amount}{" "}
+                            while purchasing paid packages.
+                          </span>
+                        </div>
+                        <div className="row noMargin noPadding button_margin_top">
+                          <div className="col-8 noPadding">
+                            <button className="referal-code-text text-center">{item.code}</button>
+                          </div>
+                          <div className="col-4 noPadding">
+                            <button className="referal-code-copy text-center">
+                              COPY
+                            </button>
+                          </div>
+                        </div>
+                        <div className="row noMargin noPadding button_margin_top">
+                          <span className="referal-terms-condition-text noPadding">
+                            Read <Link><span style={{ "color": "#9929FD" }}>terms and Conditions</span></Link> here
+                          </span>
                         </div>
                       </div>
-                      <p className="coupon-terms-condition-text">
-                        Read <Link>terms and Conditions</Link> here
-                      </p>
-                    </div>
 
-                    <div className="col-xl-5 col-lg-5 col-md-5 col-11">
-                      <img
-                        src={coupon}
-                        style={{
-                          display: "flex",
-                          margin: "auto",
-                          heigh: "15vh",
-                          width: "15vw",
-                        }}
-                      ></img>
+                      <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 noPadding noMargin alignSelfCenter mob_display_none">
+                        <div className="coupon_img_div">
+                          <img className="coupon_img" src={coupon}></img>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               ))}
 
-            {/* <div className="col-xl-11 mx-auto ">
-                
-                <div className='row  mt-5 p-5 coupon-card-background'>
-                <div className='col-xl-7  col-lg-7 col-md-7 col-11'>
- <p className="coupon-card-title">GET 20% OFF</p>
- <p className="coupon-card-subtitle">LIMITED TIME OFFER</p>
- <p className="coupon-card-text">Please redeem this coupon code on any product before August 28, 2021 
- to receive an instant 20% while purchasing paid packages.</p>
- <div className='row'>
- <div className='col-xl-8   '><p className="coupon-code-text text-center p-2 mt-2">PACKGS-USER-20</p></div>
-<div className='col-xl-4   '><p className="coupon-code-copy text-center p-2 mt-2">COPY</p></div>
- </div>
- <p className="coupon-terms-condition-text">Read <Link>terms and Conditions</Link>  here</p>
- 
- 
- </div>
- 
- <div className='col-xl-5 col-lg-5 col-md-5 col-11'>
- 
-     <img src={coupon} style={{display:'flex',margin:"auto", heigh:"15vh",width:"15vw"}}></img>
- </div>
-                </div>
-                 
-                 </div> */}
           </div>
         </div>
       ) : (

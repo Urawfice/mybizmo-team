@@ -1,0 +1,225 @@
+
+.contact_us_main{
+    .noMargin{
+        margin: 0;
+    }
+    .noPadding{
+        padding: 0;
+    }
+    .sectionPinkHead{
+        background: #d082ff;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: white;
+    }
+    .sectionBody{
+        background: #f6ecff;
+    }
+    .cu-form-name-title {
+        color: #98989c;
+        font-weight: 800;
+    }
+    .write_here_area{
+        width: 100%;
+    }
+    .cu-inage-style {
+        display: flex;
+        margin: auto;
+    }
+    .cu-find-us-text {
+        font-weight: bold;
+        color: #9929fd;
+    }
+    .social_icons_row{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .contact_us_main{
+        $pagePadding: 2vw;
+        $cardPadding: 1vw;
+        $sectionFont: 1.3vw;
+        $normalFont: 1vw;
+        $socialImgHeight: 3vw;
+
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+        .sectionBodyHead{
+            font-size: 1.5vw;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .small_margin_top{
+            margin-top: $cardPadding;
+        }
+        .cu-form-name-title{
+            font-size: $sectionFont;
+        }
+        .cu-inage-style{
+            height: 5vw;
+        }
+        .cu-find-us-text {
+            font-size: 2vw;
+        }
+        .section_marign_top{
+            margin-top: $pagePadding;
+        }
+        .social_img_div{
+            height: $socialImgHeight;
+            width: $socialImgHeight;
+        }
+        .social_img{
+            height: $socialImgHeight;
+            width: $socialImgHeight;
+        }
+        .last_sec{
+            margin-bottom: $pagePadding;
+        }
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .contact_us_main{
+        $pagePadding: 2.3vw;
+        $cardPadding: 1.3vw;
+        $sectionFont: 1.6vw;
+        $normalFont: 1.3vw;
+        $socialImgHeight: 4vw;
+
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+        .sectionBodyHead{
+            font-size: 1.8vw;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .small_margin_top{
+            margin-top: $cardPadding;
+        }
+        .cu-form-name-title{
+            font-size: $sectionFont;
+        }
+        .cu-inage-style{
+            height: 6vw;
+        }
+        .cu-find-us-text {
+            font-size: 2.3vw;
+        }
+        .section_marign_top{
+            margin-top: $pagePadding;
+        }
+        .social_img_div{
+            height: $socialImgHeight;
+            width: $socialImgHeight;
+        }
+        .social_img{
+            height: $socialImgHeight;
+            width: $socialImgHeight;
+        }
+        .last_sec{
+            margin-bottom: $pagePadding;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .contact_us_main{
+        $pagePadding: 2.6vw;
+        $cardPadding: 1.6vw;
+        $sectionFont: 1.9vw;
+        $normalFont: 1.6vw;
+        $socialImgHeight: 5vw;
+
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+        .sectionBodyHead{
+            font-size: 2.1vw;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .small_margin_top{
+            margin-top: $cardPadding;
+        }
+        .cu-form-name-title{
+            font-size: $sectionFont;
+        }
+        .cu-inage-style{
+            height: 7vw;
+        }
+        .cu-find-us-text {
+            font-size: 2.6vw;
+        }
+        .section_marign_top{
+            margin-top: $pagePadding;
+        }
+        .social_img_div{
+            height: $socialImgHeight;
+            width: $socialImgHeight;
+        }
+        .social_img{
+            height: $socialImgHeight;
+            width: $socialImgHeight;
+        }
+        .last_sec{
+            margin-bottom: $pagePadding;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .contact_us_main{
+        $pagePadding: 3.6vw;
+        $cardPadding: 2.6vw;
+        $sectionFont: 2.9vw;
+        $normalFont: 2.6vw;
+        $socialImgHeight: 7vw;
+
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+        .sectionBodyHead{
+            font-size: 3vw;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .small_margin_top{
+            margin-top: $cardPadding;
+        }
+        .cu-form-name-title{
+            font-size: $sectionFont;
+        }
+        .cu-inage-style{
+            height: 9vw;
+        }
+        .cu-find-us-text {
+            font-size: 3.6vw;
+        }
+        .section_marign_top{
+            margin-top: $pagePadding;
+        }
+        .social_img_div{
+            height: $socialImgHeight;
+            width: $socialImgHeight;
+        }
+        .social_img{
+            height: $socialImgHeight;
+            width: $socialImgHeight;
+        }
+        .last_sec{
+            margin-bottom: $pagePadding;
+        }
+    }
+}  

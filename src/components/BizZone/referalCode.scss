@@ -1,0 +1,312 @@
+//   Css by Thomas
+
+.referral_code_main{
+    .noMargin{
+        margin: 0;
+    }
+    .noPadding{
+        padding: 0;
+    }
+    .sectionPinkHead{
+        background: #d082ff;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: white;
+    }
+    .sectionBody{
+        background: #f6ecff;
+    }
+    .referral_card{
+        border: none;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.05) !important;
+        border-radius: 10px;
+    }
+    .referal-card-title {
+        font-weight: 800;
+        color: #9929fd;
+    }
+      
+    .referal-card-subtitle {
+        font-weight: 500;
+        color: #9929fd;
+    }
+      
+    .referal-card-text {
+        color: #252525;
+    }
+      
+    .referal-code-text {
+        background: #98989c;
+        border-radius: 20px;
+        color: #f2f1f7;
+        font-weight: bold;
+        border: none;
+    }
+    
+    .referal-code-copy {
+        background: #9929fd;
+        box-shadow: 5px 5px 40px -2px #b6a6c6;
+        border-radius: 20px;
+        color: #f2f1f7;
+        font-weight: bold;
+        border: none;
+    }
+    .referal-terms-condition-text {
+        color: #252525;
+    }
+    .coupon_img{
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+    }
+    .coupon_img_div{
+        display: grid;
+    }
+    .alignSelfCenter{
+        align-self: center;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .referral_code_main{
+        $pagePadding: 2vw;
+        $cardPadding: 1vw;
+        $sectionFont: 1.3vw;
+        $normalFont: 1vw;
+        $cardSubTitleFont: 1.5vw;
+
+        .common_btn {
+            font-size: $normalFont;
+            min-width: 10vw;
+            padding: 0.5vw 1vw 0.5vw 1vw;
+        }
+        .margin_left_btn{
+            margin-left: $pagePadding;
+        }
+        .button_margin_top{
+            margin-top: $pagePadding;
+        }
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+        }
+        .referral_card{
+            padding: $pagePadding;
+        }
+        
+        .referal-card-title{
+            font-size: 3vw;
+        }
+        .referal-card-subtitle{
+            font-size: $cardSubTitleFont;
+        }
+        .referal-code-text{
+            font-size: $cardSubTitleFont;
+            width: 80%;
+        }
+        .referal-code-copy {
+            font-size: $cardSubTitleFont;
+            width: 10vw;
+        }
+        .referal-terms-condition-text{
+            font-size: $normalFont;
+        }
+        .coupon_img{
+            height: 18vw;
+        }
+        .body_modal{
+            padding-left: $pagePadding;
+        }
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .referral_code_main{
+        $pagePadding: 2.3vw;
+        $cardPadding: 1.3vw;
+        $sectionFont: 1.6vw;
+        $normalFont: 1.3vw;
+        $cardSubTitleFont: 1.8vw;
+
+        .common_btn {
+            font-size: $normalFont;
+            min-width: 12vw;
+            padding: 0.7vw 1.2vw 0.7vw 1.2vw;
+        }
+        .margin_left_btn{
+            margin-left: $pagePadding;
+        }
+        .button_margin_top{
+            margin-top: $pagePadding;
+        }
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+        }
+
+        .referral_card{
+            padding: $pagePadding;
+        }
+        .referal-card-title{
+            font-size: 4vw;
+        }
+        .referal-card-subtitle{
+            font-size: $cardSubTitleFont;
+        }
+        .referal-code-text{
+            font-size: $cardSubTitleFont;
+            width: 80%;
+        }
+        .referal-code-copy {
+            font-size: $cardSubTitleFont;
+            width: 12vw;
+        }
+        .referal-terms-condition-text{
+            font-size: $normalFont;
+        }
+        .coupon_img{
+            height: 19vw;
+        }
+        .body_modal{
+            padding-left: $pagePadding;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .referral_code_main{
+        $pagePadding: 2.6vw;
+        $cardPadding: 1.6vw;
+        $sectionFont: 1.9vw;
+        $normalFont: 1.6vw;
+        $cardSubTitleFont: 2.1vw;
+
+        .common_btn {
+            font-size: $normalFont;
+            min-width: 14vw;
+            padding: 0.9vw 1.4vw 0.9vw 1.4vw;
+        }
+        .margin_left_btn{
+            margin-left: $pagePadding;
+        }
+        .button_margin_top{
+            margin-top: $pagePadding;
+        }
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+        }
+
+        .referral_card{
+            padding: $pagePadding;
+        }
+        .referal-card-title{
+            font-size: 5vw;
+        }
+        .referal-card-subtitle{
+            font-size: $cardSubTitleFont;
+        }
+        .referal-code-text{
+            font-size: $cardSubTitleFont;
+            width: 80%;
+            padding: 1vw 1vw;
+        }
+        .referal-code-copy {
+            font-size: $cardSubTitleFont;
+            width: 14vw;
+            padding: 1vw 1vw;
+        }
+        .referal-terms-condition-text{
+            font-size: $normalFont;
+        }
+        .coupon_img{
+            height: 22vw;
+        }
+        .body_modal{
+            padding-left: $pagePadding;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .referral_code_main{
+        $pagePadding: 3.6vw;
+        $cardPadding: 2.6vw;
+        $sectionFont: 2.9vw;
+        $normalFont: 2.6vw;
+        $cardSubTitleFont: 3vw;
+
+        .common_btn {
+            font-size: $normalFont;
+            min-width: 15vw;
+            padding: 1.1vw 1.6vw 1.1vw 1.6vw;
+        }
+        .margin_left_btn{
+            margin-left: $pagePadding;
+        }
+        .button_margin_top{
+            margin-top: $pagePadding;
+        }
+        .news_sec_div{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+            margin-top: $pagePadding;
+        }
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+        }
+        
+        .referral_card{
+            padding: $pagePadding;
+        }
+        .referal-card-title{
+            font-size: 5vw;
+        }
+        .referal-card-subtitle{
+            font-size: $cardSubTitleFont;
+        }
+        .referal-code-text{
+            font-size: $cardSubTitleFont;
+            width: 80%;
+            padding: 1vw 1vw;
+        }
+        .referal-code-copy {
+            font-size: $cardSubTitleFont;
+            width: 14vw;
+            padding: 1vw 1vw;
+        }
+        .referal-terms-condition-text{
+            font-size: $normalFont;
+        }
+        .mob_display_none{
+            display: none;
+        }
+        .body_modal{
+            padding-left: $pagePadding;
+        }
+    }
+}

@@ -1,0 +1,658 @@
+
+  //Css by Thomas
+.biz_zone_main_page_main{
+    flex-grow: 1;
+    margin-top: 50px;
+
+    .topmenu_btn{
+        border: none;
+        border-radius: 4px;
+        background-color: white;
+    }
+    .active_menu{
+        border-bottom: 3px #03CBC9 solid;
+    }
+    .biz-btm-bordr {
+        border-bottom: 3px solid #03cbc9;
+    }
+    .img_span{
+        position: relative;
+    }
+    .topMenu_icon, .leaf_item_name{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .common_btn:focus, .common_btn_review:focus {
+        outline: none;
+    }
+    .common_btn, .common_btn_review {
+        border-radius: 44px;
+    }
+    .not_active_btn{
+        border: none;
+        background-color: white;
+    }
+    .not_active_grey_btn{
+        border: 1px solid #98989C;
+        background-color: white;
+    }
+    .blue_active{
+        background: #9929FD;
+        box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.25);
+        border-radius: 44px;
+        border: none;
+        color: white;
+    }
+    .green_active{
+        background-color: rgb(75, 223, 210);
+        color: white;
+        border: none;
+        box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.25);
+    }
+    .who_we_are_main{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .sectionPinkHead{
+        background: #d082ff;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: white;
+    }
+    .sectionBody{
+        background: #f6ecff;
+    }
+    .leaf_img{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        
+    }
+    .leaf_img_div{
+        position: relative;
+    }
+    .leaf_item_name{
+        font-weight: 800;
+        color: #98989C;
+    }
+    .sectionBodyHead{
+        font-weight: 600;
+    }
+    .profile_img_div{
+        border: 3.27px solid #9929fd;
+        filter: drop-shadow(4.36px 4.36px 21.8px #cac9d2);
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .accordion-item{
+        padding: 0 !important;
+    }
+    .align_self_center{
+        align-self: center;
+    }
+    .profile_row_sec{
+        width: 100%;
+    }
+    .profile_name_span{
+        font-weight: 600;
+        color: #252525;
+    }
+    .profile_role_span{
+        color: #98989C;
+    }
+    .biz_review_title {
+        font-weight: 600;
+        color: #03cbc9;
+    }
+    .btn-close{
+        margin: 0;
+        padding: 0;
+    }
+    .biz-review-subtitle{
+        font-weight: 600;
+        color: #252525;
+    }
+    .biz-review-form-title {
+        font-weight: bold;
+        color: #98989c;
+    }
+    .biz-review-input {
+        border: 1px solid #98989C !important;
+        width: 80%;
+        border-radius: 10px;
+    }
+    .pop_review_text_area{
+        border-radius: 10px;
+        width: 80%;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .biz_zone_main_page_main{
+        $pagePadding: 2vw;
+        $normalHeadFont: 1vw;
+        $topBtnMargin: 2vw;
+        $cardPadding: 1vw;
+        $sectionFont: 1.3vw;
+        $profileImgHeight: 6vw;
+
+        .top_menu_activity{
+            padding-top: $pagePadding;
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .topmenu_btn{
+            padding: 0.5vw 1vw;
+            margin-right: 2vw;
+            font-size: $normalHeadFont;
+        }
+        .topMenu_icon{
+            height: 1.3vw;
+            margin-right: 5px;
+        }
+        .btn_row{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .button_margin_top{
+            margin-top: $topBtnMargin;
+        }
+        .common_btn {
+            font-size: $normalHeadFont;
+            width: 10vw;
+            padding: 0.5vw 1vw 0.5vw 1vw;
+        }
+        .common_btn_review {
+            font-size: $normalHeadFont;
+            padding: 0.5vw 1vw 0.5vw 1vw;
+        }
+        .margin_left_btn{
+            margin-left: $topBtnMargin;
+        }
+
+        .btn_background_img_span{
+            height: 2.2vw;
+        }
+        .img_span, .review_span{
+            margin-right: 0.5vw;
+        }
+        .review_icon{
+            height: 1.2vw;
+        }
+
+        .our_team_content{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .who_we_are_main{
+            margin-top: $pagePadding;
+        }
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .sectionBodyHead, .leaf_item_name{
+            font-size: 1.5vw;
+        }
+        .mission_body_text_div{
+            margin-top: $pagePadding;
+        }
+        .certi_leaf_sec{
+            margin-top: $pagePadding;
+        }
+        .certified_by_div{
+            margin-top: $cardPadding;
+        }
+        .biz-profile-pic{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_img_div{
+            border-radius: 20px;
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .acc_btn, .acc_body{
+            padding: 1.5vw;
+        }
+        .bio_text{
+            font-size: 1.1vw;
+        }
+
+        .popupHead{
+            padding: $cardPadding;
+            padding-left: $pagePadding;
+        }
+        .review_footer{
+            padding: $cardPadding;
+            padding-left: $pagePadding;
+        }
+        .biz_review_title{
+            font-size: 1.2vw;
+        }
+        .btn-close{
+            height: 1vw;
+        }
+        .biz-review-subtitle{
+           font-size: $sectionFont; 
+           margin-top: $pagePadding;
+        }
+        .biz-review-form-title{
+           font-size: $sectionFont; 
+        }
+        .designation_div{
+            margin-top: $pagePadding;
+        }
+        .review_modal_body{
+            padding: $pagePadding;
+        }
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .biz_zone_main_page_main{
+        $pagePadding: 2.3vw;
+        $normalHeadFont: 1.3vw;
+        $topBtnMargin: 2.3vw;
+        $cardPadding: 1.3vw;
+        $sectionFont: 1.6vw;
+        $profileImgHeight: 7vw;
+
+        .top_menu_activity{
+            padding-top: $pagePadding;
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .topmenu_btn{
+            padding: 0.7vw 1.2vw;
+            margin-right: 2.3vw;
+            font-size: $normalHeadFont;
+        }
+        .topMenu_icon{
+            height: 1.4vw;
+            margin-right: 5px;
+        }
+        .btn_row{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .button_margin_top{
+            margin-top: $topBtnMargin;
+        }
+        .common_btn {
+            font-size: $normalHeadFont;
+            min-width: 12vw;
+            padding: 0.7vw 1.2vw 0.7vw 1.2vw;
+        }
+        .common_btn_review{
+            font-size: $normalHeadFont;
+            padding: 0.7vw 1.2vw 0.7vw 1.2vw;
+        }
+        .margin_left_btn{
+            margin-left: $topBtnMargin;
+        }
+        .btn_background_img_span{
+            height: 2.4vw;
+        }
+        .img_span, .review_span{
+            margin-right: 0.7vw;
+        }
+
+        .our_team_content{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .review_icon{
+            height: 1.2vw;
+        }
+
+        .who_we_are_main{
+            margin-top: $pagePadding;
+        }
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .sectionBodyHead, .leaf_item_name{
+            font-size: 1.8vw;
+        }
+        .mission_body_text_div{
+            margin-top: $pagePadding;
+        }
+        .certi_leaf_sec{
+            margin-top: $pagePadding;
+        }
+        .certified_by_div{
+            margin-top: $cardPadding;
+        }
+        .biz-profile-pic{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_img_div{
+            border-radius: 20px;
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .acc_btn, .acc_body{
+            padding: 1.8vw;
+        }
+        .pro_details_sec{
+            padding-left: 1.8vw;
+        }
+        .bio_text{
+            font-size: 1.4vw;
+        }
+
+        .popupHead{
+            padding: $cardPadding;
+            padding-left: $pagePadding;
+        }
+        .review_footer{
+            padding: $cardPadding;
+            padding-left: $pagePadding;
+        }
+        .biz_review_title{
+            font-size: 1.5vw;
+        }
+        .btn-close{
+            height: 1.3vw;
+        }
+        .biz-review-subtitle{
+           font-size: $sectionFont; 
+           margin-top: $pagePadding;
+        }
+        .biz-review-form-title{
+           font-size: $sectionFont; 
+        }
+        .designation_div{
+            margin-top: $pagePadding;
+        }
+        .review_modal_body{
+            padding: $pagePadding;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .biz_zone_main_page_main{
+        $pagePadding: 2.6vw;
+        $normalHeadFont: 1.6vw;
+        $btnMargin: 2.6vw;
+        $topBtnMargin: 2.6vw;
+        $cardPadding: 1.6vw;
+        $sectionFont: 1.9vw;
+        $profileImgHeight: 8vw;
+
+        .top_menu_activity{
+            // padding-top: $pagePadding;
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .topmenu_btn{
+            padding: 0.9vw 1.4vw;
+            margin-right: $btnMargin;
+            font-size: $normalHeadFont;
+            margin-top: $btnMargin;
+        }
+        .topMenu_icon{
+            height: 1.7vw;
+            margin-right: 5px;
+        }
+        .btn_row{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .button_margin_top{
+            margin-top: $topBtnMargin;
+        }
+        .common_btn {
+            font-size: $normalHeadFont;
+            min-width: 14vw;
+            padding: 0.9vw 1.4vw 0.9vw 1.4vw;
+        }
+        .common_btn_review {
+            font-size: $normalHeadFont;
+            padding: 0.9vw 1.4vw 0.9vw 1.4vw;
+        }
+        .margin_left_btn{
+            margin-left: $topBtnMargin;
+        }
+        .btn_background_img_span{
+            height: 2.7vw;
+        }
+        .img_span, .review_span{
+            margin-right: 0.9vw;
+        }
+        .who_we_are_main{
+            margin-top: $pagePadding;
+        }
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .sectionBodyHead, .leaf_item_name{
+            font-size: 2.1vw;
+        }
+        .mission_body_text_div{
+            margin-top: $pagePadding;
+        }
+        .certi_leaf_sec{
+            margin-top: $pagePadding;
+        }
+        .certified_by_div{
+            margin-top: $cardPadding;
+        }
+        .biz-profile-pic{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_img_div{
+            border-radius: 20px;
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .acc_btn, .acc_body{
+            padding: 2.1vw;
+        }
+        .pro_details_sec{
+            padding-left: 2.1vw;
+        }
+        .cert_main_sec{
+            max-width: 60%;
+        }
+        .our_team_content{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .bio_text{
+            font-size: 1.7vw;
+        }
+        
+        .popupHead{
+            padding: $cardPadding;
+            padding-left: $pagePadding;
+        }
+        .review_footer{
+            padding: $cardPadding;
+            padding-left: $pagePadding;
+        }
+        .biz_review_title{
+            font-size: 1.8vw;
+        }
+        .btn-close{
+            height: 1.6vw;
+        }
+        .biz-review-subtitle{
+           font-size: $sectionFont; 
+           margin-top: $pagePadding;
+        }
+        .biz-review-form-title{
+           font-size: $sectionFont; 
+        }
+        .designation_div{
+            margin-top: $pagePadding;
+        }
+        .review_modal_body{
+            padding: $pagePadding;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .biz_zone_main_page_main{
+        $pagePadding: 2.6vw;
+        $normalHeadFont: 2.6vw;
+        $btnMargin: 2.6vw;
+        $topBtnMargin: 3.5vw;
+        $cardPadding: 2.6vw;
+        $sectionFont: 2.9vw;
+        $profileImgHeight: 8vw;
+
+        .top_menu_activity{
+            // padding-top: $pagePadding;
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .topmenu_btn{
+            padding: 2vw 2.3vw;
+            margin-right: $btnMargin;
+            font-size: $normalHeadFont;
+            margin-top: $btnMargin;
+        }
+        .topMenu_icon{
+            height: 2.5vw;
+            margin-right: 5px;
+        }
+        .btn_row{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .button_margin_top{
+            margin-top: $topBtnMargin;
+        }
+        .common_btn {
+            font-size: $normalHeadFont;
+            min-width: 15vw;
+            padding: 1.1vw 1.6vw 1.1vw 1.6vw;
+        }
+        .common_btn_review {
+            font-size: $normalHeadFont;
+            padding: 1.1vw 1.6vw 1.1vw 1.6vw;
+        }
+        .margin_left_btn{
+            margin-left: $topBtnMargin;
+        }
+        .btn_background_img_span{
+            height: 3.5vw;
+        }
+        .img_span, .review_span{
+            margin-right: 1.1vw;
+        }
+        .who_we_are_main{
+            margin-top: $pagePadding;
+        }
+        .sectionPinkHead{
+            padding: $cardPadding $pagePadding;
+            font-size: $sectionFont;
+        }
+        .sectionBody{
+            padding: $pagePadding;
+        }
+        .sectionBodyText{
+            font-size: $sectionFont;
+        }
+        .sectionBodyHead, .leaf_item_name{
+            font-size: 2.1vw;
+        }
+        .mission_body_text_div{
+            margin-top: $pagePadding;
+        }
+        .certi_leaf_sec{
+            margin-top: $pagePadding;
+        }
+        .certified_by_div{
+            margin-top: $cardPadding;
+        }
+        .biz-profile-pic{
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+        }
+        .profile_img_div{
+            border-radius: 15px;
+            height: $profileImgHeight;
+            width: $profileImgHeight;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .acc_btn, .acc_body{
+            padding: 2.1vw;
+        }
+        .cert_main_sec{
+            max-width: 60%;
+        }
+        .our_team_content{
+            padding-left: $pagePadding;
+            padding-right: $pagePadding;
+        }
+        .bio_text{
+            font-size: 2.5vw;
+        }
+        .acc_body{
+            line-height: 1;
+        }
+        
+        .popupHead{
+            padding: $cardPadding;
+            padding-left: $pagePadding;
+        }
+        .review_footer{
+            padding: $cardPadding;
+            padding-left: $pagePadding;
+        }
+        .biz_review_title{
+            font-size: 2.8vw;
+        }
+        .btn-close{
+            height: 2.6vw;
+        }
+        .biz-review-subtitle{
+           font-size: $sectionFont; 
+           margin-top: $pagePadding;
+        }
+        .biz-review-form-title{
+           font-size: $sectionFont; 
+        }
+        .designation_div{
+            margin-top: $pagePadding;
+        }
+        .review_modal_body{
+            padding: $pagePadding;
+        }
+        .biz-review-input {
+            width: 100%;
+        }
+        .pop_review_text_area{
+            width: 100%;
+        }
+    }
+}
+  

@@ -9,7 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "../../Sidenav/sidenavStyle.css";
 // import './subscription.css';
 import "./alerts.scss";
-import '../../MyZone/topMenu.scss';
+import "../../MyZone/topMenu.scss";
 import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-datepicker/dist/react-datepicker.css";
@@ -223,7 +223,7 @@ export default function Alerts(props) {
     console.log(cookies.get("token"));
 
     await axios
-      .get("/users/message-list", {
+      .get("/masters/message-list", {
         headers: {
           Authorization: "Token" + " " + cookies.get("token"),
         },
@@ -239,6 +239,7 @@ export default function Alerts(props) {
         console.log(res.data);
         setMsgData(res.data);
         setFinal(res.data);
+
         console.log(finalA);
       })
       .catch((err) => {
@@ -395,7 +396,7 @@ export default function Alerts(props) {
   const onAllClick = (e) => {
     setActiveBtn1("Received");
     axios
-      .get("/users/message-list", {
+      .get("/masters/message-list", {
         headers: {
           Authorization: "Token" + " " + cookies.get("token"),
         },
@@ -419,7 +420,7 @@ export default function Alerts(props) {
   const onUnreadClick = (e) => {
     setActiveBtn1("Unread");
     axios
-      .get("/users/message-list", {
+      .get("/masters/message-list", {
         headers: {
           Authorization: "Token" + " " + cookies.get("token"),
         },
@@ -444,7 +445,7 @@ export default function Alerts(props) {
     console.log("sent");
     setActiveBtn1("Sent");
     axios
-      .get("/users/message-list", {
+      .get("/masters/message-list", {
         headers: {
           Authorization: "Token" + " " + cookies.get("token"),
         },
@@ -467,13 +468,13 @@ export default function Alerts(props) {
 
   const openMsg = (e, index) => {
     axios
-      .get("/users/message-detail/" + e, {
+      .get("/masters/message-detail/" + e, {
         headers: {
           Authorization: "Token" + " " + cookies.get("token"),
         },
       })
       .then((res) => {
-        console.log(res.data);
+        console.log("message data", res.data);
         res.data["index"] = index;
         setClickData(res.data);
 
@@ -491,7 +492,7 @@ export default function Alerts(props) {
         }
 
         axios
-          .get("/users/message-list", {
+          .get("/masters/message-list", {
             headers: {
               Authorization: "Token" + " " + cookies.get("token"),
             },
@@ -518,7 +519,7 @@ export default function Alerts(props) {
 
   const onDelClick = (e) => {
     axios
-      .get("/users/message-delete/" + e, {
+      .get("/masters/message-delete/" + e, {
         headers: {
           Authorization: "Token" + " " + cookies.get("token"),
         },
@@ -536,7 +537,7 @@ export default function Alerts(props) {
         }
 
         axios
-          .get("/users/message-list", {
+          .get("/masters/message-list", {
             headers: {
               Authorization: "Token" + " " + cookies.get("token"),
             },
@@ -563,10 +564,9 @@ export default function Alerts(props) {
     return false;
   };
 
-
   return (
     <div className={classes.root}>
-      <main className="messaging_main" style={{marginTop:"-10px"}}>
+      <main className="messaging_main" style={{ marginTop: "-10px" }}>
         <div className="row noMargin noPadding button_margin_top">
           <span className="page_head noPadding">Alerts & Messages</span>
         </div>
@@ -687,6 +687,20 @@ export default function Alerts(props) {
                       <div className="row noPadding noMargin">
                         {true ? (
                           <div className="col-sm-1 col-2 noPadding">
+                            {/* {event.read === false ? (
+                              <img
+                                id={event.id}
+                                src="/Images/uncheck.svg"
+                                className="check_svg"
+                              ></img>
+                            ) : (
+                              <img
+                                id={event.id}
+                                src="/Images/checked.svg"
+                                className="check_svg"
+                              ></img>
+                            )} */}
+
                             <img
                               id={event.id}
                               src="/Images/uncheck.svg"
@@ -755,7 +769,7 @@ export default function Alerts(props) {
           </table>
         </div>
 
-        {isMsgOpen ? (
+        {/* {isMsgOpen ? (
           <div
             ref={modalRef}
             className="overlay-msg shadow-lg bg-white rounded"
@@ -819,6 +833,151 @@ export default function Alerts(props) {
             >
               Reply
             </button>
+          </div>
+        ) : (
+          <></>
+        )} */}
+
+        {isMsgOpen ? (
+          <div
+            ref={modalRef}
+            className="overlay-msg shadow-lg bg-white rounded row"
+          >
+            <div className="col-xl-12 ">
+              <div className="row ">
+                <div className="col-xl-12 mx-auto  ovr-head">
+                  <div className="row ">
+                    <div className="col-xl-6 col-lg-6 col-md-6 col-6 ">
+                      <span
+                        onClick={() => setisMsgOpen(false)}
+                        className="compose-msg"
+                      >
+                        {" "}
+                        <img
+                          src="/Images/lar.svg"
+                          style={{ marginRight: "10px" }}
+                        />
+                        Back to the list{" "}
+                      </span>
+                    </div>
+                    {/* <div className="col-xl-4 "></div> */}
+                    <div className="col-xl-6 col-lg-6 col-md-6 col-6 mt-1">
+                      <span
+                        className="mt-2 mr-2 ovr-cls"
+                        onClick={() => onDelClick(clickData.id)}
+                      >
+                        <img
+                          className="ovr-cr"
+                          src="/Images/delB.svg"
+                          style={{ marginRight: "10px" }}
+                        />
+                        Delete
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="row mt-4 p-3 ">
+                <div className="col-xl-12 mx-auto  ">
+                  <div className="row ">
+                    <div className="col-xl-2 col-lg-2 col-md-2 col-2 ">
+                      <img
+                        src="/Images/profilepic.png"
+                        className="profile-msg"
+                        style={{ margin: "auto", display: "flex" }}
+                      />
+                    </div>
+
+                    <div className="col-xl-6 col-lg-5  col-md-5 col-4  pt-1">
+                      <span className="name-msg">{clickData.sender_name}</span>
+                    </div>
+                    {/* <div className="col-xl-3 "></div> */}
+                    <div className="col-xl-4 col-lg-5 col-md-4 col-4  text-right">
+                      <span className="date-msg ">
+                        {getMonthName(clickData.created_at)},{" "}
+                        {clickData.created_at.slice(27, 32)}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="row mt-3 pl-3 pt-3 pr-3 ">
+                <div className="col-xl-11 mx-auto  ">{clickData.message}</div>
+              </div>
+              <div>
+                <div className="row">
+                  <div
+                    className="col-xl-2  col-lg-4 col-md-4 col-4 "
+                    style={{
+                      position: "absolute",
+                      bottom: "50px",
+                      left: "20px",
+                    }}
+                  >
+                    <button
+                      className=" ml-3 btn btn-send"
+                      // style={{ float: "left" }}
+                    >
+                      Reply
+                    </button>
+                  </div>
+                  <div
+                    className="col-xl-6 col-lg-4 col-md-1 col-1 "
+                    style={{ position: "absolute", bottom: "50px" }}
+                  ></div>
+                  <div
+                    className="col-xl-4 col-lg-4 col-md-4 col-6 "
+                    style={{
+                      position: "absolute",
+                      bottom: "50px",
+                      right: "20px",
+                    }}
+                  >
+                    <span className="btn-del btn-del1  ">
+                      <img
+                        src="/Images/lar.svg"
+                        style={{ marginRight: "10px" }}
+                        onClick={() => {
+                          if (clickData.index > 0) {
+                            console.log(
+                              clickData.index + 1 + " " + msgData.length
+                            );
+                            let ind = clickData.index - 1;
+                            let id1 = msgData[ind].id;
+                            openMsg(id1, ind);
+                          }
+                        }}
+                      />
+                      <div
+                        style={{
+                          display: "inline-block",
+                          paddingTop: "5px",
+                        }}
+                      >
+                        {clickData && clickData.index + 1} of{" "}
+                        {msgData && msgData.length}
+                      </div>
+                      <img
+                        src="/Images/rar.svg"
+                        onClick={() => {
+                          if (clickData.index + 1 < msgData.length) {
+                            console.log(
+                              clickData.index + 1 + " " + msgData.length
+                            );
+                            let ind = clickData.index + 1;
+                            let id1 = msgData[ind].id;
+                            openMsg(id1, ind);
+                          }
+                        }}
+                        style={{ marginLeft: "10px" }}
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         ) : (
           <></>

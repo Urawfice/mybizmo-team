@@ -1,693 +1,768 @@
+.new-form-header {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #03cbc9;
+}
+.new-form-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 23px;
+  color: #98989c;
+}
 
+.new-form-input {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 23px;
+  color: #98989c;
+  width: 90%;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.news-back {
+  background: #ffffff;
+  border-radius: 10px;
+}
 
+.add-another-btn {
+  box-shadow: 5px 5px 40px -2px rgba(182, 166, 198, 0.25);
+  border-radius: 44px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  color: #ffffff;
+  background: #03cbc9;
+  border: none;
+}
+
+.upload-btn {
+  background: #03cbc9;
+  box-shadow: 5px 5px 40px -2px rgba(182, 166, 198, 0.25);
+  border-radius: 44px;
+}
+
+input[type="file"] {
+  display: none !important;
+}
+.custom-file-upload {
+  cursor: pointer;
+  background: #03cbc9;
+  box-shadow: 5px 5px 40px -2px rgba(182, 166, 198, 0.25);
+  border-radius: 44px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+}
 //Css by Thomas
-.my_forms_main{
-    flex-grow: 1;
-    margin-top: 50px;
-    $popupBorderRadius: 6px;
+.my_forms_main {
+  flex-grow: 1;
+  margin-top: 50px;
+  $popupBorderRadius: 6px;
 
-    .common_btn:focus {
-        outline: none;
-    }
-    .common_btn {
-        border-radius: 44px;
-    }
-    .not_active_btn{
-        border: none;
-        background-color: white;
-    }
-    .blue_active{
-        background: #9929FD;
-        box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.25);
-        border-radius: 44px;
-        border: none;
-        color: white;
-    }
-    .page_head{
-        font-weight: 600;
-    }
-    .table th:first-child{
-        border-top-left-radius: 10px;
-    }
-    .table th:last-child{
-        border-top-right-radius: 10px;
-    }
-    .table th, .td_font{
-        font-weight: normal;
-    }
-    .table th{
-        border: none;
-    }
-    .table td{
-        border-bottom: 0.8px solid #baacc6;
-    }
-    .red_dot{
-        background-color: red;
-        border-radius: 30px;
-        height: 7px;
-        width: 7px;
-        padding-left: 0;
-        border: none;
-        margin-right: 10px;
-    }
-    
-    .overlay_msg{
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        z-index: 2;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 50%;
-        border-radius: $popupBorderRadius !important;
-        background-color: white;
-    }
-    .popup_head{
-        background: #E6D4F6;
-        border-top-left-radius: $popupBorderRadius;
-        border-top-right-radius: $popupBorderRadius;
-    }
-    .compose_msg{
-        display: flex;
-    }
-    .contain_docs {
-        background-color: #F6ECFF;
-        border-top-left-radius: $popupBorderRadius;
-        border-top-right-radius: $popupBorderRadius;
-        display: grid;
-    }
-    .selected_img{
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
-        width: auto;
-        align-self: center;
-    }
-    .btm_head{
-        background-color: #EAC7FF;
-        border-bottom-left-radius: $popupBorderRadius;
-        border-bottom-right-radius: $popupBorderRadius;
-    }
-    .upload_btn{
-        color: #252525;
-        background-color: white;
-        border: 1px solid #98989C;
-        border-radius: 20px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-    }
-    .skip_btn{
-        color: #252525;
-        background-color: white;
-        border: 1px solid #98989C;
-        border-radius: 20px;
-    }
-    .unselect_btn{
-        color: #98989C;
-        background: #F2F1F7;
-        border-radius: 20px;
-        border: none;
-    }
-    .select_submit{
-        color: #FFFFFF;
-        background: #9929FD;
-        box-shadow: 5px 5px 40px -2px #B6A6C6;
-        border: none;
-        border-radius: 20px;
-    }
-    .text_area{
-        border: 1px solid #98989C;
-        border-radius: 4px;
-        padding: 5px;
-    }
-    .between_line{
-        border-top: 1px solid#F2F1F7;
-        margin: 0px 5px;
-    }
-    .radio_form{
-        position: relative;
-    }
-    .radio_label{
-        position: absolute;
-    }
-    .theading{
-        background: #E6D4F6 !important;
-    }
-    .upload_input{
-        position: absolute;
-        left: -15px;
-        top: 0;
-        opacity: 0;
-    }
+  .common_btn:focus {
+    outline: none;
+  }
+  .common_btn {
+    border-radius: 44px;
+  }
+  .not_active_btn {
+    border: none;
+    background-color: white;
+  }
+  .blue_active {
+    background: #9929fd;
+    box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.25);
+    border-radius: 44px;
+    border: none;
+    color: white;
+  }
+  .page_head {
+    font-weight: 600;
+  }
+  .table th:first-child {
+    border-top-left-radius: 10px;
+  }
+  .table th:last-child {
+    border-top-right-radius: 10px;
+  }
+  .table th,
+  .td_font {
+    font-weight: normal;
+  }
+  .table th {
+    border: none;
+  }
+  .table td {
+    border-bottom: 0.8px solid #baacc6;
+  }
+  .red_dot {
+    background-color: red;
+    border-radius: 30px;
+    height: 7px;
+    width: 7px;
+    padding-left: 0;
+    border: none;
+    margin-right: 10px;
+  }
+
+  .overlay_msg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    border-radius: $popupBorderRadius !important;
+    background-color: white;
+  }
+  .popup_head {
+    background: #e6d4f6;
+    border-top-left-radius: $popupBorderRadius;
+    border-top-right-radius: $popupBorderRadius;
+  }
+  .compose_msg {
+    display: flex;
+  }
+  .contain_docs {
+    background-color: #f6ecff;
+    border-top-left-radius: $popupBorderRadius;
+    border-top-right-radius: $popupBorderRadius;
+    display: grid;
+  }
+  .selected_img {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: auto;
+    align-self: center;
+  }
+  .btm_head {
+    background-color: #eac7ff;
+    border-bottom-left-radius: $popupBorderRadius;
+    border-bottom-right-radius: $popupBorderRadius;
+  }
+  .upload_btn {
+    color: #252525;
+    background-color: white;
+    border: 1px solid #98989c;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .skip_btn {
+    color: #252525;
+    background-color: white;
+    border: 1px solid #98989c;
+    border-radius: 20px;
+  }
+  .unselect_btn {
+    color: #98989c;
+    background: #f2f1f7;
+    border-radius: 20px;
+    border: none;
+  }
+  .select_submit {
+    color: #ffffff;
+    background: #9929fd;
+    box-shadow: 5px 5px 40px -2px #b6a6c6;
+    border: none;
+    border-radius: 20px;
+  }
+  .text_area {
+    border: 1px solid #98989c;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  .between_line {
+    border-top: 1px solid#F2F1F7;
+    margin: 0px 5px;
+  }
+  .radio_form {
+    position: relative;
+  }
+  .radio_label {
+    position: absolute;
+  }
+  .theading {
+    background: #e6d4f6 !important;
+  }
+  .upload_input {
+    position: absolute;
+    left: -15px;
+    top: 0;
+    opacity: 0;
+  }
 }
 @media only screen and (min-width: 992px) {
-    .my_forms_main{
-        padding: 2vw;
-        $headBtnFont: 1vw;
-        $topBtnMargin: 2vw;
-        $normalPadding: 1vw;
-        $containDocWidth: 17vw;
-        $formBtnPadding: 0.5vw 1.5vw;
-        $paginateMargin: 1vw;
-        $popupHeadHeight: 3.4vw;
-        $popupTailHeight: 2.6vw;
-        $overlayHeight: 30vw;
-        $popupBodyPadding: 2vw;
+  .my_forms_main {
+    padding: 2vw;
+    $headBtnFont: 1vw;
+    $topBtnMargin: 2vw;
+    $normalPadding: 1vw;
+    $containDocWidth: 17vw;
+    $formBtnPadding: 0.5vw 1.5vw;
+    $paginateMargin: 1vw;
+    $popupHeadHeight: 3.4vw;
+    $popupTailHeight: 2.6vw;
+    $overlayHeight: 30vw;
+    $popupBodyPadding: 2vw;
 
-        .common_btn {
-            font-size: $headBtnFont;
-            // width: 10vw;
-            padding: 0.5vw 1vw 0.5vw 1vw;
-        }
-        .margin_left_btn{
-            margin-left: $topBtnMargin;
-        }
-        .button_margin_top{
-            margin-top: $topBtnMargin;
-        }
-
-        .page_head{
-            font-size: 1.2vw;
-        }
-        .table th{
-            font-size: $headBtnFont;
-        }
-        .table td{
-            font-size: $headBtnFont;
-        }
-        .action_sec{
-            width: 10vw;
-        }
-        .date_th{
-            width: 12vw;
-        }
-        .action_icons{
-            height: 1vw;
-        }
-
-        .overlay_msg{
-            width: 60%;
-            height: $overlayHeight;
-        }
-        .popup_head{
-            padding: $normalPadding;
-        }
-        .compose_msg{
-            font-size: $headBtnFont;
-        }
-        .compose_msg{
-            img{
-                height: 1vw;
-                margin-right: 10px;
-            }
-        }
-        .alignSelfCenter{
-            align-self: center;
-        }
-        .popup_body{
-            padding: $popupBodyPadding;
-        }
-        .center_body{
-            // center body height is calculated by total height of overlay - head, tail height and all the padding and margin
-            height: $overlayHeight - $popupHeadHeight - $popupTailHeight - ($popupBodyPadding * 3);
-        }
-        .popup_tail{
-            height: $popupTailHeight;
-        }
-        .question_div{
-            margin-top: $popupBodyPadding;
-            font-size: $headBtnFont;
-        }
-        .contain_docs {
-            width: $containDocWidth;
-            height: 10vw;
-            padding: $normalPadding !important;
-            margin-top: 2vw;
-        }
-        .selected_img{
-            max-height: 5vw;
-            max-width: 5vw;
-        }
-        .btm_head{
-            width: $containDocWidth;
-            min-height: 2vw;
-            padding: 0.7vw;
-        }
-        .current_file_name{
-            font-size: 0.9vw;
-        }
-        .upload_btn, .skip_btn{
-            font-size: $headBtnFont;
-            padding: $formBtnPadding;
-        }
-        .unselect_btn{
-            font-size: $headBtnFont;
-            padding: $formBtnPadding;
-            margin-right: $popupBodyPadding;
-        }
-        .select_submit{
-            font-size: $headBtnFont;
-            padding: $formBtnPadding;
-            margin-right: $popupBodyPadding;
-        }
-        .qstn_count_status{
-            font-size: 0.8vw;
-        }
-        .popup_pagination_sec{
-            img{
-                height: 1vw;
-            }
-        }
-        .right_paginate{
-            margin-left: $paginateMargin;
-        }
-        .left_paginate{
-            margin-right: $paginateMargin;
-        }
-        .radio_div{
-            margin-top: $topBtnMargin;
-        }
-        .between_line{
-            width: 5vw;
-        }
-        .radio_label{
-            top: 1.5vw;
-        }
-        .radio_label {
-            font-size: 0.9vw;
-        }
+    .common_btn {
+      font-size: $headBtnFont;
+      // width: 10vw;
+      padding: 0.5vw 1vw 0.5vw 1vw;
     }
+    .margin_left_btn {
+      margin-left: $topBtnMargin;
+    }
+    .button_margin_top {
+      margin-top: $topBtnMargin;
+    }
+
+    .page_head {
+      font-size: 1.2vw;
+    }
+    .table th {
+      font-size: $headBtnFont;
+    }
+    .table td {
+      font-size: $headBtnFont;
+    }
+    .action_sec {
+      width: 10vw;
+    }
+    .date_th {
+      width: 12vw;
+    }
+    .action_icons {
+      height: 1vw;
+    }
+
+    .overlay_msg {
+      width: 60%;
+      height: $overlayHeight;
+    }
+    .popup_head {
+      padding: $normalPadding;
+    }
+    .compose_msg {
+      font-size: $headBtnFont;
+    }
+    .compose_msg {
+      img {
+        height: 1vw;
+        margin-right: 10px;
+      }
+    }
+    .alignSelfCenter {
+      align-self: center;
+    }
+    .popup_body {
+      padding: $popupBodyPadding;
+    }
+    .center_body {
+      // center body height is calculated by total height of overlay - head, tail height and all the padding and margin
+      height: $overlayHeight - $popupHeadHeight - $popupTailHeight -
+        ($popupBodyPadding * 3);
+    }
+    .popup_tail {
+      height: $popupTailHeight;
+    }
+    .question_div {
+      margin-top: $popupBodyPadding;
+      font-size: $headBtnFont;
+    }
+    .contain_docs {
+      width: $containDocWidth;
+      height: 10vw;
+      padding: $normalPadding !important;
+      margin-top: 2vw;
+    }
+    .selected_img {
+      max-height: 5vw;
+      max-width: 5vw;
+    }
+    .btm_head {
+      width: $containDocWidth;
+      min-height: 2vw;
+      padding: 0.7vw;
+    }
+    .current_file_name {
+      font-size: 0.9vw;
+    }
+    .upload_btn,
+    .skip_btn {
+      font-size: $headBtnFont;
+      padding: $formBtnPadding;
+    }
+    .unselect_btn {
+      font-size: $headBtnFont;
+      padding: $formBtnPadding;
+      margin-right: $popupBodyPadding;
+    }
+    .select_submit {
+      font-size: $headBtnFont;
+      padding: $formBtnPadding;
+      margin-right: $popupBodyPadding;
+    }
+    .qstn_count_status {
+      font-size: 0.8vw;
+    }
+    .popup_pagination_sec {
+      img {
+        height: 1vw;
+      }
+    }
+    .right_paginate {
+      margin-left: $paginateMargin;
+    }
+    .left_paginate {
+      margin-right: $paginateMargin;
+    }
+    .radio_div {
+      margin-top: $topBtnMargin;
+    }
+    .between_line {
+      width: 5vw;
+    }
+    .radio_label {
+      top: 1.5vw;
+    }
+    .radio_label {
+      font-size: 0.9vw;
+    }
+  }
 }
 @media only screen and (max-width: 991px) and (min-width: 768px) {
-    .my_forms_main{
-        padding: 2.3vw;
-        $headBtnFont: 1.3vw;
-        $topBtnMargin: 2.3vw;
-        $normalPadding: 1.3vw;
-        $containDocWidth: 19vw;
-        $formBtnPadding: 0.7vw 1.8vw;
-        $paginateMargin: 1.3vw;
-        $popupHeadHeight: 4.4vw;
-        $popupTailHeight: 2.6vw;
-        $overlayHeight: 35vw;
-        $popupBodyPadding: 2.3vw;
+  .my_forms_main {
+    padding: 2.3vw;
+    $headBtnFont: 1.3vw;
+    $topBtnMargin: 2.3vw;
+    $normalPadding: 1.3vw;
+    $containDocWidth: 19vw;
+    $formBtnPadding: 0.7vw 1.8vw;
+    $paginateMargin: 1.3vw;
+    $popupHeadHeight: 4.4vw;
+    $popupTailHeight: 2.6vw;
+    $overlayHeight: 35vw;
+    $popupBodyPadding: 2.3vw;
 
-        .common_btn {
-            font-size: $headBtnFont;
-            // min-width: 12vw;
-            padding: 0.7vw 1.2vw 0.7vw 1.2vw;
-        }
-        .margin_left_btn{
-            margin-left: $topBtnMargin;
-        }
-        .button_margin_top{
-            margin-top: $topBtnMargin;
-        }
-
-        .page_head{
-            font-size: 1.5vw;
-        }
-        .table th{
-            font-size: $headBtnFont;
-        }
-        .table td{
-            font-size: $headBtnFont;
-        }
-        .action_sec{
-            width: 13vw;
-        }
-        .date_th{
-            width: 14vw;
-        }
-        .action_icons{
-            height: 1.3vw;
-        }
-
-        .overlay_msg{
-            width: 75%;
-            height: $overlayHeight;
-        }
-        .popup_head{
-            padding: $normalPadding;
-        }
-        .compose_msg{
-            font-size: $headBtnFont;
-            img{
-                height: 1.3vw;
-                margin-right: 10px;
-            }
-        }
-        .alignSelfCenter{
-            align-self: center;
-        }
-        .popup_body{
-            padding: $popupBodyPadding;
-        }
-        .center_body{
-            // center body height is calculated by total height of overlay - head, tail height and all the padding and margin
-            height: $overlayHeight - $popupHeadHeight - $popupTailHeight - ($popupBodyPadding * 2);
-        }
-        .popup_tail{
-            height: $popupTailHeight;
-        }
-        .contain_docs {
-            width: $containDocWidth;
-            height: 12vw;
-            padding: $normalPadding !important;
-            margin-top: 2.3vw;
-        }
-        .selected_img{
-            max-height: 7vw;
-            max-width: 7vw;
-        }
-        .btm_head{
-            width: $containDocWidth;
-            min-height: 2.3vw;
-            padding: 0.9vw;
-        }
-        .current_file_name{
-            font-size: 1.2vw;
-        }
-        .upload_btn, .skip_btn{
-            font-size: $headBtnFont;
-            padding: $formBtnPadding;
-        }
-        .unselect_btn{
-            font-size: $headBtnFont;
-            padding: $formBtnPadding;
-            margin-right: $popupBodyPadding;
-        }
-        .select_submit{
-            font-size: $headBtnFont;
-            padding: $formBtnPadding;
-            margin-right: $popupBodyPadding;
-        }
-        .qstn_count_status{
-            font-size: 1.1vw;
-        }
-        .popup_pagination_sec{
-            img{
-                height: 1.3vw;
-            }
-        }
-        .right_paginate{
-            margin-left: $paginateMargin;
-        }
-        .left_paginate{
-            margin-right: $paginateMargin;
-        }
-        .radio_div{
-            margin-top: $topBtnMargin;
-        }
-        .between_line{
-            width: 7vw;
-        }
-        .radio_label{
-            top: 1.8vw;
-        }
-        .radio_label {
-            font-size: 1.2vw;
-        }
-        .question_div{
-            font-size: $headBtnFont;
-        }
+    .common_btn {
+      font-size: $headBtnFont;
+      // min-width: 12vw;
+      padding: 0.7vw 1.2vw 0.7vw 1.2vw;
     }
+    .margin_left_btn {
+      margin-left: $topBtnMargin;
+    }
+    .button_margin_top {
+      margin-top: $topBtnMargin;
+    }
+
+    .page_head {
+      font-size: 1.5vw;
+    }
+    .table th {
+      font-size: $headBtnFont;
+    }
+    .table td {
+      font-size: $headBtnFont;
+    }
+    .action_sec {
+      width: 13vw;
+    }
+    .date_th {
+      width: 14vw;
+    }
+    .action_icons {
+      height: 1.3vw;
+    }
+
+    .overlay_msg {
+      width: 75%;
+      height: $overlayHeight;
+    }
+    .popup_head {
+      padding: $normalPadding;
+    }
+    .compose_msg {
+      font-size: $headBtnFont;
+      img {
+        height: 1.3vw;
+        margin-right: 10px;
+      }
+    }
+    .alignSelfCenter {
+      align-self: center;
+    }
+    .popup_body {
+      padding: $popupBodyPadding;
+    }
+    .center_body {
+      // center body height is calculated by total height of overlay - head, tail height and all the padding and margin
+      height: $overlayHeight - $popupHeadHeight - $popupTailHeight -
+        ($popupBodyPadding * 2);
+    }
+    .popup_tail {
+      height: $popupTailHeight;
+    }
+    .contain_docs {
+      width: $containDocWidth;
+      height: 12vw;
+      padding: $normalPadding !important;
+      margin-top: 2.3vw;
+    }
+    .selected_img {
+      max-height: 7vw;
+      max-width: 7vw;
+    }
+    .btm_head {
+      width: $containDocWidth;
+      min-height: 2.3vw;
+      padding: 0.9vw;
+    }
+    .current_file_name {
+      font-size: 1.2vw;
+    }
+    .upload_btn,
+    .skip_btn {
+      font-size: $headBtnFont;
+      padding: $formBtnPadding;
+    }
+    .unselect_btn {
+      font-size: $headBtnFont;
+      padding: $formBtnPadding;
+      margin-right: $popupBodyPadding;
+    }
+    .select_submit {
+      font-size: $headBtnFont;
+      padding: $formBtnPadding;
+      margin-right: $popupBodyPadding;
+    }
+    .qstn_count_status {
+      font-size: 1.1vw;
+    }
+    .popup_pagination_sec {
+      img {
+        height: 1.3vw;
+      }
+    }
+    .right_paginate {
+      margin-left: $paginateMargin;
+    }
+    .left_paginate {
+      margin-right: $paginateMargin;
+    }
+    .radio_div {
+      margin-top: $topBtnMargin;
+    }
+    .between_line {
+      width: 7vw;
+    }
+    .radio_label {
+      top: 1.8vw;
+    }
+    .radio_label {
+      font-size: 1.2vw;
+    }
+    .question_div {
+      font-size: $headBtnFont;
+    }
+  }
 }
 @media only screen and (max-width: 767px) and (min-width: 576px) {
-    .my_forms_main{
-        padding: 2.6vw;
-        padding-top: 0;
-        $headBtnFont: 1.9vw;
-        $topBtnMargin: 2.6vw;
-        $normalPadding: 1.6vw;
-        $containDocWidth: 19vw;
-        $formBtnPadding: 0.8vw 2vw;
-        $paginateMargin: 1.5vw;
-        $popupHeadHeight: 5.7vw;
-        $popupTailHeight: 2.9vw;
-        $overlayHeight: 40vw;
-        $popupBodyPadding: 2.6vw;
+  .my_forms_main {
+    padding: 2.6vw;
+    padding-top: 0;
+    $headBtnFont: 1.9vw;
+    $topBtnMargin: 2.6vw;
+    $normalPadding: 1.6vw;
+    $containDocWidth: 19vw;
+    $formBtnPadding: 0.8vw 2vw;
+    $paginateMargin: 1.5vw;
+    $popupHeadHeight: 5.7vw;
+    $popupTailHeight: 2.9vw;
+    $overlayHeight: 40vw;
+    $popupBodyPadding: 2.6vw;
 
-        .common_btn {
-            font-size: $headBtnFont;
-            min-width: 14vw;
-            padding: 0.9vw 1.4vw 0.9vw 1.4vw;
-        }
-        .margin_left_btn{
-            margin-left: $topBtnMargin;
-        }
-        .button_margin_top{
-            margin-top: $topBtnMargin;
-        }
-
-        .page_head{
-            font-size: 1.8vw;
-        }
-        .table th{
-            font-size: $headBtnFont;
-        }
-        .table td{
-            font-size: $headBtnFont;
-        }
-        .action_sec{
-            width: 16vw;
-        }
-        .date_th{
-            width: 17vw;
-        }
-        .action_icons{
-            height: 1.6vw;
-        }
-
-        .overlay_msg{
-            width: 85%;
-            height: $overlayHeight;
-        }
-        .popup_head{
-            padding: $normalPadding;
-        }
-        .compose_msg{
-            font-size: $headBtnFont;
-            img{
-                height: 1.6vw;
-                margin-right: 10px;
-            }
-        }
-        .alignSelfCenter{
-            align-self: center;
-        }
-        .popup_body{
-            padding: $popupBodyPadding;
-        }
-        .center_body{
-            // center body height is calculated by total height of overlay - head, tail height and all the padding and margin
-            height: $overlayHeight - $popupHeadHeight - $popupTailHeight - ($popupBodyPadding * 2);
-        }
-        .popup_tail{
-            height: $popupTailHeight;
-        }
-        .contain_docs {
-            width: $containDocWidth;
-            height: 12vw;
-            padding: $normalPadding !important;
-            margin-top: 2.6vw;
-        }
-        .selected_img{
-            max-height: 7vw;
-            max-width: 7vw;
-        }
-        .btm_head{
-            width: $containDocWidth;
-            min-height: 2.6vw;
-            padding: 1.1vw;
-        }
-        .current_file_name{
-            font-size: 1.5vw;
-        }
-        .upload_btn, .skip_btn{
-            font-size: $headBtnFont;
-            padding: $formBtnPadding;
-        }
-        .unselect_btn{
-            font-size: $headBtnFont;
-            padding: $formBtnPadding;
-            margin-right: $popupBodyPadding;
-        }
-        .select_submit{
-            font-size: $headBtnFont;
-            padding: $formBtnPadding;
-            margin-right: $popupBodyPadding;
-        }
-        .qstn_count_status{
-            font-size: 1.4vw;
-        }
-        .popup_pagination_sec{
-            img{
-                height: 1.6vw;
-            }
-        }
-        .right_paginate{
-            margin-left: $paginateMargin;
-        }
-        .left_paginate{
-            margin-right: $paginateMargin;
-        }
-        .radio_div{
-            margin-top: $topBtnMargin;
-        }
-        .between_line{
-            width: 7vw;
-        }
-        .radio_label{
-            top: 2.1vw;
-        }
-        .radio_label {
-            font-size: 1.5vw;
-        }
-        .question_div{
-            font-size: $headBtnFont;
-        }
+    .common_btn {
+      font-size: $headBtnFont;
+      min-width: 14vw;
+      padding: 0.9vw 1.4vw 0.9vw 1.4vw;
     }
+    .margin_left_btn {
+      margin-left: $topBtnMargin;
+    }
+    .button_margin_top {
+      margin-top: $topBtnMargin;
+    }
+
+    .page_head {
+      font-size: 1.8vw;
+    }
+    .table th {
+      font-size: $headBtnFont;
+    }
+    .table td {
+      font-size: $headBtnFont;
+    }
+    .action_sec {
+      width: 16vw;
+    }
+    .date_th {
+      width: 17vw;
+    }
+    .action_icons {
+      height: 1.6vw;
+    }
+
+    .overlay_msg {
+      width: 85%;
+      height: $overlayHeight;
+    }
+    .popup_head {
+      padding: $normalPadding;
+    }
+    .compose_msg {
+      font-size: $headBtnFont;
+      img {
+        height: 1.6vw;
+        margin-right: 10px;
+      }
+    }
+    .alignSelfCenter {
+      align-self: center;
+    }
+    .popup_body {
+      padding: $popupBodyPadding;
+    }
+    .center_body {
+      // center body height is calculated by total height of overlay - head, tail height and all the padding and margin
+      height: $overlayHeight - $popupHeadHeight - $popupTailHeight -
+        ($popupBodyPadding * 2);
+    }
+    .popup_tail {
+      height: $popupTailHeight;
+    }
+    .contain_docs {
+      width: $containDocWidth;
+      height: 12vw;
+      padding: $normalPadding !important;
+      margin-top: 2.6vw;
+    }
+    .selected_img {
+      max-height: 7vw;
+      max-width: 7vw;
+    }
+    .btm_head {
+      width: $containDocWidth;
+      min-height: 2.6vw;
+      padding: 1.1vw;
+    }
+    .current_file_name {
+      font-size: 1.5vw;
+    }
+    .upload_btn,
+    .skip_btn {
+      font-size: $headBtnFont;
+      padding: $formBtnPadding;
+    }
+    .unselect_btn {
+      font-size: $headBtnFont;
+      padding: $formBtnPadding;
+      margin-right: $popupBodyPadding;
+    }
+    .select_submit {
+      font-size: $headBtnFont;
+      padding: $formBtnPadding;
+      margin-right: $popupBodyPadding;
+    }
+    .qstn_count_status {
+      font-size: 1.4vw;
+    }
+    .popup_pagination_sec {
+      img {
+        height: 1.6vw;
+      }
+    }
+    .right_paginate {
+      margin-left: $paginateMargin;
+    }
+    .left_paginate {
+      margin-right: $paginateMargin;
+    }
+    .radio_div {
+      margin-top: $topBtnMargin;
+    }
+    .between_line {
+      width: 7vw;
+    }
+    .radio_label {
+      top: 2.1vw;
+    }
+    .radio_label {
+      font-size: 1.5vw;
+    }
+    .question_div {
+      font-size: $headBtnFont;
+    }
+  }
 }
 @media screen and (max-width: 575px) {
-    .my_forms_main{
-        padding: 2.6vw;
-        padding-top: 0;
-        $headBtnFont: 2.5vw;
-        $topBtnMargin: 3.5vw;
-        $normalPadding: 2.6vw;
-        $containDocWidth: 25vw;
-        $formBtnPadding: 0.5vw 2.8vw;
-        $paginateMargin: 2.5vw;
-        $popupHeadHeight: 8.7vw;
-        $popupTailHeight: 3.9vw;
-        $overlayHeight: 47vw;
-        $popupBodyPadding: 3.6vw;
+  .my_forms_main {
+    padding: 2.6vw;
+    padding-top: 0;
+    $headBtnFont: 2.5vw;
+    $topBtnMargin: 3.5vw;
+    $normalPadding: 2.6vw;
+    $containDocWidth: 25vw;
+    $formBtnPadding: 0.5vw 2.8vw;
+    $paginateMargin: 2.5vw;
+    $popupHeadHeight: 8.7vw;
+    $popupTailHeight: 3.9vw;
+    $overlayHeight: 47vw;
+    $popupBodyPadding: 3.6vw;
 
-        .common_btn {
-            font-size: $headBtnFont;
-            min-width: 15vw;
-            padding: 1.1vw 1.6vw 1.1vw 1.6vw;
-        }
-        .margin_left_btn{
-            margin-left: $topBtnMargin;
-        }
-        .button_margin_top{
-            margin-top: $topBtnMargin;
-        }
-
-        .page_head{
-            font-size: 2.8vw;
-        }
-        .table th{
-            font-size: $headBtnFont;
-            padding: 1.2vw;
-        }
-        .table td{
-            font-size: $headBtnFont;
-            padding: 1.2vw;
-        }
-        .action_sec{
-            width: 21vw;
-        }
-        .date_th{
-            width: 22vw;
-        }
-        .action_icons{
-            height: 2vw;
-        }
-
-        .overlay_msg{
-            width: 96%;
-            height: $overlayHeight;
-        }
-        .popup_head{
-            padding: $normalPadding;
-            height: $popupHeadHeight;
-        }
-        .compose_msg{
-            font-size: $headBtnFont;
-            img{
-                height: 2.5vw;
-                margin-right: 10px;
-            }
-        }
-        .alignSelfCenter{
-            align-self: center;
-        }
-        .popup_body{
-            padding: $popupBodyPadding;
-        }
-        .center_body{
-            // center body height is calculated by total height of overlay - head, tail height and all the padding and margin
-            height: $overlayHeight - $popupHeadHeight - $popupTailHeight - ($popupBodyPadding * 2);
-        }
-        .popup_tail{
-            height: $popupTailHeight;
-        }
-        .contain_docs {
-            width: $containDocWidth;
-            height: 15vw;
-            padding: $normalPadding !important;
-            margin-top: 2.6vw;
-        }
-        .selected_img{
-            max-height: 8vw;
-            max-width: 8vw;
-        }
-        .btm_head{
-            width: $containDocWidth;
-            min-height: 3.5vw;
-            padding: 2vw;
-        }
-        .current_file_name{
-            font-size: 1.5vw;
-        }
-        .upload_btn, .skip_btn{
-            font-size: $headBtnFont;
-            padding: $formBtnPadding;
-        }
-        .unselect_btn{
-            font-size: $headBtnFont;
-            padding: $formBtnPadding;
-            margin-right: $popupBodyPadding;
-        }
-        .select_submit{
-            font-size: $headBtnFont;
-            padding: $formBtnPadding;
-            margin-right: $popupBodyPadding;
-        }
-        .qstn_count_status{
-            font-size: 2.4vw;
-        }
-        .popup_pagination_sec{
-            img{
-                height: 2.6vw;
-            }
-        }
-        .right_paginate{
-            margin-left: $paginateMargin;
-        }
-        .left_paginate{
-            margin-right: $paginateMargin;
-        }
-        .radio_div{
-            margin-top: $topBtnMargin;
-        }
-        .between_line{
-            width: 10vw;
-        }
-        .radio_label{
-            top: 4vw;
-            left: 0;
-        }
-        .radio_label {
-            font-size: 2.5vw;
-        }
-        .question_div{
-            font-size: $headBtnFont;
-        }
+    .common_btn {
+      font-size: $headBtnFont;
+      min-width: 15vw;
+      padding: 1.1vw 1.6vw 1.1vw 1.6vw;
     }
+    .margin_left_btn {
+      margin-left: $topBtnMargin;
+    }
+    .button_margin_top {
+      margin-top: $topBtnMargin;
+    }
+
+    .page_head {
+      font-size: 2.8vw;
+    }
+    .table th {
+      font-size: $headBtnFont;
+      padding: 1.2vw;
+    }
+    .table td {
+      font-size: $headBtnFont;
+      padding: 1.2vw;
+    }
+    .action_sec {
+      width: 21vw;
+    }
+    .date_th {
+      width: 22vw;
+    }
+    .action_icons {
+      height: 2vw;
+    }
+
+    .overlay_msg {
+      width: 96%;
+      height: $overlayHeight;
+    }
+    .popup_head {
+      padding: $normalPadding;
+      height: $popupHeadHeight;
+    }
+    .compose_msg {
+      font-size: $headBtnFont;
+      img {
+        height: 2.5vw;
+        margin-right: 10px;
+      }
+    }
+    .alignSelfCenter {
+      align-self: center;
+    }
+    .popup_body {
+      padding: $popupBodyPadding;
+    }
+    .center_body {
+      // center body height is calculated by total height of overlay - head, tail height and all the padding and margin
+      height: $overlayHeight - $popupHeadHeight - $popupTailHeight -
+        ($popupBodyPadding * 2);
+    }
+    .popup_tail {
+      height: $popupTailHeight;
+    }
+    .contain_docs {
+      width: $containDocWidth;
+      height: 15vw;
+      padding: $normalPadding !important;
+      margin-top: 2.6vw;
+    }
+    .selected_img {
+      max-height: 8vw;
+      max-width: 8vw;
+    }
+    .btm_head {
+      width: $containDocWidth;
+      min-height: 3.5vw;
+      padding: 2vw;
+    }
+    .current_file_name {
+      font-size: 1.5vw;
+    }
+    .upload_btn,
+    .skip_btn {
+      font-size: $headBtnFont;
+      padding: $formBtnPadding;
+    }
+    .unselect_btn {
+      font-size: $headBtnFont;
+      padding: $formBtnPadding;
+      margin-right: $popupBodyPadding;
+    }
+    .select_submit {
+      font-size: $headBtnFont;
+      padding: $formBtnPadding;
+      margin-right: $popupBodyPadding;
+    }
+    .qstn_count_status {
+      font-size: 2.4vw;
+    }
+    .popup_pagination_sec {
+      img {
+        height: 2.6vw;
+      }
+    }
+    .right_paginate {
+      margin-left: $paginateMargin;
+    }
+    .left_paginate {
+      margin-right: $paginateMargin;
+    }
+    .radio_div {
+      margin-top: $topBtnMargin;
+    }
+    .between_line {
+      width: 10vw;
+    }
+    .radio_label {
+      top: 4vw;
+      left: 0;
+    }
+    .radio_label {
+      font-size: 2.5vw;
+    }
+    .question_div {
+      font-size: $headBtnFont;
+    }
+  }
 }
