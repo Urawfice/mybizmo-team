@@ -17,6 +17,7 @@
     "google-maps-react": "^2.0.6",
     "html-react-parser": "^1.4.0",
     "mobiscroll": "^3.0.0-beta6",
+    "multiselect-react-dropdown": "^2.0.7",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",

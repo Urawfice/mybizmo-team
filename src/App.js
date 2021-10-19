@@ -38,6 +38,7 @@ import PersonalDetails from './components/MyZone/UploadDocs';
 // New links
 import Profile from './components/Profile/Profile';
 import Connect from './components/Profile/Connect/Connect';
+import Financials from './components/Profile/Financials/Financials';
 
 const cookies = new Cookies()
 
@@ -86,6 +87,7 @@ function App() {
         <Route path="/profile" exact component={MyProfile} />
         <Route path="/schedules" exact component={MySchedule} />
         <Route path="/connect" exact component={Connect} />
+        <Route path="/financials" exact component={Financials} />
       </div>
     </BrowserRouter>
   );

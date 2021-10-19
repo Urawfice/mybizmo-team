@@ -61,34 +61,35 @@ function PersonalProfile(props) {
 
     const updateProfile = (e) => {
         e.preventDefault();
-        console.log(e.target.files[0]);
-        let img = URL.createObjectURL(e.target.files[0]);
-        // setSelectedImagePreview(img);
-    
-        const formData = new FormData();
-        formData.append("image", e.target.files[0]);
-        for (var key of formData.entries()) {
-          console.log(key[0] + ", " + key[1]);
+        console.log(data);
+        const updatedData = {
+            "name":data.name,
+            "gender":data.gender,
+            "address":data.address,
+            "phone_number":data.phone_number,
+            "country":data.country,   
+            "city":data.city,
+            "name":data.name,
         }
-        axios.put(`users/profile-update`, formData, {
-            headers: {
-              Authorization: "Token " + cookies.get("token"),
-            },
-        })
-        .then((res) => {
-            console.log(res);
-            toast.success("Image updated successfully", {
-              position: toast.POSITION.TOP_CENTER,
-              setTimeout: 2000,
-            });
-        })
-        .catch((err) => {
-            console.log(err);
-            toast.warning("Some error occured", {
-              position: toast.POSITION.TOP_CENTER,
-              setTimeout: 2000,
-            });
-        });
+        // axios.put(`users/profile-update`, formData, {
+        //     headers: {
+        //       Authorization: "Token " + cookies.get("token"),
+        //     },
+        // })
+        // .then((res) => {
+        //     console.log(res);
+        //     toast.success("Image updated successfully", {
+        //       position: toast.POSITION.TOP_CENTER,
+        //       setTimeout: 2000,
+        //     });
+        // })
+        // .catch((err) => {
+        //     console.log(err);
+        //     toast.warning("Some error occured", {
+        //       position: toast.POSITION.TOP_CENTER,
+        //       setTimeout: 2000,
+        //     });
+        // });
     };
 
     return (
@@ -372,7 +373,7 @@ function PersonalProfile(props) {
                     <div className="col-12 noMargin noPadding each_input">
                     <button
                         className="blue_active edit_common_btn"
-                        // onClick={updateDetails}
+                        onClick={updateProfile}
                     >
                         Update
                     </button>
