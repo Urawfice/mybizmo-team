@@ -1,0 +1,71 @@
+.bank-add-payment-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  color: #03cbc9;
+}
+
+.bank-form-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 23px;
+  color: #98989c;
+}
+
+.bank-form-input {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 23px;
+  color: #98989c;
+  width: 90%;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.bank-back {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.bank-main-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.bank-main-title-fade {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+
+  color: grey;
+}
+
+.bank-payment-info {
+  cursor: pointer;
+  background: #03cbc9;
+  box-shadow: 5px 5px 40px -2px rgba(182, 166, 198, 0.25);
+  border-radius: 44px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+}

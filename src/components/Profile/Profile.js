@@ -11,7 +11,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { toast } from "react-toastify";
-import PersonalDetails from '../MyZone/PersonalDetails'
+import PersonalDetails from "../MyZone/PersonalDetails";
 
 const drawerWidth = 160;
 toast.configure();
@@ -432,36 +432,38 @@ function Profile(props) {
         <div></div>
       )}
       <main className="subscription_main_class">
-      <div className="row noMargin noPadding top_menu_btn_sec_scss_class">
-        <div className="col-12 top_menu_sec noPadding noMargin">
-          <button className="topmenu_btn active_menu">
-            <img className="topMenu_icon " src="Images/subsA.svg" />{" "}
-            Personal Details{" "}
-          </button>
-
-          <Link to="/my-schedule">
-            <button className="topmenu_btn">
-              <img className="topMenu_icon" src="Images/mySchA.svg" /> Professional Details{" "}
+        <div className="row noMargin noPadding top_menu_btn_sec_scss_class">
+          <div className="col-12 top_menu_sec noPadding noMargin">
+            <button className="topmenu_btn active_menu">
+              <img className="topMenu_icon " src="Images/subsA.svg" /> Personal
+              Details{" "}
             </button>
-          </Link>
 
-          <Link to="/my-activity">
-            <button className="topmenu_btn">
-              <img className="topMenu_icon" src="Images/myActA.svg" /> Upload Documents{" "}
-            </button>
-          </Link>
+            <Link to="/my-schedule">
+              <button className="topmenu_btn">
+                <img className="topMenu_icon" src="Images/mySchA.svg" />{" "}
+                Professional Details{" "}
+              </button>
+            </Link>
 
-          <Link to="/messaging">
-            <button className="topmenu_btn">
-              <img className="topMenu_icon" src="Images/myProA.svg" /> Login & Security{" "}
-            </button>
-          </Link>
-          {/* <button className='topmenu-btn'><img className='topMenu-icon' src='Images/moreA.svg'/> More </button> */}
+            <Link to="/my-activity">
+              <button className="topmenu_btn">
+                <img className="topMenu_icon" src="Images/myActA.svg" /> Upload
+                Documents{" "}
+              </button>
+            </Link>
+
+            <Link to="/messaging">
+              <button className="topmenu_btn">
+                <img className="topMenu_icon" src="Images/myProA.svg" /> Login &
+                Security{" "}
+              </button>
+            </Link>
+            {/* <button className='topmenu-btn'><img className='topMenu-icon' src='Images/moreA.svg'/> More </button> */}
+          </div>
         </div>
-      </div>
-      <PersonalDetails />
+        <PersonalDetails />
       </main>
-
     </div>
   );
 }

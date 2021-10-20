@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 function Billing(props) {
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <div>
+      <p>Billing</p>
+    </div>
+  );
 }
 
 export default Billing;
