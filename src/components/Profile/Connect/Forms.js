@@ -15,7 +15,6 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import "react-toastify/dist/ReactToastify.css";
-
 // import '../Sidenav/sidenavStyle.css';
 // import './subscription.css';
 // import './Messaging.css'
@@ -1211,14 +1210,77 @@ export default function Forms(props) {
 
   const addQuestion = (e) => {
     e.preventDefault();
+    setQuestionCount(questionCount+1);
     setAddAnotherQuestion(addAnotherQuestion);
     addAnotherArr.push(addAnotherQuestion);
   };
 
-  const [questionType, setQuestionType] = useState("");
+  const [questionCount, setQuestionCount] = useState(1);
+  const [data, setData] = useState({})
 
-  console.log(addAnotherArr);
+  const handleChange = (e) => {
+    if(e.target.name.startsWith("option")){
+      setData({...data, [e.target.name]: e.target.value})
+    }
+    else
+      setData({...data, [e.target.name]: e.target.value})
+  }
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if(title=="") {      
+      toast.warning("Title can't be empty", {
+        position: toast.POSITION.TOP_CENTER,
+        setTimeout: 2000,
+      });
+    }
+    else{
+      let question_data = []
+      for(let i=0; i<questionCount; i++) {
+        let obj = {};
+        obj["question"] = data[`question${i}`]
+        obj["question_type"] = data[`questionType${i}`]
+        obj["description"] = data[`questionDes${i}`]
+        if(data[`questionType${i}`]==="ChoiceField")
+          obj["options"] = data[`optionOne${i}`]+','+data[`optionTwo${i}`]+','+data[`optionThree${i}`]
+        question_data.push(obj)
+      }
+      console.log("data",question_data);
+      let formData = new FormData();
+      formData.append("name", title)
+      formData.append("description", description)
+      formData.append("creator", cookies.get("id"))
+      formData.append("question_data", question_data)
+      axios.post(
+        `masters/form-create`,
+        {
+          "name":title,
+          "description": description,
+          "creator": cookies.get("id"),
+          "question_data": question_data
+        },
+        {
+          headers: {
+            Authorization: "Token " + cookies.get("token"),
+          },
+        }
+      )
+      .then((res) => {
+        console.log(res);
+        toast.success("Form created Successfully", {
+          position: toast.POSITION.TOP_CENTER,
+          setTimeout: 2000,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.warning("Some error occured", {
+          position: toast.POSITION.TOP_CENTER,
+          setTimeout: 2000,
+        });
+      });
+    }
+  }
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -1387,7 +1449,7 @@ export default function Forms(props) {
                     <div className="row">
                       <div className="col-xl-12">
                         <p className="new-form-title mb-1">
-                          Form / Survey Title
+                          Form / Survey Title <span style={{color:"red"}}>*</span>
                         </p>
                         <input
                           type="text"
@@ -1418,30 +1480,34 @@ export default function Forms(props) {
                 <div style={{ borderBottom: "3px solid #F6ECFF" }}></div>
 
                 <div className="row mt-5 p-2 mb-5">
-                  {
+                {Array.from({ length: questionCount }, (_, i) =>                   
                     <>
                       <div className="col-xl-5 mx-auto ">
                         <div>
                           <div className="col-xl-12 ">
                             <p className="new-form-title mb-1">
-                              First Question
+                              Question
                             </p>
                             <input
                               className="new-form-input"
                               type="text"
+                              name={`question${i}`}
+                              onChange={handleChange}
                               placeholder="Type your first question here..."
                             ></input>
                           </div>
-                          {/* <div className="col-xl-12 mt-3">
+                          <div className="col-xl-12 mt-3">
                             <p className="new-form-title mb-1">
-                              No. of Options
+                              Description
                             </p>
-                            <input
+                            <textarea
                               className="new-form-input"
+                              name={`questionDes${i}`}
+                              onChange={handleChange}
                               type="text"
-                              placeholder="Type your first question here..."
-                            ></input>
-                          </div> */}
+                              placeholder="Question Description"
+                            ></textarea>
+                          </div>
                         </div>
                       </div>
 
@@ -1449,23 +1515,21 @@ export default function Forms(props) {
                         <div>
                           <div className="col-xl-12 ">
                             <p className="new-form-title mb-1">Answer Mode</p>
-                            {/* <input
-                              className="new-form-input"
-                              type="text"
-                              placeholder="Select from the drop down"
-                            ></input> */}
                             <select
                               className="new-form-input"
-                              onChange={(e) => setQuestionType(e.target.value)}
+                              name={`questionType${i}`}
+                              onChange={handleChange}
+                              // onChange={(e) => setQuestionType(e.target.value)}
                             >
                               <option value="">Select</option>
                               <option value="TextField">TextField</option>
-                              <option value="File">File</option>
-                              <option value="Boolean">Boolean</option>
+                              <option value="ChoiceField">ChoiceField</option>
+                              <option value="FileField">File</option>
+                              <option value="BoolField">Boolean</option>
                             </select>
                           </div>
 
-                          {questionType == "TextField" ? (
+                          {data[`questionType${i}`] == "ChoiceField" ? (
                             <>
                               <div className="col-xl-12 mt-3">
                                 <p className="new-form-title mb-1">
@@ -1474,6 +1538,8 @@ export default function Forms(props) {
                                 <input
                                   className="new-form-input"
                                   type="text"
+                                  onChange={handleChange}
+                                  name={`optionOne${i}`}
                                   placeholder="Type your first question here..."
                                 ></input>
                               </div>
@@ -1483,6 +1549,8 @@ export default function Forms(props) {
                                 </p>
                                 <input
                                   className="new-form-input"
+                                  name={`optionTwo${i}`}
+                                  onChange={handleChange}
                                   type="text"
                                   placeholder="Type your first question here..."
                                 ></input>
@@ -1493,6 +1561,8 @@ export default function Forms(props) {
                                 </p>
                                 <input
                                   className="new-form-input"
+                                  name={`optionThree${i}`}
+                                  onChange={handleChange}
                                   type="text"
                                   placeholder="Type your first question here..."
                                 ></input>
@@ -1504,8 +1574,7 @@ export default function Forms(props) {
                         </div>
                       </div>
                     </>
-                  }
-
+                )}
                   <div className="row">
                     <div className="col-xl-10  mt-3 mx-auto ">
                       <button
@@ -1521,7 +1590,7 @@ export default function Forms(props) {
                     <div className="col-xl-5">
                       <div className="row">
                         <div className="col-xl-5 mx-auto ">
-                          <button className="common_btn blue_active ">
+                          <button className="common_btn blue_active " onClick={handleSubmit}>
                             Create
                           </button>
                         </div>
