@@ -1,7 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Component } from "react";
 import axios from "../../../Axios";
 import Cookies from "universal-cookie";
 import "./Bank.css";
+import "./payout.scss";
+
+// Table from react-bootstrap
+import { Table } from "react-bootstrap";
+// Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css";
+// To make rows collapsible
+import "bootstrap/js/src/collapse.js";
+import del from "../../Images/delete.png";
+import edit from "../../Images/edit.png";
+
 const cookies = new Cookies();
 
 function Bank(props) {
@@ -52,7 +63,6 @@ function Bank(props) {
     formData.append("upi_id", upiId);
     formData.append("wallet_name", walletName);
     formData.append("wallet_phone_no", walletPhoneNo);
-
     formData.append("paypal_mail", paypalMail);
 
     axios
@@ -75,11 +85,28 @@ function Bank(props) {
       });
   }
 
+  const [bankAccountDetails, setBankAccountDetails] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("/masters/payment-detail-list", {
+        headers: {
+          Authorization: "Token" + " " + cookies.get("token"),
+        },
+      })
+      .then((res) => {
+        console.log("payment details", res.data);
+        setBankAccountDetails(res.data);
+      })
+      .catch((err) => {
+        console.log("err", err);
+      });
+  }, []);
+
   return (
     <div>
-      <p>Bank</p>
-      <div className="row">
-        <div className="col-xl-11 mx-auto  ">
+      <div className="row mt-5">
+        <div className="col-xl-12 mx-auto  ">
           <div className="row">
             <div className="col-xl-4 ">
               <p className="bank-main-title">
@@ -101,6 +128,126 @@ function Bank(props) {
             </div>
           </div>
         </div>
+        {addPaymentActive === false ? (
+          <div>
+            <p className="bank-add-payment-title">Bank Accounts</p>
+            <Table>
+              <thead className="table-header-fin ">
+                <tr>
+                  <th></th>
+                  <th>Account Number</th>
+                  <th>Account Holders's Name</th>
+                  <th>Bank Name</th>
+                  <th></th>
+                </tr>
+              </thead>
+              {bankAccountDetails &&
+                bankAccountDetails.map((item) =>
+                  item.detail_type === "Bank Account" ? (
+                    <tbody className="p-3">
+                      <tr
+                        data-toggle="collapse"
+                        data-target=".multi-collapse1"
+                        aria-controls="multiCollapseExample1"
+                      >
+                        <td></td>
+                        <td className="table-text">{item.account_no}</td>
+                        <td className="table-text">{item.person_name}</td>
+                        <td className="table-text">{item.bank_name}</td>
+                        <td></td>
+                      </tr>
+                      <tr
+                        class="collapse multi-collapse1"
+                        id="multiCollapseExample1"
+                      ></tr>
+                    </tbody>
+                  ) : (
+                    <></>
+                  )
+                )}
+              <p className="mt-5 bank-add-payment-title">UPI</p>
+              {bankAccountDetails &&
+                bankAccountDetails.map((item) =>
+                  item.detail_type === "UPI" ? (
+                    <tbody className="bank-details-table">
+                      <tr>
+                        <td></td>
+                        <td className="table-text">{item.upi_id}</td>
+                        <td className="table-text">{item.person_name}</td>
+                        <td></td>
+                        <td>
+                          <img
+                            src={edit}
+                            style={{ height: "20px", width: "20px" }}
+                          ></img>{" "}
+                          <img
+                            src={del}
+                            style={{ height: "20px", width: "20px" }}
+                          ></img>
+                        </td>
+                      </tr>
+                    </tbody>
+                  ) : (
+                    <></>
+                  )
+                )}
+              <p className="mt-5 bank-add-payment-title">Wallet</p>
+              {bankAccountDetails &&
+                bankAccountDetails.map((item) =>
+                  item.detail_type === "Wallet" ? (
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td className="table-text">{item.wallet_phone_no}</td>
+                        <td className="table-text">{item.person_name}</td>
+                        <td></td>
+                        <td>
+                          <img
+                            src={edit}
+                            style={{ height: "20px", width: "20px" }}
+                          ></img>{" "}
+                          <img
+                            style={{ height: "20px", width: "20px" }}
+                            src={del}
+                          ></img>
+                        </td>
+                      </tr>
+                    </tbody>
+                  ) : (
+                    <></>
+                  )
+                )}
+              <p className="mt-5 bank-add-payment-title">PayPal</p>
+              {bankAccountDetails &&
+                bankAccountDetails.map((item) =>
+                  item.detail_type === "Paypal" ? (
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td className="table-text">{item.paypal_mail}</td>
+                        <td className="table-text">{item.person_name}</td>
+                        <td></td>
+                        <td>
+                          <img
+                            src={edit}
+                            style={{ height: "20px", width: "20px" }}
+                          ></img>{" "}
+                          <img
+                            src={del}
+                            style={{ height: "20px", width: "20px" }}
+                          ></img>
+                        </td>
+                      </tr>
+                    </tbody>
+                  ) : (
+                    <></>
+                  )
+                )}
+            </Table>
+          </div>
+        ) : (
+          <></>
+        )}
 
         {addPaymentActive === true ? (
           <div className="row mt-5">
