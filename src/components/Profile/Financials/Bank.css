@@ -69,3 +69,22 @@
   text-align: center;
   color: #ffffff;
 }
+
+.bank-details-table {
+  background-color: white;
+  border-radius: 10px !important;
+  border: none;
+}
+
+.table > :not(:first-child) {
+  border: none !important;
+}
+
+.table-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 34px;
+  color: #252525;
+}

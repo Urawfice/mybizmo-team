@@ -480,7 +480,7 @@ function Financials(props) {
               }
               onClick={() => setActiveHead("bank")}
             >
-              <img className="topMenu_icon" src="Images/myActA.svg" /> Bank
+              <img className="topMenu_icon" src="Images/myActA.svg" /> Payment
               Details{" "}
             </button>
           </div>

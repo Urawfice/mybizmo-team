@@ -1,37 +1,53 @@
-import React from "react";
+import React, { useState, useEffect, Component } from "react";
+import axios from "../../../Axios";
+import Cookies from "universal-cookie";
 import "./payout.scss";
+const cookies = new Cookies();
 function Payout(props) {
+  const [payoutDetails, setPayoutDetails] = useState([]);
+  useEffect(() => {
+    axios
+      .get("/masters/payout-list", {
+        headers: {
+          Authorization: "Token" + " " + cookies.get("token"),
+        },
+      })
+      .then((res) => {
+        console.log("payout Details", res.data);
+        setPayoutDetails(res.data);
+      })
+      .catch((err) => {
+        console.log("err", err);
+      });
+  }, []);
   return (
     <div>
       <table class="table" style={{ marginTop: "5%" }}>
         <thead className="table-header-fin">
           <tr>
-            <th scope="col">Date</th>
-            <th scope="col">Status</th>
-            <th scope="col">Gross Salary</th>
-            <th scope="col">Other</th>
-            <th scope="col">Gross Pay</th>
-            <th scope="col">Charges</th>
-            <th scope="col">Fees</th>
-            <th scope="col">Total</th>
+            <th scope="col">Transaction ID</th>
+            <th scope="col">Bill ID</th>
+            <th scope="col">Transaction Date</th>
+            <th scope="col">Amount Paid</th>
+            <th scope="col">Mode of payment</th>
+            <th scope="col">Receipt</th>
+            <th scope="col">more</th>
           </tr>
         </thead>
+
         <tbody>
-          <tr>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          {payoutDetails &&
+            payoutDetails.map((item) => (
+              <tr>
+                <td>{item.transaction_id}</td>
+                <td>{item.bill_id}</td>
+                <td>{item.bill_date.slice(0, 10)}</td>
+                <td>{item.amount_paid}</td>
+                <td>{item.mode_of_payment}</td>
+                <td>{item.receipt}</td>
+                <td></td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
