@@ -14,7 +14,7 @@ function Skills(props) {
   const [addAnother, setAddAnother] = useState(false);
   const [projectEdit, setProjectEdit] = useState(false);
   const [data, setData] = useState([]);
-  const [count, setCount] = useState(1)
+  const [count, setCount] = useState(0)
   const [skillData, setSkillData] = useState({})
 
   useEffect(() => {
@@ -78,6 +78,7 @@ function Skills(props) {
           position: toast.POSITION.TOP_CENTER,
           setTimeout: 2000,
         });
+        setProjectEdit(false)
       })
       .catch((err) => {
         console.log(err);
