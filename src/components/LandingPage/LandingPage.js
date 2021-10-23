@@ -3,6 +3,7 @@ import "./LandingPage.css";
 import axios from "../../Axios";
 import Cookies from "universal-cookie";
 import { Dropdown } from "react-bootstrap";
+// import Gallery from '../Gallery/Gallery';
 import {
   BrowserRouter,
   Route,
@@ -59,7 +60,10 @@ export default function LandingPage(props) {
   const [showShare, setShowShare] = useState(false);
 
   const [showContact, setShowContact] = useState(false);
-
+  const shareHandleShow = () => setShowShare(true);
+  const shareHandleClose = () => {
+    setShowShare(false);
+  }
   let whirligig;
   const next = () => whirligig.next();
   const prev = () => whirligig.prev();
@@ -71,6 +75,8 @@ export default function LandingPage(props) {
     const elementRef = useRef(initialValue);
     useEffect(() => {
       window.scrollTo(0, 0);
+    },[])
+    useEffect(() => {
       function handler(event) {
         if (!elementRef.current?.contains(event.target)) {
           callback();
@@ -308,7 +314,6 @@ export default function LandingPage(props) {
 
         <div className="banner-image-lp">
           {/* < SliderOne show={1}>
-
                     <div >
                         <img className='banner-img' src={data && data.banners[0].banner_image}  />
                     </div>
@@ -356,7 +361,8 @@ export default function LandingPage(props) {
               backgroundColor: "#f1eeee",
             }}
           >
-            {data &&
+            {/* <Gallery /> */}
+            {/* {data &&
               data.banners.map((item) => (
                 <img
                   style={{
@@ -366,7 +372,7 @@ export default function LandingPage(props) {
                   }}
                   src={item.banner_image}
                 />
-              ))}
+              ))} */}
           </div>
         </div>
 
@@ -526,7 +532,7 @@ export default function LandingPage(props) {
                               data-bs-parent="#accordionExample"
                             >
                               <div class="accordion-body">
-                                <strong>{item.master_bio} Some Bio</strong>
+                                <strong>{item.master_bio}</strong>
                                 <div className="mt-3">
                                   <span style={{ fontWeight: "600" }}>
                                     Certifications :{" "}
@@ -534,6 +540,7 @@ export default function LandingPage(props) {
                                   {item.master_certification}
                                 </div>
                                 <div className="mt-3">
+                                {item.fb!==null ? 
                                   <a href={item.fb} target="_blank">
                                     <img
                                       src="/Images/fbC.svg"
@@ -543,6 +550,10 @@ export default function LandingPage(props) {
                                       }}
                                     />
                                   </a>
+                                  :
+                                  <></>
+                                }
+                                {item.instagram!==null ? 
                                   <a href={item.instagram} target="_blank">
                                     <img
                                       src="/Images/instaC.svg"
@@ -552,6 +563,10 @@ export default function LandingPage(props) {
                                       }}
                                     />
                                   </a>
+                                  :
+                                  <></>
+                                }
+                                {item.twitter!==null ? 
                                   <a href={item.twitter} target="_blank">
                                     <img
                                       src="/Images/twitC.svg"
@@ -561,6 +576,10 @@ export default function LandingPage(props) {
                                       }}
                                     />
                                   </a>
+                                  :
+                                  <></>
+                                }
+                                {item.linkedin!==null ? 
                                   <a href={item.linkedin} target="_blank">
                                     <img
                                       src="/Images/linkedC.svg"
@@ -570,6 +589,9 @@ export default function LandingPage(props) {
                                       }}
                                     />
                                   </a>
+                                  :
+                                  <></>
+                                }
                                 </div>
                               </div>
                             </div>
@@ -1236,8 +1258,8 @@ export default function LandingPage(props) {
                         >
                           {trId !== item.id ? (
                             <img
-                              src="/Images/Tag.svg"
-                              onClick={onMsgClick}
+                              // src="/Images/Tag.svg"
+                              // onClick={onMsgClick}
                               onMouseOver={() => {
                                 settrId(item.id);
                               }}
@@ -1250,8 +1272,8 @@ export default function LandingPage(props) {
                             />
                           ) : (
                             <img
-                              src="/Images/Tag (1).svg"
-                              onClick={onMsgClick}
+                              // src="/Images/Tag (1).svg"
+                              onClick={shareHandleShow}
                               onMouseOver={() => {
                                 settrId(item.id);
                               }}
@@ -1319,7 +1341,7 @@ export default function LandingPage(props) {
                               className="col-xl-12 "
                             >
                               <p className="mr-details-text">
-                                {item.content.slice(0, 25)}
+                                {item.description}
                               </p>
                             </div>
                             <div
@@ -1428,7 +1450,7 @@ export default function LandingPage(props) {
                               className="col-xl-12 "
                             >
                               <p className="mr-details-text">
-                                {item.content.slice(0, 25)}
+                                {item.description}
                               </p>
                             </div>
                             <div
@@ -1815,6 +1837,77 @@ export default function LandingPage(props) {
           </Modal.Header>
           <Modal.Body>
             <div>{newsData && newsData}</div>
+          </Modal.Body>
+        </Modal>
+
+        
+        {/* share model */}
+        <Modal show={showShare}
+          onHide={shareHandleClose}
+          aria-labelledby="contained-modal-title-vcenter"
+          size="lg"
+          centered>
+          <Modal.Header className="single_cls_header_sec_desc" closeButton>
+            <Modal.Title className="single_cls_popup_desc">Share This Package</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+
+            <div className="single_cls_scss_inst_sec">
+              <div className="row noMargin noPadding">
+                <div className="row noMargin noPadding">
+                  <div className="col-xl-10 col-lg-10 col-md-11 col-sm-10 col-10 noPadding">
+                    <span className="single_class_pro_tail_heads noPadding">Share wellness package with your contacts</span>
+                    <div className="row noMargin noPadding mail_sec">
+                      <div className="col-xl-2 col-lg-2 col-md-1 col-sm-2 col-2 text-right" style={{ display: "grid" }}>
+                        <span className="align_self_center">To</span>
+                      </div>
+                      <div className="col-xl-10 col-lg-10 col-md-11 col-sm-10 col-10 noPadding text-left">
+                        <input type="text" className="form-control enter_mail_id" placeholder="Enter  ','  separated email Ids here" onChange={(e) => { setShareEmail(e.target.value) }} />
+                      </div>
+                      <div className="col-xl-10 offset-xl-2 col-lg-10 offset-lg-2 col-md-11 offset-md-1 col-sm-10 offset-sm-2 col-10 offset-2 noPadding text-left">
+                        <textarea rows="5" className="form-control enter_text" placeholder="Enter your message here" value={shareMessage} onChange={(e) => setShareMessage(e.target.value)} ></textarea>
+                      </div>
+                      <div className="col-xl-10 offset-xl-2 col-lg-10 offset-lg-2 col-md-11 offset-md-1 col-sm-10 offset-sm-2 col-10 offset-2 noPadding text-left">
+                        <button onClick={onSendMsg} className="mail_share_btn">Share</button>
+                      </div>
+                      <div className="col-xl-10 offset-xl-2 col-lg-10 offset-lg-2 col-md-11 offset-md-1 col-sm-10 offset-sm-2 col-10 offset-2 noPadding text-left">
+                        <div className="row noMargin noPadding mail_sec">
+                          {/* <div className="col-xl-3 col-lg-2 col-md-3 col-sm-3 col-3 text-left noPadding" style={{ display: "grid" }}>
+                            <span className="align_self_center">Or Copy Link</span>
+                          </div>
+                          <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 noPadding text-left">
+                            <div class="input-group copy_link_grp">
+                              <input type="text" className="form-control copy_link" value={currUrl} aria-describedby="basic-addon2" />
+                              <div class="input-group-append">
+                                <span style={{ cursor: "pointer" }} class="input-group-text copy_img_span" id="basic-addon2">
+
+                                  {!isCopy ?
+                                    <img onClick={() => {
+                                      navigator.clipboard.writeText(currUrl)
+                                      setIsCopy(true);
+                                    }} className="copy_link_img" src="/Images/copy-link.svg" />
+                                    :
+                                    <span style={{ color: "#03cbc9", fontSize: "1.8vh" }}>Link Copied !</span>
+                                  }
+
+                                </span>
+                              </div>
+                            </div>
+                          </div> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-xl-2 col-lg-2 col-md-1 col-sm-2 col-2 noPadding text-center">
+                    <div className="mail_img_div">
+                      {/* <img className="share_mail_img align_self_center" src="/Images/share_mail_img.png" style={{ display: "block" }}></img> */}
+                      <button style={{ background: "none", borderRadius: "50px", borderColor: "#03cbc9", height: "55px", width: "55px" }}> <img style={{ height: "20px" }} className="share_mail_img align_self_center" src="/Images/mailE.svg"></img> </button>
+                      <p style={{ paddingLeft: "6px", color: "#03cbc9" }}>Email</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </Modal.Body>
         </Modal>
       </div>

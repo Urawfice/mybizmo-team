@@ -36,6 +36,13 @@ function Skills(props) {
     setSkillData({...skillData, [e.target.name]: e.target.value})
   }
 
+  const handleUpdate = (e) => {
+    for(let i=0; i<data.length; i++) {
+      if(data[i]['id']==e.target.id){
+        data[i][e.target.name]=e.target.value;
+      }
+    }
+  }
   const handleSubmit = (e) => {
       e.preventDefault();
       console.log(skillData);
@@ -50,43 +57,37 @@ function Skills(props) {
             obj["rating"]=skillData[`rating${i}`];
         skills.push(obj);
       }
-      axios.put(
-        `masters/strength-update`,
-        {
-          "skills":skills
-        },
-        {
-          headers: {
-            Authorization: "Token " + cookies.get("token"),
-          },
-        }
-      )
-      .then((res) => {
-        console.log(res);
-        toast.success("Skills updated successfully", {
-          position: toast.POSITION.TOP_CENTER,
-          setTimeout: 2000,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        toast.warning("Some error occured", {
-          position: toast.POSITION.TOP_CENTER,
-          setTimeout: 2000,
-        });
-      });
+      for(let i=0; i<data.length; i++) {
+        skills.push(data[i]);
+      }
+      console.log(skills);
+      // axios.put(
+      //   `masters/strength-update`,
+      //   {
+      //     "skills":skills
+      //   },
+      //   {
+      //     headers: {
+      //       Authorization: "Token " + cookies.get("token"),
+      //     },
+      //   }
+      // )
+      // .then((res) => {
+      //   console.log(res);
+      //   toast.success("Skills updated successfully", {
+      //     position: toast.POSITION.TOP_CENTER,
+      //     setTimeout: 2000,
+      //   });
+      // })
+      // .catch((err) => {
+      //   console.log(err);
+      //   toast.warning("Some error occured", {
+      //     position: toast.POSITION.TOP_CENTER,
+      //     setTimeout: 2000,
+      //   });
+      // });
         
   }
-  const items = [
-    {
-      title: "May 1940",
-      cardTitle: "Dunkirk",
-      cardSubtitle:
-        "Men of the British Expeditionary Force (BEF) wade out to..",
-      cardDetailedText:
-        "Men of the British Expeditionary Force (BEF) wade out to..",
-    },
-  ];
 
   return (
     <div>
@@ -146,12 +147,46 @@ function Skills(props) {
                   Edit Skills / Strengths
                 </span>
               </div>
-
+              <div className="row  ml-3">
+                {data.map((item,i) => 
+                <>
+                <div className="col-12 col-sm-6 mt-3">
+                  <div className="jb-ps-pr">{i+1}. Skill / Strength Name</div>
+                  <input 
+                    name="name"
+                    type="text"
+                    onChange={handleUpdate}
+                    id={item.id}
+                    value={item.name}
+                    placeholder="Enter your skill / strength here..."
+                    style={{ width: "80%" }} 
+                />
+                </div>
+                <div className="col-12 col-sm-6 mt-3">
+                  <div className="jb-ps-pr">
+                    Skill / Strength Level
+                    <span style={{ fontWeight: "500" }}> (Out of 10) </span>
+                  </div>
+                  <input
+                    type="number"
+                    value={item.rating}
+                    id={item.id}
+                    onChange={handleUpdate}
+                    min="1"
+                    name="rating"
+                    max="10"
+                    step="0.5"
+                    style={{ width: "80%" }}
+                  />
+                </div>
+                </>
+                )}
+              </div>
               <div className="row  ml-3">
                 {Array.from({ length: count }, (_, i) =>                   
                 <>
                 <div className="col-12 col-sm-6 mt-3">
-                  <div className="jb-ps-pr">{i+1}. Skill / Strength Name</div>
+                  <div className="jb-ps-pr">{data.length+i+1}. Skill / Strength Name</div>
                   <input 
                     name={`skill${i}`}
                     type="text"
