@@ -3,7 +3,7 @@ import "./LandingPage.css";
 import axios from "../../Axios";
 import Cookies from "universal-cookie";
 import { Dropdown } from "react-bootstrap";
-// import Gallery from '../Gallery/Gallery';
+import Gallery from "../Gallery/gallery";
 import {
   BrowserRouter,
   Route,
@@ -60,14 +60,15 @@ export default function LandingPage(props) {
   const [showShare, setShowShare] = useState(false);
 
   const [showContact, setShowContact] = useState(false);
-  const shareHandleShow = () => setShowShare(true);
-  const shareHandleClose = () => {
-    setShowShare(false);
-  }
+
   let whirligig;
   const next = () => whirligig.next();
   const prev = () => whirligig.prev();
 
+  const shareHandleShow = () => setShowShare(true);
+  const shareHandleClose = () => {
+    setShowShare(false);
+  };
   const modalRef = useOnClickOutsideRef(() => {
     // setShowShare(false);
   });
@@ -75,7 +76,7 @@ export default function LandingPage(props) {
     const elementRef = useRef(initialValue);
     useEffect(() => {
       window.scrollTo(0, 0);
-    },[])
+    }, []);
     useEffect(() => {
       function handler(event) {
         if (!elementRef.current?.contains(event.target)) {
@@ -240,14 +241,25 @@ export default function LandingPage(props) {
               style={{ margin: "4px 25px", color: "black", fontSize: "2.2vh" }}
             >
               {" "}
-              <a href="#topreads"> MUST READ </a>{" "}
+              <a
+                href="#topreads"
+                style={{ color: "black", textDecoration: "none" }}
+              >
+                {" "}
+                MUST READ{" "}
+              </a>{" "}
             </p>
             <p
               className="pn"
               id="name"
               style={{ margin: "4px 25px", color: "black", fontSize: "2.2vh" }}
             >
-              <a href="#infs">INFLUENCERS </a>
+              <a
+                href="#infs"
+                style={{ color: "black", textDecoration: "none" }}
+              >
+                INFLUENCERS{" "}
+              </a>
             </p>
             <Link to="/reach-us">
               <p
@@ -361,7 +373,7 @@ export default function LandingPage(props) {
               backgroundColor: "#f1eeee",
             }}
           >
-            {/* <Gallery /> */}
+            <Gallery />
             {/* {data &&
               data.banners.map((item) => (
                 <img
@@ -540,58 +552,58 @@ export default function LandingPage(props) {
                                   {item.master_certification}
                                 </div>
                                 <div className="mt-3">
-                                {item.fb!==null ? 
-                                  <a href={item.fb} target="_blank">
-                                    <img
-                                      src="/Images/fbC.svg"
-                                      style={{
-                                        height: "3vh",
-                                        marginRight: "25px",
-                                      }}
-                                    />
-                                  </a>
-                                  :
-                                  <></>
-                                }
-                                {item.instagram!==null ? 
-                                  <a href={item.instagram} target="_blank">
-                                    <img
-                                      src="/Images/instaC.svg"
-                                      style={{
-                                        height: "3vh",
-                                        marginRight: "25px",
-                                      }}
-                                    />
-                                  </a>
-                                  :
-                                  <></>
-                                }
-                                {item.twitter!==null ? 
-                                  <a href={item.twitter} target="_blank">
-                                    <img
-                                      src="/Images/twitC.svg"
-                                      style={{
-                                        height: "3vh",
-                                        marginRight: "25px",
-                                      }}
-                                    />
-                                  </a>
-                                  :
-                                  <></>
-                                }
-                                {item.linkedin!==null ? 
-                                  <a href={item.linkedin} target="_blank">
-                                    <img
-                                      src="/Images/linkedC.svg"
-                                      style={{
-                                        height: "3vh",
-                                        marginRight: "25px",
-                                      }}
-                                    />
-                                  </a>
-                                  :
-                                  <></>
-                                }
+                                  {item.fb !== null ? (
+                                    <a href={item.fb} target="_blank">
+                                      <img
+                                        src="/Images/fbC.svg"
+                                        style={{
+                                          height: "3vh",
+                                          marginRight: "25px",
+                                        }}
+                                      />
+                                    </a>
+                                  ) : (
+                                    <></>
+                                  )}
+                                  {item.instagram !== null ? (
+                                    <a href={item.instagram} target="_blank">
+                                      <img
+                                        src="/Images/instaC.svg"
+                                        style={{
+                                          height: "3vh",
+                                          marginRight: "25px",
+                                        }}
+                                      />
+                                    </a>
+                                  ) : (
+                                    <></>
+                                  )}
+                                  {item.twitter !== null ? (
+                                    <a href={item.twitter} target="_blank">
+                                      <img
+                                        src="/Images/twitC.svg"
+                                        style={{
+                                          height: "3vh",
+                                          marginRight: "25px",
+                                        }}
+                                      />
+                                    </a>
+                                  ) : (
+                                    <></>
+                                  )}
+                                  {item.linkedin !== null ? (
+                                    <a href={item.linkedin} target="_blank">
+                                      <img
+                                        src="/Images/linkedC.svg"
+                                        style={{
+                                          height: "3vh",
+                                          marginRight: "25px",
+                                        }}
+                                      />
+                                    </a>
+                                  ) : (
+                                    <></>
+                                  )}
                                 </div>
                               </div>
                             </div>
@@ -814,10 +826,14 @@ export default function LandingPage(props) {
                 >
                   {data &&
                     data.testimonials.slice(0, 3).map((item) => (
-                      <div className="col-12 col-sm-6 col-md-4 px-2  mb-4 ">
+                      <div className="col-12 col-sm-6 col-md-4 px-2 mb-4">
                         <div
                           className="test-card-style"
-                          style={{ width: "96%", marginLeft: "1%" }}
+                          style={{
+                            width: "96%",
+                            marginLeft: "1%",
+                            backgroundColor: "white",
+                          }}
                         >
                           <img
                             src="/Images/review.png"
@@ -896,7 +912,11 @@ export default function LandingPage(props) {
                       <div className="col-12 col-sm-6 col-md-4 px-2  mb-4 ">
                         <div
                           className="test-card-style m-auto"
-                          style={{ width: "96%", marginLeft: "1%" }}
+                          style={{
+                            width: "96%",
+                            marginLeft: "1%",
+                            backgroundColor: "white",
+                          }}
                         >
                           <img
                             src="/Images/review.png"
@@ -1075,7 +1095,18 @@ export default function LandingPage(props) {
                           onClick={() => SettrReadMore(false)}
                           className="col-xl-6 col-6 mt-4"
                         >
-                          <p className="mr-read-more text-center p-2 ">Back</p>
+                          <button
+                            className="mr-read-more text-center p-2 "
+                            style={{
+                              backgroundColor: "#9929fd",
+                              borderRadius: "20px",
+                              color: "white",
+                              border: "1px solid #9929fd",
+                              marginBottom: "10px",
+                            }}
+                          >
+                            Back
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1258,7 +1289,7 @@ export default function LandingPage(props) {
                         >
                           {trId !== item.id ? (
                             <img
-                              // src="/Images/Tag.svg"
+                              src="/Images/Tag.svg"
                               // onClick={onMsgClick}
                               onMouseOver={() => {
                                 settrId(item.id);
@@ -1272,7 +1303,7 @@ export default function LandingPage(props) {
                             />
                           ) : (
                             <img
-                              // src="/Images/Tag (1).svg"
+                              src="/Images/Tag (1).svg"
                               onClick={shareHandleShow}
                               onMouseOver={() => {
                                 settrId(item.id);
@@ -1336,14 +1367,14 @@ export default function LandingPage(props) {
                                 </div>
                               </div>
                             </div>
-                            <div
+                            {/* <div
                               style={{ height: "5.5vh" }}
                               className="col-xl-12 "
                             >
                               <p className="mr-details-text">
                                 {item.description}
                               </p>
-                            </div>
+                            </div> */}
                             <div
                               onClick={() => {
                                 // settrData(item.content);
@@ -1355,9 +1386,18 @@ export default function LandingPage(props) {
                               }}
                               className="col-xl-6 col-6 "
                             >
-                              <p className="mr-read-more text-center p-2">
+                              <button
+                                className="mr-read-more text-center p-1"
+                                style={{
+                                  backgroundColor: "#9929fd",
+                                  borderRadius: "20px",
+                                  color: "white",
+                                  border: "1px solid #9929fd",
+                                  marginBottom: "10px",
+                                }}
+                              >
                                 Read more
-                              </p>
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -1445,14 +1485,14 @@ export default function LandingPage(props) {
                                 </div>
                               </div>
                             </div>
-                            <div
+                            {/* <div
                               style={{ height: "5.5vh" }}
                               className="col-xl-12 "
                             >
                               <p className="mr-details-text">
                                 {item.description}
                               </p>
-                            </div>
+                            </div> */}
                             <div
                               onClick={() => {
                                 // settrData(item.content);
@@ -1462,9 +1502,18 @@ export default function LandingPage(props) {
                               }}
                               className="col-xl-6 col-6 "
                             >
-                              <p className="mr-read-more text-center p-2">
+                              <button
+                                className="mr-read-more text-center p-2"
+                                style={{
+                                  backgroundColor: "#9929fd",
+                                  borderRadius: "20px",
+                                  color: "white",
+                                  border: "1px solid #9929fd",
+                                  marginBottom: "10px",
+                                }}
+                              >
                                 Read more
-                              </p>
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -1547,7 +1596,18 @@ export default function LandingPage(props) {
                             target="_blank"
                           >
                             {" "}
-                            <p className="news-readmore-btn p-1">Read More</p>
+                            <button
+                              className="news-readmore-btn p-1"
+                              style={{
+                                backgroundColor: "#9929fd",
+                                borderRadius: "20px",
+                                color: "white",
+                                border: "1px solid #9929fd",
+                                marginBottom: "10px",
+                              }}
+                            >
+                              Read More
+                            </button>
                           </a>
                         </div>
                         <div className="col "></div>
@@ -1636,7 +1696,18 @@ export default function LandingPage(props) {
                           <div className="col-6 col-sm-4 col-md-2">
                             <a href={item.news_link} target="_blank">
                               {" "}
-                              <p className="news-readmore-btn p-1">Read More</p>
+                              <button
+                                className="news-readmore-btn p-1"
+                                style={{
+                                  backgroundColor: "#9929fd",
+                                  borderRadius: "20px",
+                                  color: "white",
+                                  border: "1px solid #9929fd",
+                                  marginBottom: "10px",
+                                }}
+                              >
+                                Read More
+                              </button>
                             </a>{" "}
                           </div>
                         </div>
@@ -1806,6 +1877,10 @@ export default function LandingPage(props) {
         ) : (
           <></>
         )}
+        {/* <Modal show={showModal} onHide={handleModal} style={{marginTop:"200px"}}>  
+          <Modal.Header closeButton style={{backgroundColor:"#E6D4F6"}}>Share</Modal.Header>  
+          <Modal.Body>{adminComment}</Modal.Body>  
+        </Modal> */}
         <Modal
           show={trshow}
           onHide={() => settrShow(false)}
@@ -1839,36 +1914,57 @@ export default function LandingPage(props) {
             <div>{newsData && newsData}</div>
           </Modal.Body>
         </Modal>
-
-        
         {/* share model */}
-        <Modal show={showShare}
+        <Modal
+          show={showShare}
           onHide={shareHandleClose}
           aria-labelledby="contained-modal-title-vcenter"
           size="lg"
-          centered>
+          centered
+        >
           <Modal.Header className="single_cls_header_sec_desc" closeButton>
-            <Modal.Title className="single_cls_popup_desc">Share This Package</Modal.Title>
+            <Modal.Title className="single_cls_popup_desc">
+              Share This Package
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-
             <div className="single_cls_scss_inst_sec">
               <div className="row noMargin noPadding">
                 <div className="row noMargin noPadding">
                   <div className="col-xl-10 col-lg-10 col-md-11 col-sm-10 col-10 noPadding">
-                    <span className="single_class_pro_tail_heads noPadding">Share wellness package with your contacts</span>
+                    <span className="single_class_pro_tail_heads noPadding">
+                      Share wellness package with your contacts
+                    </span>
                     <div className="row noMargin noPadding mail_sec">
-                      <div className="col-xl-2 col-lg-2 col-md-1 col-sm-2 col-2 text-right" style={{ display: "grid" }}>
+                      <div
+                        className="col-xl-2 col-lg-2 col-md-1 col-sm-2 col-2 text-right"
+                        style={{ display: "grid" }}
+                      >
                         <span className="align_self_center">To</span>
                       </div>
                       <div className="col-xl-10 col-lg-10 col-md-11 col-sm-10 col-10 noPadding text-left">
-                        <input type="text" className="form-control enter_mail_id" placeholder="Enter  ','  separated email Ids here" onChange={(e) => { setShareEmail(e.target.value) }} />
+                        <input
+                          type="text"
+                          className="form-control enter_mail_id"
+                          placeholder="Enter  ','  separated email Ids here"
+                          onChange={(e) => {
+                            setShareEmail(e.target.value);
+                          }}
+                        />
                       </div>
                       <div className="col-xl-10 offset-xl-2 col-lg-10 offset-lg-2 col-md-11 offset-md-1 col-sm-10 offset-sm-2 col-10 offset-2 noPadding text-left">
-                        <textarea rows="5" className="form-control enter_text" placeholder="Enter your message here" value={shareMessage} onChange={(e) => setShareMessage(e.target.value)} ></textarea>
+                        <textarea
+                          rows="5"
+                          className="form-control enter_text"
+                          placeholder="Enter your message here"
+                          value={shareMessage}
+                          onChange={(e) => setShareMessage(e.target.value)}
+                        ></textarea>
                       </div>
                       <div className="col-xl-10 offset-xl-2 col-lg-10 offset-lg-2 col-md-11 offset-md-1 col-sm-10 offset-sm-2 col-10 offset-2 noPadding text-left">
-                        <button onClick={onSendMsg} className="mail_share_btn">Share</button>
+                        <button onClick={onSendMsg} className="mail_share_btn">
+                          Share
+                        </button>
                       </div>
                       <div className="col-xl-10 offset-xl-2 col-lg-10 offset-lg-2 col-md-11 offset-md-1 col-sm-10 offset-sm-2 col-10 offset-2 noPadding text-left">
                         <div className="row noMargin noPadding mail_sec">
@@ -1901,8 +1997,25 @@ export default function LandingPage(props) {
                   <div className="col-xl-2 col-lg-2 col-md-1 col-sm-2 col-2 noPadding text-center">
                     <div className="mail_img_div">
                       {/* <img className="share_mail_img align_self_center" src="/Images/share_mail_img.png" style={{ display: "block" }}></img> */}
-                      <button style={{ background: "none", borderRadius: "50px", borderColor: "#03cbc9", height: "55px", width: "55px" }}> <img style={{ height: "20px" }} className="share_mail_img align_self_center" src="/Images/mailE.svg"></img> </button>
-                      <p style={{ paddingLeft: "6px", color: "#03cbc9" }}>Email</p>
+                      <button
+                        style={{
+                          background: "none",
+                          borderRadius: "50px",
+                          borderColor: "#03cbc9",
+                          height: "55px",
+                          width: "55px",
+                        }}
+                      >
+                        {" "}
+                        <img
+                          style={{ height: "20px" }}
+                          className="share_mail_img align_self_center"
+                          src="/Images/mailE.svg"
+                        ></img>{" "}
+                      </button>
+                      <p style={{ paddingLeft: "6px", color: "#03cbc9" }}>
+                        Email
+                      </p>
                     </div>
                   </div>
                 </div>

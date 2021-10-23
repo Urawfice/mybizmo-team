@@ -1,0 +1,296 @@
+.noMargin{
+    margin: 0;
+}
+.noPadding{
+    padding: 0;
+}
+.gallery_card_main{
+    .each_img_div{
+        // display: grid;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .img_common_class{
+        object-fit: cover;
+        width: 100%;
+    }
+    .oneByTwoLeft{
+        padding-left: 0; 
+    }
+    .oneByTwoRight{
+        padding-right: 0; 
+    }
+    .video_img_div{
+        position: relative;
+    }
+    .play_btn{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.gallery_img_modal_dialogue{
+    .full_img{
+        align-self: center;
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+    .full_img_div{
+        display: grid;
+    }
+    .popupHead{
+        color: #03cbc9;
+    }
+    .pop_head_div{
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    }
+}
+@media only screen and (min-width: 992px) {
+    .gallery_card_main{
+        $sectionPadding: 2vw;
+        $cardPadding: $sectionPadding/2;
+        $verticalOneByTwoHeight: 16vw;
+        .onyBy3SectionDiv{
+            padding-left: $cardPadding;
+            padding-right: $cardPadding;
+        }
+        .gallery_row{
+            padding-left: $cardPadding;
+            padding-right: $cardPadding; 
+            margin-top: $cardPadding;
+        }
+        .gallery_margin_top{
+            margin-top: $cardPadding;
+        }
+        .gallery_margin_bottom{
+            margin-bottom: $cardPadding;
+        }
+        .oneByTwoLeft{
+            padding-right: $cardPadding; 
+        }
+        .oneByTwoRight{
+            padding-left: $cardPadding; 
+        }
+        .vertical_one_by_two{
+            height: $verticalOneByTwoHeight;
+        }
+        .vertical_full{
+            height: ($verticalOneByTwoHeight * 2) + $sectionPadding;
+        }
+        .play_btn{
+            height: 4vw;
+        }
+        .gallery_empty_text{
+            margin-top: 5vw;
+            font-size: 2vw;
+        }
+    }
+    .gallery_img_modal_dialogue{
+        $sectionPadding: 2vw;
+        $fullImg_height: 20vw;
+        .full_img_main_row{
+            padding: $sectionPadding;
+        }
+        .full_img{
+            max-height: $fullImg_height;
+        }
+        .full_img_div{
+            height: $fullImg_height;
+        }
+        .pop_head_div{
+            padding: 1vw;
+        }
+        .popupHead{
+            font-size: 1.2vw;
+        }
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .gallery_card_main{
+        $sectionPadding: 2vw;
+        $cardPadding: $sectionPadding/2;
+        $verticalOneByTwoHeight: 16vw;
+        .onyBy3SectionDiv{
+            padding-left: $cardPadding;
+            padding-right: $cardPadding;
+        }
+        .gallery_row{
+            padding-left: $cardPadding;
+            padding-right: $cardPadding; 
+            margin-top: $cardPadding;
+        }
+        .gallery_margin_top{
+            margin-top: $cardPadding;
+        }
+        .gallery_margin_bottom{
+            margin-bottom: $cardPadding;
+        }
+        .oneByTwoLeft{
+            padding-right: $cardPadding; 
+        }
+        .oneByTwoRight{
+            padding-left: $cardPadding; 
+        }
+        .vertical_one_by_two{
+            height: $verticalOneByTwoHeight;
+        }
+        .vertical_full{
+            height: ($verticalOneByTwoHeight * 2) + $sectionPadding;
+        }
+        .play_btn{
+            height: 4.5vw;
+        }
+        .gallery_empty_text{
+            margin-top: 6vw;
+            font-size: 2.5vw;
+        }
+    }
+    .gallery_img_modal_dialogue{
+        $sectionPadding: 2.3vw;
+        $fullImg_height: 25vw;
+        .full_img_main_row{
+            padding: $sectionPadding;
+        }
+        .full_img{
+            max-height: $fullImg_height;
+        }
+        .full_img_div{
+            height: $fullImg_height;
+        }
+        .pop_head_div{
+            padding: 1.3vw;
+        }
+        .popupHead{
+            font-size: 1.5vw;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .gallery_card_main{
+        $sectionPadding: 2.3vw;
+        $cardPadding: $sectionPadding/2;
+        $verticalOneByTwoHeight: 19vw;
+        .onyBy3SectionDiv{
+            padding-left: $cardPadding;
+            padding-right: $cardPadding;
+        }
+        .gallery_row{
+            padding-left: $cardPadding;
+            padding-right: $cardPadding; 
+            margin-top: $cardPadding;
+        }
+        .gallery_margin_top{
+            margin-top: $cardPadding;
+        }
+        .gallery_margin_bottom{
+            margin-bottom: $cardPadding;
+        }
+        .oneByTwoLeft{
+            padding-right: $cardPadding; 
+        }
+        .oneByTwoRight{
+            padding-left: $cardPadding; 
+        }
+        .vertical_one_by_two{
+            height: $verticalOneByTwoHeight;
+        }
+        .vertical_full{
+            height: ($verticalOneByTwoHeight * 2) + $sectionPadding;
+        }
+        .play_btn{
+            height: 5vw;
+        }
+        .gallery_empty_text{
+            margin-top: 7vw;
+            font-size: 3vw;
+        }
+    }
+    .gallery_img_modal_dialogue{
+        $sectionPadding: 2.6vw;
+        $fullImg_height: 30vw;
+        .full_img_main_row{
+            padding: $sectionPadding;
+        }
+        .full_img{
+            max-height: $fullImg_height;
+        }
+        .full_img_div{
+            height: $fullImg_height;
+        }
+        .pop_head_div{
+            padding: 1.6vw;
+        }
+        .popupHead{
+            font-size: 2vw;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .gallery_card_main{
+        $sectionPadding: 2.3vw;
+        $cardPadding: $sectionPadding/2;
+        $verticalOneByTwoHeight: 40vw;
+        .onyBy3SectionDiv{
+            padding-left: $cardPadding;
+            padding-right: $cardPadding;
+        }
+        .gallery_row{
+            padding-left: $cardPadding;
+            padding-right: $cardPadding; 
+            margin-top: $cardPadding;
+        }
+        .gallery_margin_top{
+            margin-top: $cardPadding;
+        }
+        .gallery_margin_bottom{
+            margin-bottom: $cardPadding;
+        }
+        .oneByTwoLeft{
+            padding-right: $cardPadding; 
+        }
+        .oneByTwoRight{
+            padding-left: $cardPadding; 
+        }
+        .vertical_one_by_two{
+            height: $verticalOneByTwoHeight;
+        }
+        .vertical_full{
+            height: ($verticalOneByTwoHeight * 2) + $sectionPadding;
+        }
+        .play_btn{
+            height: 8vw;
+        }
+        .gallery_empty_text{
+            margin-top: 9vw;
+            font-size: 5vw;
+        }
+    }
+    .gallery_img_modal_dialogue{
+        $sectionPadding: 3.6vw;
+        $fullImg_height: 40vw;
+        .full_img_main_row{
+            padding: $sectionPadding;
+        }
+        .full_img{
+            max-height: $fullImg_height;
+        }
+        .full_img_div{
+            height: $fullImg_height;
+        }
+        .pop_head_div{
+            padding: 2.6vw;
+        }
+        .popupHead{
+            font-size: 3vw;
+        }
+        .close{
+            padding: 0;
+            margin: 0;
+            font-size: 4vw;
+        }
+    }
+}

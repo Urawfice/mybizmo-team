@@ -24,6 +24,7 @@ import GoogleMapReact from "google-map-react";
 import MapContainer from "../../Map";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "../BizZone/ContactUsPage.css";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -204,14 +205,22 @@ export default function ReachUs(props) {
             style={{ margin: "4px 25px", color: "black", fontSize: "2.2vh" }}
           >
             {" "}
-            <a href="/#topreads"> MUST READ </a>{" "}
+            <a
+              href="/#topreads"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              {" "}
+              MUST READ{" "}
+            </a>{" "}
           </p>
           <p
             className="pn"
             id="name"
             style={{ margin: "4px 25px", color: "black", fontSize: "2.2vh" }}
           >
-            <a href="/#infs">INFLUENCERS </a>
+            <a href="/#infs" style={{ textDecoration: "none", color: "black" }}>
+              INFLUENCERS{" "}
+            </a>
           </p>
           <p
             onClick={() => setShowContact(true)}
@@ -269,8 +278,8 @@ export default function ReachUs(props) {
       <div>
         <div style={{ width: "93.5%" }} className="row pt-4 mx-auto mt-5">
           <div
-            style={{ width: "93.5%" }}
-            className="col-12 m-auto  Cu-nav-background"
+            // style={{ width: "93.5%" }}
+            className="col-12 mx-auto  Cu-nav-background "
           >
             <p className="cu-nav-title pt-2 pl-3 pb-2 mb-0"> Get in touch!</p>
           </div>

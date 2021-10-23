@@ -226,14 +226,14 @@ export default function AboutUs(props) {
             style={{ margin: "4px 25px", color: "black", fontSize: "2.2vh" }}
           >
             {" "}
-            <a href="/#topreads"> MUST READ </a>{" "}
+            <a href="/#topreads" style={{textDecoration:"none", color:"black"}}> MUST READ </a>{" "}
           </p>
           <p
             className="pn"
             id="name"
             style={{ margin: "4px 25px", color: "black", fontSize: "2.2vh" }}
           >
-            <a href="/#infs">INFLUENCERS </a>
+            <a href="/#infs" style={{textDecoration:"none", color:"black"}}>INFLUENCERS </a>
           </p>
           <Link to="/reach-us">
             <p
@@ -486,7 +486,7 @@ export default function AboutUs(props) {
                         data-bs-parent="#accordionExample"
                       >
                         <div class="accordion-body">
-                          <strong>{item.master_bio} Some Bio</strong>
+                          <strong>{item.master_bio}</strong>
                           <div className="mt-3">
                             <span style={{ fontWeight: "600" }}>
                               Certifications :{" "}
@@ -494,30 +494,46 @@ export default function AboutUs(props) {
                             {item.master_certification}
                           </div>
                           <div className="mt-3">
+                          {item.fb!==null ? 
                             <a href={item.fb} target="_blank">
                               <img
                                 src="/Images/fbC.svg"
                                 style={{ height: "3vh", marginRight: "25px" }}
                               />
                             </a>
+                            :
+                            <></>
+                          }
+                          {item.instagram!==null ? 
                             <a href={item.instagram} target="_blank">
                               <img
                                 src="/Images/instaC.svg"
                                 style={{ height: "3vh", marginRight: "25px" }}
                               />
                             </a>
+                            :
+                            <></>
+                          }
+                          {item.twitter!==null ? 
                             <a href={item.twitter} target="_blank">
                               <img
                                 src="/Images/twitC.svg"
                                 style={{ height: "3vh", marginRight: "25px" }}
                               />
                             </a>
+                            :
+                            <></>
+                          }
+                          {item.linkedin!==null ? 
                             <a href={item.linkedin} target="_blank">
                               <img
                                 src="/Images/linkedC.svg"
                                 style={{ height: "3vh", marginRight: "25px" }}
                               />
                             </a>
+                            :
+                            <></>
+                          }
                           </div>
                         </div>
                       </div>

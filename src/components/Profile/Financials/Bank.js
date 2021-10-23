@@ -22,6 +22,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import more from "../../Images/more.png";
 import less from "../../Images/less.png";
+import { width } from "@mui/system";
 
 const cookies = new Cookies();
 
@@ -243,9 +244,12 @@ function Bank(props) {
   };
 
   const [modalId, setModalId] = useState("");
-  const gettingBankIdFn = (e, id) => {
+  const gettingBankIdFn = (e, id, bank_name, detail_type) => {
     e.preventDefault();
     console.log("test modal id", id);
+    console.log("test bankName", bank_name);
+    console.log("test detail type", detail_type);
+
     setModalId(id);
   };
 
@@ -285,6 +289,8 @@ function Bank(props) {
                   <thead className="table-header-fin">
                     <tr>
                       <th></th>
+
+                      <th></th>
                       <th>Account Number</th>
                       <th>Account Holder's Name</th>
                       <th>Bank Name</th>
@@ -297,6 +303,13 @@ function Bank(props) {
                       user.detail_type === "Bank Account" ? (
                         <>
                           <tr key={user.id} style={{ color: "black" }}>
+                            <td>
+                              {/* <p>{user.logo}</p> */}
+                              <img
+                                src={user.logo}
+                                style={{ height: "40px", width: "40px" }}
+                              ></img>
+                            </td>
                             <td>
                               {user.primary === false ? (
                                 <img
@@ -312,7 +325,14 @@ function Bank(props) {
                                     display: "flex",
                                     margin: "auto",
                                   }}
-                                  onClick={(e) => gettingBankIdFn(e, user.id)}
+                                  onClick={(e) =>
+                                    gettingBankIdFn(
+                                      e,
+                                      user.id,
+                                      user.bank_name,
+                                      user.detail_type
+                                    )
+                                  }
                                 ></img>
                               ) : (
                                 <img
@@ -367,7 +387,7 @@ function Bank(props) {
                           <>
                             {expandedRows.includes(user.id) ? (
                               <tr style={{ backgroundColor: "#E6E4E9" }}>
-                                <td colspan="6">
+                                <td colspan="7">
                                   <div
                                     style={{
                                       backgroundColor: "#E6E4E9",
@@ -482,6 +502,12 @@ function Bank(props) {
                         <tbody className="bank-details-table">
                           <tr>
                             <td>
+                              <img
+                                src={item.logo}
+                                style={{ height: "30px", width: "30px" }}
+                              ></img>
+                            </td>
+                            <td>
                               {" "}
                               {item.primary === false ? (
                                 <img
@@ -549,13 +575,18 @@ function Bank(props) {
                         <tbody>
                           <tr>
                             <td>
+                              <img
+                                src={item.logo}
+                                style={{ height: "30px", width: "30px" }}
+                              ></img>
+                            </td>
+                            <td>
                               {" "}
                               {item.primary === false ? (
                                 <img
                                   className="mt-2"
                                   src={unselectimg}
                                   type="button"
-                                  className="btn btn-primary"
                                   data-toggle="modal"
                                   data-target="#exampleModalCenter"
                                   style={{
@@ -571,7 +602,6 @@ function Bank(props) {
                                   className="mt-2"
                                   src={selectimg}
                                   type="button"
-                                  className="btn btn-primary"
                                   data-toggle="modal"
                                   data-target="#exampleModalCenter"
                                   style={{
@@ -619,6 +649,12 @@ function Bank(props) {
                       item.detail_type === "Paypal" ? (
                         <tbody>
                           <tr>
+                            <td>
+                              <img
+                                src={item.logo}
+                                style={{ height: "30px", width: "30px" }}
+                              ></img>
+                            </td>
                             <td>
                               {" "}
                               {item.primary === false ? (
@@ -719,12 +755,36 @@ function Bank(props) {
                             className="bank-form-input"
                           >
                             <option value="">Select</option>
-                            <option value="State Bank of India">
-                              State Bank of India
+                            <option value="State Bank Of India">
+                              State Bank Of India
                             </option>
-                            <option value="ICIC Bank">ICIC Bank</option>
+                            <option value="ICICI Bank">ICICI Bank</option>
                             <option value="HDFC Bank">HDFC Bank</option>
                             <option value="Canara Bank">Canara Bank</option>
+                            <option value="Axis Bank">Axis Bank</option>
+                            <option value="Bank of Baroda">
+                              Bank of Baroda
+                            </option>
+                            <option value="Central Bank of India">
+                              Central Bank of India
+                            </option>
+                            <option value="City Bank">City Bank</option>
+                            <option value="Federal Bank">Federal Bank</option>
+                            <option value="Indian Bank">Indian Bank</option>
+                            <option value="Indusind Bank">Indusind Bank</option>
+                            <option value="Kotak Mahindra Bank">
+                              Kotak Mahindra Bank
+                            </option>
+                            <option value="South Indian Bank">
+                              South Indian Bank
+                            </option>
+                            <option value="Standard Chartered">
+                              Standard Chartered
+                            </option>
+                            <option value="Union Bank of India">
+                              Union Bank of India
+                            </option>
+                            <option value="Yes Bank">Yes Bank</option>
                             <option value="Other">Other</option>
                           </select>
                         </div>
@@ -1228,7 +1288,7 @@ function Bank(props) {
           <div className="modal-content">
             <div className="modal-header">
               <h5
-                className="modal-title text-center "
+                className="modal-title text-center bank-add-payment-title"
                 id="exampleModalLongTitle"
               >
                 Change primary payment detail
@@ -1245,11 +1305,11 @@ function Bank(props) {
             <div className="modal-body">
               <div className="row">
                 <div className="col-xl-10 mx-auto">
-                  <p className="text-center">
-                    Are you sure you want to add 'Bank Account-ICICI' as your
-                    new primary payment detail?
+                  <p className="text-center bank-main-title">
+                    Are you sure you want to add as your new primary payment
+                    detail?
                   </p>
-                  <p className="text-center">
+                  <p className="text-center bank-main-title-fade">
                     (The default one will be removed as primary and appear under
                     the "Bank Account" section)
                   </p>
@@ -1257,7 +1317,7 @@ function Bank(props) {
                 <div className="row">
                   <div className="col-xl-12 mx-auto">
                     <div className="row mt-2 mb-3">
-                      <div className="col-xl-6 ">
+                      <div className="col-xl-6 col-lg-6 col-md-6 col-6">
                         <button
                           className="common_btn blue_active"
                           onClick={primaryBankFn}
@@ -1266,7 +1326,7 @@ function Bank(props) {
                           yes
                         </button>
                       </div>
-                      <div className="col-xl-6 ">
+                      <div className="col-xl-6 col-lg-6 col-md-6 col-6">
                         <button
                           className="common_btn not_active_btn"
                           data-dismiss="modal"
