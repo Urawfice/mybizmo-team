@@ -426,7 +426,7 @@ export default function MyProfile(props) {
                         <ListItemIcon style={{ minWidth: "2.27vw" }}>
                           <img
                             style={{ height: "2.77vh" }}
-                            src="Images/myZone.svg"
+                            src="NavImages/scheduleimg.png"
                             alt="schedules"
                           />{" "}
                         </ListItemIcon>
@@ -443,7 +443,7 @@ export default function MyProfile(props) {
                         <ListItemIcon style={{ minWidth: "2.27vw" }}>
                           <img
                             style={{ height: "2.77vh" }}
-                            src="Images/myZone.svg"
+                            src="NavImages/connectimg.png"
                             alt="connect"
                           />{" "}
                         </ListItemIcon>
@@ -460,7 +460,7 @@ export default function MyProfile(props) {
                         <ListItemIcon style={{ minWidth: "2.27vw" }}>
                           <img
                             style={{ height: "2.77vh" }}
-                            src="Images/library.svg"
+                            src="NavImages/financialsimg.png"
                             alt="financials"
                           />
                         </ListItemIcon>
@@ -470,55 +470,7 @@ export default function MyProfile(props) {
                   </Link>
                 </div>
                 <div id="menuItem">
-                  <Link to="">
-                    <button className="nbtn">
-                      <ListItem className="test1">
-                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                          <img
-                            style={{ height: "2.77vh" }}
-                            src="Images/packages.svg"
-                            alt="packages"
-                          />
-                        </ListItemIcon>
-                        <ListItemText primary="Packages" />
-                      </ListItem>
-                    </button>
-                  </Link>
-                </div>
-                <div id="menuItem">
-                  <Link to="instructor">
-                    <button className="nbtn">
-                      <ListItem className="test">
-                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                          <img
-                            style={{ height: "2.77vh" }}
-                            src="Images/smeet.svg"
-                            alt="zone"
-                          />
-                        </ListItemIcon>
-                        <ListItemText primary="Influencers" />
-                      </ListItem>
-                    </button>
-                  </Link>
-                </div>
-                <div id="menuItem">
-                  <Link to="/subscription">
-                    <button className="nbtn" style={{ color: "#03CBC9" }}>
-                      <ListItem className="test1">
-                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                          <img
-                            style={{ height: "2.77vh" }}
-                            src="Images/myZone.svg"
-                            alt="zone"
-                          />
-                        </ListItemIcon>
-                        <ListItemText primary="My Zone" />
-                      </ListItem>
-                    </button>
-                  </Link>
-                </div>
-                <div id="menuItem">
-                  <Link to="instructor">
+                  <Link to="/my-bizzone-main-page">
                     <button className="nbtn">
                       <ListItem className="test">
                         <ListItemIcon style={{ minWidth: "2.27vw" }}>
@@ -594,7 +546,7 @@ export default function MyProfile(props) {
                         <ListItemIcon style={{ minWidth: "2.27vw" }}>
                           <img
                             style={{ height: "2.77vh" }}
-                            src="Images/myZone.svg"
+                            src="NavImages/scheduleimg.png"
                             alt="schedules"
                           />{" "}
                         </ListItemIcon>
@@ -611,7 +563,7 @@ export default function MyProfile(props) {
                         <ListItemIcon style={{ minWidth: "2.27vw" }}>
                           <img
                             style={{ height: "2.77vh" }}
-                            src="Images/myZone.svg"
+                            src="NavImages/connectimg.png"
                             alt="connect"
                           />{" "}
                         </ListItemIcon>
@@ -628,7 +580,7 @@ export default function MyProfile(props) {
                         <ListItemIcon style={{ minWidth: "2.27vw" }}>
                           <img
                             style={{ height: "2.77vh" }}
-                            src="Images/library.svg"
+                            src="NavImages/financialsimg.png"
                             alt="financials"
                           />
                         </ListItemIcon>
@@ -637,57 +589,8 @@ export default function MyProfile(props) {
                     </button>
                   </Link>
                 </div>
-
                 <div id="menuItem">
-                  <Link to="/packages">
-                    <button className="nbtn">
-                      <ListItem className="test">
-                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                          <img
-                            style={{ height: "2.77vh" }}
-                            src="Images/packages.svg"
-                            alt="packages"
-                          />
-                        </ListItemIcon>
-                        <ListItemText primary="Packages" />
-                      </ListItem>
-                    </button>
-                  </Link>
-                </div>
-                <div id="menuItem">
-                  <Link to="instructor">
-                    <button className="nbtn">
-                      <ListItem className="test">
-                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                          <img
-                            style={{ height: "2.77vh" }}
-                            src="Images/smeet.svg"
-                            alt="zone"
-                          />
-                        </ListItemIcon>
-                        <ListItemText primary="Influencers" />
-                      </ListItem>
-                    </button>
-                  </Link>
-                </div>
-                <div id="menuItem">
-                  <Link to="/subscription">
-                    <button className="nbtn" style={{ color: "#03CBC9" }}>
-                      <ListItem className="test1">
-                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                          <img
-                            style={{ height: "2.77vh" }}
-                            src="Images/myZone.svg"
-                            alt="zone"
-                          />
-                        </ListItemIcon>
-                        <ListItemText primary="Profile" />
-                      </ListItem>
-                    </button>
-                  </Link>
-                </div>
-                <div id="menuItem">
-                  <Link to="instructor">
+                  <Link to="/my-bizzone-main-page">
                     <button className="nbtn">
                       <ListItem className="test">
                         <ListItemIcon style={{ minWidth: "2.27vw" }}>

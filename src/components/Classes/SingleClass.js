@@ -132,7 +132,6 @@ export default function SingleClass(props) {
   const modalRef = useOnClickOutsideRef(() => {
     setShowDis(false)
     setShowMaster(false)
-
   })
 
 
@@ -371,7 +370,7 @@ export default function SingleClass(props) {
   const handleRating = (rate, id) => {
     setRating(rate)
     console.log(rate)
-    axios.post(`users/package-rating/` + id, {
+    axios.post(`users/master-rating/` + id, {
       rating: rate
     },
 
@@ -421,6 +420,7 @@ export default function SingleClass(props) {
     setTimeout(() => {
       if (showDisC) {
         setShowDis(false);
+        setShowMaster(false)
       }
       else {
         setShowDis(true);
@@ -435,7 +435,11 @@ export default function SingleClass(props) {
 
   }
 
-
+const closeDis = (e) => {
+  e.preventDefault();
+  setShowDis(false);
+  setShowMaster(false)
+}
   const onApplyCoupon = (e) => {
 
     console.log(actCoupon)
@@ -755,7 +759,7 @@ export default function SingleClass(props) {
                   </Link>
                 </div>
                 <div id="menuItem">
-                  <Link to="/instructor">
+                  <Link to="/my-bizzone-main-page">
                     <button className="nbtn">
                       <ListItem className="test" >
                         <ListItemIcon style={{ minWidth: '2.27vw' }}><img style={{ "height": "2.77vh" }} src='/Images/smeet.svg' alt="zone" /></ListItemIcon>
@@ -847,7 +851,7 @@ export default function SingleClass(props) {
                   </Link>
                 </div>
                 <div id="menuItem">
-                  <Link to="/instructor">
+                  <Link to="/my-bizzone-main-page">
                     <button className="nbtn">
                       <ListItem className="test" >
                         <ListItemIcon style={{ minWidth: '2.27vw' }}><img style={{ "height": "2.77vh" }} src='/Images/smeet.svg' alt="zone" /></ListItemIcon>
@@ -1019,7 +1023,7 @@ export default function SingleClass(props) {
                             Disclaimer
                           </div>
                           <div className="single_lib_popup_close col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 noPadding text-right">
-                            <button className="single_lib_close_btn" onClick={onDisClick}  >Close</button>
+                            <button className="single_lib_close_btn" onClick={closeDis}  >Close</button>
                           </div>
                         </div>
                         <div className="single_lib_body_sec_desc row noMargin text-left">
@@ -1208,11 +1212,11 @@ export default function SingleClass(props) {
                                     <div className="rating_main_span">
                                       <span className="single_lib_table_header_tracks_span align_self_center" >Rating</span>
                                       {windowWidth < 768 ?
-                                        <Rating onClick={(rate) => handleRating(rate,insClickDat &&  insClickDat.id)} ratingValue={rating} className="rating_span_class align_self_center" size="15" />
+                                        <Rating onClick={(rate) => handleRating(rate,insClickDat &&  insClickDat.id)} ratingValue={singlepackage.main_master_rating} className="rating_span_class align_self_center" size="15" />
                                         :
-                                        <Rating onClick={(rate) => handleRating(rate,insClickDat && insClickDat.id)} ratingValue={rating} className="rating_span_class align_self_center" size="25" />
+                                        <Rating onClick={(rate) => handleRating(rate,insClickDat && insClickDat.id)} ratingValue={singlepackage.main_master_rating} className="rating_span_class align_self_center" size="25" />
                                       }
-                                      <span className="single_lib_table_header_tracks_span align_self_center">{rating} </span>
+                                      <span className="single_lib_table_header_tracks_span align_self_center">{singlepackage.main_master_rating} </span>
                                     </div>
                                   </div>
                                 </div>

@@ -516,6 +516,20 @@ export default function SingleLibrary(props) {
   }
 
 
+  const checkEndTime = (et,event) => {
+    const endTime = new Date(new Date().toDateString() + ' ' + et)
+    const currentTime = new Date();
+    // console.log(endTime+" "+currentTime)
+
+    return !event.fnished;
+
+    if (endTime < currentTime) {
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
 
   const onApplyCoupon = (e) => {
 
@@ -561,7 +575,11 @@ export default function SingleLibrary(props) {
         console.log("err", err);
       })
   }
-
+  const closeDis = (e) => {
+    e.preventDefault();
+    setShowDis(false);
+    setShowMaster(false)
+  }
   const onShoWClick = (e) => {
 
     e.preventDefault();
@@ -881,7 +899,7 @@ export default function SingleLibrary(props) {
                   </Link>
                 </div>
                 <div id="menuItem">
-                  <Link to="/instructor">
+                  <Link to="/my-bizzone-main-page">
                     <button className="nbtn">
                       <ListItem className="test" >
                         <ListItemIcon style={{ minWidth: '2.27vw' }}><img style={{ "height": "2.77vh" }} src='/Images/smeet.svg' alt="zone" /></ListItemIcon>
@@ -973,7 +991,7 @@ export default function SingleLibrary(props) {
                   </Link>
                 </div>
                 <div id="menuItem">
-                  <Link to="/instructor">
+                  <Link to="/my-bizzone-main-page">
                     <button className="nbtn">
                       <ListItem className="test" >
                         <ListItemIcon style={{ minWidth: '2.27vw' }}><img style={{ "height": "2.77vh" }} src='/Images/smeet.svg' alt="zone" /></ListItemIcon>
@@ -1152,7 +1170,7 @@ export default function SingleLibrary(props) {
                             Disclaimer
                           </div>
                           <div className="single_lib_popup_close col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 noPadding text-right">
-                            <button className="single_lib_close_btn" onClick={onDisClick}  >Close</button>
+                            <button className="single_lib_close_btn" onClick={closeDis}  >Close</button>
                           </div>
                         </div>
                         <div className="single_lib_body_sec_desc row noMargin noPadding text-left">
@@ -1544,11 +1562,18 @@ export default function SingleLibrary(props) {
                         <tr key={event.id}>
                           <td>
                             <div className="row noPadding noMargin">
-                              <div className="col-xl-1 col-lg-1 col-md-2 col-sm-2 col-2 noPadding"><input onChange={() => onChecked(event)} type="checkbox" className="chkinp" ></input></div>
+                              {/* <div className="col-1 noPadding">
+                                {checkEndTime(event.end_time, event) ?
+                                  <img className="check_svg" src='/Images/uncheck.svg' />
+                                  :
+                                  <img className="check_svg" src='/Images/checked.svg' />
+                                }
+                              </div> */}
+                              {/* <div className="col-xl-1 col-lg-1 col-md-2 col-sm-2 col-2 noPadding"><input onChange={() => onChecked(event)} type="checkbox" className="chkinp" ></input></div> */}
                               <div className="col-xl-11 col-lg-11 col-md-10 col-sm-10 col-10 noPadding single_lib_table_vid_title">{event.title}</div>
                             </div>
                           </td>
-                          <td>{event.narrator} </td>
+                          <td>{event.author} </td>
                           {/* <td>{event.date}</td> */}
                           <td className="text-left">
                             <span className="single_lib_table_duration_span">{event.duration} min</span>
@@ -1588,11 +1613,11 @@ export default function SingleLibrary(props) {
                         <tr key={event.id}>
                           <td>
                             <div className="row noPadding noMargin">
-                              <div className="col-1 noPadding"><input onChange={() => onChecked(event)} type="checkbox" className="chkinp" ></input></div>
+                              {/* <div className="col-1 noPadding"><input onChange={() => onChecked(event)} type="checkbox" className="chkinp" ></input></div> */}
                               <div className="col noPadding single_lib_table_vid_title">{event.title}</div>
                             </div>
                           </td>
-                          <td>{event.narrator} </td>
+                          <td>{event.author} </td>
                           <td className="text-left">
                             <span className="single_lib_table_duration_span">{event.duration} min</span>
 
@@ -1618,17 +1643,17 @@ export default function SingleLibrary(props) {
                         <tr key={event.id}>
                           <td>
                             <div className="row noPadding noMargin">
-                              <div className="col-1 noPadding"><input onChange={() => onChecked(event)} type="checkbox" className="chkinp" ></input></div>
-                              <div className="col noPadding">{event.title}</div>
+                              {/* <div className="col-1 noPadding"><input onChange={() => onChecked(event)} type="checkbox" className="chkinp" ></input></div> */}
+                              <div className="col noPadding">{event.quote_text}</div>
                             </div>
                           </td>
-                          <td>{event.narrator} </td>
+                          <td>{event.quote_narrator_name} </td>
                           {/* <td>{event.date}</td> */}
                           <td className="text-left">
                             <span className="single_lib_table_duration_span">{event.duration} min</span>
-                            <button onClick={() => onShowMaster(event)} className="single_lib_table_type_btn">
+                            {/* <button onClick={() => onShowMaster(event)} className="single_lib_table_type_btn">
                               <img className="single_lib_table_type_img" src="/Images/playB.svg" />
-                            </button>
+                            </button> */}
                           </td>
                         </tr>
                       )
@@ -1796,10 +1821,10 @@ export default function SingleLibrary(props) {
                     </div>
                     :
 
-                    <div className="row noMargin single_lib_more_desc_sec" >
+                    <div className="row noMargin single_lib_more_desc_sec" style={{backgroundColor:"black"}}>
                       <div className="col-xl-10 col-lg-10 col-md-9 col-sm-9 col-9 noPadding single_lib_vid_desc_div">
                         {/* <span>this sd9nv vdvnfv dffv inv vjjd vjdvvjd vjd vdfvj vjd vdvuisbv</span> */}
-                        <span>{currDesp}</span>
+                        <span style={{color:"white"}}>{currDesp}</span>
                       </div>
                       <div className="col-xl-2 col-lg-2 col-md-3 col-sm-3 col-3 noPadding single_lib_desc_vid_div" style={{ "display": "grid" }}>
                         <button onClick={(e) => onShoWClick(e)} className="single_lib_see_more_vid_pop">

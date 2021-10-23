@@ -11,13 +11,6 @@ import ResetPassword from "./components/ForgotPassword/ResetPassword";
 import Home from "./components/home/home";
 import Cookies from "universal-cookie";
 import VerifyOtp from "./components/auth/VerifyOtp";
-import Classes from "./components/Classes/Classes";
-import SingleClass from "./components/Classes/SingleClass";
-import SingleLibrary from "./components/Library/SingleLibrary";
-import Library from "./components/Library/Library";
-import PackageClass from "./components/Packages/PackageClass";
-// import PackageLibrary from './components/Packages/PackageLibrary';
-import TeamDetailsNew from "./components/instructor/TeamDetailsNew";
 import Main from "./components/home/Main";
 import Subscription from "./components/MyZone/Subscription";
 import Messaging from "./components/MyZone/Messaging";
@@ -51,10 +44,6 @@ function App() {
         <Route path="/sign-up" exact component={SignUp} />
         <Route path="/enter-otp" exact component={OtpPage} />
         <Route path="/verify-otp" exact component={VerifyOtp} />
-        <Route path="/classes" exact component={Classes} />
-        <Route path="/library" exact component={Library} />
-        <Route path="/packages" exact component={PackageClass} />
-        <Route path="/instructor" exact component={TeamDetailsNew} />
         <Route path="/subscription" exact component={Subscription} />
         <Route path="/my-activity" exact component={MyActivity} />
         <Route path="/messaging" exact component={Messaging} />
@@ -69,9 +58,6 @@ function App() {
         <Route path="/forms" exact component={Forms} />
         <Route path="/reach-us" exact component={ReachUs} />
 
-        {/* <Route path="/packages/Library" exact component={PackageLibrary}/> */}
-        <Route path="/class/:id" exact component={SingleClass} />
-        <Route path="/library/:id" exact component={SingleLibrary} />
         <Route path="/home1" exact component={Main} />
         <Route path="/reset-password" exact component={ResetPassword} />
         {cookies.get("token") ? (

@@ -658,7 +658,7 @@ export default function Library(props) {
                 </Link>
               </div>
               <div id="menuItem">
-                <Link to="/instructor">
+                <Link to="/my-bizzone-main-page">
                   <button className="nbtn">
                     <ListItem className="test" >
                       <ListItemIcon style={{ minWidth: '2.27vw' }}><img style={{ "height": "2.77vh" }} src='Images/smeet.svg' alt="zone" /></ListItemIcon>

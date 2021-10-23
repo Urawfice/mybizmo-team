@@ -372,92 +372,72 @@ export default function Sidenav() {
                     </div>
 
                     <div id="menuItem">
-                      <Link to="/classes">
-                        <button className="nbtn">
-                          <ListItem className="test">
-                            <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                              <img
-                                onMouseOut={(e) =>
-                                  (e.currentTarget.src = "Images/classes.svg")
-                                }
-                                onMouseOver={(e) =>
-                                  (e.currentTarget.src = "Images/classes.svg")
-                                }
-                                style={{ height: "2.77vh" }}
-                                src="Images/classes.svg"
-                                alt="classes"
-                              />{" "}
-                            </ListItemIcon>
-                            <ListItemText primary="Classes" />
-                          </ListItem>
-                        </button>
-                      </Link>
-                    </div>
+                  <Link to="/profile">
+                    <button className="nbtn">
+                      <ListItem className="test">
+                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
+                          <img
+                            style={{ height: "2.77vh" }}
+                            src="Images/myZone.svg"
+                            alt="profile"
+                          />{" "}
+                        </ListItemIcon>
+                        <ListItemText primary="Profile" />
+                      </ListItem>
+                    </button>
+                  </Link>
+                </div>
 
-                    <div id="menuItem">
-                      <Link to="/library">
-                        <button className="nbtn">
-                          <ListItem className="test">
-                            <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                              <img
-                                style={{ height: "2.77vh" }}
-                                src="Images/library.svg"
-                                alt="library"
-                              />
-                            </ListItemIcon>
-                            <ListItemText primary="Library" />
-                          </ListItem>
-                        </button>
-                      </Link>
-                    </div>
-                    <div id="menuItem">
-                      <Link to="/packages">
-                        <button className="nbtn">
-                          <ListItem className="test">
-                            <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                              <img
-                                style={{ height: "2.77vh" }}
-                                src="Images/packages.svg"
-                                alt="packages"
-                              />
-                            </ListItemIcon>
-                            <ListItemText primary="Packages" />
-                          </ListItem>
-                        </button>
-                      </Link>
-                    </div>
-                    <div id="menuItem">
-                      <Link to="/instructor">
-                        <button className="nbtn">
-                          <ListItem className="test">
-                            <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                              <img
-                                style={{ height: "2.77vh" }}
-                                src="Images/smeet.svg"
-                                alt="zone"
-                              />
-                            </ListItemIcon>
-                            <ListItemText primary="Influencers" />
-                          </ListItem>
-                        </button>
-                      </Link>
-                    </div>
-                    <div id="menuItem">
-                      <Link to="/subscription">
-                        <button className="nbtn">
-                          <ListItem className="test">
-                            <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                              <img
-                                style={{ height: "2.77vh" }}
-                                src="Images/myZone.svg"
-                                alt="zone"
-                              />
-                            </ListItemIcon>
-                            <ListItemText primary="My Zone" />
-                          </ListItem>
-                        </button>
-                      </Link>
-                    </div>
+                <div id="menuItem">
+                  <Link to="/schedules">
+                    <button className="nbtn">
+                      <ListItem className="test">
+                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
+                          <img
+                            style={{ height: "2.77vh" }}
+                            src="NavImages/scheduleimg.png"
+                            alt="schedules"
+                          />{" "}
+                        </ListItemIcon>
+                        <ListItemText primary="Schedules" />
+                      </ListItem>
+                    </button>
+                  </Link>
+                </div>
+
+                <div id="menuItem">
+                  <Link to="/connect">
+                    <button className="nbtn">
+                      <ListItem className="test">
+                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
+                          <img
+                            style={{ height: "2.77vh" }}
+                            src="NavImages/connectimg.png"
+                            alt="connect"
+                          />{" "}
+                        </ListItemIcon>
+                        <ListItemText primary="Connect" />
+                      </ListItem>
+                    </button>
+                  </Link>
+                </div>
+
+                <div id="menuItem">
+                  <Link to="/financials">
+                    <button className="nbtn">
+                      <ListItem className="test">
+                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
+                          <img
+                            style={{ height: "2.77vh" }}
+                            src="NavImages/financialsimg.png"
+                            alt="financials"
+                          />
+                        </ListItemIcon>
+                        <ListItemText primary="Financials" />
+                      </ListItem>
+                    </button>
+                  </Link>
+                </div> 
                     <div id="menuItem">
                       <Link to="/instructor">
                         <button className="nbtn">
@@ -514,92 +494,72 @@ export default function Sidenav() {
                     </div>
 
                     <div id="menuItem">
-                      <Link to="/classes">
-                        <button className="nbtn">
-                          <ListItem className="test">
-                            <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                              <img
-                                onMouseOut={(e) =>
-                                  (e.currentTarget.src = "Images/classes.svg")
-                                }
-                                onMouseOver={(e) =>
-                                  (e.currentTarget.src = "Images/classes.svg")
-                                }
-                                style={{ height: "2.77vh" }}
-                                src="Images/classes.svg"
-                                alt="classes"
-                              />{" "}
-                            </ListItemIcon>
-                            <ListItemText primary="Classes" />
-                          </ListItem>
-                        </button>
-                      </Link>
-                    </div>
+                  <Link to="/profile">
+                    <button className="nbtn">
+                      <ListItem className="test">
+                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
+                          <img
+                            style={{ height: "2.77vh" }}
+                            src="Images/myZone.svg"
+                            alt="profile"
+                          />{" "}
+                        </ListItemIcon>
+                        <ListItemText primary="Profile" />
+                      </ListItem>
+                    </button>
+                  </Link>
+                </div>
 
-                    <div id="menuItem">
-                      <Link to="/library">
-                        <button className="nbtn">
-                          <ListItem className="test">
-                            <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                              <img
-                                style={{ height: "2.77vh" }}
-                                src="Images/library.svg"
-                                alt="library"
-                              />
-                            </ListItemIcon>
-                            <ListItemText primary="Library" />
-                          </ListItem>
-                        </button>
-                      </Link>
-                    </div>
-                    <div id="menuItem">
-                      <Link to="/packages">
-                        <button className="nbtn">
-                          <ListItem className="test">
-                            <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                              <img
-                                style={{ height: "2.77vh" }}
-                                src="Images/packages.svg"
-                                alt="packages"
-                              />
-                            </ListItemIcon>
-                            <ListItemText primary="Packages" />
-                          </ListItem>
-                        </button>
-                      </Link>
-                    </div>
-                    <div id="menuItem">
-                      <Link to="/instructor">
-                        <button className="nbtn">
-                          <ListItem className="test">
-                            <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                              <img
-                                style={{ height: "2.77vh" }}
-                                src="Images/smeet.svg"
-                                alt="zone"
-                              />
-                            </ListItemIcon>
-                            <ListItemText primary="Influencers" />
-                          </ListItem>
-                        </button>
-                      </Link>
-                    </div>
-                    <div id="menuItem">
-                      <Link to="/subscription">
-                        <button className="nbtn">
-                          <ListItem className="test">
-                            <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                              <img
-                                style={{ height: "2.77vh" }}
-                                src="Images/myZone.svg"
-                                alt="zone"
-                              />
-                            </ListItemIcon>
-                            <ListItemText primary="My Zone" />
-                          </ListItem>
-                        </button>
-                      </Link>
-                    </div>
+                <div id="menuItem">
+                  <Link to="/schedules">
+                    <button className="nbtn">
+                      <ListItem className="test">
+                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
+                          <img
+                            style={{ height: "2.77vh" }}
+                            src="NavImages/scheduleimg.png"
+                            alt="schedules"
+                          />{" "}
+                        </ListItemIcon>
+                        <ListItemText primary="Schedules" />
+                      </ListItem>
+                    </button>
+                  </Link>
+                </div>
+
+                <div id="menuItem">
+                  <Link to="/connect">
+                    <button className="nbtn">
+                      <ListItem className="test">
+                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
+                          <img
+                            style={{ height: "2.77vh" }}
+                            src="NavImages/connectimg.png"
+                            alt="connect"
+                          />{" "}
+                        </ListItemIcon>
+                        <ListItemText primary="Connect" />
+                      </ListItem>
+                    </button>
+                  </Link>
+                </div>
+
+                <div id="menuItem">
+                  <Link to="/financials">
+                    <button className="nbtn">
+                      <ListItem className="test">
+                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
+                          <img
+                            style={{ height: "2.77vh" }}
+                            src="NavImages/financialsimg.png"
+                            alt="financials"
+                          />
+                        </ListItemIcon>
+                        <ListItemText primary="Financials" />
+                      </ListItem>
+                    </button>
+                  </Link>
+                </div> 
                     <div id="menuItem">
                       <Link to="/my-bizzone-main-page">
                         <button className="nbtn">

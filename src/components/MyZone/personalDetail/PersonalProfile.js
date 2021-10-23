@@ -70,26 +70,27 @@ function PersonalProfile(props) {
             "country":data.country,   
             "city":data.city,
             "name":data.name,
+            "dob":data.dob,
         }
-        // axios.put(`users/profile-update`, formData, {
-        //     headers: {
-        //       Authorization: "Token " + cookies.get("token"),
-        //     },
-        // })
-        // .then((res) => {
-        //     console.log(res);
-        //     toast.success("Image updated successfully", {
-        //       position: toast.POSITION.TOP_CENTER,
-        //       setTimeout: 2000,
-        //     });
-        // })
-        // .catch((err) => {
-        //     console.log(err);
-        //     toast.warning("Some error occured", {
-        //       position: toast.POSITION.TOP_CENTER,
-        //       setTimeout: 2000,
-        //     });
-        // });
+        axios.put(`users/profile-update`, updatedData, {
+            headers: {
+              Authorization: "Token " + cookies.get("token"),
+            },
+        })
+        .then((res) => {
+            console.log(res);
+            toast.success("Profile updated successfully", {
+              position: toast.POSITION.TOP_CENTER,
+              setTimeout: 2000,
+            });
+        })
+        .catch((err) => {
+            console.log(err);
+            toast.warning("Some error occured", {
+              position: toast.POSITION.TOP_CENTER,
+              setTimeout: 2000,
+            });
+        });
     };
 
     return (

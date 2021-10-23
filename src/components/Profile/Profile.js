@@ -151,7 +151,7 @@ function Profile(props) {
                         <ListItemIcon style={{ minWidth: "2.27vw" }}>
                           <img
                             style={{ height: "2.77vh" }}
-                            src="Images/myZone.svg"
+                            src="NavImages/scheduleimg.png"
                             alt="schedules"
                           />{" "}
                         </ListItemIcon>
@@ -168,7 +168,7 @@ function Profile(props) {
                         <ListItemIcon style={{ minWidth: "2.27vw" }}>
                           <img
                             style={{ height: "2.77vh" }}
-                            src="Images/myZone.svg"
+                            src="NavImages/connectimg.png"
                             alt="connect"
                           />{" "}
                         </ListItemIcon>
@@ -185,59 +185,11 @@ function Profile(props) {
                         <ListItemIcon style={{ minWidth: "2.27vw" }}>
                           <img
                             style={{ height: "2.77vh" }}
-                            src="Images/library.svg"
+                            src="NavImages/finanacialsimg.png"
                             alt="financials"
                           />
                         </ListItemIcon>
                         <ListItemText primary="Financials" />
-                      </ListItem>
-                    </button>
-                  </Link>
-                </div>
-                <div id="menuItem">
-                  <Link to="">
-                    <button className="nbtn">
-                      <ListItem className="test1">
-                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                          <img
-                            style={{ height: "2.77vh" }}
-                            src="Images/packages.svg"
-                            alt="packages"
-                          />
-                        </ListItemIcon>
-                        <ListItemText primary="Packages" />
-                      </ListItem>
-                    </button>
-                  </Link>
-                </div>
-                <div id="menuItem">
-                  <Link to="instructor">
-                    <button className="nbtn">
-                      <ListItem className="test">
-                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                          <img
-                            style={{ height: "2.77vh" }}
-                            src="Images/smeet.svg"
-                            alt="zone"
-                          />
-                        </ListItemIcon>
-                        <ListItemText primary="Influencers" />
-                      </ListItem>
-                    </button>
-                  </Link>
-                </div>
-                <div id="menuItem">
-                  <Link to="/subscription">
-                    <button className="nbtn" style={{ color: "#03CBC9" }}>
-                      <ListItem className="test1">
-                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                          <img
-                            style={{ height: "2.77vh" }}
-                            src="Images/myZone.svg"
-                            alt="zone"
-                          />
-                        </ListItemIcon>
-                        <ListItemText primary="My Zone" />
                       </ListItem>
                     </button>
                   </Link>
@@ -319,7 +271,7 @@ function Profile(props) {
                         <ListItemIcon style={{ minWidth: "2.27vw" }}>
                           <img
                             style={{ height: "2.77vh" }}
-                            src="Images/myZone.svg"
+                            src="NavImages/scheduleimg.png"
                             alt="schedules"
                           />{" "}
                         </ListItemIcon>
@@ -336,7 +288,7 @@ function Profile(props) {
                         <ListItemIcon style={{ minWidth: "2.27vw" }}>
                           <img
                             style={{ height: "2.77vh" }}
-                            src="Images/myZone.svg"
+                            src="NavImages/connectimg.png"
                             alt="connect"
                           />{" "}
                         </ListItemIcon>
@@ -353,60 +305,11 @@ function Profile(props) {
                         <ListItemIcon style={{ minWidth: "2.27vw" }}>
                           <img
                             style={{ height: "2.77vh" }}
-                            src="Images/library.svg"
+                            src="NavImages/finanacialsimg.png"
                             alt="financials"
                           />
                         </ListItemIcon>
                         <ListItemText primary="Financial" />
-                      </ListItem>
-                    </button>
-                  </Link>
-                </div>
-
-                <div id="menuItem">
-                  <Link to="/packages">
-                    <button className="nbtn">
-                      <ListItem className="test">
-                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                          <img
-                            style={{ height: "2.77vh" }}
-                            src="Images/packages.svg"
-                            alt="packages"
-                          />
-                        </ListItemIcon>
-                        <ListItemText primary="Packages" />
-                      </ListItem>
-                    </button>
-                  </Link>
-                </div>
-                <div id="menuItem">
-                  <Link to="instructor">
-                    <button className="nbtn">
-                      <ListItem className="test">
-                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                          <img
-                            style={{ height: "2.77vh" }}
-                            src="Images/smeet.svg"
-                            alt="zone"
-                          />
-                        </ListItemIcon>
-                        <ListItemText primary="Influencers" />
-                      </ListItem>
-                    </button>
-                  </Link>
-                </div>
-                <div id="menuItem">
-                  <Link to="/subscription">
-                    <button className="nbtn" style={{ color: "#03CBC9" }}>
-                      <ListItem className="test1">
-                        <ListItemIcon style={{ minWidth: "2.27vw" }}>
-                          <img
-                            style={{ height: "2.77vh" }}
-                            src="Images/myZone.svg"
-                            alt="zone"
-                          />
-                        </ListItemIcon>
-                        <ListItemText primary="Profile" />
                       </ListItem>
                     </button>
                   </Link>

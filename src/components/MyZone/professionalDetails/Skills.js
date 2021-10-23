@@ -61,31 +61,31 @@ function Skills(props) {
         skills.push(data[i]);
       }
       console.log(skills);
-      // axios.put(
-      //   `masters/strength-update`,
-      //   {
-      //     "skills":skills
-      //   },
-      //   {
-      //     headers: {
-      //       Authorization: "Token " + cookies.get("token"),
-      //     },
-      //   }
-      // )
-      // .then((res) => {
-      //   console.log(res);
-      //   toast.success("Skills updated successfully", {
-      //     position: toast.POSITION.TOP_CENTER,
-      //     setTimeout: 2000,
-      //   });
-      // })
-      // .catch((err) => {
-      //   console.log(err);
-      //   toast.warning("Some error occured", {
-      //     position: toast.POSITION.TOP_CENTER,
-      //     setTimeout: 2000,
-      //   });
-      // });
+      axios.put(
+        `masters/strength-update`,
+        {
+          "skills":skills
+        },
+        {
+          headers: {
+            Authorization: "Token " + cookies.get("token"),
+          },
+        }
+      )
+      .then((res) => {
+        console.log(res);
+        toast.success("Skills updated successfully", {
+          position: toast.POSITION.TOP_CENTER,
+          setTimeout: 2000,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.warning("Some error occured", {
+          position: toast.POSITION.TOP_CENTER,
+          setTimeout: 2000,
+        });
+      });
         
   }
 
@@ -157,7 +157,7 @@ function Skills(props) {
                     type="text"
                     onChange={handleUpdate}
                     id={item.id}
-                    value={item.name}
+                    defaultValue={item.name}
                     placeholder="Enter your skill / strength here..."
                     style={{ width: "80%" }} 
                 />
@@ -169,7 +169,7 @@ function Skills(props) {
                   </div>
                   <input
                     type="number"
-                    value={item.rating}
+                    defaultValue={item.rating}
                     id={item.id}
                     onChange={handleUpdate}
                     min="1"
