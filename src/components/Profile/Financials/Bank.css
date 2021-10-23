@@ -88,3 +88,21 @@
   line-height: 34px;
   color: #252525;
 }
+
+.bank-more-details-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 34px;
+  color: #7e7673;
+}
+
+.bank-more-details-data {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 34px;
+  color: #252525;
+}
