@@ -13,6 +13,10 @@ import ListItemText from "@material-ui/core/ListItemText";
 import { toast } from "react-toastify";
 import PersonalDetails from "../MyZone/PersonalDetails";
 
+import finacialsimg from "../Images/financialsimg.png";
+import connectimg from "../Images/connectimg.png";
+import scheduleimg from "../Images/scheduleimg.png";
+
 const drawerWidth = 160;
 toast.configure();
 
@@ -353,7 +357,7 @@ function Profile(props) {
                             alt="financials"
                           />
                         </ListItemIcon>
-                        <ListItemText primary="Financials" />
+                        <ListItemText primary="Financial" />
                       </ListItem>
                     </button>
                   </Link>
