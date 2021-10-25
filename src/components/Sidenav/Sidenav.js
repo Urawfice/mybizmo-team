@@ -762,36 +762,6 @@ export default function Sidenav() {
             {/* ------------------Content Library section END-------------- */}
 
             {/* ----------------Analytics part---------- */}
-            {/* <div className="row simple-border">
-              <div classNam="col-xl-10 mx-auto simple-border">
-                <div className="row">
-                  <div
-                    className="col-xl-3 simple-border mx-auto"
-                    style={{ maxWidth: "330px" }}
-                  >
-                    Hi
-                  </div>
-                  <div
-                    className="col-xl-3 simple-border mx-auto"
-                    style={{ maxWidth: "330px" }}
-                  >
-                    Hi
-                  </div>
-                  <div
-                    className="col-xl-3 simple-border mx-auto"
-                    style={{ maxWidth: "330px" }}
-                  >
-                    Hi
-                  </div>
-                  <div
-                    className="col-xl-3 simple-border mx-auto"
-                    style={{ maxWidth: "330px" }}
-                  >
-                    Hi
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </main>
         </div>
       )}
